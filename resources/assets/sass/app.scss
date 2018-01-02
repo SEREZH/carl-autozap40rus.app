@@ -1,0 +1,92 @@
+
+// Fonts
+
+@import url('https://fonts.googleapis.com/css?family=
+	Anonymous+Pro:400,400i,700,700i|
+	Bad+Script|
+	Caveat:400,700|
+	Comfortaa:300,400,700|
+	Cormorant+Infant:300,300i,400,400i,500,500i,600,600i,700,700i|
+	Marck+Script|
+	Montserrat+Alternates:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|
+	Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|
+	Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|
+	PT+Mono|
+	Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic');
+
+/* @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&subset=cyrillic'); */
+
+/* 
+@import url("./fonts/arimo/arimo.css"); arimo - Arimo   400,700
+@import url("./fonts/baronneue/baronneue.css"); baronneue - Baron Neue  400,700.900
+@import url("./fonts/cleanvertising/cleanvertising.css"); cleanvertising - 300,900
+@import url("./fonts/clearsans/clearsans.css"); clearsansthin - 200,300,400,400i,500,500i,700
+@import url("./fonts/firasans/firasans.css"); firasans - Fira Sans 600,500,500i,400i,100,200,200i
+@import url("./fonts/fregat/fregat.css"); fregat - Fregat 400,400i,700,700i
+
+@import url("./fonts/intro/intro.css"); intro - Intro 400
+@import url("./fonts/opensans/opensans.css"); opensans - Open Sans  300,300i,400,400i600,600i,700,700i,800,800i
+@import url("./fonts/ptsans/ptsans.css"); ptsans - PT Sans 400,400i,700,700i
+@import url("./fonts/roboto/roboto.css"); roboto - Roboto 100,100i,300,300i,400,400i,500,500i,700,700i,900,900i
+@import url("./fonts/lato/lato.css"); lato - Lato 100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i
+ */
+
+
+
+
+
+
+.intro-2 {
+    background: url("http://mdbootstrap.com/img/Photos/Others/images/91.jpg")no-repeat center center;
+    background-size: cover;
+}
+
+.top-nav-collapse {
+    background-color: #3f51b5 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+}
+
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #3f51b5 !important;
+    }
+}
+
+.hm-gradient .full-bg-img {
+    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%));
+    background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+}
+
+.card {
+    background-color: rgba(126, 123, 215, 0.2);
+}
+
+.md-form .prefix {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.md-form label {
+    color: #ffffff;
+}
+
+h6 {
+    line-height: 1.7;
+}
+
+@media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+        height: 1040px;
+    }
+}

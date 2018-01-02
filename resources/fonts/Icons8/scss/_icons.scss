@@ -1,0 +1,12 @@
+// Icons
+// -------------------------
+
+
+[data-icons8]:before,
+.icons8-filled-bookmark-ribbon:before,
+{ @include icons8-font; }
+
+[data-icons8]:before { content: attr(data-icons8); }
+
+.icons8-filled-bookmark-ribbon:before { content: $icons8-var-filled-bookmark-ribbon; }
+

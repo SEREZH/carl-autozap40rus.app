@@ -1,0 +1,49 @@
+.ez-bcol-blue-main {
+  background-color: #064780 !important; }
+
+.ez-header {
+  color: white !important;
+  background-color: #064780 !important;
+  font-size: 0.9rem; }
+  .ez-header .ez-header-logo {
+    margin: 1rem 0 0 0; }
+  .ez-header .ez-header-name {
+    text-align: center; }
+    .ez-header .ez-header-name .ez-header-name-title {
+      font-family: Comfortaa;
+      font-weight: 400;
+      margin: 1rem 0 0 0; }
+    .ez-header .ez-header-name .ez-header-name-subtitle {
+      font-family: Marck Script; }
+  .ez-header .ez-header-addresse {
+    font-family: Comfortaa;
+    font-weight: 300;
+    margin: 1rem 0 0.5rem 0; }
+    .ez-header .ez-header-addresse .ez-header-addresse-post {
+      margin-top: 0.25rem;
+      margin-bottom: 0.5rem; }
+    .ez-header .ez-header-addresse .ez-header-addresse-phone {
+      margin-bottom: 0.5rem !important; }
+
+/* .ez-draft {
+    .ez-draft-l {
+        .ez-draft-l-embed {
+            border-radius: 0.3rem;  
+        }
+    }
+}        */
+.embed-responsive video {
+  border-radius: 0.3rem; }
+
+/* .navbar .navbar-brand img {
+    height: 55px;
+}
+.navbar .nav-item a.nav-link {
+    text-transform: uppercase;
+}
+
+.embed-responsive.embed-responsive-16by9 video {
+    position: absolute!important;
+} */
+
+/*# sourceMappingURL=ezh.css.map */

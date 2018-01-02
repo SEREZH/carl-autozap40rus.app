@@ -1,0 +1,336 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(node_modules/normalize.css/normalize.css);
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  height: 100vh;
+  margin: 0; }
+
+.full-height {
+  height: 100vh; }
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center; }
+
+.position-ref {
+  position: relative; }
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px; }
+
+.content {
+  text-align: center; }
+
+.title {
+  font-size: 84px; }
+
+.m-b-md {
+  margin-bottom: 30px; }
+
+.zcl-amati-red {
+  color: #db1b12; }
+
+.zcl-amati-red-25 {
+  color: rgba(219, 27, 18, 0.25); }
+
+.zcl-amati-red-33 {
+  color: rgba(219, 27, 18, 0.33); }
+
+.zcl-amati-red-50 {
+  color: rgba(219, 27, 18, 0.5); }
+
+.zcl-amati-red-67 {
+  color: rgba(219, 27, 18, 0.67); }
+
+.zcl-amati-red-75 {
+  color: rgba(219, 27, 18, 0.75); }
+
+.zcl-white {
+  color: white; }
+
+.zcl-white-25 {
+  color: rgba(255, 255, 255, 0.25); }
+
+.zcl-white-33 {
+  color: rgba(255, 255, 255, 0.33); }
+
+.zcl-white-50 {
+  color: rgba(255, 255, 255, 0.5); }
+
+.zcl-white-67 {
+  color: rgba(255, 255, 255, 0.67); }
+
+.zcl-white-75 {
+  color: rgba(255, 255, 255, 0.75); }
+
+.zcl-black {
+  color: black; }
+
+.zcl-black-25 {
+  color: rgba(0, 0, 0, 0.25); }
+
+.zcl-black-33 {
+  color: rgba(0, 0, 0, 0.33); }
+
+.zcl-black-50 {
+  color: rgba(0, 0, 0, 0.5); }
+
+.zcl-black-67 {
+  color: rgba(0, 0, 0, 0.67); }
+
+.zcl-black-75 {
+  color: rgba(0, 0, 0, 0.75); }
+
+.zcl-red {
+  color: red; }
+
+.zcl-green {
+  color: green; }
+
+.zcl-blue {
+  color: blue; }
+
+.zcl-yellow {
+  color: yellow; }
+
+.zbcl-white {
+  background-color: white; }
+
+.zbcl-white-25 {
+  background-color: rgba(255, 255, 255, 0.25); }
+
+.zbcl-white-33 {
+  background-color: rgba(255, 255, 255, 0.33); }
+
+.zbcl-white-50 {
+  background-color: rgba(255, 255, 255, 0.5); }
+
+.zbcl-white-67 {
+  background-color: rgba(255, 255, 255, 0.67); }
+
+.zbcl-white-75 {
+  background-color: rgba(255, 255, 255, 0.75); }
+
+.zbcl-black {
+  background-color: black; }
+
+.zbcl-black-25 {
+  background-color: rgba(0, 0, 0, 0.25); }
+
+.zbcl-black-33 {
+  background-color: rgba(0, 0, 0, 0.33); }
+
+.zbcl-black-50 {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.zbcl-black-67 {
+  background-color: rgba(255, 255, 255, 0.67); }
+
+.zbcl-black-75 {
+  background-color: rgba(255, 255, 255, 0.75); }
+
+/* _opps-preloader-md-one.scss 
+-------------------------------------------------------------------------------------
+<header class="ez-hd">
+  <div aria-busy="true" aria-label="Загрузка, пожалуйста подождите." role="progressbar"></div>
+</header>
+-------------------------------------------------------------------------------------
+*/
+header.ez-preloader-hdr {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  /* 
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+  background-color: #fff;
+   */ }
+
+header.ez-preloader-hdr [role="alert"][aria-busy="true"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 3px;
+  width: 100%;
+  background-color: #159756;
+  animation: preloader-background linear 3.5s infinite; }
+  header.ez-preloader-hdr [role="alert"][aria-busy="true"]::before, header.ez-preloader-hdr [role="alert"][aria-busy="true"]::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 0;
+    height: 3px;
+    background: #afa;
+    animation: preloader-front linear 3.5s infinite;
+    content: ''; }
+  header.ez-preloader-hdr [role="alert"][aria-busy="true"]::before {
+    right: 50%; }
+  header.ez-preloader-hdr [role="alert"][aria-busy="true"]::after {
+    left: 50%; }
+
+@keyframes preloader-background {
+  0%, 24.9% {
+    background-color: #159756; }
+  25%, 49.9% {
+    background-color: #da4733; }
+  50%, 74.9% {
+    background-color: #3b78e7; }
+  75%, 100% {
+    background-color: #fdba2c; } }
+@keyframes preloader-front {
+  0% {
+    width: 0;
+    background-color: #da4733; }
+  24.9% {
+    width: 50%;
+    background-color: #da4733; }
+  25% {
+    width: 0;
+    background-color: #3b78e7; }
+  49.9% {
+    width: 50%;
+    background-color: #3b78e7; }
+  50% {
+    width: 0;
+    background-color: #fdba2c; }
+  74.9% {
+    width: 50%;
+    background-color: #fdba2c; }
+  75% {
+    width: 0%;
+    background-color: #159756; }
+  100% {
+    width: 50%;
+    background-color: #159756; } }
+/* * {
+  box-sizing: border-box;
+} */
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
+} */
+/* 
+header.ezh-preloader-hdr {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+  background-color: #fff;
+} */
+/* main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-grow: 1;
+  text-align: center;
+  
+  :root  & > * + * {
+    margin-top: 1em;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 200;
+}
+
+p {
+  margin: 0;
+  font-size: .875em;
+  font-weight: 400;
+} */
+/* adds some margin below the link sets  */
+.navbar .dropdown-menu div[class*="col"] {
+  margin-bottom: 1rem; }
+
+.navbar .dropdown-menu {
+  border: none;
+  background-color: #0060c8 !important; }
+
+/* breakpoint and up - mega dropdown styles */
+@media screen and (min-width: 992px) {
+  /* remove the padding from the navbar so the dropdown hover state is not broken */
+  .navbar {
+    padding-top: 0px;
+    padding-bottom: 0px; }
+
+  /* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+  .navbar .nav-item {
+    padding: .5rem .5rem;
+    margin: 0 .25rem; }
+
+  /* makes the dropdown full width  */
+  .navbar .dropdown {
+    position: static; }
+
+  .navbar .dropdown-menu {
+    width: 100%;
+    left: 0;
+    right: 0;
+    /*  height of nav-item  */
+    top: 45px; }
+
+  /* shows the dropdown menu on hover */
+  .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+    display: block !important; }
+
+  .navbar .dropdown-menu {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: #fff; } }
+.ez-menu-mega-login-links > a {
+  /* font-family: 'Roboto', sans-serif; */
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  padding: 0 25px;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all .75s ease-in-out;
+  -moz-transition: all .75s ease-in-out;
+  -ms-transition: all .75s ease-in-out;
+  -o-transition: all .75s ease-in-out;
+  transition: all .75s ease-in-out; }
+  .ez-menu-mega-login-links > a:hover {
+    /* font-weight: 700; */
+    color: red; }
+
+/* 
+@import "site-addons";
+@import "menu";
+@import "body-images";
+@import "body-jcarousel";
+@import "body-amati-about";
+@import "body-birthday-register";
+@import "body-amati-select";
+@import "body-amati-podxod";
+@import "body-amati-news";
+@import "body-testimonials";
+@import "footer-menu";
+@import "footer-offerta";
+@import "footer-social";
+@import "footer-copyright";
+@import "flip3d";
+ */
+
+/*# sourceMappingURL=amati.css.map */
