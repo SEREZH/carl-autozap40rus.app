@@ -13414,11 +13414,13 @@ WOW.prototype.doSync = function (node) {
 var OFFSET_TOP = 50;
 
 $(window).scroll(function () {
-  if ($('.navbar').offset().top > OFFSET_TOP) {
-    $('.scrolling-navbar').addClass('top-nav-collapse');
-  } else {
-    $('.scrolling-navbar').removeClass('top-nav-collapse');
-  }
+  if ($('.navbar').length) {  //EZH-20180102A
+      if ($('.navbar').offset().top > OFFSET_TOP) {
+        $('.scrolling-navbar').addClass('top-nav-collapse');
+      } else {
+        $('.scrolling-navbar').removeClass('top-nav-collapse');
+      }
+    }
 });
 /*!
  * Waves v0.7.5
