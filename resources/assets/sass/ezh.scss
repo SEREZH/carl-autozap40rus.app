@@ -2,9 +2,12 @@
     background-color: rgba(6, 71, 128, 1)!important;
 }
 
-.ez-header {
+.ez-body {
+    
+}
+
+.ez-header, .ez-draft {
     color: rgba(255, 255, 255, 1)!important;
-    background-color: rgba(6, 71, 128, 1)!important;
     font-size: 0.8rem;
     .ez-header-logo {
 		margin: 1rem 0 0 0;    	
@@ -47,17 +50,21 @@
     .ez-draft-l {
         .ez-draft-l-embed {
             border-radius: 0.3rem;  
+            .ez-draft-l-embed-video {
+                margin-top: 1rem;
+            }
         }
         .ez-draft-l-footer {
             font-family: Comfortaa;
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 400;
-            margin-top: 0.5rem;
+            margin-top: 1.5rem;
         }
     }
     .ez-draft-r {
         .card-body {
-            padding-top: 0.5rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
             .form-control {
                 padding-bottom: 0.25rem;
             }
@@ -82,6 +89,8 @@
         }
 
         .ez-draft-r-btn {
+            color: white !important;
+            border-color: white!important;
             font-size: 1.15rem;
             i {
                 font-size: 2rem;
@@ -93,15 +102,44 @@
     }
 }
 
-
-
-/* .navbar .navbar-brand img {
-    height: 55px;
+.ez-tovar {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    .ez-tovar-card {
+        .ez-tovar-card-header {
+            font-family: Comfortaa;
+            font-weight: 400;
+            font-size: 0.8rem;
+            padding: 0.3rem 0 0 0!important;
+            h2 {
+                padding: 0.5rem 0 0 0!important;
+            }
+            p {
+                padding: 0!important;
+            }
+        }
+    }
+    .ez-tovar-card-body {
+        background-color: transparent!important;
+    }
 }
-.navbar .nav-item a.nav-link {
-    text-transform: uppercase;
-}
+    
+.ez-footer {
+    margin-top: 0!important;
+    .ez-footer-cont-x {
+        .ez-footer-cont {
+            .ez-footer-social {
+                a {
+                    width: 4rem;
+                    height: 4rem;
+                    .ez-footer-social-fa {
+                        font-size: 3rem!important;
+                        line-height: 4rem!important;
+                    }
+                }
+            }    
+        }
+    }
+}    
 
-.embed-responsive.embed-responsive-16by9 video {
-    position: absolute!important;
-} */
+
