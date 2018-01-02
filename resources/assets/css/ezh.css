@@ -4,7 +4,7 @@
 .ez-header {
   color: white !important;
   background-color: #064780 !important;
-  font-size: 0.9rem; }
+  font-size: 0.8rem; }
   .ez-header .ez-header-logo {
     margin: 1rem 0 0 0; }
   .ez-header .ez-header-name {
@@ -12,6 +12,7 @@
     .ez-header .ez-header-name .ez-header-name-title {
       font-family: Comfortaa;
       font-weight: 400;
+      font-size: 2rem;
       margin: 1rem 0 0 0; }
     .ez-header .ez-header-name .ez-header-name-subtitle {
       font-family: Marck Script; }
@@ -19,21 +20,47 @@
     font-family: Comfortaa;
     font-weight: 300;
     margin: 1rem 0 0.5rem 0; }
-    .ez-header .ez-header-addresse .ez-header-addresse-post {
+    .ez-header .ez-header-addresse .ez-header-addresse-post,
+    .ez-header .ez-header-addresse .ez-header-addresse-phone,
+    .ez-header .ez-header-addresse .ez-header-addresse-time {
       margin-top: 0.25rem;
-      margin-bottom: 0.5rem; }
-    .ez-header .ez-header-addresse .ez-header-addresse-phone {
-      margin-bottom: 0.5rem !important; }
+      margin-bottom: 0.35rem; }
+      .ez-header .ez-header-addresse .ez-header-addresse-post p,
+      .ez-header .ez-header-addresse .ez-header-addresse-phone p,
+      .ez-header .ez-header-addresse .ez-header-addresse-time p {
+        margin: 0 !important; }
+      .ez-header .ez-header-addresse .ez-header-addresse-post i,
+      .ez-header .ez-header-addresse .ez-header-addresse-phone i,
+      .ez-header .ez-header-addresse .ez-header-addresse-time i {
+        font-size: 1.05rem; }
 
-/* .ez-draft {
-    .ez-draft-l {
-        .ez-draft-l-embed {
-            border-radius: 0.3rem;  
-        }
-    }
-}        */
-.embed-responsive video {
+.ez-draft .ez-draft-l .ez-draft-l-embed {
   border-radius: 0.3rem; }
+.ez-draft .ez-draft-l .ez-draft-l-footer {
+  font-family: Comfortaa;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.5rem; }
+.ez-draft .ez-draft-r .card-body {
+  padding-top: 0.5rem; }
+  .ez-draft .ez-draft-r .card-body .form-control {
+    padding-bottom: 0.25rem; }
+.ez-draft .ez-draft-r .ez-draft-r-header {
+  font-family: Comfortaa;
+  font-size: 1.15rem; }
+  .ez-draft .ez-draft-r .ez-draft-r-header .ez-draft-r-header-text .ez-draft-r-header-text-during {
+    font-family: Marck Script;
+    font-size: 1.3rem; }
+  .ez-draft .ez-draft-r .ez-draft-r-header .ez-draft-r-header-icon {
+    justify-content: center; }
+.ez-draft .ez-draft-r .ez-draft-r-footer {
+  font-family: Comfortaa;
+  font-size: 0.75rem; }
+.ez-draft .ez-draft-r .ez-draft-r-btn {
+  font-size: 1.15rem; }
+  .ez-draft .ez-draft-r .ez-draft-r-btn i {
+    font-size: 2rem;
+    margin-right: 2rem; }
 
 /* .navbar .navbar-brand img {
     height: 55px;

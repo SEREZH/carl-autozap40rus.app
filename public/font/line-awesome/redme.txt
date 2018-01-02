@@ -1,0 +1,26 @@
+https://icons8.com/line-awesome
+
+Font Awesome is great, but many people like line icons more. 1 Have a look and decide which icons do you like:
+
+Line Awesome consists of 674 flat line icons that are created based on Windows 10 style. You may compare Line Awesome and Font Awesome at preview page.
+
+How to Install
+Replace this line:
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+…with this one:
+
+<link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+Downloadable Version
+If you host the font files on your server, unpack this zip and replace the line:
+
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+…with this one:
+
+<link rel="stylesheet" href="path/to/line-awesome/css/line-awesome-font-awesome.min.css">
+
+Using in Sketch, Photoshop, etc.
+You can find all these icons (and even more) on Icons8. All free, including SVG.
+Fine Tuning
+There’s a trick however. Line Awesome is pixel perfect, though it’s optimized for larger size. While Font Awesome is optimized for 14?14 px, Line Awesome looks great in 32?32 px.
+If you use larger icons, you’re cool. If you use 14?14, first please check if it looks ok. Many icons do. Otherwise, try changing it to 16?16 with CSS. The majority of our line icons look cool this way. If not, please drop us a line in comments and tell us which icon you want us to fix. We’ll do that for you.
