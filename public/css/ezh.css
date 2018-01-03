@@ -59,6 +59,7 @@
     .ez-draft .ez-draft-r .card-body .form-control {
       padding-bottom: 0.25rem; }
   .ez-draft .ez-draft-r .ez-draft-r-card-wrapper {
+    background-color: rgba(62, 69, 81, 0.35) !important;
     padding: 2rem 1rem !important; }
   .ez-draft .ez-draft-r .ez-draft-r-header {
     font-family: Comfortaa;

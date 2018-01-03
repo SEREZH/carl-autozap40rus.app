@@ -18,6 +18,17 @@
 @import url("./fonts/roboto/roboto.css"); roboto - Roboto 100,100i,300,300i,400,400i,500,500i,700,700i,900,900i
 @import url("./fonts/lato/lato.css"); lato - Lato 100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i
  */
+.ez-form-draft-status {
+  padding-left: 3rem;
+  color: #ff0000;
+  margin-top: -1rem;
+  font-family: Open Sans;
+  font-size: 0.85rem;
+  font-weight: 400;
+  font-style: italic;
+  text-decoration: underline;
+  text-shadow: 3px 3px 3px black; }
+
 .intro-2 {
   background: url("http://mdbootstrap.com/img/Photos/Others/images/91.jpg") no-repeat center center;
   background-size: cover; }
