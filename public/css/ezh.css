@@ -6,6 +6,8 @@
   font-size: 0.8rem; }
   .ez-header .ez-header-logo, .ez-draft .ez-header-logo {
     margin: 1rem 0 0 0; }
+    .ez-header .ez-header-logo img, .ez-draft .ez-header-logo img {
+      margin: auto; }
   .ez-header .ez-header-name, .ez-draft .ez-header-name {
     text-align: center; }
     .ez-header .ez-header-name .ez-header-name-title, .ez-draft .ez-header-name .ez-header-name-title {
@@ -88,12 +90,52 @@
     background-color: transparent !important; }
 
 .ez-footer {
+  font-family: Comfortaa;
+  font-weight: 400;
   margin-top: 0 !important; }
-  .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-social a {
-    width: 4rem;
-    height: 4rem; }
-    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-social a .ez-footer-social-fa {
-      font-size: 3rem !important;
-      line-height: 4rem !important; }
+  .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    /* .ez-footer-social {
+            a {
+                width: 4rem;
+                height: 4rem;
+                .ez-footer-social-fa {
+                    font-size: 3rem!important;
+                    line-height: 4rem!important;
+                }
+            }
+        } */ }
+    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-logo {
+      display: flex;
+      justify-content: center; }
+      .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-logo img {
+        max-width: 21rem !important; }
+    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-header {
+      font-size: 1.1rem !important;
+      text-align: center !important;
+      margin-bottom: 1rem !important; }
+    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka {
+      padding-left: 2rem; }
+      .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka .ez-footer-info-dostavka-header {
+        font-size: 1.1rem !important;
+        text-align: left !important; }
+      .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka .ez-footer-info-dostavka-spisok {
+        font-size: 0.75rem !important;
+        text-align: left !important;
+        list-style: square outside;
+        padding-left: 1rem; }
+    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-yandex-map {
+      display: flex !important;
+      justify-content: center !important; }
+    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-header {
+      font-size: 1.1rem !important;
+      text-align: left !important; }
+    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body {
+      font-size: 1rem !important;
+      text-align: left !important;
+      padding-left: 1rem; }
+      .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body p {
+        margin-bottom: 0.5rem; }
 
 /*# sourceMappingURL=ezh.css.map */
