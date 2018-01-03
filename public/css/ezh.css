@@ -50,29 +50,32 @@
   font-size: 1.05rem;
   font-weight: 400;
   margin-top: 1.5rem; }
-.ez-draft .ez-draft-r .card-body {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
-  .ez-draft .ez-draft-r .card-body .form-control {
-    padding-bottom: 0.25rem; }
-.ez-draft .ez-draft-r .ez-draft-r-header {
-  font-family: Comfortaa;
-  font-size: 1.15rem; }
-  .ez-draft .ez-draft-r .ez-draft-r-header .ez-draft-r-header-text .ez-draft-r-header-text-during {
-    font-family: Marck Script;
-    font-size: 1.3rem; }
-  .ez-draft .ez-draft-r .ez-draft-r-header .ez-draft-r-header-icon {
-    justify-content: center; }
-.ez-draft .ez-draft-r .ez-draft-r-footer {
-  font-family: Comfortaa;
-  font-size: 0.75rem; }
-.ez-draft .ez-draft-r .ez-draft-r-btn {
-  color: white !important;
-  border-color: white !important;
-  font-size: 1.15rem; }
-  .ez-draft .ez-draft-r .ez-draft-r-btn i {
-    font-size: 2rem;
-    margin-right: 2rem; }
+.ez-draft .ez-draft-r {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+  .ez-draft .ez-draft-r .card-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; }
+    .ez-draft .ez-draft-r .card-body .form-control {
+      padding-bottom: 0.25rem; }
+  .ez-draft .ez-draft-r .ez-draft-r-header {
+    font-family: Comfortaa;
+    font-size: 1.15rem; }
+    .ez-draft .ez-draft-r .ez-draft-r-header .ez-draft-r-header-text .ez-draft-r-header-text-during {
+      font-family: Marck Script;
+      font-size: 1.3rem; }
+    .ez-draft .ez-draft-r .ez-draft-r-header .ez-draft-r-header-icon {
+      justify-content: center; }
+  .ez-draft .ez-draft-r .ez-draft-r-footer {
+    font-family: Comfortaa;
+    font-size: 0.75rem; }
+  .ez-draft .ez-draft-r .ez-draft-r-btn {
+    color: white !important;
+    border-color: white !important;
+    font-size: 1.15rem; }
+    .ez-draft .ez-draft-r .ez-draft-r-btn i {
+      font-size: 2rem;
+      margin-right: 2rem; }
 
 .ez-tovar {
   padding-top: 3rem;
@@ -110,7 +113,7 @@
       display: flex;
       justify-content: center; }
       .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-logo img {
-        max-width: 21rem !important; }
+        margin: auto; }
     .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-header {
       font-size: 1.1rem !important;
       text-align: center !important;
@@ -137,5 +140,21 @@
       padding-left: 1rem; }
       .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body p {
         margin-bottom: 0.5rem; }
+
+@media all and (max-width: 480px) {
+  .ez-draft-r-btn {
+    font-size: 0.75rem !important;
+    padding: 0.45rem; }
+    .ez-draft-r-btn i {
+      font-size: 1.25rem !important;
+      margin-right: 0.75rem !important; }
+
+  .ez-draft-r-header-text {
+    font-size: 0.8rem !important; }
+    .ez-draft-r-header-text .ez-draft-r-header-text-during {
+      font-size: 0.9rem !important; }
+
+  .ez-header-addresse-time {
+    font-size: 0.75rem; } }
 
 /*# sourceMappingURL=ezh.css.map */
