@@ -58,6 +58,8 @@
     padding-bottom: 1.5rem; }
     .ez-draft .ez-draft-r .card-body .form-control {
       padding-bottom: 0.25rem; }
+  .ez-draft .ez-draft-r .ez-draft-r-card-wrapper {
+    padding: 2rem 1rem !important; }
   .ez-draft .ez-draft-r .ez-draft-r-header {
     font-family: Comfortaa;
     font-size: 1.15rem; }
