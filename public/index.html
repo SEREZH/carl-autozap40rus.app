@@ -53,105 +53,102 @@
         <div class="container-fluid unique-color ez-draft">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 z-depth-1-half-XXX ez-draft-l">
-                        <div class="embed-responsive embed-responsive-3by4 ez-draft-l-embed">
-                            <video class="ez-draft-l-embed-video"
-                                src="img/video/VTEA.mp4" 
-                                widht="500" height="500" 
-                                controls autoplay loop muted>
-                            </video>
-                        </div>
-                        <div class="ez-draft-l-footer text-center white-text">
-                             <div>БЕЗУПРЕЧНОСТЬ В РАБОТЕ</div>
-                             <div>ВЫСОКОЕ КАЧЕСТВО ЗАПЧАСТЕЙ</div>
-                             <div>НИЗКИЕ ЦЕНЫ</div>
-                        </div>
+                    <div class="col-lg-6 ez-draft-l">
+                        <section id="FormDraftSection" class="form-dark ez-draft-r">
+                            <div class="embed-responsive embed-responsive-3by4 ez-draft-l-embed">
+                                <video class="ez-draft-l-embed-video"
+                                    src="img/video/VTEA.mp4" 
+                                    widht="500" height="500" 
+                                    controls autoplay loop muted>
+                                </video>
+                            </div>
+                            <div class="ez-draft-l-footer text-center white-text">
+                                 <div>БЕЗУПРЕЧНОСТЬ В РАБОТЕ</div>
+                                 <div>ВЫСОКОЕ КАЧЕСТВО ЗАПЧАСТЕЙ</div>
+                                 <div>ДОСТАВКА НА СЛЕДУЮЩИЙ ДЕНЬ</div>
+                                 <div>НИЗКИЕ ЦЕНЫ</div>
+                            </div>
+                        </section>
                     </div>
                     <div class="col-lg-6 align-middle ez-draft-r"> <!-- /Form -->
                         <!--Section: Form Draft-->
-                        <section id="FormDraft222222" class="form-dark ez-draft-r">
+                        <section id="FormDraftSection" class="form-dark ez-draft-r">
                             <!--Form without header-->
                             <!-- <form id="FormDraft" method="get" action=""> -->
                             <!-- <form id ="FormDraft" name="FormDraft" action="mail.php" method="POST">     -->
                             <form id ="FormDraft" name="FormDraft" action="" method="POST">    
-                            
-                            <!-- <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table7.jpg');"> -->
-                            <div class="card card-image" style="background-image: url('img/backgr/zapch-blue_print_products.png');">
-                                <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4 ez-draft-r-card-wrapper">
-                                    <!--Header-->
-                                    <div class="ez-draft-r-header">
-                                        <div class="ez-draft-r-header-text text-center">
-                                            <div class="">ПОЛУЧИТЬ ИНФОРМАЦИЮ</div>
-                                            <div class="">О НАЛИЧИИ И СТОИМОСТИ</div>
-                                            <div class="ez-draft-r-header-text-during">В ТЕЧЕНИИ 15 МИНУТ</div>
+                                <div class="card card-image" style="background-image: url('img/backgr/zapch-blue_print_products.png');">
+                                    <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4 ez-draft-r-card-wrapper">
+                                        <!--Header-->
+                                        <div class="ez-draft-r-header">
+                                            <div class="text-center ez-draft-r-header-text">
+                                                <div class="">ПОЛУЧИТЬ ИНФОРМАЦИЮ</div>
+                                                <div class="">О НАЛИЧИИ И СТОИМОСТИ</div>
+                                                <div class="ez-draft-r-header-text-during">В ТЕЧЕНИИ 15 МИНУТ</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <!--Body-->
-                                    <div class="md-form ez-draft-r-form ">
-                                        <i class="fa fa-user prefix white-text"></i>
-                                        <input type="text" 
-                                            id="FormDraftUserName" 
-                                            class="form-control white-text" 
-                                            required
-                                            pattern="[A-Za-z]{3}"
+                                        <!--Body-->
+                                        <div class="md-form ez-draft-r-form ">
+                                            <i class="fa fa-user prefix white-text"></i>
+                                            <input type="text" 
+                                                id="FormDraftUserName" 
+                                                name="FormDraftUserName" 
+                                                class="form-control white-text ez-form-control ez-tooltip-js" 
+                                                data-toggle="tooltip" 
+                                                onblur="validateFormDraft(this, event)"
+                                                >
+                                            <label for="FormDraftUserName">Ваше имя:</label>
+                                        </div>
+                                        <div class="md-form pb-3">
+                                            <i class="fa fa-mobile prefix white-text"></i>
+                                            <input type="text" 
+                                                id="FormDraftContactPhone" 
+                                                name="FormDraftContactPhone" 
+                                                class="form-control white-text  ez-form-control ez-tooltip-js" 
+                                                data-toggle="tooltip" 
+                                                onblur="validateFormDraft(this, event)" 
                                             >
-                                        <label for="FormDraftUserName">Ваше имя:</label>
-                                        <div id="FormDraftUserNameStatus" class="ez-form-draft-status"></div>
-                                    </div>
-
-                                    <div class="md-form pb-3">
-                                        <i class="fa fa-mobile prefix white-text"></i>
-                                        <input type="tel" 
-                                            id="FormDraftContactPhone" 
-                                            class="form-control white-text" required
-                                            placeholder="(___) ___ __ __"
-                                        >
-                                        <label for="FormDraftContactPhone">Ваш телефон:</label>
-                                        <div id="FormDraftContactPhoneStatus" class="ez-form-draft-status"></div>
-                                        <!-- 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="checkbox6">
-                                            <label for="checkbox6" class="white-text">Accept the<a href="#" class="green-text font-bold"> Terms and Conditions</a></label>
+                                            <label for="FormDraftContactPhone">Ваш телефон:</label>
+                                            <!-- 
+                                            <div class="form-group">
+                                                <input type="checkbox" id="checkbox6">
+                                                <label for="checkbox6" class="white-text">Accept the<a href="#" class="green-text font-bold"> Terms and Conditions</a></label>
+                                            </div>
+                                             -->
                                         </div>
-                                         -->
-                                    </div>
+                                        <!--Grid row-->
+                                        <div class="row d-flex align-items-center mb-4">
+                                            <!--Grid column-->
+                                            <div class="text-center mb-3 col-md-12">
+                                                <!-- <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Sign in</button> -->
+                                                <!-- <button type="submit" class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn">
+                                                    <i class="fa fa-arrow-circle-right animated slideInRight infinite" aria-hidden="true"></i>
+                                                    Экспресс подбор
+                                                </button> -->
 
-                                    <!--Grid row-->
-                                    <div class="row d-flex align-items-center mb-4">
+
+                                                <a class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn"
+                                                    onclick="validateFormDraft()">
+                                                    Экспресс подбор
+                                                </a>
+
+                                            </div>
+                                            <!--Grid column-->
+                                        </div>
+                                        <!--Grid row-->
                                         <!--Grid column-->
-                                        <div class="text-center mb-3 col-md-12">
-                                            <!-- <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Sign in</button> -->
-                                            <!-- <button type="submit" class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn">
-                                                <i class="fa fa-arrow-circle-right animated slideInRight infinite" aria-hidden="true"></i>
-                                                Экспресс подбор
-                                            </button> -->
-
-
-                                            <a class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn"
-                                                onclick="validateFormDraft()">
-                                                Экспресс подбор
-                                            </a>
-
+                                        <div class="col-md-12">
+                                            <hr class="hr-light mb-3 mt-4">
+                                            <div class="ez-draft-r-footer text-center white-text">
+                                                Подберем и предложим лучший вариант
+                                            </div>
                                         </div>
                                         <!--Grid column-->
-                                    </div>
-                                    <!--Grid row-->
-                                    <!--Grid column-->
-                                    <div class="col-md-12">
-                                        <!-- <p class="font-small white-text d-flex justify-content-end">Have an account? <a href="#" class="green-text ml-1 font-bold"> Log in</a></p> -->
-                                        <hr class="hr-light mb-3 mt-4">
-                                        <div class="ez-draft-r-footer text-center white-text">
-                                            Подберем и предложим лучший вариант
-                                        </div>
-                                    </div>
-                                    <!--Grid column-->
 
+                                    </div>
                                 </div>
-                            </div>
-
                             </form>
                             <!--/Form without header-->
-
                         </section>
                         <!--Section: Form Draft-->
                     </div>  <!-- \Form -->
@@ -324,20 +321,31 @@
     </a>
 </div>
                                             
-
+<!-- !!!!!!!!!!!!!!
+<div class="example">
+            {% include example10t.html %}
+</div>
+ -->
 
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/tooltip.min.js"></script>
+    <!-- 
+    <script type="text/javascript" src="lib/popper.js/dist/udm/popper.min.js"></script>
+    <script type="text/javascript" src="lib/tooltip.js/dist/udm/tooltip.min.js"></script>
+     -->
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.js"></script>
     <!-- EZH JS LIB -->
-    <script type="text/javascript" src="dist/jquery.validate.js"></script>
+    <!-- <script type="text/javascript" src="dist/jquery.validate.js"></script> -->
     <!-- EZH JS -->
     <script type="text/javascript" src="js/app.js"></script>
 

@@ -1,6 +1,37 @@
+/* input:required:invalid {
+    border:1px solid red;
+} */
+
+.ez-tooltip-js {}
+.ez-tooltip-js-valid-yes {}
+.ez-tooltip-js-valid-no {}
+.ez-form-control {
+    padding-top: 1rem!important;
+}
+
+.tooltip.bs-tooltip-top {
+    top: 1.5rem!important;
+}
+
+.tooltip.bs-tooltip-top .arrow {
+    
+}
+.bs-tooltip-top .arrow::before {
+    border-top-color: #ff4444!important;    
+}
+.tooltip-inner {
+    font-family: Comfortaa;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: white!important;
+    background-color: #ff4444!important;
+    padding: 0.3rem 0.75rem!important;
+}
+
+
 .ez-form-draft-status {
     padding-left: 3rem;
-    color: #ff0000;
+    color: #ff4444;
     margin-top: -1rem;
     font-family: Open Sans;
     font-size: 0.85rem;
