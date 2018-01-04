@@ -41,15 +41,28 @@
       .ez-draft .ez-header-addresse .ez-header-addresse-time i {
         font-size: 1.05rem; }
 
-.ez-draft .ez-draft-l .ez-draft-l-embed {
-  border-radius: 0.3rem; }
-  .ez-draft .ez-draft-l .ez-draft-l-embed .ez-draft-l-embed-video {
-    margin-top: 1rem; }
-.ez-draft .ez-draft-l .ez-draft-l-footer {
-  font-family: Comfortaa;
-  font-size: 1.05rem;
-  font-weight: 400;
-  margin-top: 1.5rem; }
+.ez-draft .ez-draft-l {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+  .ez-draft .ez-draft-l .card-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; }
+    .ez-draft .ez-draft-l .card-body .form-control {
+      padding-bottom: 0.25rem; }
+  .ez-draft .ez-draft-l .ez-draft-l-card {
+    padding-bottom: 0rem; }
+  .ez-draft .ez-draft-l .ez-draft-l-card-wrapper {
+    background-color: rgba(62, 69, 81, 0.35) !important;
+    padding: 2rem 1rem !important; }
+  .ez-draft .ez-draft-l .ez-draft-l-embed {
+    border-radius: 0.3rem; }
+  .ez-draft .ez-draft-l .ez-draft-l-footer {
+    font-family: Comfortaa;
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    text-shadow: 1px 1px black; }
 .ez-draft .ez-draft-r {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem; }
@@ -65,7 +78,8 @@
     font-family: Comfortaa;
     font-size: 1.15rem; }
     .ez-draft .ez-draft-r .ez-draft-r-header .ez-draft-r-header-text {
-      padding-bottom: 0.75rem; }
+      padding-bottom: 0.75rem;
+      text-shadow: 1px 1px black; }
       .ez-draft .ez-draft-r .ez-draft-r-header .ez-draft-r-header-text .ez-draft-r-header-text-during {
         font-family: Marck Script;
         font-size: 1.3rem; }
@@ -83,7 +97,7 @@
       margin-right: 2rem; }
 
 .ez-tovar {
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-bottom: 1rem; }
   .ez-tovar .ez-tovar-card .ez-tovar-card-header {
     font-family: Comfortaa;
