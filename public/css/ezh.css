@@ -52,14 +52,14 @@
   .ez-draft .ez-draft-l .ez-draft-l-card {
     padding-bottom: 0rem; }
   .ez-draft .ez-draft-l .ez-draft-l-card-wrapper {
-    background-color: rgba(62, 69, 81, 0.35) !important;
-    padding: 2rem 1rem !important; }
+    background-color: rgba(192, 14, 170, 0.9) !important;
+    padding: 0 !important; }
   .ez-draft .ez-draft-l .ez-draft-l-embed {
     border-radius: 0.3rem; }
   .ez-draft .ez-draft-l .ez-draft-l-footer {
     font-family: Comfortaa;
     font-size: 1.15rem;
-    font-weight: 400;
+    font-weight: 700;
     margin-top: 3rem;
     padding-bottom: 3rem;
     text-shadow: 1px 1px black; }
@@ -72,7 +72,7 @@
     .ez-draft .ez-draft-r .card-body .form-control {
       padding-bottom: 0.25rem; }
   .ez-draft .ez-draft-r .ez-draft-r-card-wrapper {
-    background-color: rgba(62, 69, 81, 0.35) !important;
+    background-color: rgba(192, 14, 170, 0.9) !important;
     padding: 2rem 1rem !important; }
   .ez-draft .ez-draft-r .ez-draft-r-header {
     font-family: Comfortaa;
@@ -91,6 +91,7 @@
   .ez-draft .ez-draft-r .ez-draft-r-btn {
     color: white !important;
     border-color: white !important;
+    text-shadow: 1px 1px black;
     font-size: 1.15rem; }
     .ez-draft .ez-draft-r .ez-draft-r-btn i {
       font-size: 2rem;
@@ -103,7 +104,8 @@
     font-family: Comfortaa;
     font-weight: 400;
     font-size: 0.8rem;
-    padding: 0.3rem 0 0 0 !important; }
+    padding: 0.3rem 0 0 0 !important;
+    background-color: rgba(209, 63, 169, 0.75) !important; }
     .ez-tovar .ez-tovar-card .ez-tovar-card-header h2 {
       padding: 0.5rem 0 0 0 !important; }
     .ez-tovar .ez-tovar-card .ez-tovar-card-header p {
