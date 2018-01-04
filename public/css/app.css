@@ -49,6 +49,40 @@
   text-decoration: underline;
   text-shadow: 3px 3px 3px black; }
 
+.ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row {
+  text-align: center;
+  color: #fff; }
+  .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 2rem; }
+
+.circle {
+  width: 100px;
+  margin: 6px 6px 20px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  line-height: 1.2; }
+
+.circle canvas {
+  vertical-align: top; }
+
+.circle strong {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px; }
+
+.circle span {
+  display: block;
+  color: #aaa;
+  margin-top: 12px; }
+
 .intro-2 {
   background: url("http://mdbootstrap.com/img/Photos/Others/images/91.jpg") no-repeat center center;
   background-size: cover; }
