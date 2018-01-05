@@ -83,6 +83,7 @@
                             <!--Form without header-->
                             <!-- <form id="FormDraft" method="get" action=""> -->
                             <!-- <form id ="FormDraft" name="FormDraft" action="mail.php" method="POST">     -->
+                            <!-- <form id ="FormDraft" name="FormDraft" action="php/sendz.php" method="POST">     -->
                             <form id ="FormDraft" name="FormDraft" action="" method="POST">    
                                 <!-- <div class="card card-image" style="background-image: url('img/backgr/zapch-blue_print_products.png');"> -->
                                 <div class="card card-image" style="background-image: url('img/backgr/zapch-autoparts.png');">
@@ -130,7 +131,7 @@
                                             <!--Grid column-->
                                             <div class="text-center mb-3 col-md-12">
                                                 <!-- <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Sign in</button> -->
-                                                <button type="submit" class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn" onclick="validateFormDraft(this, event)">
+                                                <button id='ez-button-sendz' type="button" class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn" onclick="validateFormDraft(this, event)">
                                                     <i class="fa fa-arrow-circle-right animated slideInRight infinite" aria-hidden="true"></i>
                                                     <span>Экспресс подбор запчастей</span>
                                                 </button>
@@ -151,6 +152,8 @@
                                             </div>
                                         </div>
                                         <!--Grid column-->
+                                        <br>
+                                        <div id="FormDraftResult"><div>
 
                                     </div>
                                 </div>

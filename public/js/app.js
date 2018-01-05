@@ -4,7 +4,71 @@ jQuery( document ).ready(function() {
 	new WOW().init();
  	
  	jQuery("#FormDraftContactPhone").mask("+7(999)999-99-99");
+
+
+ 	jQuery("#ez-button-sendz").click(
+		function(){
+			console.log('#ez-button-sendz click BEGIN');
+			sendAjaxFormDraft('FormDraftResult', 'FormDraft', 'sendz.php');
+			return false; 
+		}
+	);
+
+/*
+  	jQuery('#ez-button-sendz').on('click', function(event) {
+	  	console.log('#ez-button-sendz click BEGIN');
+	    event.preventDefault();
+	    jQuery.ajax({
+	      	url: 'php/sendz.php',
+	      	type: 'POST',
+	      	dataType: 'json',
+	      	data: jQuery('#FormDraft').serialize(),
+	      	success: function(response) {
+	        	console.log('response: ' + response);
+	    	},
+	    	error: function(jqXHR, textStatus, errorThrown) {
+	    		console.log('Возникла ошибка: ' + jqXHR.responseCode);
+	    		console.log('Возникла ошибка: ' + textStatus);
+	    	}
+    	}).done(function() {
+          	console.log('#ez-button-sendz click DONE');
+	        setTimeout(function() {
+	        /////   jQuery.fancybox.close();
+	        }, 2000);
+    	});
+	});
+*/
 });
+
+function sendAjaxFormDraft(result_form, ajax_form, url) {
+	console.log('AJAX - sendAjaxFormDraft BEGIN');
+	console.log('AJAX - sendAjaxFormDraft::result_form='+result_form);
+	console.log('AJAX - sendAjaxFormDraft::ajax_form='+ajax_form);
+	console.log('AJAX - sendAjaxFormDraft::url='+url);
+	var v_form = jQuery("#"+ajax_form).serialize();
+	console.log('AJAX - sendAjaxFormDraft::v_form='+v_form);
+
+
+    jQuery.ajax({
+        url:     url, //url страницы (action_ajax_form.php)
+        type:     "POST", //метод отправки
+        dataType: "html", //формат данных
+        data: jQuery("#"+ajax_form).serialize(),  // Сериализуем объект
+        success: function(response) { //Данные отправлены успешно
+        	result = jQuery.parseJSON(response);
+        	jQuery('#result_form').html('Имя: '+result.name+'<br>Телефон: '+result.phonenumber);
+    	},
+    	error: function(response) { // Данные не отправлены
+            jQuery('#result_form').html('Ошибка. Данные не отправлены.');
+    	}
+ 	}).done(function() {
+          	console.log('AJAX - sendAjaxFormDraft DONE');
+	        /////setTimeout(function() {
+	        /////   jQuery.fancybox.close();
+	        /////}, 2000);
+    });
+ 	console.log('AJAX - sendAjaxFormDraft END');
+}
 
 
 function validateFormDraft(obj, e) {
@@ -14,6 +78,7 @@ function validateFormDraft(obj, e) {
 	//Object.getOwnPropertyNames(ev).forEach(function(val, idx, array) {console.log(val + ' -> ' + ev[val]);});
 
 	if (typeof e !== 'undefined') {
+/*		
 		console.log('validateFormDraft: e.type='+e.type);
 		console.log('validateFormDraft: e.target='+e.target);
 		console.log('validateFormDraft: e.target.form.id='+e.target.form.id);
@@ -32,7 +97,7 @@ function validateFormDraft(obj, e) {
 		console.log('validateFormDraft: obj.value='+obj.value);
 		console.log('validateFormDraft: obj.value.length='+obj.value.length);
 		console.log('validateFormDraft: e.target.value='+e.target.value);
-		console.log('validateFormDraft: e.target.value.length='+e.target.value.length);
+		console.log('validateFormDraft: e.target.value.length='+e.target.value.length);*/
 	}	
 
 	jQuery(obj).removeClass('ez-tooltip-js-valid-no');
@@ -230,3 +295,28 @@ jQuery('#circle').circleProgress({
     // "data-fill" (and other object options) should be in valid JSON format
   });*/
 })(jQuery);
+
+
+/*
+jQuery(function(){
+
+  jQuery('#ez-button-sendz').on('click', function(event) {
+  	console.log('#ez-button-sendz click BEGIN');
+
+    event.preventDefault();
+ 
+    jQuery.ajax({
+      url: 'php/sendz.php',
+      type: 'POST',
+      dataType: 'json',
+      data: jQuery('#FormDraft').serialize(),
+      success: function(response) {
+        console.log('response: ' + response);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        
+      }
+    });
+        
+  });
+});*/
