@@ -1,0 +1,29 @@
+.ez-work-schema {
+    .ez-work-schema-cont {        
+        .ez-work-schema-row {
+            color: white;
+            font-family: Comfortaa;
+            font-size: 0.7rem;
+            font-weight: 400;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 1.5rem;
+            .ez-work-schema-row-header {
+                text-transform: uppercase;
+                text-align: center;
+                h1 {
+                    font-size: 1.7rem;
+                }
+            }
+            min-width: 100%;
+            .ez-work-schema-col {
+                .ez-work-schema-col-icon {
+                    font-size: 3.5rem;
+                }
+                .ez-work-schema-col-header {
+                    
+                }
+            }
+        }
+    }
+}    

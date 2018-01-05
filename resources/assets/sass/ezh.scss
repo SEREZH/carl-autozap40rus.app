@@ -1,5 +1,8 @@
-.ez-bcol-blue-main {
+.ez-bcol-main-blue {
     background-color: rgba(6, 71, 128, 1)!important;
+}
+.ez-bcol-main-blue-light {
+    background-color: rgba(63,114,155, 1)!important;
 }
 
 .ez-body {
@@ -120,13 +123,14 @@
         }
 
         .ez-draft-r-btn {
+            display: inline-flex;
             color: white !important;
             border-color: white!important;
             text-shadow: 1px 1px black;
             font-size: 1.15rem;
-            i {
+            i, svg {
                 font-size: 2rem;
-                margin-right: 2rem;            
+                margin-right: 2.5rem;            
             }
         } 
     }
@@ -167,6 +171,7 @@
                     .ez-footer-info-logo {
                         display: flex;
                         justify-content: center;
+                        padding: 0 5rem;
                         img {
                             margin: auto;
                         }
@@ -177,7 +182,8 @@
                         margin-bottom: 1rem !important;
                     }
                     .ez-footer-info-dostavka {
-                        padding-left: 2rem;
+                        padding-left: 6rem;
+                        
                         .ez-footer-info-dostavka-header {
                             font-size: 1.1rem!important;
                             text-align: left!important;   
@@ -195,9 +201,14 @@
                     justify-content: center!important;
                 }
                 .ez-footer-contact {
+                    -webkit-transition: all 1s ease-out;
+                    -moz-transition: all 1s ease-out;
+                    -ms-transition: all 1s ease-out;
+                    transition: all 1s ease-out;
                     .ez-footer-contact-header {
                         font-size: 1.1rem!important;
                         text-align: left!important;   
+                        padding-left: 3rem;
                     }
                     .ez-footer-contact-body {
                         font-size: 1rem!important;
@@ -205,6 +216,27 @@
                         padding-left: 1rem;
                         p {
                             margin-bottom: 0.5rem;
+                        }
+                        .ez-footer-contact-addr a {
+                            &:hover {
+                                color: goldenrod!important;
+                                font-weight: 900;
+                                font-size: 1.25rem;
+                            }
+                        }
+                        .ez-footer-contact-phone  a {
+                            &:hover {
+                                color: aquamarine!important;
+                                font-weight: 900;
+                                font-size: 1.25rem;
+                            }
+                        }
+                        .ez-footer-contact-mail  a {
+                            &:hover {
+                                color: pink!important;
+                                font-weight: 900;
+                                font-size: 1.25rem;
+                            }    
                         }
                     }
                 }

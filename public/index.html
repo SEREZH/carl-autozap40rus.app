@@ -9,7 +9,8 @@
     <!-- Font Awesome -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <!-- <link rel="stylesheet" href="font/fontawesome502/web-fonts-with-css/css/fontawesome-all.min.css"> -->
-    <link rel="stylesheet" href="font/line-awesome/css/line-awesome-font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="font/line-awesome/css/line-awesome-font-awesome.min.css"> -->
+    <script defer src="font/fontawesome502/svg-with-js/js/fontawesome-all.js"></script>
         
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,14 +35,14 @@
                         <h4 class="ez-header-name-subtitle">интернет-магазин</h4>
                     </div>
                     <div class="col-lg-5 animated bounceInRight ez-header-addresse">
-                        <p class="ez-header-addresse-post"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                        <p class="ez-header-addresse-post"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;
                             <span>г. Обнинск, Киевское ш., 49а, пав. 39</span>
                         </p>
-                        <p class="ez-header-addresse-phone"><i class="fa fa-phone"></i>&nbsp; 
+                        <p class="ez-header-addresse-phone"><i class="fas fa-phone"></i>&nbsp; 
                             <span class="ez-header-addresse-phone">+7 (920) 899<img>-00<img>-39,&nbsp;</span> 
                             <span class="ez-header-addresse-phone">+7 (929) 032<img>-63<img>-43</span>
                         </p>
-                        <p class="ez-header-addresse-time"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;
+                        <p class="ez-header-addresse-time"><i class="far fa-clock"></i>&nbsp;&nbsp;
                             <span>ПН-СБ: 10:00 - 17:00 ВС: ВЫХОДНОЙ</span>
                         </p>
                     </div>
@@ -68,8 +69,8 @@
                                         <div class="ez-draft-l-footer text-center white-text">
                                              <div>БЕЗУПРЕЧНОСТЬ В РАБОТЕ</div>
                                              <div>ВЫСОКОЕ КАЧЕСТВО ЗАПЧАСТЕЙ</div>
-                                             <div>ДОСТАВКА НА СЛЕДУЮЩИЙ ДЕНЬ</div>
                                              <div>ПРИЕМЛЕМЫЕ ЦЕНЫ</div>
+                                             <div>ДОСТАВКА НА СЛЕДУЮЩИЙ ДЕНЬ</div>
                                         </div>
                                     </div>
                                 </div>
@@ -97,7 +98,7 @@
                                         </div>
                                         <!--Body-->
                                         <div class="md-form ez-draft-r-form ">
-                                            <i class="fa fa-user prefix white-text"></i>
+                                            <i class="far fa-user prefix white-text"></i>
                                             <input type="text" 
                                                 id="FormDraftUserName" 
                                                 name="FormDraftUserName" 
@@ -108,7 +109,7 @@
                                             <label for="FormDraftUserName">Ваше имя</label>
                                         </div>
                                         <div class="md-form pb-3">
-                                            <i class="fa fa-mobile prefix white-text"></i>
+                                            <i class="fas fa-phone prefix white-text"></i>
                                             <input type="text" 
                                                 id="FormDraftContactPhone" 
                                                 name="FormDraftContactPhone" 
@@ -131,7 +132,7 @@
                                                 <!-- <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Sign in</button> -->
                                                 <button type="submit" class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn" onclick="validateFormDraft(this, event)">
                                                     <i class="fa fa-arrow-circle-right animated slideInRight infinite" aria-hidden="true"></i>
-                                                    Экспресс подбор запчастей
+                                                    <span>Экспресс подбор запчастей</span>
                                                 </button>
                                                 <!-- <a class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn"
                                                     onclick="validateFormDraft()">
@@ -163,6 +164,71 @@
         </div>   
     </section>
     <!-- </header> -->
+    <!-- --- work schema --- -->
+    <section class="ez-work-schema ez-bcol-main-blue-light">
+        <div class="container ez-work-schema-cont">
+<!--          <div class="row ez-work-schema-row">
+    <div class="text-center ez-work-schema-row-header">
+        <h1>порядок выполнения экспресс-заказа</h1>
+    </div>
+</div> -->
+         <div class="row ez-work-schema-row">
+             <div class="col-lg-2 wow fadeInUp ez-work-schema-col">
+                 <div class="ez-work-schema-col-icon"><i class="far fa-address-card"></i></div>
+                 <div class="ez-work-schema-col-header"><div>Заполняем<br>карточку экспресс-заказа</div></div>
+             </div>
+             <div class="col-lg-2 wow fadeInUp ez-work-schema-col">
+                 <div class="ez-work-schema-col-icon"><i class="fa fa-arrow-circle-right"></i></div>
+                 <div class="ez-work-schema-col-header"><div>Отправляем<br>карточку экспресс-заказа оператору</div></div>
+             </div>
+             <div class="col-lg-2 wow fadeInUp ez-work-schema-col">
+                 <div class="ez-work-schema-col-icon"><i class="far fa-clock"></i></div>
+                 <div class="ez-work-schema-col-header"><div>Ожидаем<br>обратный звонок не&nbsp;более&nbsp;15&nbsp;минут</div></div>
+             </div>
+             <div class="col-lg-2 wow fadeInUp ez-work-schema-col">
+                 <div class="ez-work-schema-col-icon"><i class="fas fa-phone"></i></div>
+                 <div class="ez-work-schema-col-header"><div>Уточняем<br>с оператором детали&nbsp;заказа</div></div>
+             </div>
+
+             <div class="col-lg-2 wow fadeInUp ez-work-schema-col">
+                 <!-- <div class="ez-work-schema-col-icon"><i class="fas fa-rocket"></i></div> -->
+                 <!-- <div class="ez-work-schema-col-icon"><i class="fas fa-plane"></i></div> -->
+                 <div class="ez-work-schema-col-icon"><i class="fas fa-fighter-jet"></i></div>
+                 <div class="ez-work-schema-col-header"><div>Доставляем<br>в&nbsp;кратчайшие&nbsp;сроки заказ в магазин</div></div>
+             </div>
+             <div class="col-lg-2 wow fadeInUp ez-work-schema-col">
+                 <div class="ez-work-schema-col-icon"><i class="fas fa-gift"></i></div>
+                 <div class="ez-work-schema-col-header"><div>Сообщаем<br>о прибытии заказа в&nbsp;магазин</div></div>
+             </div>
+
+
+         </div>
+                <!-- <div class="ez-work-schema-cols">
+                    <div class="col-lg-3 ez-work-schema-col">
+                        <div class="ez-work-schema-col-header">
+                            <div><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ez-work-schema-col">
+                        <div class="ez-work-schema-col-header">
+                            <div><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ez-work-schema-col">
+                        <div class="ez-work-schema-col-header">
+                            <div><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ez-work-schema-col">
+                        <div class="ez-work-schema-col-header">
+                            <div><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>    
+    <!-- --- tovar --- -->
     <section>
         <div class="container-fluid unique-color ez-tovar">
             <div class="container">
@@ -259,31 +325,33 @@
             </div>
         </div>            
     </section>
-
+    
     <!-- --- circle-progress --- -->
-    <section class="ez-circle-progress">
+    <section class="ez-circle-progress ez-bcol-main-blue-light">
         <div class="container ez-circle-progress-cont">
             <div class="row circles ez-circle-progress-row">
-                <div class="col-lg-3 ez-circle-progress-col">
-                    <div class="first circle">
-                      <span>no <br> animation</span>
+                <div class="col-lg-3 wow bounceInUp ez-circle-progress-col">
+                    <div class="first circle ez-circle-progress-col-header">
+                        <strong></strong>  
+                        <span>надежных<br>поставщиков</span>
                     </div>
                 </div>
-                <div class="col-lg-3 ez-circle-progress-col">
-                    <div class="second circle">
-                      <strong>100%</strong>
-                      <span>animation <br> progress</span>
+                <div class="col-lg-3 wow bounceInUp ez-circle-progress-col">
+                    <div class="second circle ez-circle-progress-col-header">
+                      <strong></strong>
+                      <span>выполненных<br>заказов</span>
                     </div>
                 </div>
-                <div class="col-lg-3 ez-circle-progress-col">
-                    <div class="third circle">
+                <div class="col-lg-3 wow bounceInUp ez-circle-progress-col">
+                    <div class="third circle ez-circle-progress-col-header">
                       <strong></strong>  
-                      <div>value <br> progress</div>
+                      <span>заказов доставленных<br>на следующий день</span>
                     </div>
                 </div>
-                <div class="col-lg-3 ez-circle-progress-col">
-                    <div class="forth circle">
-                      <div>custom angle, <br> value update</div>
+                <div class="col-lg-3 wow bounceInUp ez-circle-progress-col">
+                    <div class="forth circle ez-circle-progress-col-header">
+                      <strong></strong>  
+                      <span>custom angle, <br> value update</span>
                     </div>
                 </div>
 <!--                 <div class="col-lg-3 ez-circle-progress-col">
@@ -309,9 +377,18 @@
                     <div class="offset-lg-1"></div>
                     <!--First column-->
                     <div class="col-lg-3 ez-footer-info">
-                        <div class="wow bounceInLeft ez-footer-info-logo" data-wow-delay="0.1s">
+                        <!-- <div class="wow bounceInLeft ez-footer-info-logo" data-wow-delay="0.1s">
                             <img src="img/logo/logoСT1A.png" class="img-fluid ez-footer-info-img" alt="CARLEON40">
+                        </div> -->
+
+                        <div class="view wow bounceInLeft ez-footer-info-logo  data-wow-delay="0.1s">
+                            <img src="img/logo/logoСT1A.png" class="img-fluid" alt="CARLEON40">
+                            <div class="mask flex-center waves-effect waves-light">
+                                <!-- <p class="white-text">strong overlay</p> -->
+                            </div>
                         </div>
+                
+
                         <h6 class="h5-responsive title mb-4 font-bold ez-footer-info-header">
                             Интернет-магазин автозапчастей
                         </h6>
@@ -337,13 +414,13 @@
                     <hr class="clearfix w-100 d-lg-none">
                     <div class="col-lg-3 ez-footer-contact">
                         <!-- <h5 class="title mb-4 font-bold">Подписывайтесь</h5> -->
-                            <h5 class="title mb-4 font-bold ez-footer-contact-header">Наш адрес:</h5>
+                            <h5 class="title mb-4 font-bold ez-footer-contact-header">Наши контакты:</h5>
                             <!--Info-->
                             <div class="ez-footer-contact-body">
-                                <p><i class="fa fa-home mr-3"></i>г. Обнинск, Киевское ш., 49а, пав. 39</p>
-                                <p><i class="fa fa-phone mr-3"></i>+7 (920) 899<img>-00<img>-39</p>
-                                <p><i class="fa fa-phone mr-3"></i>+7 (929) 032<img>-63<img>-43</p>
-                                <p><i class="fa fa-envelope mr-3"></i> carleon40@mail.ru</p>
+                                <p class="ez-footer-contact-addr"><i class="fas fa-home mr-3"></i><span>г. Обнинск, Киевское ш., 49а, пав. 39</span></p>
+                                <p class="ez-footer-contact-phone"><i class="fas fa-phone mr-3"></i><a href="tel:+79208990039"><span>+7 (920) 899<img>-00<img>-39</span></a></p>
+                                <p class="ez-footer-contact-phone"><i class="fas fa-phone mr-3"></i><a href="tel:+79290326343"><span>+7 (929) 032<img>-63<img>-43</span></a></p>
+                                <p class="ez-footer-contact-mail"><i class="far fa-envelope mr-3"></i> <a href="mailto:carleon40@mail.ru"><span>carleon40@mail.ru</span></a></p>
                             </div>
                     </div>
                     <!--/.Second column-->
@@ -364,9 +441,9 @@
 
 
 <!-- --------------------------------------- -->
-<div class="fixed-action-btn smooth-scroll" style="bottom: 45px; right: 24px;">
+<div class="fixed-action-btn smooth-scroll ez-button-up" style="bottom: 45px; right: 24px;">
     <a href="#top-section" class="btn-floating btn-large unique-color z-depth-1-half">
-        <i class="fa fa-arrow-up"></i>
+        <i class="fas fa-arrow-up"></i>
     </a>
 </div>
                                             

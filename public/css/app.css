@@ -49,39 +49,90 @@
   text-decoration: underline;
   text-shadow: 3px 3px 3px black; }
 
+.ez-work-schema .ez-work-schema-cont .ez-work-schema-row {
+  color: white;
+  font-family: Comfortaa;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  min-width: 100%; }
+  .ez-work-schema .ez-work-schema-cont .ez-work-schema-row .ez-work-schema-row-header {
+    text-transform: uppercase;
+    text-align: center; }
+    .ez-work-schema .ez-work-schema-cont .ez-work-schema-row .ez-work-schema-row-header h1 {
+      font-size: 1.7rem; }
+  .ez-work-schema .ez-work-schema-cont .ez-work-schema-row .ez-work-schema-col .ez-work-schema-col-icon {
+    font-size: 3.5rem; }
+
 .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row {
   text-align: center;
   color: #fff; }
   .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col {
-    font-size: 1rem;
-    font-weight: 300;
+    font-family: Comfortaa;
+    font-size: 0.7rem;
+    font-weight: 400;
     text-align: center;
-    padding: 2rem; }
+    text-transform: uppercase;
+    padding: 1.5rem; }
+    .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col .circle {
+      width: 100%;
+      margin: 6px 6px 20px;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      line-height: 1.2; }
+      .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col .circle .ez-circle-progress-col-header {
+        font-weight: 700;
+        line-height: 1.7; }
+      .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col .circle strong {
+        position: absolute;
+        top: 1.7rem;
+        left: 0;
+        width: 100%;
+        font-size: 2rem !important;
+        text-align: center;
+        line-height: 3rem; }
+      .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col .circle canvas {
+        vertical-align: top; }
+      .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col .circle span {
+        display: block;
+        color: white;
+        margin-top: 12px;
+        line-height: 1.25rem; }
 
-.circle {
-  width: 100px;
-  margin: 6px 6px 20px;
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  line-height: 1.2; }
-
+/* .circle {
+    width: 100px;
+    margin: 6px 6px 20px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    line-height: 1.2;
+}
 .circle canvas {
-  vertical-align: top; }
-
-.circle strong {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  line-height: 40px;
-  font-size: 30px; }
-
-.circle span {
-  display: block;
-  color: #aaa;
-  margin-top: 12px; }
+    vertical-align: top;
+}
+ */
+/* .circle strong {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+} */
+/* .circle span {
+        display: block;
+        color: white;
+        margin-top: 12px;
+    }
+     */
+.ez-button-up i, .ez-button-up svg {
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 1rem; }
 
 .intro-2 {
   background: url("http://mdbootstrap.com/img/Photos/Others/images/91.jpg") no-repeat center center;

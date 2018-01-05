@@ -153,9 +153,11 @@ jQuery('#circle').circleProgress({
    * By the way - you may specify more than 2 colors for the gradient
    */
   $('.first.circle').circleProgress({
-    value: 0.35,
-    animation: false,
+    value: 0.12,
+    //animation: false,
     fill: {gradient: ['#ff1e41', '#ff5f43']}
+  }).on('circle-animation-progress', function(event, progress, stepValue) {
+    $(this).find('strong').text(Math.round(100 * (stepValue)));
   });
 
   /*
@@ -165,9 +167,10 @@ jQuery('#circle').circleProgress({
    * - listening to `circle-animation-progress` event and display the animation progress: from 0 to 100%
    */
   $('.second.circle').circleProgress({
-    value: 0.6
-  }).on('circle-animation-progress', function(event, progress) {
-    $(this).find('strong').html(Math.round(100 * progress) + '<i>%</i>');
+    	value: 0.627
+  }).on('circle-animation-progress', function(event, progress, stepValue) {
+    	/*$(this).find('strong').html(Math.round(100 * stepValue) + '<i>%</i>');*/
+    	$(this).find('strong').html(Math.round(1000 * (stepValue + 0.5)));
   });
 
   /*
@@ -178,9 +181,10 @@ jQuery('#circle').circleProgress({
    */
   $('.third.circle').circleProgress({
     value: 0.75,
-    fill: {gradient: [['#0681c4', .5], ['#4ac5f8', .5]], gradientAngle: Math.PI / 4}
+    fill: {gradient: [['#AD4CA6', .5], ['#C524B1', .5]], gradientAngle: Math.PI / 4}
   }).on('circle-animation-progress', function(event, progress, stepValue) {
-    $(this).find('strong').text(stepValue.toFixed(2).substr(1));
+    //$(this).find('strong').text(stepValue.toFixed(2).substr(1));
+    $(this).find('strong').html(Math.round(100 * stepValue) + '<i>%</i>');
   });
 
   /*
@@ -198,6 +202,8 @@ jQuery('#circle').circleProgress({
     value: 0.5,
     lineCap: 'round',
     fill: {color: '#ffa500'}
+  }).on('circle-animation-progress', function(event, progress, stepValue) {
+    $(this).find('strong').text(stepValue.toFixed(2).substr(1));
   });
 
   // Let's emulate dynamic value update
