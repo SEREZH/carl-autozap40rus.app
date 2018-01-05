@@ -84,7 +84,7 @@
                             <!-- <form id="FormDraft" method="get" action=""> -->
                             <!-- <form id ="FormDraft" name="FormDraft" action="mail.php" method="POST">     -->
                             <!-- <form id ="FormDraft" name="FormDraft" action="php/sendz.php" method="POST">     -->
-                            <form id ="FormDraft" name="FormDraft" action="" method="POST">    
+                            <form id ="FormDraft" name="FormDraft" action="js/sendz.php" method="POST">    
                                 <!-- <div class="card card-image" style="background-image: url('img/backgr/zapch-blue_print_products.png');"> -->
                                 <div class="card card-image" style="background-image: url('img/backgr/zapch-autoparts.png');">
                                     <!-- <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4 ez-draft-r-card-wrapper"> -->
@@ -130,8 +130,12 @@
                                         <div class="row d-flex align-items-center mb-4">
                                             <!--Grid column-->
                                             <div class="text-center mb-3 col-md-12">
-                                                <!-- <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Sign in</button> -->
-                                                <button id='ez-button-sendz' type="button" class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn" onclick="validateFormDraft(this, event)">
+                                                <!-- <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Sign in</button> 
+                                                onclick="validateFormDraft(this, event)"
+                                                -->
+                                                <button id='ez-button-sendz' 
+                                                        type="submit" 
+                                                        class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn">
                                                     <i class="fa fa-arrow-circle-right animated slideInRight infinite" aria-hidden="true"></i>
                                                     <span>Экспресс подбор запчастей</span>
                                                 </button>
@@ -139,7 +143,6 @@
                                                     onclick="validateFormDraft()">
                                                     Экспресс подбор запчастей
                                                 </a> -->
-
                                             </div>
                                             <!--Grid column-->
                                         </div>
@@ -457,6 +460,7 @@
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
     <script type="text/javascript" src="js/circle-progress.min.js"></script>
+    <script type="text/javascript" src="js/jquery.form.min.js"></script>
 
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="js/popper.min.js"></script>
