@@ -132,11 +132,16 @@
                                         </div>
                                         <!-- --- form-autocomplete Марка автомобиля --- -->
                                         <div class="md-form ez-draft-r-form ez-car-autocompl-form">
+                                            <input  type="hidden" 
+                                                    id="ez-car-autocompl-mark-hidden" 
+                                                    name="ez-car-autocompl-mark-hidden" 
+                                             >
                                             <i class="far fa-star prefix white-text"></i>
                                             <input  type="search" 
                                                     autocomplete="off"
                                                     id="ez-car-autocompl-mark" 
                                                     name="ez-car-autocompl-mark" 
+                                                    onblur="ezCarAutocomplMarkBlur(this, event)" 
                                                     class="form-control mdb-autocomplete ez-car-autocompl-input"
                                             >
                                             <button class="mdb-autocomplete-clear ez-car-autocompl-button">
@@ -150,6 +155,26 @@
                                             </label>
                                         </div>
                                         <!-- --- form-autocomplete Модель автомобиля --- -->
+                                        <div class="md-form ez-draft-r-form ez-car-autocompl-form">
+                                            <i class="far fa-star prefix white-text"></i>
+                                            <input  type="search" 
+                                                    autocomplete="off"
+                                                    id="ez-car-autocompl-model" 
+                                                    name="ez-car-autocompl-model" 
+                                                    onblur="ezCarAutocomplModelBlur(this, event)" 
+                                                    onfocus="ezCarAutocomplModelFill(this, event)" 
+                                                    class="form-control mdb-autocomplete ez-car-autocompl-input"
+                                            >
+                                            <button class="mdb-autocomplete-clear ez-car-autocompl-button">
+                                                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
+                                                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                                                    <path d="M0 0h24v24H0z" fill="none" />
+                                                </svg>
+                                            </button>
+                                            <label for="ez-car-autocompl-model" class="active ez-car-autocompl-label">
+                                                Модель автомобиля
+                                            </label>
+                                        </div>
                                         <!-- --- form-autocomplete Поколение автомобиля --- -->
                                         <!-- BUTTON Express -->
                                         <div class="row d-flex align-items-center mb-4">

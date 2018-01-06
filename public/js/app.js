@@ -5,7 +5,6 @@ jQuery( document ).ready(function() {
  	
  	jQuery("#FormDraftContactPhone").mask("+7(999)999-99-99");
 
-
  	var ajaxSubmitOptions = { 
         target:    '#FormDraftResult',   // target element(s) to be updated with server response 
 ///////*        beforeSubmit:  showRequest,  // pre-submit callback 

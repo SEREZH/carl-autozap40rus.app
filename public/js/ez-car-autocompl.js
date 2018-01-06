@@ -1,6 +1,7 @@
 jQuery( document ).ready(function() {
 
 	console.log('jQuery - ez-car-autocompl: READY');
+
 ///* 	var ajaxSubmitOptions = { 
 ///*        target:    '#FormDraftResult',   // target element(s) to be updated with server response 
 ///*        success:   showResponse,  // post-submit callback 
@@ -36,7 +37,7 @@ jQuery( document ).ready(function() {
 	});*/
 });
 
-var marks = [
+var gv_marks = [
     "AC","Acura","Alfa Romeo","Alpine","AM General","Ariel","Aro","Asia","Aston Martin","Audi","Austin",
     "Autobianchi","Baltijas Dzips","Beijing","Bentley","Bertone","Bitter","BMW","BMW Alpina","Brabus",
     "Brilliance","Bristol","Bufori","Bugatti","Buick","BYD","Byvin","Cadillac","Callaway","Carbodies",
@@ -56,11 +57,101 @@ var marks = [
     "Tianma","Tianye","Tofas","Toyota","Trabant","Tramontana","Triumph","TVR","Ultima","Vauxhall","Vector",
     "Venturi","Volkswagen","Volvo","Vortex","Wartburg","Westfield","Wiesmann","Xin Kai","Zastava","Zotye","ZX",
     "Автокам","Астро","Бронто","ВАЗ","ГАЗ","Ё-мобиль","ЗАЗ","ЗИЛ","ИЖ","КамАЗ","Канонир","ЛУАЗ","Москвич","СеАЗ",
-    "СМЗ","ТагАЗ","УАЗ","Эксклюзив",
+    "СМЗ","ТагАЗ","УАЗ","Эксклюзив"
 ];
 jQuery('#ez-car-autocompl-mark').mdb_autocomplete({
-    data: marks
+    data: gv_marks
 });
+
+var g_mark_val;
+var g_mark_val_wet;
+var g_mark_val_old;
+var g_mark_val_wet_old;
+function ezCarAutocomplMarkBlur(obj, e) {
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplMarkBlur');   
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplMarkBlur: obj.name='+obj.name);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplMarkBlur: obj.value='+obj.value);
+    g_mark_val_wet = ""; // сброс "мокрой" марки автомобиля
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplMarkBlur: 1 - g_mark_val='+g_mark_val);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplMarkBlur: 1 - g_mark_val_wet='+g_mark_val_wet);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplMarkBlur: 1 - g_mark_val_old='+g_mark_val_old);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplMarkBlur: 1 - g_mark_val_wet_old='+g_mark_val_wet_old);
+    g_mark_val_wet = jQuery('#ez-car-autocompl-mark').val(); // корректировка "мокрой" марки автомобиля
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplMarkBlur: 2 - g_mark_val_wet='+g_mark_val_wet);
+    if (g_mark_val_old!=g_mark_val||
+        g_mark_val_old==null||
+        (g_mark_val_wet!=null&&g_mark_val_wet!=g_mark_val_old)
+       ) 
+    {
+        g_mark_val_wet_old  = g_mark_val_wet;
+        console.log('jQuery - ez-car-autocompl::ezCarAutocomplMarkBlur: IF :g_mark_val_old='+g_mark_val_old);
+        jQuery('#ez-car-autocompl-model').val('');    
+    }
+}
+
+var g_model_val;
+var g_model_val_old;
+var g_model_val_wet;
+var g_model_val_wet_old;
+function ezCarAutocomplModelFill(obj, e) {
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelFill');
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelFill: obj.name='+obj.name);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelFill: obj.value='+obj.value);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelFill: 1 - g_mark_val='+g_mark_val);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelFill: 1 - g_mark_val_wet='+g_mark_val_wet);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelFill: 1 - g_mark_val_old='+g_mark_val_old);
+    g_mark_val = jQuery('#ez-car-autocompl-mark').val(); // корректировка текущей марки автомобиля
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelFill: 2 - g_mark_val='+g_mark_val);
+    
+    var v_models = [""];
+    if (g_mark_val == null||g_mark_val == undefined||g_mark_val == '') {
+        console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelFill: IF');
+        jQuery('#ez-car-autocompl-model').val('');
+        jQuery('#ez-car-autocompl-model').mdb_autocomplete({
+            data: v_models
+        });
+    } else if (g_mark_val_old != g_mark_val) {
+        g_mark_val_old = g_mark_val;
+        console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelFill: ELSE IF');
+        jQuery.ajax({
+            type: 'POST',
+            url: 'php/ez-car-autocompl.php', //this should be url to your PHP file
+            dataType: 'json',
+            data: {func: 'getCarModels', car_mark: g_mark_val},
+            complete: function() {
+                console.log('AJAX::COMPLETE');
+            },
+            success: function(response) {
+                console.log('AJAX::SUCCESS: response='+response);
+                v_models = response;
+                jQuery('#ez-car-autocompl-model').mdb_autocomplete({
+                    data: v_models
+                });
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log('AJAX::ERROR: '+xhr.status);
+                console.log('AJAX::ERROR: '+thrownError);
+            }
+        });
+    }
+}    
+
+function ezCarAutocomplModelBlur(obj, e) {
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelBlur');   
+    g_mark_val = jQuery('#ez-car-autocompl-mark').val();
+    g_model_val_wet = ""; // сброс "мокрой" марки автомобиля
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelBlur: obj.name='+obj.name);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelBlur: obj.type='+obj.type);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelBlur: obj.value='+obj.value);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelBlur: e.target.value='+e.target.value);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelBlur: 1 - g_mark_val='+g_mark_val);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelBlur: 1 - g_model_val='+g_model_val);
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelBlur: 1 - g_model_val_wet='+g_model_val_wet);
+    g_model_val_wet = jQuery('#ez-car-autocompl-model').val(); // корректировка "мокрой" модели автомобиля
+    console.log('jQuery - ez-car-autocompl::ezCarAutocomplModelBlur: 2 - g_model_val_wet='+g_model_val_wet);
+
+    //jQuery('#ez-car-autocompl-model').val('');
+}
 
 
 
