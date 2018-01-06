@@ -88,9 +88,6 @@
         font-size: 1.3rem; }
     .ez-draft .ez-draft-r .ez-draft-r-header .ez-draft-r-header-icon {
       justify-content: center; }
-  .ez-draft .ez-draft-r .ez-draft-r-footer {
-    font-family: Comfortaa;
-    font-size: 0.75rem; }
   .ez-draft .ez-draft-r .ez-draft-r-btn {
     display: inline-flex;
     color: white !important;
@@ -100,6 +97,23 @@
     .ez-draft .ez-draft-r .ez-draft-r-btn i, .ez-draft .ez-draft-r .ez-draft-r-btn svg {
       font-size: 2rem;
       margin-right: 2.5rem; }
+  .ez-draft .ez-draft-r .ez-draft-r-footer {
+    font-family: Comfortaa;
+    font-size: 0.75rem; }
+  .ez-draft .ez-draft-r .ez-draft-r-form input {
+    font-size: 1.25rem;
+    font-family: Open Sans; }
+  .ez-draft .ez-draft-r .ez-draft-r-form.ez-draft-r-form-req::after {
+    content: "*";
+    font-family: Comfortaa;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    padding: 0.3rem; }
+  .ez-draft .ez-draft-r .ez-draft-r-form i, .ez-draft .ez-draft-r .ez-draft-r-form svg {
+    font-size: 1.75rem; }
 
 .ez-tovar {
   padding-top: 1rem;

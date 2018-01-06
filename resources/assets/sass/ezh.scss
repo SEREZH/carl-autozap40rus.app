@@ -51,7 +51,6 @@
 
 }
 
-
 .ez-draft {
     .ez-draft-l {
         
@@ -117,11 +116,6 @@
                 justify-content: center;
             }
         }
-        .ez-draft-r-footer {
-            font-family: Comfortaa;
-            font-size: 0.75rem;
-        }
-
         .ez-draft-r-btn {
             display: inline-flex;
             color: white !important;
@@ -133,6 +127,34 @@
                 margin-right: 2.5rem;            
             }
         } 
+        .ez-draft-r-footer {
+            font-family: Comfortaa;
+            font-size: 0.75rem;
+        }
+
+        .ez-draft-r-form {
+            //.ez-draft-r-form input#FormDraftUserName.form-control.white-text.ez-form-control.ez-tooltip-js
+            input {
+                font-size: 1.25rem;
+                font-family: Open Sans;
+            }
+            &.ez-draft-r-form-req {
+                &::after {
+                    content: "*";
+                    font-family: Comfortaa;
+                    font-size: 2rem;
+                    color: white;
+                    position: absolute;
+                    top: 0;
+                    right: 1rem;
+                    padding: 0.3rem;
+                }
+            }
+            i, svg {
+                font-size: 1.75rem;
+            }
+        }
+        
     }
 }
 

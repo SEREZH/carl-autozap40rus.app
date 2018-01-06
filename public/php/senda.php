@@ -1,4 +1,12 @@
 <?
+
+/*  function console_log( $data ){
+    echo '<script>';
+    echo 'console.log('. json_encode( $data ) .')';
+    echo '</script>';
+  }
+  console_log( "sendz BEGIN" );*/
+
 $hostname = "localhost"; 	// название/путь сервера, с MySQL
 $username = "carl"; 	// имя пользователя
 $password = "carl"; 	// пароль пользователя

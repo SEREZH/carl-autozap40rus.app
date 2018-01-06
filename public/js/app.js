@@ -1,6 +1,6 @@
 jQuery( document ).ready(function() {
 
-	console.log('jQuery: READY');
+	console.log('jQuery - app: READY');
 	new WOW().init();
  	
  	jQuery("#FormDraftContactPhone").mask("+7(999)999-99-99");
@@ -31,8 +31,8 @@ jQuery( document ).ready(function() {
         // always return false to prevent standard browser submit and page navigation 
         return false; 
     }); 
-
 });
+
 // post-submit callback 
 function showResponse(responseText, statusText, xhr, $form)  { 
     // for normal html responses, the first argument to the success callback 

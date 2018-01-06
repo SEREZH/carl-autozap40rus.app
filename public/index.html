@@ -7,11 +7,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>КОРОВА</title>
     <!-- Font Awesome -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <!-- <link rel="stylesheet" href="font/fontawesome502/web-fonts-with-css/css/fontawesome-all.min.css"> -->
     <!-- <link rel="stylesheet" href="font/line-awesome/css/line-awesome-font-awesome.min.css"> -->
     <script defer src="font/fontawesome502/svg-with-js/js/fontawesome-all.js"></script>
-        
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
@@ -54,6 +52,7 @@
         <div class="container-fluid unique-color ez-draft">
             <div class="container">
                 <div class="row">
+                    <!-- правая часть предложения -->
                     <div class="col-lg-6 ez-draft-l"> <!-- ez-draft-l -->
                         <section id="FormDraftSectionL" class="form-dark z-depth-4 ez-draft-l">
                             <form id ="FormDraftDummy" name="FormDraftDummy" action="" method="">    
@@ -77,17 +76,13 @@
                             </form>
                         </section>
                     </div>
+                    <!-- левая часть предложения -->
                     <div class="col-lg-6 ez-draft-r"> <!-- /Form -->
                         <!--Section: Form Draft-->
                         <section id="FormDraftSectionR" class="form-dark z-depth-4 ez-draft-r">
                             <!--Form without header-->
-                            <!-- <form id="FormDraft" method="get" action=""> -->
-                            <!-- <form id ="FormDraft" name="FormDraft" action="mail.php" method="POST">     -->
-                            <!-- <form id ="FormDraft" name="FormDraft" action="php/sendz.php" method="POST">     -->
                             <form id ="FormDraft" name="FormDraft" action="js/sendz.php" method="POST">    
-                                <!-- <div class="card card-image" style="background-image: url('img/backgr/zapch-blue_print_products.png');"> -->
                                 <div class="card card-image" style="background-image: url('img/backgr/zapch-autoparts.png');">
-                                    <!-- <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4 ez-draft-r-card-wrapper"> -->
                                     <div class="text-white rgba-stylish-strong py-5 px-5 ez-draft-r-card-wrapper">
                                         <!--Header-->
                                         <div class="ez-draft-r-header">
@@ -98,7 +93,7 @@
                                             </div>
                                         </div>
                                         <!--Body-->
-                                        <div class="md-form ez-draft-r-form ">
+                                        <div class="md-form ez-draft-r-form ez-draft-r-form-req">
                                             <i class="far fa-user prefix white-text"></i>
                                             <input type="text" 
                                                 id="FormDraftUserName" 
@@ -109,7 +104,7 @@
                                                 >
                                             <label for="FormDraftUserName">Ваше имя</label>
                                         </div>
-                                        <div class="md-form pb-3">
+                                        <div class="md-form ez-draft-r-form ez-draft-r-form-req">
                                             <i class="fas fa-phone prefix white-text"></i>
                                             <input type="text" 
                                                 id="FormDraftContactPhone" 
@@ -126,37 +121,56 @@
                                             </div>
                                              -->
                                         </div>
-                                        <!--Grid row-->
+                                        <div class="md-form ez-draft-r-form">
+                                            <i class="fas fa-car prefix white-text"></i>
+                                            <input type="text" 
+                                                id="FormDraftCarVIN" 
+                                                name="FormDraftCarVIN" 
+                                                class="form-control white-text ez-form-control" 
+                                                >
+                                            <label for="FormDraftCarVIN">VIN автомобиля (необязательно)</label>
+                                        </div>
+                                        <!-- --- form-autocomplete Марка автомобиля --- -->
+                                        <div class="md-form ez-draft-r-form ez-car-autocompl-form">
+                                            <i class="far fa-star prefix white-text"></i>
+                                            <input  type="search" 
+                                                    autocomplete="off"
+                                                    id="ez-car-autocompl-mark" 
+                                                    name="ez-car-autocompl-mark" 
+                                                    class="form-control mdb-autocomplete ez-car-autocompl-input"
+                                            >
+                                            <button class="mdb-autocomplete-clear ez-car-autocompl-button">
+                                                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
+                                                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                                                    <path d="M0 0h24v24H0z" fill="none" />
+                                                </svg>
+                                            </button>
+                                            <label for="ez-car-autocompl-mark" class="active ez-car-autocompl-label">
+                                                Марка автомобиля
+                                            </label>
+                                        </div>
+                                        <!-- --- form-autocomplete Модель автомобиля --- -->
+                                        <!-- --- form-autocomplete Поколение автомобиля --- -->
+                                        <!-- BUTTON Express -->
                                         <div class="row d-flex align-items-center mb-4">
-                                            <!--Grid column-->
                                             <div class="text-center mb-3 col-md-12">
-                                                <!-- <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Sign in</button> 
-                                                onclick="validateFormDraft(this, event)"
-                                                -->
                                                 <button id='ez-button-sendz' 
                                                         type="submit" 
                                                         class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn">
                                                     <i class="fa fa-arrow-circle-right animated slideInRight infinite" aria-hidden="true"></i>
                                                     <span>Экспресс подбор запчастей</span>
                                                 </button>
-                                                <!-- <a class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn"
-                                                    onclick="validateFormDraft()">
-                                                    Экспресс подбор запчастей
-                                                </a> -->
                                             </div>
-                                            <!--Grid column-->
                                         </div>
-                                        <!--Grid row-->
-                                        <!--Grid column-->
+                                        <!-- Примечание -->
                                         <div class="col-md-12">
                                             <hr class="hr-light mb-3 mt-4">
                                             <div class="ez-draft-r-footer text-center white-text">
                                                 Подберем и предложим лучший вариант
                                             </div>
                                         </div>
-                                        <!--Grid column-->
-                                        <br>
-                                        <div id="FormDraftResult"><div>
+                                        <!-- Статусная строка !!! по всей вероятности нах тут не нужна -->
+                                        <br><div id="FormDraftResult"><div>
 
                                     </div>
                                 </div>
@@ -477,6 +491,7 @@
     <!-- <script type="text/javascript" src="dist/jquery.validate.js"></script> -->
     <!-- EZH JS -->
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/ez-car-autocompl.js"></script>
 
 
 </body>

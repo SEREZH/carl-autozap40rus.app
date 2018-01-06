@@ -134,6 +134,27 @@
   margin-top: 1.5rem;
   font-size: 1rem; }
 
+/* --- ez-car-autocompl --- */
+.ez-car-autocompl-form {
+  color: rgba(198, 37, 178, 0.85) !important;
+  /* 	ul {
+  	color: rgba(198,37,178,0.75)!important;
+  	.mdb-autocomplete-wrap {
+  		background-color: rgba(198,37,178,0.75)!important;
+  		li {
+  			color: rgba(198,37,178,0.95)!important;
+  		}
+  	}
+  } */ }
+  .ez-car-autocompl-form .ez-car-autocompl-input {
+    color: white !important; }
+  .ez-car-autocompl-form .ez-car-autocompl-button {
+    color: white !important; }
+  .ez-car-autocompl-form .mdb-autocomplete-wrap li {
+    cursor: pointer;
+    padding: 0.3rem 1rem;
+    font-size: 1.1rem; }
+
 .intro-2 {
   background: url("http://mdbootstrap.com/img/Photos/Others/images/91.jpg") no-repeat center center;
   background-size: cover; }
