@@ -15,7 +15,6 @@
   else{ 
     $err_conn = '0';
   }
-
   mysqli_query($myConnection, 'SET NAMES utf8') or header('Location: Error');
   //printf("Host information: %s\n", mysqli_get_host_info($myConnection));
   // заполяем переменные полей  
