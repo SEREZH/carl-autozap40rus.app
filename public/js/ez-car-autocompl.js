@@ -193,8 +193,9 @@ function ezCarAutocomplModelBlur(obj, e) {
     console.log('::ezCarAutocomplModelBlur: 1 - g_model_val_wet='+g_model_val_wet);
     g_model_val_wet = jQuery('#ez-car-autocompl-model').val(); // корректировка "мокрой" модели автомобиля
     console.log('::ezCarAutocomplModelBlur: 2 - g_model_val_wet='+g_model_val_wet);
-
-    //jQuery('#ez-car-autocompl-model').val('');
+    if (g_model_val != g_model_val_wet) {
+        jQuery('#ez-car-autocompl-generation').val('');  
+    }
 }
 /*---------------------------------------------------------------------------------------*/
 // Модель автомобиля - ОКОНЧАНИЕ

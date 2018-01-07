@@ -49,8 +49,6 @@ function showResponse(responseText, statusText, xhr, $form)  {
         '\n\nThe output div should have already been updated with the responseText.'); 
 } 
 
-
-
 function sendAjaxFormDraft(result_form, ajax_form, url) {
 	console.log('AJAX - sendAjaxFormDraft BEGIN');
 	console.log('AJAX - sendAjaxFormDraft::result_form='+result_form);
@@ -58,8 +56,6 @@ function sendAjaxFormDraft(result_form, ajax_form, url) {
 	console.log('AJAX - sendAjaxFormDraft::url='+url);
 	var v_form = jQuery("#"+ajax_form).serialize();
 	console.log('AJAX - sendAjaxFormDraft::v_form='+v_form);
-
-
     jQuery.ajax({
         url:     url, //url страницы (action_ajax_form.php)
         type:     "POST", //метод отправки
@@ -80,7 +76,6 @@ function sendAjaxFormDraft(result_form, ajax_form, url) {
     });
  	console.log('AJAX - sendAjaxFormDraft END');
 }
-
 
 function validateFormDraft(obj, e) {
 	console.log('validateFormDraft: BEGIN');
