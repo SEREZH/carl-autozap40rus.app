@@ -1,8 +1,31 @@
 <?php
 
+$filename = 'ez-conn.php';
+if (file_exists($filename)) {
+    $test = array("Файл $filename существует");
+    //echo json_encode($test, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+} else {
+	$test = array("Файл $filename не существует");
+	//echo json_encode($test, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+}
+include $filename;
+$test = array($dbName);
+//echo json_encode($test, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+
+формируем текст запроса
+$sqlCommand = "select id from car_model where id_car_mark=1";
+//$sqlResultCount = mysqli_query($myConnection, $sqlCommand) or die (mysqli_error($myConnection));
+//не выдал ли нам запрос ошибки 
+/*if (!$sqlResultCount) {
+	$err_query1 = mysqli_error($myConnection);
+	printf("Errormessage: %s\n", $err_query1);
+} else{ 
+	$err_query1 = '0';
+}*/
+
 $result = array("Isdera","Isuzu","IVECO","JAC","Jaguar","Jeep","Jensen","JMC","Kia","Koenigsegg");
-  // ответ клиенту
-  echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+// ответ клиенту
+echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
 
 //echo '"Isdera","Isuzu","IVECO","JAC","Jaguar","Jeep","Jensen","JMC","Kia","Koenigsegg","KTM","Lamborghini","Lancia"';
 
