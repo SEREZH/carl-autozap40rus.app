@@ -43,6 +43,12 @@
       .ez-draft .ez-header-addresse .ez-header-addresse-phone i,
       .ez-draft .ez-header-addresse .ez-header-addresse-time i {
         font-size: 1.05rem; }
+      .ez-header .ez-header-addresse .ez-header-addresse-post a,
+      .ez-header .ez-header-addresse .ez-header-addresse-phone a,
+      .ez-header .ez-header-addresse .ez-header-addresse-time a, .ez-draft .ez-header-addresse .ez-header-addresse-post a,
+      .ez-draft .ez-header-addresse .ez-header-addresse-phone a,
+      .ez-draft .ez-header-addresse .ez-header-addresse-time a {
+        color: white !important; }
 
 .ez-draft .ez-draft-l {
   margin-top: 0.5rem;
@@ -80,7 +86,8 @@
       padding-bottom: 0.25rem; }
   .ez-draft .ez-draft-r .ez-draft-r-card-wrapper {
     background-color: rgba(192, 14, 170, 0.9) !important;
-    padding: 1rem 1rem 0 !important; }
+    padding: 1rem 1rem 0 !important;
+    padding-bottom: 1rem !important; }
     .ez-draft .ez-draft-r .ez-draft-r-card-wrapper .ez-draft-r-card-wrapper-row {
       padding-bottom: 0 !important; }
   .ez-draft .ez-draft-r .ez-draft-r-header {
@@ -120,6 +127,8 @@
     padding: 0.3rem; }
   .ez-draft .ez-draft-r .ez-draft-r-form i, .ez-draft .ez-draft-r .ez-draft-r-form svg {
     font-size: 1.75rem; }
+  .ez-draft .ez-draft-r .ez-draft-r-form.ez-car-autocompl-form-marka i, .ez-draft .ez-draft-r .ez-draft-r-form.ez-car-autocompl-form-marka svg, .ez-draft .ez-draft-r .ez-draft-r-form.ez-car-autocompl-form-model i, .ez-draft .ez-draft-r .ez-draft-r-form.ez-car-autocompl-form-model svg, .ez-draft .ez-draft-r .ez-draft-r-form.ez-car-autocompl-form-generation i, .ez-draft .ez-draft-r .ez-draft-r-form.ez-car-autocompl-form-generation svg {
+    font-size: 1.4rem; }
 
 .ez-tovar {
   padding-top: 1rem;

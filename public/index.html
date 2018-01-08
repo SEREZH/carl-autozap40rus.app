@@ -14,12 +14,17 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- EZ Lib CSS -->
+    <link href="lib/flipclock/flipclock.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/app.css" rel="stylesheet">
     <link href="css/ezh.css" rel="stylesheet">
 </head>
 
 <body class="mdb-color unique-color ez-body">
+    <section>
+        <div id="FormDraftResult"></div>    
+    </section>
     <section id="top-section" class="mdb-color unique-color ez-header">
         <!-- <header> -->
         <div class="container-fluid unique-color">
@@ -37,8 +42,8 @@
                             <span>г. Обнинск, Киевское ш., 49а, пав. 39</span>
                         </p>
                         <p class="ez-header-addresse-phone"><i class="fas fa-phone"></i>&nbsp; 
-                            <span class="ez-header-addresse-phone">+7 (920) 899<img>-00<img>-39,&nbsp;</span> 
-                            <span class="ez-header-addresse-phone">+7 (929) 032<img>-63<img>-43</span>
+                            <a href="tel:+79208990039"><span>+7 (920) 899<img>-00<img>-39,&nbsp;</span></a>
+                            <a href="tel:+79208990039">+7 (929) 032<img>-63<img>-43</span></a>
                         </p>
                         <p class="ez-header-addresse-time"><i class="far fa-clock"></i>&nbsp;&nbsp;
                             <span>ПН-СБ: 10:00 - 17:00 ВС: ВЫХОДНОЙ</span>
@@ -65,13 +70,6 @@
                                                 controls autoplay loop muted>
                                             </video>
                                         </div>
-<!--                                         <div class="ez-draft-l-footer text-center white-text">
-     <div>НАДЕЖНОСТЬ В РАБОТЕ</div>
-     <div>ВЫСОКОЕ КАЧЕСТВО ЗАПЧАСТЕЙ</div>
-     <div>ЗАПЧАСТИ ИЗВЕСТНЫХ БРЕНДОВ</div>
-     <div>ПРИЕМЛЕМЫЕ ЦЕНЫ</div>
-     <div>ДОСТАВКА НА СЛЕДУЮЩИЙ ДЕНЬ</div>
-</div> -->
                                     </div>
                                 </div>
                             </form>
@@ -228,7 +226,7 @@
                                             <label for="FormDraftCarVIN">VIN автомобиля</label>
                                         </div>
                                         <!-- --- form-autocomplete Марка автомобиля --- -->
-                                        <div class="md-form ez-draft-r-form ez-car-autocompl-form">
+                                        <div class="md-form ez-draft-r-form ez-car-autocompl-form ez-car-autocompl-form-marka">
                                             <input  type="hidden" 
                                                     id="ez-car-autocompl-mark-hidden" 
                                                     name="ez-car-autocompl-mark-hidden" 
@@ -252,7 +250,7 @@
                                             </label>
                                         </div>
                                         <!-- --- form-autocomplete Модель автомобиля --- -->
-                                        <div class="md-form ez-draft-r-form ez-car-autocompl-form">
+                                        <div class="md-form ez-draft-r-form ez-car-autocompl-form ez-car-autocompl-form-model">
                                             <i class="far fa-star prefix white-text"></i>
                                             <input  type="search" 
                                                     autocomplete="off"
@@ -273,7 +271,7 @@
                                             </label>
                                         </div>
                                         <!-- --- form-autocomplete Поколение автомобиля --- -->
-                                        <div class="md-form ez-draft-r-form ez-car-autocompl-form">
+                                        <div class="md-form ez-draft-r-form ez-car-autocompl-form ez-car-autocompl-form-generation">
                                             <i class="far fa-star prefix white-text"></i>
                                             <input  type="search" 
                                                     autocomplete="off"
@@ -300,7 +298,7 @@
                                                         type="submit" 
                                                         class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-draft-r-btn">
                                                     <i class="fa fa-arrow-circle-right animated slideInRight infinite" aria-hidden="true"></i>
-                                                    <span>Экспресс подбор</span>
+                                                    <span>Экспресс заказ</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -312,8 +310,6 @@
                                             </div>
                                         </div>
                                         <!-- Статусная строка !!! по всей вероятности нах тут не нужна -->
-                                        <br><div id="FormDraftResult"><div>
-
                                     </div>
                                 </div>
                             </form>
@@ -328,33 +324,36 @@
     <!-- </header> -->
     <!-- --- work schema --- -->
     <section class="ez-work-schema ez-bcol-main-blue-light">
-        <div class="container ez-work-schema-cont">
-         <div class="row ez-work-schema-row">
-             <div class="col-lg-2 wow fadeInUp ez-work-schema-col">
-                 <div class="ez-work-schema-col-icon"><i class="far fa-address-card"></i></div>
-                 <div class="ez-work-schema-col-header"><div>Заполняем<br>карточку экспресс-заказа</div></div>
+        <div class="container ez-work-schema-cont wow fadeInUp">
+            <div class="row ez-work-schema-row ez-work-schema-row-header">
+                <h5>Порядок выполнения заказа</h5>
+            </div>
+            <div class="row ez-work-schema-row ez-work-schema-row-body">
+                 <div class="col-lg-2 ez-work-schema-col">
+                     <div class="ez-work-schema-col-icon"><i class="far fa-address-card"></i></div>
+                     <div class="ez-work-schema-col-header"><div>Заполняем<br>карточку экспресс-заказа</div></div>
+                 </div>
+                 <div class="col-lg-2 ez-work-schema-col">
+                     <div class="ez-work-schema-col-icon"><i class="fa fa-arrow-circle-right"></i></div>
+                     <div class="ez-work-schema-col-header"><div>Отправляем<br>карточку экспресс-заказа оператору</div></div>
+                 </div>
+                 <div class="col-lg-2 ez-work-schema-col">
+                     <div class="ez-work-schema-col-icon"><i class="far fa-clock"></i></div>
+                     <div class="ez-work-schema-col-header"><div>Ожидаем<br>обратный звонок не&nbsp;более&nbsp;15&nbsp;минут</div></div>
+                 </div>
+                 <div class="col-lg-2 ez-work-schema-col">
+                     <div class="ez-work-schema-col-icon"><i class="fas fa-phone"></i></div>
+                     <div class="ez-work-schema-col-header"><div>Уточняем<br>с оператором детали&nbsp;заказа</div></div>
+                 </div>
+                 <div class="col-lg-2 ez-work-schema-col">
+                     <div class="ez-work-schema-col-icon"><i class="fas fa-fighter-jet"></i></div>
+                     <div class="ez-work-schema-col-header"><div>Доставляем<br>в&nbsp;кратчайшие&nbsp;сроки заказ в магазин</div></div>
+                 </div>
+                 <div class="col-lg-2 ez-work-schema-col">
+                     <div class="ez-work-schema-col-icon"><i class="fas fa-gift"></i></div>
+                     <div class="ez-work-schema-col-header"><div>Сообщаем<br>о прибытии заказа в&nbsp;магазин</div></div>
+                 </div>
              </div>
-             <div class="col-lg-2 wow fadeInUp ez-work-schema-col">
-                 <div class="ez-work-schema-col-icon"><i class="fa fa-arrow-circle-right"></i></div>
-                 <div class="ez-work-schema-col-header"><div>Отправляем<br>карточку экспресс-заказа оператору</div></div>
-             </div>
-             <div class="col-lg-2 wow fadeInUp ez-work-schema-col">
-                 <div class="ez-work-schema-col-icon"><i class="far fa-clock"></i></div>
-                 <div class="ez-work-schema-col-header"><div>Ожидаем<br>обратный звонок не&nbsp;более&nbsp;15&nbsp;минут</div></div>
-             </div>
-             <div class="col-lg-2 wow fadeInUp ez-work-schema-col">
-                 <div class="ez-work-schema-col-icon"><i class="fas fa-phone"></i></div>
-                 <div class="ez-work-schema-col-header"><div>Уточняем<br>с оператором детали&nbsp;заказа</div></div>
-             </div>
-             <div class="col-lg-2 wow fadeInUp ez-work-schema-col">
-                 <div class="ez-work-schema-col-icon"><i class="fas fa-fighter-jet"></i></div>
-                 <div class="ez-work-schema-col-header"><div>Доставляем<br>в&nbsp;кратчайшие&nbsp;сроки заказ в магазин</div></div>
-             </div>
-             <div class="col-lg-2 wow fadeInUp ez-work-schema-col">
-                 <div class="ez-work-schema-col-icon"><i class="fas fa-gift"></i></div>
-                 <div class="ez-work-schema-col-header"><div>Сообщаем<br>о прибытии заказа в&nbsp;магазин</div></div>
-             </div>
-         </div>
                 <!-- <div class="ez-work-schema-cols">
                     <div class="col-lg-3 ez-work-schema-col">
                         <div class="ez-work-schema-col-header">
@@ -380,6 +379,22 @@
             </div> -->
         </div>
     </section>    
+    <!-- --- flipclock --- -->
+    <section>
+        <div class="container-fluid unique-color wow fadeInUp ez-flipclock">
+            <div class="container ez-flipclock-con">
+                <div class="row wow fadeInUp ez-flipclock-row ez-flipclock-row-header">
+                    <h5>При заказе с сайта - скидка 5%!!!</h5>
+                </div>
+                <div class="row wow fadeInUp ez-flipclock-row ez-flipclock-row-header-rest">
+                    <h5>До окончания акции осталось:</h5>
+                </div>
+                <div class="row ez-flipclock-row ez-flipclock-row-body">
+                    <div class="ez-flipclock-clock" style="margin:0.5em 1.5em 1.5em;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- --- tovar --- -->
     <section>
         <div class="container-fluid unique-color ez-tovar">
@@ -620,7 +635,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.js"></script>
     <!-- EZH JS LIB -->
-    <!-- <script type="text/javascript" src="dist/jquery.validate.js"></script> -->
+    <script type="text/javascript" src="lib/flipclock/flipclock.min.js"></script>
     <!-- EZH JS -->
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/ez-car-autocompl.js"></script>

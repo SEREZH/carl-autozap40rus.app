@@ -1,0 +1,88 @@
+// _ez-flipclock
+//.ez-action-con div.row.ez-action-row.ez-action-row-header h5
+.ez-flipclock {
+    color: white;
+    font-family: Comfortaa;
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    .ez-flipclock-row {
+        &.ez-flipclock-row-header {
+            display: flex;
+            justify-content: center;
+            padding-top: 1.75rem;
+            padding-bottom: 0;
+            h5 {
+                //font-family: Marck Script;
+                font-size: 1.4rem;
+                font-weight: 400;
+                margin-bottom: 0;
+            }
+        }
+        &.ez-flipclock-row-header-rest {
+            display: flex;
+            justify-content: center;
+            padding-top: 0.5rem;
+            padding-bottom: 0;
+            h5 {
+                font-family: Marck Script;
+                font-size: 1.7rem;
+                font-weight: 400;
+                margin-bottom: 0;
+            }
+        }
+        &.ez-flipclock-row-body {
+            .ez-flipclock-clock {
+                display: flex;
+                justify-content: center;
+                padding-top: 1.75rem;
+                padding-bottom: 0;
+                &.flip-clock-wrapper {
+                    .flip-clock-divider {
+                        .flip-clock-label {
+                            color: white!important;
+                        }
+                    }
+                }
+            }    
+        }
+    }
+    .ez-trigger-dover-col {
+        .ez-trigger-dover-col-icon {
+            font-size: 2.8rem;
+        }
+        .ez-trigger-dover-card {
+            &.ez-trigger-dover-card-kachest {
+                .ez-trigger-dover-col-icon {
+                    background-color: rgba(255, 187, 51, 0.85);
+                }
+            }
+            &.ez-trigger-dover-card-brand {
+                .ez-trigger-dover-col-icon {
+                    background-color: rgba(51, 181, 229, 0.55);
+                }
+            }
+            &.ez-trigger-dover-card-tseny {
+                .ez-trigger-dover-col-icon {
+                    background-color: rgba(170, 102, 204, 0.55);
+                }
+            }
+            &.ez-trigger-dover-card-dostavka {
+                .ez-trigger-dover-col-icon {
+                    background-color: rgba(43, 187, 173, 0.55);
+                }
+            }
+            .card-body {
+                padding-top: .75rem;
+                padding-bottom: 0;
+                .card-text {
+                    text-transform: none;
+                }  
+            }
+        }                
+    }
+}       
+
+

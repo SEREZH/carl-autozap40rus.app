@@ -46,6 +46,11 @@
             i {
                 font-size: 1.05rem;
             }
+            a {
+               color: white!important;
+            }
+//.ez-header-addresse p.ez-header-addresse-phone a            
+
 		}
 	}
 
@@ -103,6 +108,7 @@
         .ez-draft-r-card-wrapper {
             background-color: rgba(192, 14, 170, 0.9) !important;
             padding: 1rem 1rem 0!important;
+            padding-bottom: 1rem!important;
             .ez-draft-r-card-wrapper-row {
                 padding-bottom: 0!important;
             }
@@ -137,9 +143,7 @@
             font-family: Comfortaa;
             font-size: 0.75rem;
         }
-
         .ez-draft-r-form {
-            //.ez-draft-r-form input#FormDraftUserName.form-control.white-text.ez-form-control.ez-tooltip-js
             input {
                 font-size: 1.25rem;
                 font-family: Open Sans;
@@ -158,6 +162,13 @@
             }
             i, svg {
                 font-size: 1.75rem;
+            }
+            &.ez-car-autocompl-form-marka,
+            &.ez-car-autocompl-form-model,
+            &.ez-car-autocompl-form-generation {
+                i, svg {
+                    font-size: 1.4rem;
+                }      
             }
         }
         

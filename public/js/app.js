@@ -1,4 +1,39 @@
+var ez_flipclock_clock;
+
 jQuery( document ).ready(function() {
+
+
+/*
+				// Grab the current date
+				var currentDate = new Date();
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 1);
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true
+				});
+
+*/	
+	// Grab the current date
+	var currentDate = new Date();
+	// Set some date in the future. In this case, it's always Jan 1
+	var ye = currentDate.getFullYear();
+	var mo = currentDate.getMonth()+1;
+	console.log('ez_flipclock_clock: ye='+ye);
+	console.log('ez_flipclock_clock: mo='+mo);
+	var futureDate  = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+	// Calculate the difference in seconds between the future and current date
+	var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+	ez_flipclock_clock = jQuery('.ez-flipclock-clock').FlipClock(diff, {
+		clockFace: 'DailyCounter',
+		countdown: true,
+		language: 'ru'
+	});
 
 	console.log('jQuery - app: READY');
 	new WOW().init();
