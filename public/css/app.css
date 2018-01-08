@@ -66,6 +66,39 @@
   .ez-work-schema .ez-work-schema-cont .ez-work-schema-row .ez-work-schema-col .ez-work-schema-col-icon {
     font-size: 3.5rem; }
 
+.ez-trigger-dover-row {
+  color: white;
+  font-family: Comfortaa;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.35rem 0 0; }
+  .ez-trigger-dover-row.ez-trigger-dover-row-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.75rem;
+    padding-bottom: 0; }
+    .ez-trigger-dover-row.ez-trigger-dover-row-header h5 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 0; }
+  .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-col-icon {
+    font-size: 2.8rem; }
+  .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-card.ez-trigger-dover-card-kachest .ez-trigger-dover-col-icon {
+    background-color: rgba(255, 187, 51, 0.85); }
+  .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-card.ez-trigger-dover-card-brand .ez-trigger-dover-col-icon {
+    background-color: rgba(51, 181, 229, 0.55); }
+  .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-card.ez-trigger-dover-card-tseny .ez-trigger-dover-col-icon {
+    background-color: rgba(170, 102, 204, 0.55); }
+  .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-card.ez-trigger-dover-card-dostavka .ez-trigger-dover-col-icon {
+    background-color: rgba(43, 187, 173, 0.55); }
+  .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-card .card-body {
+    padding-top: .75rem;
+    padding-bottom: 0; }
+    .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-card .card-body .card-text {
+      text-transform: none; }
+
 .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row {
   text-align: center;
   color: #fff; }
