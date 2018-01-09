@@ -106,7 +106,7 @@
             }
         }
         .ez-draft-r-card-wrapper {
-            background-color: rgba(192, 14, 170, 0.9) !important;
+            background-color: rgba(192, 14, 170, 0.3) !important;
             padding: 1rem 1rem 0!important;
             padding-bottom: 1rem!important;
             .ez-draft-r-card-wrapper-row {
@@ -203,35 +203,51 @@
     margin-top: 0!important;
     .ez-footer-cont-x {
         .ez-footer-cont {
+            background-color: rgba(54,101,139,1);
+            padding: 0.5rem;
             .ez-footer-row {
                 padding-top: 0!important;
                 margin-top: 0!important;
                 .ez-footer-info {
+                    margin-top: 1rem;
+                    h6 {
+                        font-size: 1rem!important;
+                    }
                     .ez-footer-info-logo {
-                        display: flex;
+                        /* display: flex;
                         justify-content: center;
                         padding: 0 5rem;
                         img {
                             margin: auto;
-                        }
+                        } */
                     }
                     .ez-footer-info-header {
-                        font-size: 1.1rem!important;
+                        font-size: 1rem!important;
                         text-align: center!important;
-                        margin-bottom: 1rem !important;
+                        .ez-footer-info-header-40 {
+                            font-size: 1.25rem!important;
+                            font-style: italic;
+                            color: red!important;
+                        }
+                        a:hover {
+                            color: rgba(226,49,188,1)!important;
+                            font-style: bold;
+                            text-decoration: underline;
+                        }
                     }
                     .ez-footer-info-dostavka {
-                        padding-left: 6rem;
-                        
                         .ez-footer-info-dostavka-header {
                             font-size: 1.1rem!important;
-                            text-align: left!important;   
+                            justify-content: center;
+                            text-transform: uppercase;
                         }    
-                        .ez-footer-info-dostavka-spisok {
+                        .ez-footer-info-dostavka-body {
                             font-size: 0.75rem!important;
                             text-align: left!important;   
-                            list-style: square outside;
                             padding-left: 1rem;
+                            ul {
+                                list-style: disc outside;
+                            }
                         }
                     }
                 }

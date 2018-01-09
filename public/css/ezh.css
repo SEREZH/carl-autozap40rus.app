@@ -85,7 +85,7 @@
     .ez-draft .ez-draft-r .card-body .form-control {
       padding-bottom: 0.25rem; }
   .ez-draft .ez-draft-r .ez-draft-r-card-wrapper {
-    background-color: rgba(192, 14, 170, 0.9) !important;
+    background-color: rgba(192, 14, 170, 0.3) !important;
     padding: 1rem 1rem 0 !important;
     padding-bottom: 1rem !important; }
     .ez-draft .ez-draft-r .ez-draft-r-card-wrapper .ez-draft-r-card-wrapper-row {
@@ -150,69 +150,84 @@
   font-family: Comfortaa;
   font-weight: 400;
   margin-top: 0 !important; }
-  .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-    /* .ez-footer-social {
-            a {
-                width: 4rem;
-                height: 4rem;
-                .ez-footer-social-fa {
-                    font-size: 3rem!important;
-                    line-height: 4rem!important;
-                }
-            }
-        } */ }
-    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-logo {
-      display: flex;
-      justify-content: center;
-      padding: 0 5rem; }
-      .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-logo img {
-        margin: auto; }
-    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-header {
-      font-size: 1.1rem !important;
-      text-align: center !important;
-      margin-bottom: 1rem !important; }
-    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka {
-      padding-left: 6rem; }
-      .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka .ez-footer-info-dostavka-header {
-        font-size: 1.1rem !important;
-        text-align: left !important; }
-      .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka .ez-footer-info-dostavka-spisok {
-        font-size: 0.75rem !important;
-        text-align: left !important;
-        list-style: square outside;
-        padding-left: 1rem; }
-    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-yandex-map {
-      display: flex !important;
-      justify-content: center !important; }
-    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact {
-      -webkit-transition: all 1s ease-out;
-      -moz-transition: all 1s ease-out;
-      -ms-transition: all 1s ease-out;
-      transition: all 1s ease-out; }
-      .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-header {
-        font-size: 1.1rem !important;
-        text-align: left !important;
-        padding-left: 3rem; }
-      .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body {
-        font-size: 1rem !important;
-        text-align: left !important;
-        padding-left: 1rem; }
-        .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body p {
-          margin-bottom: 0.5rem; }
-        .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body .ez-footer-contact-addr a:hover {
-          color: goldenrod !important;
-          font-weight: 900;
-          font-size: 1.25rem; }
-        .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body .ez-footer-contact-phone a:hover {
-          color: aquamarine !important;
-          font-weight: 900;
-          font-size: 1.25rem; }
-        .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body .ez-footer-contact-mail a:hover {
-          color: pink !important;
-          font-weight: 900;
-          font-size: 1.25rem; }
+  .ez-footer .ez-footer-cont-x .ez-footer-cont {
+    background-color: #36658b;
+    padding: 0.5rem; }
+    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+      /* .ez-footer-social {
+              a {
+                  width: 4rem;
+                  height: 4rem;
+                  .ez-footer-social-fa {
+                      font-size: 3rem!important;
+                      line-height: 4rem!important;
+                  }
+              }
+          } */ }
+      .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info {
+        margin-top: 1rem; }
+        .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info h6 {
+          font-size: 1rem !important; }
+        .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-logo {
+          /* display: flex;
+          justify-content: center;
+          padding: 0 5rem;
+          img {
+              margin: auto;
+          } */ }
+        .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-header {
+          font-size: 1rem !important;
+          text-align: center !important; }
+          .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-header .ez-footer-info-header-40 {
+            font-size: 1.25rem !important;
+            font-style: italic;
+            color: red !important; }
+          .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-header a:hover {
+            color: #e231bc !important;
+            font-style: bold;
+            text-decoration: underline; }
+        .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka .ez-footer-info-dostavka-header {
+          font-size: 1.1rem !important;
+          justify-content: center;
+          text-transform: uppercase; }
+        .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka .ez-footer-info-dostavka-body {
+          font-size: 0.75rem !important;
+          text-align: left !important;
+          padding-left: 1rem; }
+          .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka .ez-footer-info-dostavka-body ul {
+            list-style: disc outside; }
+      .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-yandex-map {
+        display: flex !important;
+        justify-content: center !important; }
+      .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact {
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        -ms-transition: all 1s ease-out;
+        transition: all 1s ease-out; }
+        .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-header {
+          font-size: 1.1rem !important;
+          text-align: left !important;
+          padding-left: 3rem; }
+        .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body {
+          font-size: 1rem !important;
+          text-align: left !important;
+          padding-left: 1rem; }
+          .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body p {
+            margin-bottom: 0.5rem; }
+          .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body .ez-footer-contact-addr a:hover {
+            color: goldenrod !important;
+            font-weight: 900;
+            font-size: 1.25rem; }
+          .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body .ez-footer-contact-phone a:hover {
+            color: aquamarine !important;
+            font-weight: 900;
+            font-size: 1.25rem; }
+          .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body .ez-footer-contact-mail a:hover {
+            color: pink !important;
+            font-weight: 900;
+            font-size: 1.25rem; }
 
 @media all and (max-width: 480px) {
   .ez-draft-r-btn {
