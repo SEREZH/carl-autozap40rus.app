@@ -1,9 +1,12 @@
 
 .ez-button-up {
-  i, svg  {
-    margin-left: 1.5rem;
-    margin-top: 1.5rem;
-    font-size: 1rem;            
-  }
+	a {
+		outline:0;
+	}
+	i, svg  {
+	    margin-left: 1.5rem;
+	    margin-top: 1.5rem;
+		font-size: 1rem;            
+	}
 }
 //svg.svg-inline--fa.fa-arrow-up.fa-w-14

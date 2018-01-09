@@ -92,7 +92,7 @@
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  padding: 1.35rem 0 0; }
+  padding: 1.35rem 0 0.7rem; }
   .ez-trigger-dover-row.ez-trigger-dover-row-header {
     display: flex;
     justify-content: center;
@@ -103,7 +103,7 @@
       font-weight: 400;
       margin-bottom: 0; }
   .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-col-icon {
-    font-size: 2.8rem; }
+    font-size: 2.5rem; }
   .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-card.ez-trigger-dover-card-kachest .ez-trigger-dover-col-icon {
     background-color: rgba(255, 187, 51, 0.85); }
   .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-card.ez-trigger-dover-card-brand .ez-trigger-dover-col-icon {
@@ -181,6 +181,8 @@
         margin-top: 12px;
     }
      */
+.ez-button-up a {
+  outline: 0; }
 .ez-button-up i, .ez-button-up svg {
   margin-left: 1.5rem;
   margin-top: 1.5rem;

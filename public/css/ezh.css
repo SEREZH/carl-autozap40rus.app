@@ -85,7 +85,7 @@
     .ez-draft .ez-draft-r .card-body .form-control {
       padding-bottom: 0.25rem; }
   .ez-draft .ez-draft-r .ez-draft-r-card-wrapper {
-    background-color: rgba(192, 14, 170, 0.3) !important;
+    background-color: rgba(195, 68, 167, 0.75) !important;
     padding: 1rem 1rem 0 !important;
     padding-bottom: 1rem !important; }
     .ez-draft .ez-draft-r .ez-draft-r-card-wrapper .ez-draft-r-card-wrapper-row {
@@ -133,16 +133,21 @@
 .ez-tovar {
   padding-top: 1rem;
   padding-bottom: 1rem; }
-  .ez-tovar .ez-tovar-card .ez-tovar-card-header {
-    font-family: Comfortaa;
-    font-weight: 400;
-    font-size: 0.8rem;
-    padding: 0.3rem 0 0 0 !important;
-    background-color: rgba(209, 63, 169, 0.9) !important; }
-    .ez-tovar .ez-tovar-card .ez-tovar-card-header h2 {
-      padding: 0.5rem 0 0 0 !important; }
-    .ez-tovar .ez-tovar-card .ez-tovar-card-header p {
-      padding: 0 !important; }
+  .ez-tovar .ez-tovar-card {
+    cursor: pointer; }
+    .ez-tovar .ez-tovar-card .ez-tovar-card-header {
+      font-family: Comfortaa;
+      font-weight: 400;
+      font-size: 0.8rem;
+      padding: 0.3rem 0 0 0 !important;
+      background-color: rgba(170, 102, 204, 0.55) !important;
+      cursor: pointer; }
+      .ez-tovar .ez-tovar-card .ez-tovar-card-header h2 {
+        padding: 0.5rem 0 0 0 !important; }
+      .ez-tovar .ez-tovar-card .ez-tovar-card-header p {
+        padding: 0 !important; }
+      .ez-tovar .ez-tovar-card .ez-tovar-card-header:hover {
+        background-color: rgba(209, 63, 169, 0.9) !important; }
   .ez-tovar .ez-tovar-card-body {
     background-color: transparent !important; }
 
@@ -186,12 +191,13 @@
             color: red !important; }
           .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-header a:hover {
             color: #e231bc !important;
-            font-style: bold;
-            text-decoration: underline; }
+            font-style: bold; }
         .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka .ez-footer-info-dostavka-header {
-          font-size: 1.1rem !important;
           justify-content: center;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          border-top: 1px solid white; }
+          .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka .ez-footer-info-dostavka-header h5 {
+            font-size: 1.1rem !important; }
         .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka .ez-footer-info-dostavka-body {
           font-size: 0.75rem !important;
           text-align: left !important;
@@ -211,23 +217,16 @@
           text-align: left !important;
           padding-left: 3rem; }
         .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body {
-          font-size: 1rem !important;
+          font-size: 0.85rem !important;
           text-align: left !important;
           padding-left: 1rem; }
           .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body p {
             margin-bottom: 0.5rem; }
-          .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body .ez-footer-contact-addr a:hover {
-            color: goldenrod !important;
-            font-weight: 900;
-            font-size: 1.25rem; }
-          .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body .ez-footer-contact-phone a:hover {
-            color: aquamarine !important;
-            font-weight: 900;
-            font-size: 1.25rem; }
+          .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body .ez-footer-contact-addr a:hover,
+          .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body .ez-footer-contact-phone a:hover,
           .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body .ez-footer-contact-mail a:hover {
-            color: pink !important;
-            font-weight: 900;
-            font-size: 1.25rem; }
+            color: #e231bc !important;
+            font-size: 0.9rem; }
 
 @media all and (max-width: 480px) {
   .ez-draft-r-btn {

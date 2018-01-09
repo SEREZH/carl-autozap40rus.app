@@ -6,8 +6,8 @@
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
-    padding: 1.35rem 0 0;
-    &.ez-trigger-dover-row-header {
+    padding: 1.35rem 0 0.7rem;
+    &.ez-trigger-dover-row-header { 
         display: flex;
         justify-content: center;
         padding-top: 1.75rem;
@@ -21,7 +21,7 @@
     }
     .ez-trigger-dover-col {
         .ez-trigger-dover-col-icon {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
         }
         .ez-trigger-dover-card {
             &.ez-trigger-dover-card-kachest {
