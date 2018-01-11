@@ -73,83 +73,6 @@
     margin-top: 3rem;
     padding-bottom: 3rem;
     text-shadow: 1px 1px black; }
-.ez-draft .ez-draft-r {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.5rem; }
-  .ez-draft .ez-draft-r #FormDraft, .ez-draft .ez-draft-r #FormDraft .ez-draft-r-card-wrapper, .ez-draft .ez-draft-r .card-image {
-    border-radius: 0.5rem; }
-  .ez-draft .ez-draft-r .card-body {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem; }
-    .ez-draft .ez-draft-r .card-body .form-control {
-      padding-bottom: 0.25rem; }
-  .ez-draft .ez-draft-r .ez-draft-r-card-wrapper {
-    background-color: rgba(195, 68, 167, 0.75) !important;
-    padding: 1rem 1rem 0 !important;
-    padding-bottom: 1rem !important; }
-    .ez-draft .ez-draft-r .ez-draft-r-card-wrapper .ez-draft-r-card-wrapper-row {
-      padding-bottom: 0 !important; }
-  .ez-draft .ez-draft-r .ez-draft-r-header {
-    font-family: Comfortaa;
-    font-size: 1.15rem; }
-    .ez-draft .ez-draft-r .ez-draft-r-header .ez-draft-r-header-text {
-      padding-bottom: 0.75rem;
-      text-shadow: 1px 1px black; }
-      .ez-draft .ez-draft-r .ez-draft-r-header .ez-draft-r-header-text .ez-draft-r-header-text-during {
-        font-family: Marck Script;
-        font-size: 1.3rem; }
-    .ez-draft .ez-draft-r .ez-draft-r-header .ez-draft-r-header-icon {
-      justify-content: center; }
-  .ez-draft .ez-draft-r .ez-draft-r-btn {
-    display: inline-flex;
-    color: white !important;
-    border-color: white !important;
-    text-shadow: 1px 1px black;
-    font-size: 1.15rem; }
-    .ez-draft .ez-draft-r .ez-draft-r-btn i, .ez-draft .ez-draft-r .ez-draft-r-btn svg {
-      font-size: 2rem;
-      margin-right: 2.5rem; }
-  .ez-draft .ez-draft-r .ez-draft-r-footer {
-    font-family: Comfortaa;
-    font-size: 0.75rem; }
-  .ez-draft .ez-draft-r .ez-draft-r-form input {
-    font-size: 1.25rem;
-    font-family: Open Sans; }
-  .ez-draft .ez-draft-r .ez-draft-r-form.ez-draft-r-form-req::after {
-    content: "*";
-    font-family: Comfortaa;
-    font-size: 2rem;
-    color: white;
-    position: absolute;
-    top: 0;
-    right: 1rem;
-    padding: 0.3rem; }
-  .ez-draft .ez-draft-r .ez-draft-r-form i, .ez-draft .ez-draft-r .ez-draft-r-form svg {
-    font-size: 1.75rem; }
-  .ez-draft .ez-draft-r .ez-draft-r-form.ez-car-autocompl-form-marka i, .ez-draft .ez-draft-r .ez-draft-r-form.ez-car-autocompl-form-marka svg, .ez-draft .ez-draft-r .ez-draft-r-form.ez-car-autocompl-form-model i, .ez-draft .ez-draft-r .ez-draft-r-form.ez-car-autocompl-form-model svg, .ez-draft .ez-draft-r .ez-draft-r-form.ez-car-autocompl-form-generation i, .ez-draft .ez-draft-r .ez-draft-r-form.ez-car-autocompl-form-generation svg {
-    font-size: 1.4rem; }
-
-.ez-tovar {
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
-  .ez-tovar .ez-tovar-card {
-    cursor: pointer; }
-    .ez-tovar .ez-tovar-card .ez-tovar-card-header {
-      font-family: Comfortaa;
-      font-weight: 400;
-      font-size: 0.8rem;
-      padding: 0.3rem 0 0 0 !important;
-      background-color: rgba(170, 102, 204, 0.55) !important;
-      cursor: pointer; }
-      .ez-tovar .ez-tovar-card .ez-tovar-card-header h2 {
-        padding: 0.5rem 0 0 0 !important; }
-      .ez-tovar .ez-tovar-card .ez-tovar-card-header p {
-        padding: 0 !important; }
-      .ez-tovar .ez-tovar-card .ez-tovar-card-header:hover {
-        background-color: rgba(209, 63, 169, 0.9) !important; }
-  .ez-tovar .ez-tovar-card-body {
-    background-color: transparent !important; }
 
 .ez-footer {
   font-family: Comfortaa;
@@ -205,6 +128,8 @@
           padding-left: 1rem; }
           .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka .ez-footer-info-dostavka-body ul {
             list-style: disc outside; }
+        .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-dostavka .ez-footer-info-dostavka-free {
+          font-size: 0.5rem; }
       .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-yandex-map {
         display: flex !important;
         justify-content: center !important; }

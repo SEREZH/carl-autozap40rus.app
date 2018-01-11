@@ -35,16 +35,18 @@
 @import url("./fonts/lato/lato.css"); lato - Lato 100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i
  */
 
+@import "ez-form-zakaz";
 @import "ez-validate";
 @import "ez-work-schema";
 @import "ez-trigger-dover";
-@import "ez-circle-progress";
+@import "ez-tovar";
+@import "ez-action-form-simpe";
+/* @import "ez-circle-progress"; */
 @import "ez-button-up";
-@import "ez-button-atom";
+/* @import "ez-button-atom"; */
 @import "ez-car-autocompl";
 @import "ez-flipclock";
 @import "ez-dostavka-oplata";
-@import "ez-action-form-simpe";
 
 
 .intro-2 {

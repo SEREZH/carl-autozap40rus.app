@@ -1,23 +1,6 @@
 var ez_flipclock_clock;
 
 jQuery( document ).ready(function() {
-
-/*
-				// Grab the current date
-				var currentDate = new Date();
-				// Set some date in the future. In this case, it's always Jan 1
-				var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 1);
-
-				// Calculate the difference in seconds between the future and current date
-				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
-
-				// Instantiate a coutdown FlipClock
-				clock = $('.clock').FlipClock(diff, {
-					clockFace: 'DailyCounter',
-					countdown: true
-				});
-
-*/	
 	// Grab the current date
 	var currentDate = new Date();
 	// Set some date in the future. In this case, it's always Jan 1
@@ -33,41 +16,36 @@ jQuery( document ).ready(function() {
 		countdown: true,
 		language: 'ru'
 	});
-
 	console.log('jQuery - app: READY');
 	new WOW().init();
- 	
- 	jQuery("#FormDraftContactPhone").mask("+7(999)999-99-99");
-
- 	var ajaxSubmitOptions = { 
-        target:    '#FormDraftResult',   // target element(s) to be updated with server response 
-///////*        beforeSubmit:  showRequest,  // pre-submit callback 
-        success:   showResponse,  // post-submit callback 
- 		url:       'php/sendz.php'         // override for form's 'action' attribute 
-        // other available options: 
+ 	jQuery("#formZakazContactPhone").mask("+7(999)999-99-99");
+ 	var ajaxSubmitOptionsFormZakaz = { 
+        target:    '#formZakazResult',   // target element(s) to be updated with server response 
+		//beforeSubmit:  showRequest,  // pre-submit callback 
+        success:   showResponseFormZakaz,  // post-submit callback 
+ 		url:       'php/ez-form-zakaz.php'         // override for form's 'action' attribute 
+        // Other available options: 
         //url:       url         // override for form's 'action' attribute 
         //type:      type        // 'get' or 'post', override for form's 'method' attribute 
         //dataType:  null        // 'xml', 'script', or 'json' (expected server response type) 
         //clearForm: true        // clear all form fields after successful submit 
         //resetForm: true        // reset the form after successful submit 
- 
         // $.ajax options can be used here too, for example: 
         //timeout:   3000 
     }; 
  
     // bind to the form's submit event 
-    $('#FormDraft').submit(function() { 
+    $('#formZakaz').submit(function() { 
         // inside event callbacks 'this' is the DOM element so we first 
         // wrap it in a jQuery object and then invoke ajaxSubmit 
-        $(this).ajaxSubmit(ajaxSubmitOptions); 
+        $(this).ajaxSubmit(ajaxSubmitOptionsFormZakaz); 
         // !!! Important !!! 
         // always return false to prevent standard browser submit and page navigation 
         return false; 
     }); 
 });
-
 // post-submit callback 
-function showResponse(responseText, statusText, xhr, $form)  { 
+function showResponseFormZakaz(responseText, statusText, xhr, $form)  { 
     // for normal html responses, the first argument to the success callback 
     // is the XMLHttpRequest object's responseText property 
  
@@ -79,17 +57,57 @@ function showResponse(responseText, statusText, xhr, $form)  {
     // property set to 'json' then the first argument to the success callback 
     // is the json data object returned by the server 
  
-    alert('status: ' + statusText + '\n\nresponseText: \n' + responseText + 
+/*
+status: success
+responseText: 
+<!-- ez-form-zakaz.php -->
+{
+"name":"",
+"phone":"",
+"err_code":-2001,
+"err_msg_m":"Ошибка при заполнении формы экспресс заказа!",
+"err_msg_s":"Укажите, пожалуйста, Ваше имя!",
+"err_msg_l":"Укажите, пожалуйста, Ваше имя!"}
+*/
+	var status  	= statusText;
+	var jsonObj		= JSON.parse(responseText);
+	var errCode 	= jsonObj['err_code'];
+    var errMsgM 	= jsonObj['err_msg_m'];
+    var errMsgS 	= jsonObj['err_msg_s'];
+    var errMsgL 	= jsonObj['err_msg_l'];
+    var userName 	= jsonObj['name']; 
+    var userPhone	= jsonObj['phone'];
+	if (err_code == '0') {
+		alert('Уважаемый ' + userName + '!' +
+			'Ваша заявка успешно принята.' +
+			'Наш менеджер свяжется с Вами в течении 15 минут!'
+    	);
+	} else {
+		alert(errMsgM + errMsgS);
+	}
+
+/*
+    alert('status: ' + statusText + 
+    	'\n\nresponseText: \n' + responseText + 
+    	'\n\njsonObj[err_code]: \n' + jsonObj['err_code'] + 
+    	'\n\njsonObj[err_msg_m]: \n' + jsonObj['err_msg_m'] + 
+    	'\n\njsonObj[err_msg_s]: \n' + jsonObj['err_msg_s'] + 
+    	'\n\njsonObj[err_msg_l]: \n' + jsonObj['err_msg_l'] + 
+    	'\n\njsonObj[name]: \n' + jsonObj['name'] + 
+    	'\n\njsonObj[phone]: \n' + jsonObj['phone'] + 
         '\n\nThe output div should have already been updated with the responseText.'); 
+*/
+
 } 
 
-function sendAjaxFormDraft(result_form, ajax_form, url) {
-	console.log('AJAX - sendAjaxFormDraft BEGIN');
-	console.log('AJAX - sendAjaxFormDraft::result_form='+result_form);
-	console.log('AJAX - sendAjaxFormDraft::ajax_form='+ajax_form);
-	console.log('AJAX - sendAjaxFormDraft::url='+url);
+/// -- !!! -- Похоже, что это уже не используем -- !!! ---
+function sendAjaxFormZakaz(result_form, ajax_form, url) {
+	console.log('AJAX - sendAjaxFormZakaz BEGIN');
+	console.log('AJAX - sendAjaxFormZakaz::result_form='+result_form);
+	console.log('AJAX - sendAjaxFormZakaz::ajax_form='+ajax_form);
+	console.log('AJAX - sendAjaxFormZakaz::url='+url);
 	var v_form = jQuery("#"+ajax_form).serialize();
-	console.log('AJAX - sendAjaxFormDraft::v_form='+v_form);
+	console.log('AJAX - sendAjaxFormZakaz::v_form='+v_form);
     jQuery.ajax({
         url:     url, //url страницы (action_ajax_form.php)
         type:     "POST", //метод отправки
@@ -103,60 +121,61 @@ function sendAjaxFormDraft(result_form, ajax_form, url) {
             jQuery('#result_form').html('Ошибка. Данные не отправлены.');
     	}
  	}).done(function() {
-          	console.log('AJAX - sendAjaxFormDraft DONE');
+          	console.log('AJAX - sendAjaxFormZakaz DONE');
 	        /////setTimeout(function() {
 	        /////   jQuery.fancybox.close();
 	        /////}, 2000);
     });
- 	console.log('AJAX - sendAjaxFormDraft END');
+ 	console.log('AJAX - sendAjaxFormZakaz END');
 }
 
-function validateFormDraft(obj, e) {
-	console.log('validateFormDraft: BEGIN');
+function validateFormZakaz(obj, e) {
+	console.log('validateFormZakaz: BEGIN');
 
 	//Печать имён и значений свойств с помощью Array.forEach
 	//Object.getOwnPropertyNames(ev).forEach(function(val, idx, array) {console.log(val + ' -> ' + ev[val]);});
 
 	if (typeof e !== 'undefined') {
 /*		
-		console.log('validateFormDraft: e.type='+e.type);
-		console.log('validateFormDraft: e.target='+e.target);
-		console.log('validateFormDraft: e.target.form.id='+e.target.form.id);
-		console.log('validateFormDraft: e.target.form.name='+e.target.form.name);
-		console.log('validateFormDraft: e.target.form.method='+e.target.form.method);
-		console.log('validateFormDraft: obj.form.id='+obj.form.id);
-		console.log('validateFormDraft: obj.form.name='+obj.form.name);
-		console.log('validateFormDraft: obj.form.method='+obj.form.method);
-		console.log('validateFormDraft: obj.formAction='+obj.formAction);
-		console.log('validateFormDraft: obj.formMethod='+obj.formMethod);
-		console.log('validateFormDraft: obj.formTarget='+obj.formTarget);
-		console.log('validateFormDraft: obj.id='+obj.id);
-		console.log('validateFormDraft: obj.name='+obj.name);
-		console.log('validateFormDraft: obj.type='+obj.type);
-		console.log('validateFormDraft: obj.pattern='+obj.pattern);
-		console.log('validateFormDraft: obj.value='+obj.value);
-		console.log('validateFormDraft: obj.value.length='+obj.value.length);
-		console.log('validateFormDraft: e.target.value='+e.target.value);
-		console.log('validateFormDraft: e.target.value.length='+e.target.value.length);*/
+		console.log('validateFormZakaz: e.type='+e.type);
+		console.log('validateFormZakaz: e.target='+e.target);
+		console.log('validateFormZakaz: e.target.form.id='+e.target.form.id);
+		console.log('validateFormZakaz: e.target.form.name='+e.target.form.name);
+		console.log('validateFormZakaz: e.target.form.method='+e.target.form.method);
+		console.log('validateFormZakaz: obj.form.id='+obj.form.id);
+		console.log('validateFormZakaz: obj.form.name='+obj.form.name);
+		console.log('validateFormZakaz: obj.form.method='+obj.form.method);
+		console.log('validateFormZakaz: obj.formAction='+obj.formAction);
+		console.log('validateFormZakaz: obj.formMethod='+obj.formMethod);
+		console.log('validateFormZakaz: obj.formTarget='+obj.formTarget);
+		console.log('validateFormZakaz: obj.id='+obj.id);
+		console.log('validateFormZakaz: obj.name='+obj.name);
+		console.log('validateFormZakaz: obj.type='+obj.type);
+		console.log('validateFormZakaz: obj.pattern='+obj.pattern);
+		console.log('validateFormZakaz: obj.value='+obj.value);
+		console.log('validateFormZakaz: obj.value.length='+obj.value.length);
+		console.log('validateFormZakaz: e.target.value='+e.target.value);
+		console.log('validateFormZakaz: e.target.value.length='+e.target.value.length);
+*/
 	}	
 
 	jQuery(obj).removeClass('ez-tooltip-js-valid-no');
-	//FormDraftUserName
-	//FormDraftContactPhone
-	if (obj.name == "FormDraftUserName") { 	
+	//formZakazUserName
+	//formZakazContactPhone
+	if (obj.name == "formZakazUserName") { 	
 
-		console.log('validateFormDraft::FormDraftUserName: obj.value='+obj.value);
-		console.log('validateFormDraft::FormDraftUserName: obj.value.length='+obj.value.length);
-		console.log('validateFormDraft::FormDraftUserName: e.target.value='+e.target.value);
-		console.log('validateFormDraft::FormDraftUserName: e.target.value.length='+e.target.value.length);
+		console.log('validateFormZakaz::formZakazUserName: obj.value='+obj.value);
+		console.log('validateFormZakaz::formZakazUserName: obj.value.length='+obj.value.length);
+		console.log('validateFormZakaz::formZakazUserName: e.target.value='+e.target.value);
+		console.log('validateFormZakaz::formZakazUserName: e.target.value.length='+e.target.value.length);
 
 		var v_value = obj.value;
 		var v_title = '<span>Пожалуйста,<br>укажите Ваше имя! <br> Бляха, муха!!!<br>'+v_value+'</span>';
-		console.log('validateFormDraft::FormDraftUserName: v_value='+v_value);
-		console.log('validateFormDraft::FormDraftUserName: v_title='+v_title);
+		console.log('validateFormZakaz::formZakazUserName: v_value='+v_value);
+		console.log('validateFormZakaz::formZakazUserName: v_title='+v_title);
 
 	   	if (obj.value.length < 5) {
-	   		console.log('validateFormDraft: obj.name='+obj.name+': VALIDATE ERROR');
+	   		console.log('validateFormZakaz: obj.name='+obj.name+': VALIDATE ERROR');
 	   		jQuery(e.target).tooltip('dispose');
 	   		jQuery(e.target).tooltip({
 					trigger: 'manual',
@@ -176,7 +195,7 @@ function validateFormDraft(obj, e) {
 			}, 3500);
 	   	}
 	   	else if (obj.value.length > 4) {
-	   		console.log('validateFormDraft: obj.name='+obj.name+': VALIDATE ERROR');
+	   		console.log('validateFormZakaz: obj.name='+obj.name+': VALIDATE ERROR');
 	   		jQuery(e.target).tooltip('dispose');
 	   		jQuery(e.target).tooltip({
 					trigger: 'manual',
@@ -195,21 +214,21 @@ function validateFormDraft(obj, e) {
 			}, 3500);
 	   	}
 	   	else {
-		  	console.log('validateFormDraft obj.name='+obj.name+': VALIDATE OK');
+		  	console.log('validateFormZakaz obj.name='+obj.name+': VALIDATE OK');
 		  	jQuery(e.target).tooltip('hide');
 	   	}
-	}  else if (obj.name == "FormDraftContactPhone") { 	
+	}  else if (obj.name == "formZakazContactPhone") { 	
 		var v_value_phone = obj.value;
 		var v_title_phone = '<span>Пожалуйста,<br>укажите Ваш телефон!<br>'+v_value_phone+'</span>';
-		console.log('validateFormDraft::FormDraftContactPhone: v_value='+v_value_phone);
-		console.log('validateFormDraft::FormDraftContactPhone: v_title='+v_title_phone);
+		console.log('validateFormZakaz::formZakazContactPhone: v_value='+v_value_phone);
+		console.log('validateFormZakaz::formZakazContactPhone: v_title='+v_title_phone);
 
 		var v_tph =v_value_phone;
 		v_tph = !v_tph.match(/^\([0-9]{3}\)[0-9]{3}-[0-9]{2}\-[0-9]{2}/);
-		console.log('validateFormDraft::FormDraftContactPhone: v_tph = '+v_tph);
+		console.log('validateFormZakaz::formZakazContactPhone: v_tph = '+v_tph);
 
 		if (obj.value.length < 100) {
-	   		console.log('validateFormDraft obj.name='+obj.name+': VALIDATE ERROR');
+	   		console.log('validateFormZakaz obj.name='+obj.name+': VALIDATE ERROR');
 			jQuery(e.target).tooltip('dispose');
 	   		jQuery(e.target).tooltip({
 					trigger: 'manual',
@@ -228,28 +247,18 @@ function validateFormDraft(obj, e) {
 			}, 3500);
 	   	}
 	   	else {
-		  	console.log('validateFormDraft obj.name='+obj.name+': VALIDATE OK');
+		  	console.log('validateFormZakaz obj.name='+obj.name+': VALIDATE OK');
 		  	jQuery(e.target).tooltip('hide');
 	   	}
 	} else {
-		console.log('validateFormDraft obj.name='+obj.name+': VALIDATE ELSE OTHER OBJECT');	
+		console.log('validateFormZakaz obj.name='+obj.name+': VALIDATE ELSE OTHER OBJECT');	
 	}
 }
 
 
 jQuery(function () {
   jQuery('[data-toggle="tooltip"]').tooltip()
-})
-
-/*
-jQuery('#circle').circleProgress({
-	value: 0.75,
-	size: 80,
-	fill: {
-	  gradient: ["red", "orange"]
-	}
-});*/
-
+});
 
 /* circle-progress */
 /*(function($) {

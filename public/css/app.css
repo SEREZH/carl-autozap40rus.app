@@ -18,6 +18,63 @@
 @import url("./fonts/roboto/roboto.css"); roboto - Roboto 100,100i,300,300i,400,400i,500,500i,700,700i,900,900i
 @import url("./fonts/lato/lato.css"); lato - Lato 100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i
  */
+.ez-form-zakaz {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem; }
+  .ez-form-zakaz #FormDraft, .ez-form-zakaz #FormDraft .ez-form-zakaz-card-wrapper, .ez-form-zakaz .card-image {
+    border-radius: 0.5rem; }
+  .ez-form-zakaz .card-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; }
+    .ez-form-zakaz .card-body .form-control {
+      padding-bottom: 0.25rem; }
+  .ez-form-zakaz .ez-form-zakaz-card-wrapper {
+    background-color: rgba(195, 68, 167, 0.75) !important;
+    padding: 1rem 1rem 0 !important;
+    padding-bottom: 1rem !important; }
+    .ez-form-zakaz .ez-form-zakaz-card-wrapper .ez-form-zakaz-card-wrapper-row {
+      padding-bottom: 0 !important; }
+  .ez-form-zakaz .ez-form-zakaz-header {
+    font-family: Comfortaa;
+    font-size: 1.15rem; }
+    .ez-form-zakaz .ez-form-zakaz-header .ez-form-zakaz-header-text {
+      padding-bottom: 0.75rem;
+      text-shadow: 1px 1px black; }
+      .ez-form-zakaz .ez-form-zakaz-header .ez-form-zakaz-header-text .ez-form-zakaz-header-text-during {
+        font-size: 0.9rem;
+        font-style: italic; }
+    .ez-form-zakaz .ez-form-zakaz-header .ez-form-zakaz-header-icon {
+      justify-content: center; }
+  .ez-form-zakaz .ez-form-zakaz-btn {
+    display: inline-flex;
+    color: white !important;
+    border-color: white !important;
+    text-shadow: 1px 1px black;
+    font-size: 1.15rem; }
+    .ez-form-zakaz .ez-form-zakaz-btn i, .ez-form-zakaz .ez-form-zakaz-btn svg {
+      font-size: 2rem;
+      margin-right: 2.5rem; }
+  .ez-form-zakaz .ez-form-zakaz-footer {
+    font-family: Comfortaa;
+    font-size: 0.75rem; }
+  .ez-form-zakaz .ez-form-zakaz-form input {
+    font-size: 1.25rem;
+    font-family: Open Sans; }
+  .ez-form-zakaz .ez-form-zakaz-form.ez-form-zakaz-form-req::after {
+    content: "*";
+    font-family: Comfortaa;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    padding: 0.3rem; }
+  .ez-form-zakaz .ez-form-zakaz-form i, .ez-form-zakaz .ez-form-zakaz-form svg {
+    font-size: 1.75rem; }
+  .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-marka i, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-marka svg, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-model i, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-model svg, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-generation i, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-generation svg {
+    font-size: 1.4rem; }
+
 /* input:required:invalid {
     border:1px solid red;
 } */
@@ -118,69 +175,63 @@
     .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-card .card-body .card-text {
       text-transform: none; }
 
-.ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row {
-  text-align: center;
-  color: #fff; }
-  .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col {
-    font-family: Comfortaa;
-    font-size: 0.7rem;
-    font-weight: 400;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 1.5rem; }
-    .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col .circle {
-      width: 100%;
-      margin: 6px 6px 20px;
-      display: inline-block;
-      position: relative;
-      text-align: center;
-      line-height: 1.2; }
-      .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col .circle .ez-circle-progress-col-header {
-        font-weight: 700;
-        line-height: 1.7; }
-      .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col .circle strong {
-        position: absolute;
-        top: 1.7rem;
-        left: 0;
-        width: 100%;
-        font-size: 2rem !important;
-        text-align: center;
-        line-height: 3rem; }
-      .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col .circle canvas {
-        vertical-align: top; }
-      .ez-circle-progress .ez-circle-progress-cont .ez-circle-progress-row .ez-circle-progress-col .circle span {
-        display: block;
-        color: white;
-        margin-top: 12px;
-        line-height: 1.25rem; }
+.ez-tovar {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  .ez-tovar .ez-tovar-card {
+    cursor: pointer; }
+    .ez-tovar .ez-tovar-card .ez-tovar-card-header {
+      font-family: Comfortaa;
+      font-weight: 400;
+      font-size: 0.8rem;
+      padding: 0.3rem 0 0 0 !important;
+      background-color: rgba(170, 102, 204, 0.55) !important;
+      cursor: pointer; }
+      .ez-tovar .ez-tovar-card .ez-tovar-card-header h2 {
+        padding: 0.5rem 0 0 0 !important; }
+      .ez-tovar .ez-tovar-card .ez-tovar-card-header p {
+        padding: 0 !important; }
+      .ez-tovar .ez-tovar-card .ez-tovar-card-header:hover {
+        background-color: rgba(209, 63, 169, 0.9) !important; }
+  .ez-tovar .ez-tovar-card-body {
+    background-color: transparent !important; }
 
-/* .circle {
-    width: 100px;
-    margin: 6px 6px 20px;
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    line-height: 1.2;
-}
-.circle canvas {
-    vertical-align: top;
-}
- */
-/* .circle strong {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 30px;
-} */
-/* .circle span {
-        display: block;
+.ez-action-form-simpe {
+  color: white;
+  font-family: Comfortaa;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem 0; }
+  .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section {
+    border-radius: 0.5rem; }
+    .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form {
+      background-color: rgba(209, 63, 169, 0.9) !important;
+      font-family: Comfortaa;
+      font-weight: 400;
+      border-radius: 0.5rem; }
+      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-header {
+        border-bottom: 1px solid white; }
+        .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-header .ez-action-form-simpe-card-header-text h5 {
+          font-weight: 700;
+          text-transform: uppercase; }
+      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-body-form i, .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-body-form svg {
+        font-size: 1.75rem; }
+      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-body-form label {
+        font-family: Roboto, sans-serif;
+        font-size: 1rem; }
+      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn {
         color: white;
-        margin-top: 12px;
-    }
-     */
+        border-color: white;
+        padding: 0.75rem; }
+        .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn i, .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn svg {
+          color: white;
+          font-size: 1.25rem;
+          margin-right: 1rem; }
+        .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn span {
+          color: white; }
+
+/* @import "ez-circle-progress"; */
 /* ez-button-up */
 .ez-button-up a,
 .ez-button-vk a {
@@ -224,105 +275,7 @@
   background-image: url(https://mdbootstrap.com/img/logo/mdb-angular.png);
   background-repeat: no-repeat; }
 
-/* ez-button-atom */
-:root {
-  --bg: #3C465C;
-  --primary: #ddd;
-  --solid: #fff;
-  --btn-w: 7em;
-  --dot-w: calc(var(--btn-w)*.2);
-  --tr-X: calc(var(--btn-w) - var(--dot-w)); }
-
-* {
-  box-sizing: border-box; }
-
-*:before, *:after {
-  box-sizing: border-box; }
-
-/* 
-<div class="container">	
-	<div class="btn">
-		<span>Atom</span>
-		<div class="dot"></div>
-	</div>
-	<h1>&#x261D; Hover on the button &#x261D;</h1>
-</div>
- */
-/* body {
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: wrap;
-	background: var(--bg);
-	font-size: 20px;
-	font-family: 'Titillium Web', sans-serif;
-} */
-.atom-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: wrap;
-  background: transparent;
-  font-size: 20px; }
-
-/* h1 {
-	color: var(--solid);
-	font-size: 2.5rem;
-	margin-top: 6rem;	
-} */
-.atom-button {
-  position: relative;
-  margin: 0 auto;
-  padding: 0.5 0rem;
-  width: var(--btn-w);
-  color: var(--primary);
-  border: 0.1em solid var(--primary);
-  border-radius: 5em;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 1em;
-  line-height: 1.2em;
-  cursor: pointer; }
-
-.atom-dot {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: var(--dot-w);
-  height: 100%;
-  border-radius: 100%;
-  transition: all 300ms ease;
-  display: none; }
-
-.atom-dot:after {
-  content: '';
-  position: absolute;
-  left: calc(50% - .4em);
-  top: -.4em;
-  height: .8em;
-  width: .8em;
-  background: var(--primary);
-  border-radius: 1em;
-  border: 0.25em solid var(--solid);
-  box-shadow: 0 0 0.7em var(--solid), 0 0 2em var(--primary); }
-
-.atom-button:hover .atom-dot,
-.atom-button:focus .atom-dot {
-  animation: atom 2s infinite linear;
-  display: block; }
-
-@keyframes atom {
-  0% {
-    transform: translateX(0) rotate(0); }
-  30% {
-    transform: translateX(var(--tr-X)) rotate(0); }
-  50% {
-    transform: translateX(var(--tr-X)) rotate(180deg); }
-  80% {
-    transform: translateX(0) rotate(180deg); }
-  100% {
-    transform: translateX(0) rotate(360deg); } }
+/* @import "ez-button-atom"; */
 /* --- ez-car-autocompl --- */
 .ez-car-autocompl-form {
   color: rgba(198, 37, 178, 0.85) !important;
@@ -447,41 +400,6 @@
     padding-bottom: 0; }
     .ez-dostavka-oplata .ez-trigger-dover-col .ez-trigger-dover-card .card-body .card-text {
       text-transform: none; }
-
-.ez-action-form-simpe {
-  color: white;
-  font-family: Comfortaa;
-  font-size: 0.7rem;
-  font-weight: 400;
-  text-align: center;
-  padding: 0.5rem 0; }
-  .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section {
-    border-radius: 0.5rem; }
-    .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form {
-      background-color: rgba(209, 63, 169, 0.9) !important;
-      font-family: Comfortaa;
-      font-weight: 400;
-      border-radius: 0.5rem; }
-      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-header {
-        border-bottom: 1px solid white; }
-        .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-header .ez-action-form-simpe-card-header-text h5 {
-          font-weight: 700;
-          text-transform: uppercase; }
-      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-body-form i, .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-body-form svg {
-        font-size: 1.75rem; }
-      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-body-form label {
-        font-family: Roboto, sans-serif;
-        font-size: 1rem; }
-      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn {
-        color: white;
-        border-color: white;
-        padding: 0.75rem; }
-        .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn i, .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn svg {
-          color: white;
-          font-size: 1.25rem;
-          margin-right: 1rem; }
-        .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn span {
-          color: white; }
 
 .intro-2 {
   background: url("http://mdbootstrap.com/img/Photos/Others/images/91.jpg") no-repeat center center;
