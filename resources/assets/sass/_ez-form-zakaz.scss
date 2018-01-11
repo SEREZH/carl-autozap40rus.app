@@ -83,3 +83,18 @@
     }
     
 }
+
+#modalFormZakazError {
+    .modal-warning{ 
+        .modal-content {
+            .modal-body {
+                padding: 1rem 1.5rem;
+                svg{
+                    color: #FF8E38;
+                }
+            }
+        }
+    }
+}
+
+

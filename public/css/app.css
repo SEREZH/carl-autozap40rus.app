@@ -75,6 +75,11 @@
   .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-marka i, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-marka svg, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-model i, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-model svg, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-generation i, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-generation svg {
     font-size: 1.4rem; }
 
+#modalFormZakazError .modal-warning .modal-content .modal-body {
+  padding: 1rem 1.5rem; }
+  #modalFormZakazError .modal-warning .modal-content .modal-body svg {
+    color: #FF8E38; }
+
 /* input:required:invalid {
     border:1px solid red;
 } */

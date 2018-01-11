@@ -46,44 +46,40 @@ jQuery( document ).ready(function() {
 });
 // post-submit callback 
 function showResponseFormZakaz(responseText, statusText, xhr, $form)  { 
-    // for normal html responses, the first argument to the success callback 
-    // is the XMLHttpRequest object's responseText property 
- 
-    // if the ajaxSubmit method was passed an Options Object with the dataType 
-    // property set to 'xml' then the first argument to the success callback 
-    // is the XMLHttpRequest object's responseXML property 
- 
-    // if the ajaxSubmit method was passed an Options Object with the dataType 
-    // property set to 'json' then the first argument to the success callback 
-    // is the json data object returned by the server 
- 
-/*
-status: success
-responseText: 
-<!-- ez-form-zakaz.php -->
-{
-"name":"",
-"phone":"",
-"err_code":-2001,
-"err_msg_m":"Ошибка при заполнении формы экспресс заказа!",
-"err_msg_s":"Укажите, пожалуйста, Ваше имя!",
-"err_msg_l":"Укажите, пожалуйста, Ваше имя!"}
-*/
 	var status  	= statusText;
 	var jsonObj		= JSON.parse(responseText);
 	var errCode 	= jsonObj['err_code'];
     var errMsgM 	= jsonObj['err_msg_m'];
     var errMsgS 	= jsonObj['err_msg_s'];
     var errMsgL 	= jsonObj['err_msg_l'];
-    var userName 	= jsonObj['name']; 
-    var userPhone	= jsonObj['phone'];
-	if (err_code == '0') {
-		alert('Уважаемый ' + userName + '!' +
-			'Ваша заявка успешно принята.' +
-			'Наш менеджер свяжется с Вами в течении 15 минут!'
-    	);
+    var clientID	= jsonObj['client_id']; 
+    var clientName 	= jsonObj['name']; 
+    var clientPhone	= jsonObj['phone'];
+    
+    var carID	= jsonObj['car_id'];
+    var orderID	= jsonObj['order_id'];
+    var cmtApp	= jsonObj['cmt_app'];
+
+	if (errCode == '0') {
+		var errBodyText = 'err_code='+errCode+
+			'<br>err_msg_m='+errMsgM+
+			'<br>err_msg_s='+errMsgS+
+			'<br>err_msg_l='+errMsgL+
+			'<br>client_id='+clientID+
+			'<br>name='		+clientName+
+			'<br>phone='	+clientPhone+
+			'<br>car_id='	+carID+
+			'<br>order_id='	+orderID+
+			'<br>cmt_app='	+cmtApp;
+		$('#modalFormZakazErrorBodyText').html(errBodyText);
+		$('#modalFormZakazError').modal();
 	} else {
-		alert(errMsgM + errMsgS);
+		if (errCode == '-2001'||errCode == '-2002') {   
+			var errBodyText = 'Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!';
+			errBodyText = errBodyText + '<br>' + errMsgS;
+			$('#modalFormZakazErrorBodyText').html(errBodyText);
+    		$('#modalFormZakazError').modal();
+		}	
 	}
 
 /*
