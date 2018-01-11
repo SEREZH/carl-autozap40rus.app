@@ -1,0 +1,96 @@
+/* ez-button-atom */
+:root {
+	--bg: #3C465C;
+	//--primary: #78FFCD;
+	--primary: #ddd;
+	--solid: #fff;
+	--btn-w: 7em;
+	--dot-w: calc(var(--btn-w)*.2);
+	--tr-X: calc(var(--btn-w) - var(--dot-w));
+}
+* {box-sizing: border-box;}
+*:before, *:after {box-sizing: border-box;}
+/* 
+<div class="container">	
+	<div class="btn">
+		<span>Atom</span>
+		<div class="dot"></div>
+	</div>
+	<h1>&#x261D; Hover on the button &#x261D;</h1>
+</div>
+ */
+/* body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: wrap;
+	background: var(--bg);
+	font-size: 20px;
+	font-family: 'Titillium Web', sans-serif;
+} */
+.atom-row {
+//	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: wrap;
+	//background: var(--bg);
+	background: transparent;
+	font-size: 20px;
+}
+
+/* h1 {
+	color: var(--solid);
+	font-size: 2.5rem;
+	margin-top: 6rem;	
+} */
+.atom-button {
+	position: relative;
+	margin: 0 auto;
+	padding: 0.5 0rem;
+	width: var(--btn-w);
+	color: var(--primary);
+	border: .1em solid var(--primary);
+	border-radius: 5em;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1em;
+	line-height: 1.2em;
+	cursor: pointer;	
+}
+.atom-dot {
+	content: '';
+	position: absolute;
+	top: 0;
+	width: var(--dot-w);
+	height: 100%;
+	border-radius: 100%;
+	transition: all 300ms ease;
+	display: none;
+}
+.atom-dot:after {
+	content: '';
+	position: absolute;
+	left: calc(50% - .4em);
+	top: -.4em;
+	height: .8em;
+	width: .8em;
+	background: var(--primary);
+	border-radius: 1em;
+	border: .25em solid var(--solid);
+	box-shadow: 0 0 .7em var(--solid),
+				0 0 2em var(--primary);
+}
+.atom-button:hover .atom-dot,
+.atom-button:focus .atom-dot {
+	animation: atom 2s infinite linear;
+	display: block;
+}
+@keyframes atom {
+	0% {transform: translateX(0) rotate(0);}
+	30%{transform: translateX(var(--tr-X)) rotate(0);}
+	50% {transform: translateX(var(--tr-X)) rotate(180deg);}
+	80% {transform: translateX(0) rotate(180deg);}
+	100% {transform: translateX(0) rotate(360deg);}
+}

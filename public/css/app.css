@@ -181,13 +181,148 @@
         margin-top: 12px;
     }
      */
-.ez-button-up a {
+/* ez-button-up */
+.ez-button-up a,
+.ez-button-vk a {
   outline: 0; }
-.ez-button-up i, .ez-button-up svg {
+.ez-button-up i, .ez-button-up svg,
+.ez-button-vk i,
+.ez-button-vk svg {
   margin-left: 1.5rem;
   margin-top: 1.5rem;
   font-size: 1rem; }
 
+.ez-button-vk {
+  position: fixed;
+  bottom: 125px;
+  right: 24px; }
+  .ez-button-vk a {
+    background-color: #4a76a8; }
+
+.switch-version {
+  position: fixed;
+  width: 50px;
+  background: #fff;
+  right: 0;
+  top: 50px;
+  border-radius: 4px 0 0 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+
+.switch-version a:first-child > .switch-to {
+  border-top-left-radius: 4px; }
+
+.switch-to.mdb-jquery {
+  background-position: 0 -40px; }
+
+.switch-to.active {
+  background-color: rgba(0, 0, 0, 0.15); }
+
+.switch-to {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url(https://mdbootstrap.com/img/logo/mdb-angular.png);
+  background-repeat: no-repeat; }
+
+/* ez-button-atom */
+:root {
+  --bg: #3C465C;
+  --primary: #ddd;
+  --solid: #fff;
+  --btn-w: 7em;
+  --dot-w: calc(var(--btn-w)*.2);
+  --tr-X: calc(var(--btn-w) - var(--dot-w)); }
+
+* {
+  box-sizing: border-box; }
+
+*:before, *:after {
+  box-sizing: border-box; }
+
+/* 
+<div class="container">	
+	<div class="btn">
+		<span>Atom</span>
+		<div class="dot"></div>
+	</div>
+	<h1>&#x261D; Hover on the button &#x261D;</h1>
+</div>
+ */
+/* body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: wrap;
+	background: var(--bg);
+	font-size: 20px;
+	font-family: 'Titillium Web', sans-serif;
+} */
+.atom-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  background: transparent;
+  font-size: 20px; }
+
+/* h1 {
+	color: var(--solid);
+	font-size: 2.5rem;
+	margin-top: 6rem;	
+} */
+.atom-button {
+  position: relative;
+  margin: 0 auto;
+  padding: 0.5 0rem;
+  width: var(--btn-w);
+  color: var(--primary);
+  border: 0.1em solid var(--primary);
+  border-radius: 5em;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.2em;
+  cursor: pointer; }
+
+.atom-dot {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: var(--dot-w);
+  height: 100%;
+  border-radius: 100%;
+  transition: all 300ms ease;
+  display: none; }
+
+.atom-dot:after {
+  content: '';
+  position: absolute;
+  left: calc(50% - .4em);
+  top: -.4em;
+  height: .8em;
+  width: .8em;
+  background: var(--primary);
+  border-radius: 1em;
+  border: 0.25em solid var(--solid);
+  box-shadow: 0 0 0.7em var(--solid), 0 0 2em var(--primary); }
+
+.atom-button:hover .atom-dot,
+.atom-button:focus .atom-dot {
+  animation: atom 2s infinite linear;
+  display: block; }
+
+@keyframes atom {
+  0% {
+    transform: translateX(0) rotate(0); }
+  30% {
+    transform: translateX(var(--tr-X)) rotate(0); }
+  50% {
+    transform: translateX(var(--tr-X)) rotate(180deg); }
+  80% {
+    transform: translateX(0) rotate(180deg); }
+  100% {
+    transform: translateX(0) rotate(360deg); } }
 /* --- ez-car-autocompl --- */
 .ez-car-autocompl-form {
   color: rgba(198, 37, 178, 0.85) !important;
@@ -312,6 +447,41 @@
     padding-bottom: 0; }
     .ez-dostavka-oplata .ez-trigger-dover-col .ez-trigger-dover-card .card-body .card-text {
       text-transform: none; }
+
+.ez-action-form-simpe {
+  color: white;
+  font-family: Comfortaa;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem 0; }
+  .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section {
+    border-radius: 0.5rem; }
+    .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form {
+      background-color: rgba(209, 63, 169, 0.9) !important;
+      font-family: Comfortaa;
+      font-weight: 400;
+      border-radius: 0.5rem; }
+      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-header {
+        border-bottom: 1px solid white; }
+        .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-header .ez-action-form-simpe-card-header-text h5 {
+          font-weight: 700;
+          text-transform: uppercase; }
+      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-body-form i, .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-body-form svg {
+        font-size: 1.75rem; }
+      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-body-form label {
+        font-family: Roboto, sans-serif;
+        font-size: 1rem; }
+      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn {
+        color: white;
+        border-color: white;
+        padding: 0.75rem; }
+        .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn i, .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn svg {
+          color: white;
+          font-size: 1.25rem;
+          margin-right: 1rem; }
+        .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn span {
+          color: white; }
 
 .intro-2 {
   background: url("http://mdbootstrap.com/img/Photos/Others/images/91.jpg") no-repeat center center;

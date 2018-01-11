@@ -172,6 +172,7 @@
               }
           } */ }
       .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info {
+        padding: 0 1.5rem;
         margin-top: 1rem; }
         .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info h6 {
           font-size: 1rem !important; }

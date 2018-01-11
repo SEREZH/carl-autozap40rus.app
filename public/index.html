@@ -31,6 +31,7 @@
         <div id="FormDraftResult"></div>    
     </section>
     <!-- header -->
+    <!-- Форма экспресс-заказа -->
     <section id="top-section" class="mdb-color ez-bcol-main-blue-light ez-header">
         <!-- <header> -->
         <div class="container-fluid">
@@ -369,7 +370,7 @@
              </div>
           </div>
     </section>    
-    <!-- --- flipclock --- -->
+    <!-- --- Акция - Обратный отсчет --- -->
     <section>
         <div class="container-fluid ez-bcol-main-blue-light wow fadeInUp ez-flipclock">
             <div class="container ez-flipclock-con">
@@ -392,13 +393,90 @@
             </div>
         </div>
     </section>
-    <!-- --- tovar --- -->
-    <!--data-toggle="tooltip"
-        data-trigger="hover" 
-        data-placement="auto"
-        data-html="true"
-        title="Переход в интернет-магазин &laquo;CARLEON40&nbsp;&raquo;" 
-    -->
+    <!-- --- Акция - Упрощенная форма экспресс-заказа -->
+    <section class="mdb-color ez-bcol-main-blue-light ez-action-form-simpe">
+        <div class="container wow fadeInUp ez-action-form-simpe-con"> <!-- /Form -->
+            <!--Section: Form Draft-->
+            <section class="form-dark z-depth-4 ez-action-form-simpe-section">
+                <!--Form without header-->
+                <form id ="formActionFormSimple" 
+                    name="formActionFormSimple" 
+                    class="ez-action-form-simpe-form"
+                    action="js/sendz.php" 
+                    method="POST">    
+                    <div class="card text-white mx-auto py-1 px-2 ez-action-form-simpe-card">
+                        <!-- <div class="text-white mx-auto py-1 px-0 ez-action-form-simpe-card-wrapper"> -->
+                            <!--Header-->
+                            <div class="mt-3 ez-action-form-simpe-card-header">
+                                <div class="text-center ez-action-form-simpe-card-header-text">
+                                    <h5>Заказать обратный звонок</h5>
+                                </div>
+                            </div>
+                            <!--Body-->
+                            <!-- <div class="d-inline-flex justify-content-center ez-action-form-simpe-body"> -->
+                            <div class="mx-auto ez-action-form-simpe-card-body">
+                                <div class="row mt-3">
+                                    <div class="col-lg-9 d-inline-flex">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <div class="md-form d-inline-flex ez-action-form-simpe-card-body-form ez-action-form-simpe-card-body-form-req">
+                                                    <i class="far fa-user prefix white-text"></i>
+                                                    <input type="text" 
+                                                        id="formActionFormSimpleUserName" name="formActionFormSimpleUserName" 
+                                                        class="form-control white-text ez-form-control ez-tooltip-js" 
+                                                        >
+                                                    <label for="formActionFormSimpleUserName">Ваше имя</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="md-form d-inline-flex ez-action-form-simpe-card-body-form ez-action-form-simpe-card-body-form-req">
+                                                    <i class="fas fa-phone prefix white-text"></i>
+                                                    <input type="text" 
+                                                        id="formActionFormSimpleContactPhone" name="formActionFormSimpleContactPhone" 
+                                                        class="form-control white-text  ez-form-control ez-tooltip-js" 
+                                                    >
+                                                    <label for="FormDraftContactPhone">Ваш телефон</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="md-form d-inline-flex ez-action-form-simpe-card-body-form">
+                                                    <i class="fas fa-car prefix white-text"></i>
+                                                    <input type="text" 
+                                                        id="formActionFormSimpleCarVIN" name="formActionFormSimpleCarVIN" 
+                                                        class="form-control white-text ez-form-control" 
+                                                        >
+                                                    <label for="formActionFormSimpleCarVIN">VIN автомобиля</label>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div>    
+                                     <div class="col-lg-3">
+                                        <!-- BUTTON Express -->
+                                        <div class="row d-flex align-items-center mb-4 ez-action-form-simpe-card-row">
+                                            <!-- <div class="text-center col-md-12"> -->
+                                            <div class="text-center">
+                                                <button id='ez-button-action-send' 
+                                                        type="submit" 
+                                                        class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-action-form-simpe-card-btn">
+                                                    <i class="fa fa-arrow-circle-right animated slideInRight infinite" aria-hidden="true"></i>
+                                                    <span>Экспресс заказ</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+<!--                         </div> -->
+
+                    </div>
+                </form>
+                <!--/Form without header-->
+            </section>
+            <!--Section: Form Draft-->
+        </div>  <!-- \Form -->
+    </section>
+    <!-- --- Разделы товаров интернет-магазина --- -->
     <section>
         <div class="container-fluid ez-bcol-main-blue-light ez-tovar">
             <div class="container">
@@ -563,52 +641,54 @@
         </div>
     </section> -->
     <!-- --- Доставка и оплата --- -->
-    <section class="ez-dostavka-oplata ez-bcol-main-blue-light">
-        <div class="container-fluid">
-            <div class="container ez-dostavka-oplata-cont">
-                <div class="row ez-dostavka-oplata-row">
-                    <div class="col-lg-6 wow fadeInUp ez-dostavka-oplata-col">
-                        <div class="ez-dostavka-col">
-                            <div class="row ez-dostavka-row-header">
-                                <h5>Доставка</h5>
-                            </div>
-                            <div class="row ez-dostavka-row-body">
-                                <ul>
-                                    <li>Обнинск</li>
-                                    <li>Балабаново</li>
-                                    <li>Кривское</li>
-                                </ul>
+<!-- 
+        <section class="ez-dostavka-oplata ez-bcol-main-blue-light">
+            <div class="container-fluid">
+                <div class="container ez-dostavka-oplata-cont">
+                    <div class="row ez-dostavka-oplata-row">
+                        <div class="col-lg-6 wow fadeInUp ez-dostavka-oplata-col">
+                            <div class="ez-dostavka-col">
+                                <div class="row ez-dostavka-row-header">
+                                    <h5>Доставка</h5>
+                                </div>
+                                <div class="row ez-dostavka-row-body">
+                                    <ul>
+                                        <li>Обнинск</li>
+                                        <li>Балабаново</li>
+                                        <li>Кривское</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 wow bounceInUp ez-dostavka-oplata-col">
-                        <div class="ez-oplata-col">
-                            <div class="row ez-oplata-row-header">
-                                <h5>Оплата</h5>
-                            </div>
-                            <div class="row circles ez-oplata-row-body">
-                                <div class="col-md-3 ez-dostavka-oplata-col">
-                                    <img src="img/logo/bank_card_mir_x100.jpg" class="img-fluid" alt="Бакновская карта 'МИР'">
+                        <div class="col-lg-6 wow bounceInUp ez-dostavka-oplata-col">
+                            <div class="ez-oplata-col">
+                                <div class="row ez-oplata-row-header">
+                                    <h5>Оплата</h5>
+                                </div>
+                                <div class="row circles ez-oplata-row-body">
+                                    <div class="col-md-3 ez-dostavka-oplata-col">
+                                        <img src="img/logo/bank_card_mir_x100.jpg" class="img-fluid" alt="Бакновская карта 'МИР'">
+                                    </div>  
+                                    <div class="col-md-3 ez-dostavka-oplata-col">
+                                        <img src="img/logo/bank_card_maestro_x100.jpg" class="img-fluid" alt="Бакновская карта 'MAESTRO'">
+                                    </div>
+                                    <div class="col-md-3 ez-dostavka-oplata-col">
+                                        <img src="img/logo/bank_card_visa_x100.jpg" class="img-fluid" alt="Бакновская карта 'VISA'">
+                                    </div>
+                                    <div class="col-md-3 ez-dostavka-oplata-col">
+                                        <img src="img/logo/bank_card_nalich_x100.png" class="img-fluid" alt="НАЛИЧНЫЕ">
+                                    </div>
+                                    <div class="col-md-3 wow bounceInUp ez-dostavka-oplata-col">
+                                        <img src="img/logo/bank_card_mastercard_x100.jpg" class="img-fluid" alt="Бакновская карта 'МИР'">
+                                    </div>
                                 </div>  
-                                <div class="col-md-3 ez-dostavka-oplata-col">
-                                    <img src="img/logo/bank_card_maestro_x100.jpg" class="img-fluid" alt="Бакновская карта 'MAESTRO'">
-                                </div>
-                                <div class="col-md-3 ez-dostavka-oplata-col">
-                                    <img src="img/logo/bank_card_visa_x100.jpg" class="img-fluid" alt="Бакновская карта 'VISA'">
-                                </div>
-                                <div class="col-md-3 ez-dostavka-oplata-col">
-                                    <img src="img/logo/bank_card_nalich_x100.png" class="img-fluid" alt="НАЛИЧНЫЕ">
-                                </div>
-                                <!-- <div class="col-md-3 wow bounceInUp ez-dostavka-oplata-col">
-                                    <img src="img/logo/bank_card_mastercard_x100.jpg" class="img-fluid" alt="Бакновская карта 'МИР'">
-                                </div> -->
-                            </div>  
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+     -->    
     <!--Footer-->
     <footer class="page-footer center-on-small-only unique-color ez-footer">
         <div class="ez-footer-cont-x">
@@ -672,6 +752,9 @@
                                 <p class="ez-footer-contact-phone"><i class="fas fa-phone mr-3"></i><a href="tel:+79208990039"><span>+7 (920) 899<img>-00<img>-39</span></a></p>
                                 <p class="ez-footer-contact-phone"><i class="fas fa-phone mr-3"></i><a href="tel:+79290326343"><span>+7 (929) 032<img>-63<img>-43</span></a></p>
                                 <p class="ez-footer-contact-mail"><i class="far fa-envelope mr-3"></i> <a href="mailto:carleon40@mail.ru"><span>carleon40@mail.ru</span></a></p>
+                                <div class="p-1 ez-footer-contact-body-bank_card_all">
+                                    <img src="img/logo/bank_card_all.png" class="img-fluid" alt="Способ оплаты">
+                                </div>
                             </div>
                         </div>
                         <!--/.Second column-->
@@ -691,13 +774,73 @@
     <!--/.Footer-->
 
 
+<!-- --------------------------------------- -->
+<!-- Пример  разворачивающихся вверх кнопок  -->
+<!-- 
+<div class="fixed-action-btn" style="bottom: 120px; right: 24px;">
+    <a class="btn-floating btn-lg red waves-effect waves-light">
+        <i class="fas fa-pencil-alt"></i>
+    </a>
+    <ul>
+        <li><a class="btn-floating red waves-effect waves-light" 
+            style="transform: scaleY(0.4) scaleX(0.4) translateY(-40px) translateX(0px); opacity: 0;">
+            <i class="fa fa-star"></i></a>
+        </li>
+        <li><a class="btn-floating yellow darken-1 waves-effect waves-light" 
+            style="transform: scaleY(0.4) scaleX(0.4) translateY(-40px) translateX(0px); opacity: 0;">
+            <i class="fa fa-user"></i></a>
+        </li>
+        <li><a class="btn-floating green waves-effect waves-light" 
+            style="transform: scaleY(0.4) scaleX(0.4) translateY(-40px) translateX(0px); opacity: 0;">
+            <i class="fa fa-envelope"></i></a>
+        </li>
+        <li><a class="btn-floating blue waves-effect waves-light" 
+            style="transform: scaleY(0.4) scaleX(0.4) translateY(-40px) translateX(0px); opacity: 0;">
+            <i class="fa fa-shopping-cart"></i></a>
+        </li>
+    </ul>
+</div>
+ -->
+<!-- --------------------------------------- -->
+<!-- 
+<div class="switch-version hidden-md-down">
+        <a href="/material-design-for-bootstrap"><span class="switch-to active mdb-jquery"></span></a>
+        <a href="/angular"><span class="switch-to mdb-angular"></span></a>
+        <a href="/react"><span class="switch-to mdb-react"></span></a>
+        <a href="/vue"><span class="switch-to mdb-vue"></span></a>
+</div>  
+ -->
+<div class="switch-version hidden-md-down">
+    <div class="p-1 ez-footer-contact-body-bank_card_all">
+        <img src="img/logo/bank_card_all_vertical.png" class="img-fluid" alt="Способ оплаты">
+    </div>
+</div>  
 
+
+<!-- --------------------------------------- -->
+<!-- <div class="fixed-action-btn ez-button-up" style="bottom: 125px; right: 24px;">
+    <a href="https//vk.com/carleon40" 
+        target="_blank" 
+        class="btn-floating btn-large blue-gradient waves-effect waves-ligh z-depth-1-half"
+        >
+        <i class="fab fa-vk"></i>
+    </a>
+</div> -->
+RGB(74,118,168)
+<div class="ez-fixed-button  ez-button-up ez-button-vk" style="position: fixed; bottom: 125px; right: 24px;">
+    <a  href="https://vk.com/carleon40" 
+        target="_blank" 
+        class="btn-floating btn-large waves-effect waves-ligh z-depth-1-half">
+        <i class="fab fa-vk"></i>
+    </a>
+</div>
 <!-- --------------------------------------- -->
 <div class="fixed-action-btn smooth-scroll ez-button-up" style="bottom: 45px; right: 24px;">
     <a href="#top-section" class="btn-floating btn-large unique-color z-depth-1-half">
         <i class="fas fa-arrow-up"></i>
     </a>
 </div>
+<!-- --------------------------------------- -->
 
 
     <!-- SCRIPTS -->

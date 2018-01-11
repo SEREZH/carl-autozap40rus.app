@@ -1,12 +1,46 @@
-
-.ez-button-up {
+/* ez-button-up */
+.ez-button-up,
+.ez-button-vk {
 	a {
 		outline:0;
 	}
-	i, svg  {
+ 	i, svg  {
 	    margin-left: 1.5rem;
 	    margin-top: 1.5rem;
 		font-size: 1rem;            
+	} 
+}
+.ez-button-vk {
+	position: fixed; 
+	bottom: 125px; 
+	right: 24px; 
+	a {
+		background-color: rgba(74,118,168,1);	
 	}
 }
-//svg.svg-inline--fa.fa-arrow-up.fa-w-14
+
+.switch-version {
+    position: fixed;
+    width: 50px;
+    background: #fff;
+    right: 0;
+    top: 50px;
+    border-radius: 4px 0 0 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+.switch-version a:first-child > .switch-to {
+    border-top-left-radius: 4px;
+}
+.switch-to.mdb-jquery {
+    background-position: 0 -40px;
+}
+.switch-to.active {
+    background-color: rgba(0,0,0,.15);
+}
+.switch-to {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(https://mdbootstrap.com/img/logo/mdb-angular.png);
+    background-repeat: no-repeat;
+}
