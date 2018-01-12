@@ -110,23 +110,29 @@
   return;
   /////////////// ВРЕМЕННО!!! ///////////////
   ///////////////////////////////////////////
-  // - Добавление новой записи в таблицу EZ_CLIENTS, если клиента там еще нету 
   if ($client_id == 0) {
+    $cmt_app = $cmt_app.'<br>'.'Добавление новой записи в таблицу EZ_CLIENTS, $client_id == 0 - клиента там еще нету.';
     $clientInsertQuery = "insert into ez_clients (id,name,phone,mail) values (null, '$name','$phone', 'e-mail')";
     $sqlResultInsert = mysqli_query($connConnection, $clientInsertQuery);
     if (!$sqlResultInsert) { //не выдал ли нам запрос ошибки 
       $err = mysqli_error($connConnection);
+      $cmt_app = $cmt_app.'<br>'.'Ошибка при попытке добавления клиента в БД.'.'<br>'.$err;
       $result = array(
         'err_code'  => -2201,
         'err_msg_m' => "Ошибка при попытке добавления клиента в БД.",
         'err_msg_s' => $err,
         'err_msg_l' => $err,
-        'client_id' => "0",
+        'client_id' => $client_id,
+        'car_id'    => $car_id,
+        'order_id'  => $order_id,
         'name'      => $name,
         'phone'     => $phone,
         'cmt_app'   => $cmt_app,
       );
-    // - Определяем ID добавленного клиента $clientSelectQuery определен выше
+      echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+      return; 
+    };  
+    $cmt_app = $cmt_app.'<br>'.'Определяем ID добавленного клиента $clientSelectQuery определен выше.';
     $clientSelectResult = mysqli_query($connConnection, $clientSelectQuery) or die (mysqli_error($connConnection));
     if (!$clientSelectResult) { //не выдал ли нам запрос ошибки 
       $err = mysqli_error($connConnection);
