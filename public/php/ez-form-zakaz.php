@@ -18,12 +18,34 @@
     return $randomString;
   }
 
+  function checkPhoneNumber($i_phoneNumber) {
+    $f_phoneNumberDraft = $i_phoneNumber;
+    $f_phoneNumberClear = preg_replace('/\s|\+|-|\(|\)/','', $f_phoneNumberDraft);//удалим пробелы,и не нужные знаки
+ 
+    /*if ((is_numeric($phoneNumberClear))&&
+        (strlen($phoneNumberClear) = 10)) { //длина чистых цифр введенного телефона должна быть равна 10 символов*/
+    if (is_numeric($f_phoneNumberClear)) {
+          $f_phoneNumberFormatPart0 = '+7';
+          $f_phoneNumberFormatPart1 = substr($f_phoneNumberClear, 1, 3);
+          $f_phoneNumberFormatPart2 = substr($f_phoneNumberClear, 4, 3);
+          $f_phoneNumberFormatPart3 = substr($f_phoneNumberClear, 7, 2);
+          $f_phoneNumberFormatPart4 = substr($f_phoneNumberClear, 9, 2);
+          $f_phoneNumberFormat      = $f_phoneNumberFormatPart0.' ('.
+                                      $f_phoneNumberFormatPart1.') '.
+                                      $f_phoneNumberFormatPart2.' - '.
+                                      $f_phoneNumberFormatPart3.' - '.
+                                      $f_phoneNumberFormatPart4;
+    }
+    return array($f_phoneNumberDraft,$f_phoneNumberClear,$f_phoneNumberFormat);
+  }
+
   function setResultArray($log_key, $i_err_code, $i_err_msg_t, $i_err_msg_s, $i_err_msg_l, 
                           $i_client_name, $i_client_phone, $car_vin, $car_mark, $car_model, $car_gener, $car_part, 
                           $i_client_id, $i_car_id, $i_order_id, $i_cmt_app_html)
   {
+
       $f_result = array(
-              'log_key'     => $i_err_code,
+              'log_key'     => $log_key,
               'err_code'    => $i_err_code,
               'err_msg_t'   => $i_err_msg_t,
               'err_msg_s'   => $i_err_msg_s,
@@ -38,10 +60,14 @@
               'client_id'   => $i_client_id,
               'car_id'      => $i_car_id,
               'order_id'    => $i_order_id,
-              'cmt_app_html'=> $i_cmt_app_html,
+              'cmt_app_html'=> $i_cmt_app_html
             );
       return $f_result;
   };
+
+  $phoneNumberDraft   = "";
+  $phoneNumberClear   = "";
+  $phoneNumberFormat  = "";
 
   $logKey       = "Ключ журналирования";
   $logKeyID     = 0;
@@ -80,14 +106,14 @@
   $cmtAppHTML   = $cmtAppHTML."<br>Номер телефона клиента: ".$clientPhone;
   $cmtAppHTML   = $cmtAppHTML."<br>VIN номер автомобиля: ".$carVin;
   $cmtAppHTML   = $cmtAppHTML."<br>Марка автомобиля: ".$carMark;
-  $cmtAppHTML   = $cmtAppHTML."<br>Модель автомобиля: ".$carModel;
+  $cmtAppHTML   = $cmtAppHTML."<br>Модель автомобиля: ".$carModel."<br>";
   /// !!! ??? Можно убрать ??? !!! \\\
   $logAct         = 'Получены данные из формы заказа.';
-  $logKeyID       = ++$logKeyID;
+  $logKeyID       = $logKeyID + 1;
+  $cmtAppHTML     = $cmtAppHTML.'<br>'.$logAct.'<br>Добавление новой записи в таблицу LOGS.<br>';
   $logInsertQuery = "insert into ez_logs (id,log_key,log_key_id,log_act,log_cmt) ".
                     "values (null, '$logKey','$logKeyID', '$logAct', '$cmtAppHTML')";
-  $cmtAppHTML     = $cmtAppHTML.'<br>'.'Добавление новой записи в таблицу LOGS.'.'<br>'.$logAct;
-  $cmtAppHTML     = $cmtAppHTML.'<br>'.'Текст запроса на добавление новой записи в таблицу LOGS.'.'<br>'.$logInsertQuery;                   
+  
   $logInsertQueryResult = mysqli_query($connConnection, $logInsertQuery);
   if (!$logInsertQueryResult) { //не выдал ли нам запрос ошибки 
     $sqlErr     = mysqli_error($connConnection);
@@ -104,46 +130,15 @@
     return; 
   };
   /// !!! ??? Можно убрать ??? !!! ///
-  
-  /// !!! !!! Убрать 100% !!! !!! \\\
-  $logAct     = 'Успешно добавлена новая запись в таблицу LOGS.';
-  $errCode    = 0;
-  $errMsgT    = "Добавление новой записи в таблицу LOGS";
-  $errMsgS    = "Добавление новой записи в таблицу LOGS.<br> Выполнено действие:<br>".$logAct;
-  $errMsgL    = $errMsgS;
-  $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgS;
-  $result     = setResultArray( $logKey, 
-                                $errCode, $errMsgT, $errMsgS, $errMsgL,
-                                $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
-                                $clientID, $carID, $orderID, $cmtAppHTML);
-  echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
-  return; 
-  /// !!! !!! Убрать 100% !!! !!! ///
-
-
-  /// !!! !!! Убрать 100% !!! !!! \\\
-  
-  $logAct     = 'Получены данные из формы заказа.';
-  $cmtAppHTML = $cmtAppHTML.'<br>'.'Добавление новой записи в таблицу LOGS.'.'<br>'.$logAct;
-  $errCode    = 0;
-  $errMsgT    = "Заполнение журнала приложения";
-  $errMsgS    = "В журнал приложения успешно добавлена запись:<br>".$logAct;
-  $errMsgL    = $errMsgS;
-  $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgS;
-  $result     = setResultArray( $logKey, 
-                                $errCode, $errMsgT, $errMsgS, $errMsgL,
-                                $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
-                                $clientID, $carID, $orderID, $cmtAppHTML);
-  echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
-  return; 
-  /// !!! !!! Убрать 100% !!! !!! ///
-  /*----------------------------------------------------------------------------------------------------------------*/
+  $logAct = 'Начата проверка валидности заполнения полей Ваше имя и Ваш телефон формы заказа.'; 
+  $cmtAppHTML = $cmtAppHTML.'<br>'.$logAct; 
   if ($clientName=='') {
       $errCode  = -2001;
       $errMsgT  = "Ошибка при заполнении формы заказа";
       $errMsgS  = "Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!";
       $errMsgS  = $errMsgS."<br>"."Укажите, пожалуйста, Ваше имя!";
       $errMsgL  = $errMsgS;
+      $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgS; 
       $result = setResultArray( $logKey, 
                                 $errCode, $errMsgT, $errMsgS, $errMsgL,
                                 $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
@@ -157,6 +152,27 @@
       $errMsgS  = "Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!";
       $errMsgS  = $errMsgS."<br>"."Укажите, пожалуйста, Ваш телефон!";
       $errMsgL  = $errMsgS;
+      $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgS; 
+      $result = setResultArray( $logKey, 
+                                $errCode, $errMsgT, $errMsgS, $errMsgL,
+                                $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
+                                $clientID, $carID, $orderID, $cmtAppHTML);
+      echo json_encode($result, JSON_UNESCAPED_UNICODE);
+      return;
+  } 
+  $phoneNumberArray = checkPhoneNumber($clientPhone);
+  list  ($phoneNumberDraft, $phoneNumberClear, $phoneNumberFormat) = $phoneNumberArray;
+  if (!$phoneNumberFormat) {
+      $errCode    = -2003;
+      $errMsgT    = "Ошибка при заполнении формы заказа";
+      //$errMsgS    = "Поле&nbsp;&laquo;Ваш&nbsp;телефон&raquo; должно содержать 10 цифр!";
+      $errMsgS    = $errMsgS."<br>"."Пожалуйста, введите правильно Ваш телефон!";
+      $errMsgL    = $errMsgS;
+      $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgS; 
+      $cmtAppHTML = $cmtAppHTML.
+                    '<br> Номер телефона введенный пользователем: '.$phoneNumberDraft.
+                    '<br> Чистый номер телефона: '.$phoneNumberClear.
+                    '<br> Отформатированный номер телефона: '.$phoneNumberFormat; 
       $result = setResultArray( $logKey, 
                                 $errCode, $errMsgT, $errMsgS, $errMsgL,
                                 $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
@@ -164,10 +180,16 @@
       echo json_encode($result, JSON_UNESCAPED_UNICODE);
       return;
   }
-  //формируем текст запроса
+  $cmtAppHTML = $cmtAppHTML.'<br>Проверка корректности введенного номера телефона выполнена успешно.'.
+                '<br> Номер телефона введенный пользователем: '.$phoneNumberDraft.
+                '<br> Чистый номер телефона: '.$phoneNumberClear.
+                '<br> Отформатированный номер телефона: '.$phoneNumberFormat; 
+
+  $logAct = 'Завершена успешно проверка валидности заполнения полей Ваше имя и Ваш телефон формы заказа.'; 
+  $cmtAppHTML = $cmtAppHTML.'<br>'.$logAct;
+  $logAct = 'Проверка наличия клиента в базе по имени и телефону в таблице EZ_CLIENTS.'; 
+  $cmtAppHTML = $cmtAppHTML.'<br>'.$logAct;
   $clientSelectQuery = "select id from ez_clients where upper(name)=upper('$clientName') and upper(phone)=upper('$clientPhone') limit 1";
-  $cmtAppHTML = $cmtAppHTML."<br>Проверяем наличие клиента в базе по имени и телефону в таблице EZ_CLIENTS.";
-  $cmtAppHTML = $cmtAppHTML."<br>Текст запроса: ".$clientSelectQuery;
   $clientSelectResult = mysqli_query($connConnection, $clientSelectQuery) or die (mysqli_error($connConnection));
   if (!$clientSelectResult) { //не выдал ли нам запрос ошибки 
     $errCode  = -2101;
@@ -188,7 +210,57 @@
   } else {
     $client_exists = "Определен ID клиента = ".$clientID.".";
   };  
-  $cmtAppHTML = $cmtAppHTML."<br>".$client_exists;
+  $logAct     = 'Завершена успешно проверка наличия клиента в базе по имени и телефону в таблице EZ_CLIENTS.'; 
+  $cmtAppHTML = $cmtAppHTML."<br>".$logAct."<br>".$client_exists;
+  $logKeyID   = $logKeyID + 1;
+  $logInsertQuery = "insert into ez_logs (id,log_key,log_key_id,log_act,log_cmt) ".
+                    "values (null, '$logKey','$logKeyID', '$logAct', '$cmtAppHTML')";
+  $logInsertQueryResult = mysqli_query($connConnection, $logInsertQuery);
+  if (!$logInsertQueryResult) { //не выдал ли нам запрос ошибки 
+    $sqlErr     = mysqli_error($connConnection);
+    $errCode    = -2202;
+    $errMsgT    = "Ошибка при заполнении журнала приложения";
+    $errMsgS    = "Ошибка при попытке добавления записи ".$logKeyID." в журнал приложения:<br>".$sqlErr;
+    $errMsgL    = $errMsgS."<br>".$logKeyID." - logInsertQuery = <br>".$logInsertQuery;
+    $result = setResultArray( $logKey, 
+                              $errCode, $errMsgT, $errMsgS, $errMsgL,
+                              $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
+                              $clientID, $carID, $orderID, $cmtAppHTML);
+    echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+    return; 
+  };
+  /*--- !!! ТЕСТ ВЫХОДА - BEGIN !!!*/
+  $errCode    = 0;
+  $errMsgT    = "Тест выхода №1";
+  $errMsgS    = "Тест выхода №1. Завершена успешно проверка наличия клиента в базе.";
+  $errMsgL    = $errMsgS;
+  $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgS;
+  $result = setResultArray( $logKey, 
+                            $errCode, $errMsgT, $errMsgS, $errMsgL,
+                            $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
+                            $clientID, $carID, $orderID, $cmtAppHTML
+                          );
+  echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+  return; 
+  /*--- !!! ТЕСТ ВЫХОДА - END !!!*/
+
+
+  $errCode    = 0;
+  $errMsgT    = $logAct;
+  $errMsgS    = $logAct;
+  $errMsgL    = $errMsgS;
+  // !!! $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgS;
+  $cmtAppHTML = $errMsgS;
+  $result     = setResultArray( $logKey, 
+                                $errCode, $errMsgT, $errMsgS, $errMsgL,
+                                $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
+                                $clientID, $carID, $orderID, $cmtAppHTML);
+  echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+  return; 
+  /// !!! !!! Убрать 100% !!! !!! ///
+  /*----------------------------------------------------------------------------------------------------------------*/
+
+
   ///////////////////////////////////////////
   /////////////// ВРЕМЕННО!!! ///////////////
   $errCode = 0; 
