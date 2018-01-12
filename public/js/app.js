@@ -20,12 +20,13 @@ jQuery( document ).ready(function() {
 	new WOW().init();
  	jQuery("#formZakazContactPhone").mask("+7(999)999-99-99");
  	var ajaxSubmitOptionsFormZakaz = { 
-        target:    '#formZakazResult',   // target element(s) to be updated with server response 
-		//beforeSubmit:  showRequest,  // pre-submit callback 
-        success:   showResponseFormZakaz,  // post-submit callback 
- 		url:       'php/ez-form-zakaz.php'         // override for form's 'action' attribute 
+        //dataType:	'json',
+        target:    	'#formZakazResult',   	// target element(s) to be updated with server response 
+		//beforeSubmit:  showRequest,  		// pre-submit callback 
+        success:   	showResponseFormZakaz,  // post-submit callback 
+ 		url:       	'php/ez-form-zakaz.php',// override for form's 'action' attribute 
+
         // Other available options: 
-        //url:       url         // override for form's 'action' attribute 
         //type:      type        // 'get' or 'post', override for form's 'method' attribute 
         //dataType:  null        // 'xml', 'script', or 'json' (expected server response type) 
         //clearForm: true        // clear all form fields after successful submit 
@@ -35,10 +36,10 @@ jQuery( document ).ready(function() {
     }; 
  
     // bind to the form's submit event 
-    $('#formZakaz').submit(function() { 
+    jQuery('#formZakaz').submit(function() { 
         // inside event callbacks 'this' is the DOM element so we first 
         // wrap it in a jQuery object and then invoke ajaxSubmit 
-        $(this).ajaxSubmit(ajaxSubmitOptionsFormZakaz); 
+        jQuery(this).ajaxSubmit(ajaxSubmitOptionsFormZakaz); 
         // !!! Important !!! 
         // always return false to prevent standard browser submit and page navigation 
         return false; 
@@ -46,54 +47,63 @@ jQuery( document ).ready(function() {
 });
 // post-submit callback 
 function showResponseFormZakaz(responseText, statusText, xhr, $form)  { 
-	var status  	= statusText;
+	var ajaxStatus	= statusText;
 	var jsonObj		= JSON.parse(responseText);
+	var logKey 		= jsonObj['log_key'];
 	var errCode 	= jsonObj['err_code'];
-    var errMsgM 	= jsonObj['err_msg_m'];
+    var errMsgT 	= jsonObj['err_msg_t'];
     var errMsgS 	= jsonObj['err_msg_s'];
     var errMsgL 	= jsonObj['err_msg_l'];
+    var clientName 	= jsonObj['client_name']; 
+    var clientPhone	= jsonObj['client_phone'];
+    var carVin		= jsonObj['car_vin'];
+    var carMark		= jsonObj['car_mark'];
+    var carModel	= jsonObj['car_model'];
+    var carGener	= jsonObj['car_gener'];
+    var carPart		= jsonObj['car_part'];
     var clientID	= jsonObj['client_id']; 
-    var clientName 	= jsonObj['name']; 
-    var clientPhone	= jsonObj['phone'];
-    
-    var carID	= jsonObj['car_id'];
-    var orderID	= jsonObj['order_id'];
-    var cmtApp	= jsonObj['cmt_app'];
+    var carID		= jsonObj['car_id'];
+    var orderID		= jsonObj['order_id'];
+    var cmtAppHTML  = jsonObj['cmt_app_html'];
+
+    console.log('showResponseFormZakaz: statusText='+statusText);
+    console.log('showResponseFormZakaz: responseText='+responseText);
+    console.log('showResponseFormZakaz: cmtAppHTML='+cmtAppHTML);
 
 	if (errCode == '0') {
-		var errBodyText = 'err_code='+errCode+
-			'<br>err_msg_m='+errMsgM+
-			'<br>err_msg_s='+errMsgS+
-			'<br>err_msg_l='+errMsgL+
-			'<br>client_id='+clientID+
-			'<br>name='		+clientName+
-			'<br>phone='	+clientPhone+
-			'<br>car_id='	+carID+
-			'<br>order_id='	+orderID+
-			'<br>cmt_app='	+cmtApp;
-		$('#modalFormZakazErrorBodyText').html(errBodyText);
-		$('#modalFormZakazError').modal();
+		var errBodyText = 'Сервер возвратил следующие значения переменных:'+
+			'<br>ajaxStatus='	+ajaxStatus+
+			'<br>logKey='		+logKey+
+			'<br>errCode='		+errCode+
+			'<br>errMsgT='		+errMsgT+
+			'<br>errMsgS='		+errMsgS+
+			'<br>errMsgL='		+errMsgL+
+			'<br>clientName='	+clientName+
+			'<br>clientPhone='	+clientPhone+
+			'<br>carVin='		+carVin+
+			'<br>carMark='		+carMark+
+			'<br>carModel='		+carModel+
+			'<br>carGener='		+carGener+
+			'<br>carPart='		+carPart+
+			'<br>clientID='		+clientID+
+			'<br>carID='		+carID+
+			'<br>orderID='		+orderID+
+			'<br>cmtAppHTML='	+cmtAppHTML;
+
+		$('#modalFormZakazSuccessTitleText').html(errMsgT);	
+		$('#modalFormZakazSuccessBodyText').html(errBodyText);
+		$('#modalFormZakazSuccess').modal();
 	} else {
 		if (errCode == '-2001'||errCode == '-2002') {   
-			var errBodyText = 'Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!';
-			errBodyText = errBodyText + '<br>' + errMsgS;
-			$('#modalFormZakazErrorBodyText').html(errBodyText);
+			$('#modalFormZakazErrorTitleText').html(errMsgT);
+			$('#modalFormZakazErrorBodyText').html(errMsgS);
+    		$('#modalFormZakazError').modal();
+		} else {
+			$('#modalFormZakazErrorTitleText').html(errMsgT);
+			$('#modalFormZakazErrorBodyText').html(errMsgS);
     		$('#modalFormZakazError').modal();
 		}	
 	}
-
-/*
-    alert('status: ' + statusText + 
-    	'\n\nresponseText: \n' + responseText + 
-    	'\n\njsonObj[err_code]: \n' + jsonObj['err_code'] + 
-    	'\n\njsonObj[err_msg_m]: \n' + jsonObj['err_msg_m'] + 
-    	'\n\njsonObj[err_msg_s]: \n' + jsonObj['err_msg_s'] + 
-    	'\n\njsonObj[err_msg_l]: \n' + jsonObj['err_msg_l'] + 
-    	'\n\njsonObj[name]: \n' + jsonObj['name'] + 
-    	'\n\njsonObj[phone]: \n' + jsonObj['phone'] + 
-        '\n\nThe output div should have already been updated with the responseText.'); 
-*/
-
 } 
 
 /// -- !!! -- Похоже, что это уже не используем -- !!! ---

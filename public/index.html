@@ -910,16 +910,15 @@ RGB(74,118,168)
             class="modal fade" 
             tabindex="-1" 
             role="dialog" 
-            aria-labelledby="myModalLabel" 
+            aria-labelledby="myModalLabelError" 
             aria-hidden="true">
         <div class="modal-dialog cascading-modal modal-notify modal-warning" role="document">
             <!--Content-->
             <div class="modal-content">
                 <!--Header-->
                 <div class="modal-header">
-                    <p class="heading lead">Ошибка при заполнении формы заказа!</p>
-    
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <p id="modalFormZakazErrorTitleText" class="heading lead">Заголовок ошибки!</p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="white-text">&times;</span>
                     </button>
                 </div>
@@ -927,7 +926,7 @@ RGB(74,118,168)
                 <div class="modal-body">
                     <div class="text-center">
                         <i class="far fa-times-circle fa-3x mb-3 animated rotateIn"></i>
-                        <p id="modalFormZakazErrorBodyText">Lorem ipsum dolor...</p>
+                        <p id="modalFormZakazErrorBodyText">Текст ошибки...</p>
                     </div>
                 </div>
                 <!--Footer-->
@@ -940,7 +939,43 @@ RGB(74,118,168)
             <!--/.Content-->
         </div>
     </div>
-    <!-- Central Modal Medium Warning-->
+    <!-- Central Modal Medium Warning -- END -->
+
+    <!-- Central Modal Medium Success -- BEGIN -->
+    <div    id="modalFormZakazSuccess" 
+            class="modal fade" 
+            tabindex="-1" 
+            role="dialog" 
+            aria-labelledby="myModalLabelSuccess" 
+            aria-hidden="true">
+        <div class="modal-dialog cascading-modal modal-notify modal-success" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p id="modalFormZakazSuccessTitleText" class="heading lead">Заголовок сообщения об успешном действии!</p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="far fa-times-circle fa-3x mb-3 animated rotateIn"></i>
+                        <p id="modalFormZakazSuccessBodyText">Текст сообщения об успешном действии...</p>
+                    </div>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <!-- <a type="button" class="btn btn-primary-modal">Get it now <i class="fa fa-diamond ml-1"></i></a> -->
+                    <!-- <a type="button" class="btn btn-outline-secondary-modal waves-effect" data-dismiss="modal">OK</a> -->
+                    <a type="button" class="btn btn-primary-modal waves-effect waves-light" data-dismiss="modal">OK</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Central Modal Medium Success -- END -->
     
 
 
