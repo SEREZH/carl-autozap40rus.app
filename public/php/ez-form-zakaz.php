@@ -94,12 +94,12 @@
   mysqli_query($connConnection, 'SET NAMES utf8') or header('Location: Error');
   //printf("Host information: %s\n", mysqli_get_host_info($connConnection));
   //заполяем переменные полей формы заказа 
-  if (isset($_POST["formZakazUserName"]))      { $clientName = $_POST["formZakazUserName"];}     else{ $clientName  = '';}
-  if (isset($_POST["formZakazContactPhone"]))  { $clientPhone= $_POST["formZakazContactPhone"];} else{ $clientPhone = '';}
-  if (isset($_POST["formZakazCarVIN"]))        { $carVin     = $_POST["formZakazCarVIN"];}       else{ $carVin      = '';}
-  if (isset($_POST["formZakazCarMark"]))       { $carMark    = $_POST["formZakazCarMark"];}      else{ $carMark     = '';}
-  if (isset($_POST["formZakazCarModel"]))      { $carModel   = $_POST["formZakazCarModel"];}     else{ $carModel    = '';}
-  if (isset($_POST["formZakazCarGeneration"])) { $generation = $_POST["formZakazCarGeneration"];}else{ $generation  = '';}
+  if (isset($_POST["formZakazUserName"]))      { $clientName =$_POST["formZakazUserName"];}     else{ $clientName ='';}
+  if (isset($_POST["formZakazContactPhone"]))  { $clientPhone=$_POST["formZakazContactPhone"];} else{ $clientPhone='';}
+  if (isset($_POST["formZakazCarVIN"]))        { $carVin     =$_POST["formZakazCarVIN"];}       else{ $carVin     ='';}
+  if (isset($_POST["formZakazCarMark"]))       { $carMark    =$_POST["formZakazCarMark"];}      else{ $carMark    ='';}
+  if (isset($_POST["formZakazCarModel"]))      { $carModel   =$_POST["formZakazCarModel"];}     else{ $carModel   ='';}
+  if (isset($_POST["formZakazCarGeneration"])) { $carGener   =$_POST["formZakazCarGeneration"];}else{ $carGener   ='';}
   // формируем комментарий приложения
   $cmtAppHTML   = $cmtAppHTML."<br>Значения переданные из формы заказа:";
   $cmtAppHTML   = $cmtAppHTML."<br>Имя клиента: ".$clientName;
@@ -129,7 +129,7 @@
     echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
     return; 
   };
-  /// !!! ??? Можно убрать ??? !!! ///
+
   $logAct = 'Начата проверка валидности заполнения полей Ваше имя и Ваш телефон формы заказа.'; 
   $cmtAppHTML = $cmtAppHTML.'<br>'.$logAct; 
   if ($clientName=='') {
@@ -210,7 +210,7 @@
   } else {
     $client_exists = "Определен ID клиента = ".$clientID.".";
   };  
-  $logAct     = 'Завершена успешно проверка наличия клиента в базе по имени и телефону в таблице EZ_CLIENTS.'; 
+  $logAct     = 'Завершена успешно проверка наличия клиента в базе по имени и телефону в EZ_CLIENTS.'; 
   $cmtAppHTML = $cmtAppHTML."<br>".$logAct."<br>".$client_exists;
   $logKeyID   = $logKeyID + 1;
   $logInsertQuery = "insert into ez_logs (id,log_key,log_key_id,log_act,log_cmt) ".
@@ -229,10 +229,135 @@
     echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
     return; 
   };
-  /*--- !!! ТЕСТ ВЫХОДА - BEGIN !!!*/
+
+  if ($clientID == 0) {
+    $logAct     = 'Добавление новой записи в EZ_CLIENTS.'; 
+    $cmtAppHTML = $cmtAppHTML.'<br>'.$logAct.': $clientID == 0 --> клиента там еще нету.';
+    $clientInsertQuery =  "insert into ez_clients (id,name,phone,phone_draft,phone_clear,phone_format,mail) ".
+                          "values (null,'$clientName','$clientPhone',".
+                          "'$phoneNumberDraft','$phoneNumberClear','$phoneNumberFormat','e-mail')";
+    $sqlResultInsert = mysqli_query($connConnection, $clientInsertQuery);
+    if (!$sqlResultInsert) { //не выдал ли нам запрос ошибки 
+      $sqlErr = mysqli_error($connConnection);
+      $cmtAppHTML = $cmtAppHTML.'<br>'.'Ошибка при попытке добавления клиента в EZ_CLIENTS.'.'<br>'.$sqlErr;
+      $sqlErr     = mysqli_error($connConnection);
+      $errCode    = -2202;
+      $errMsgT    = "Ошибка регистрации нового клиента";
+      $errMsgS    = "Ошибка регистрации нового клиента:<br>".$sqlErr;
+      $errMsgL    = $errMsgS;
+      $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgS;
+      $result = setResultArray( $logKey, 
+                                $errCode, $errMsgT, $errMsgS, $errMsgL,
+                                $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
+                                $clientID, $carID, $orderID, $cmtAppHTML);
+      echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+      return; 
+    };  
+    $cmtAppHTML = $cmtAppHTML.'<br>'.'Определяем ID добавленного клиента $clientSelectQuery определен выше.';
+    $clientSelectResult = mysqli_query($connConnection, $clientSelectQuery) or die (mysqli_error($connConnection));
+    if (!$clientSelectResult) { //не выдал ли нам запрос ошибки 
+      $sqlErr = mysqli_error($connConnection);
+      $errCode    = -2203;
+      $errMsgT    = $logAct;     // 'Добавление новой записи в EZ_CLIENTS.'
+      $errMsgS    = "Ошибка при попытке проверки определить ID вновь добавленного клиента.";
+      $errMsgL    = $errMsgS.'<br>'.$sqlErr;
+      $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgL;
+      $result = setResultArray( $logKey, 
+                                $errCode, $errMsgT, $errMsgS, $errMsgL,
+                                $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
+                                $clientID, $carID, $orderID, $cmtAppHTML
+                                );
+      echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+      return; 
+    }
+    $msg = "Определяем ID вновь добавленного клиента ".$clientName.".";
+    $clientID = 0;
+    while ($rowEzClients = mysqli_fetch_array($clientSelectResult)) { 
+      $clientID = $rowEzClients['id'];
+    }
+    $msg = $msg."<br>"."В таблицу EZ_CLIENTS добавлен клиент с ID = ".$clientID;
+    $cmtAppHTML = $cmtAppHTML."<br>".$msg;
+    //mysqli_commit($connConnection); mysqli_close($connConnection); //???!!! Делать ли коммит и закрывать ли сессию ???
+    
+    $logAct         = 'Добавлен новый клиент в EZ_CLIENTS.';
+    $logActCode     = 'CLN_INS';
+    $logKeyID       = $logKeyID + 1;
+    $cmtAppHTML     = $cmtAppHTML.'<br>'.$logAct.'<br>Добавление новой записи в таблицу LOGS.<br>';
+    $logInsertQuery = "insert into ez_logs (id,log_key,log_key_id,log_act,log_act_code,log_cmt) ".
+                      "values (null, '$logKey','$logKeyID', '$logAct', '$logActCode', '$cmtAppHTML')";
+    $logInsertQueryResult = mysqli_query($connConnection, $logInsertQuery);
+    if (!$logInsertQueryResult) { //не выдал ли нам запрос ошибки 
+      $sqlErr     = mysqli_error($connConnection);
+      $errCode    = -2203;
+      $errMsgT    = "Ошибка при заполнении журнала приложения";
+      $errMsgS    = "Ошибка при попытке добавления записи в журнал приложения:<br>".$sqlErr;
+      $errMsgL    = $errMsgS;
+      $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgS;
+      $result = setResultArray( $logKey, 
+                                $errCode, $errMsgT, $errMsgS, $errMsgL,
+                                $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
+                                $clientID, $carID, $orderID, $cmtAppHTML);
+      echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+      return; 
+    };
+  }  
+
+  // 5 - Добавление новой записи в таблицу EZ_CLIENT_CARS, если там ее еще нету 
+  // по VIN, MARK, MODEL, GENERATION их комбинаций - в зависимости от того, что ввел пользователь
+  $logAct         = "Поиск автомобиля для клиента";
+  $carSelectQuery =   "select id from ez_client_cars WHERE client_id = '$clientID' ".
+                      " and COALESCE(vin,'') = '$carVin' ".
+                      " and COALESCE(mark,'') = '$carMark' ".
+                      " and COALESCE(model,'') = '$carModel' ".
+                      " and COALESCE(gener,'') = '$carGener' ".
+                      " limit 1";
+  $carSelectQueryResult = mysqli_query($connConnection, $carSelectQuery);
+  $carSelectQueryRows = mysqli_num_rows($carSelectQueryResult); /* определение числа строк в выборке */
+  if ($carSelectQueryRows>0) {
+    while ($carSelectQueryResultRow = mysqli_fetch_array($carSelectQueryResult)) 
+      {$carID = $carSelectQueryResultRow['id'];};
+  } else {
+    $carID = 0;
+  }
+  
+  if ($carSelectQueryRows == 0) {
+    $logAct         = "Добавление нового автомобиля для клиента";
+    $logKeyID       = $logKeyID + 1;
+    $cmtAppHTML     = $cmtAppHTML."<br>".$logAct.".";
+    $carInsertQuery = "insert into ez_client_cars(id,client_id,vin,mark,model,gener) ".
+                      " values (NULL,'$clientID','$carVin','$carMark','$carModel','$carGener')";
+    $carInsertQueryResult = mysqli_query($connConnection, $carInsertQuery);
+    if (!$carInsertQueryResult) { //не выдал ли нам запрос ошибки 
+      $sqlErr     = mysqli_error($connConnection);
+      $errCode    = -2301;
+      $errMsgT    = $logAct;
+      $errMsgS    = "Ошибка при попытке добавление нового автомобиля для клиента ID=".$clientID."<br>".$sqlErr;
+      $errMsgL    = $errMsgS;
+      $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgS;
+      $result = setResultArray( $logKey, 
+                                $errCode, $errMsgT, $errMsgS, $errMsgL,
+                                $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
+                                $clientID, $carID, $orderID, $cmtAppHTML);
+      echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+      return; 
+    };                
+    // определить новый созданный ez_cars.id
+    $carSelectQueryResult = mysqli_query($connConnection, $carSelectQuery); 
+    ///$carID = $carInsertQueryResult[0];
+    $cmtAppHTML     = $cmtAppHTML."<br>".$logAct.". carID=".$carID;
+    // добавить запись в EZ_LOGS
+    // найти carID созданной записи в EZ_CLIENT_CARS
+    $carSelectQueryResult = mysqli_query($connConnection, $carSelectQuery); 
+    while ($carSelectQueryResultRow = mysqli_fetch_array($carSelectQueryResult)) 
+      {$carID = $carSelectQueryResultRow['id'];};
+  }
+  mysqli_free_result($carSelectQueryResult); /* закрытие выборки */
+
+ /*--- !!! ТЕСТ ВЫХОДА - BEGIN !!!*/
   $errCode    = 0;
-  $errMsgT    = "Тест выхода №1";
-  $errMsgS    = "Тест выхода №1. Завершена успешно проверка наличия клиента в базе.";
+  $errMsgT    = "ТЕСТ ВЫХОДА:: ".$logAct;
+  $errMsgS    = $logAct.'. Количество выбранных записей carSelectQueryRows='.$carSelectQueryRows.
+                ". Для клиента  clientID=".$clientID." определен carID=".$carID;
   $errMsgL    = $errMsgS;
   $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgS;
   $result = setResultArray( $logKey, 
@@ -244,132 +369,6 @@
   return; 
   /*--- !!! ТЕСТ ВЫХОДА - END !!!*/
 
-
-  $errCode    = 0;
-  $errMsgT    = $logAct;
-  $errMsgS    = $logAct;
-  $errMsgL    = $errMsgS;
-  // !!! $cmtAppHTML = $cmtAppHTML.'<br>'.$errMsgS;
-  $cmtAppHTML = $errMsgS;
-  $result     = setResultArray( $logKey, 
-                                $errCode, $errMsgT, $errMsgS, $errMsgL,
-                                $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
-                                $clientID, $carID, $orderID, $cmtAppHTML);
-  echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
-  return; 
-  /// !!! !!! Убрать 100% !!! !!! ///
-  /*----------------------------------------------------------------------------------------------------------------*/
-
-
-  ///////////////////////////////////////////
-  /////////////// ВРЕМЕННО!!! ///////////////
-  $errCode = 0; 
-  $errMsgT = "Проверка наличия клиента"; 
-  $errMsgS = "Проверка наличия клиента в БД по имени и телефону."."<br>".$client_exists; 
-  $errMsgL = $errMsgS; 
-  $result = setResultArray( $logKey, 
-                            $errCode, $errMsgT, $errMsgS, $errMsgL,
-                            $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
-                            $clientID, $carID, $orderID, $cmtAppHTML);
-  echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
-  return;
-  /////////////// ВРЕМЕННО!!! ///////////////
-  ///////////////////////////////////////////
-  if ($clientID == 0) {
-    $cmtAppHTML = $cmtAppHTML.'<br>'.'Добавление новой записи в таблицу EZ_CLIENTS, $clientID == 0 - клиента там еще нету.';
-    $clientInsertQuery = "insert into ez_clients (id,name,phone,mail) values (null, '$clientName','$clientPhone', 'e-mail')";
-    $sqlResultInsert = mysqli_query($connConnection, $clientInsertQuery);
-    if (!$sqlResultInsert) { //не выдал ли нам запрос ошибки 
-      $err = mysqli_error($connConnection);
-      $cmtAppHTML = $cmtAppHTML.'<br>'.'Ошибка при попытке добавления клиента в БД.'.'<br>'.$err;
-      $result = array(
-        'err_code'  => -2201,
-        'err_msg_t' => "Ошибка при попытке добавления клиента в БД.",
-        'err_msg_s' => $err,
-        'err_msg_l' => $err,
-        'client_id' => $clientID,
-        'car_id'    => $carID,
-        'order_id'  => $orderID,
-        'name'      => $clientName,
-        'phone'     => $clientPhone,
-        'cmt_app'   => $cmtAppHTML,
-      );
-      echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
-      return; 
-    };  
-    $cmtAppHTML = $cmtAppHTML.'<br>'.'Определяем ID добавленного клиента $clientSelectQuery определен выше.';
-    $clientSelectResult = mysqli_query($connConnection, $clientSelectQuery) or die (mysqli_error($connConnection));
-    if (!$clientSelectResult) { //не выдал ли нам запрос ошибки 
-      $err = mysqli_error($connConnection);
-      $result = array(
-        'err_code'  => -2101,
-        'err_msg_t' => "Ошибка при попытке проверки наличия клиента.",
-        'err_msg_s' => $err,
-        'err_msg_l' => $err,
-        'client_id' => "0",
-        'name'      => $clientName,
-        'phone'     => $clientPhone,
-        'cmt_app'   => $cmtAppHTML,
-      );
-      echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
-      return; 
-    }
-    // цикл выборки, преобразованной в массив - Количество уникальных записей (имя,телефон)
-    $outputEzClientID = 0;
-    while ($rowEzClients = mysqli_fetch_array($clientSelectResult)) { 
-      $outputEzClientID = $rowEzClients['id'];
-    }
-
-
-
-    echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
-    return; 
-    //$count = mysqli_affected_rows($sqlResultInsert);
-    $err = "В таблицу EZ_CLIENTS додавлен клиент с ID = ".$clientID;
-    $cmtAppHTML = $cmtAppHTML."<br>".$err;
-    //mysqli_commit($connConnection); mysqli_close($connConnection); 
-    //??? Делать ли коммит и закрывать ли сессию ???
-    ///////////////////////////////////////////
-    /////////////// ВРЕМЕННО!!! ///////////////
-    $result = array(
-      'err_code'  => 0,
-      'err_msg_t' => "Добавления клиента в БД выполнено успешно.",
-      'err_msg_s' => $err,
-      'err_msg_l' => $err,
-      'client_id' => "0",
-      'name'      => $clientName,
-      'phone'     => $clientPhone,    
-      'cmt_app'   => $cmtAppHTML,
-    );
-    echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
-    return;
-    /////////////// ВРЕМЕННО!!! ///////////////
-    ///////////////////////////////////////////
-  }  
-
-  ///////////////////////////////////////////
-  /////////////// ВРЕМЕННО!!! ///////////////
-  /*$err = "Клиент уже есть в БД!";
-  $result = array(
-    'err_code'  => 0,
-    'err_msg_t' => "Проверка наличия клиента в БД.",
-    'err_msg_s' => $err,
-    'err_msg_l' => $err,
-    'client_id' => "0",
-    'name'      => $clientName,
-    'phone'     => $clientPhone,    
-        
-  );
-  echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
-  return;*/
-  /////////////// ВРЕМЕННО!!! ///////////////
-  ///////////////////////////////////////////
-  
-  // - Добавление новой записи в таблицу EZ_CARS, если там ее еще нету 
-  // - нету по VIN, MARK, MODEL, GENERATION их комбинаций - в зависимости от того что ввел пользователь или вообще не ввел
-  if ($carVin==''||$carMark==''||$carModel==''||$generation) {
-     $carSelectQuery = "select id from ez_cars where client_id = $outputEzClientID limit 1)";
-  }
 
 
 
@@ -398,11 +397,8 @@
     $outputEzClients[] = $outputEzClientID;
   }
 
-
-
-
   if ($count == 0) {
-    $clientInsertQuery = "insert into ez_clients (id,name,phone,mail) values (null, '$clientName','$clientPhone', 'e-mail')";
+    $clientInsertQuery = "insert into ez_clients (id,name,phone,mail) values(null,'$clientName','$clientPhone','e-mail')";
     $sqlResultInsert = mysqli_query($connConnection, $clientInsertQuery);
     if (!$sqlResultInsert) { //не выдал ли нам запрос ошибки 
       $err = mysqli_error($connConnection);
@@ -419,9 +415,9 @@
       echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
       return; 
     }
-    $count = mysqli_affected_rows($sqlResultInsert);
-    $err = "Количество добавленных записей в таблицу EZ_CLIENTS = ".$count;
-    $cmtAppHTML = $cmtAppHTML."<br>".$err; //пока пишем эту хрень
+    $countRows = mysqli_affected_rows($sqlResultInsert);
+    $msg = "Количество добавленных записей в таблицу EZ_CLIENTS = ".$countRows;
+    $cmtAppHTML = $cmtAppHTML."<br>".$msg; //пока пишем эту хрень
     //mysqli_commit($connConnection); mysqli_close($connConnection); 
     //??? Делать ли коммит и закрывать ли сессию ???
     ///////////////////////////////////////////
@@ -429,8 +425,8 @@
     $result = array(
       'err_code'  => 0,
       'err_msg_t' => "Добавления клиента в БД выполнено успешно.",
-      'err_msg_s' => $err,
-      'err_msg_l' => $err,
+      'err_msg_s' => $msg,
+      'err_msg_l' => $msg,
       'client_id' => "0",
       'name'      => $clientName,
       'phone'     => $clientPhone,    
