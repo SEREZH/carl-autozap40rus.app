@@ -37,37 +37,11 @@ jQuery( document ).ready(function() {
 		jQuery('.ez-car-autocompl-form ul.mdb-autocomplete-wrap').css( "background-color", "red" );
 	});*/
 });
-
-/*var gv_marks = [
-    "AC","Acura","Alfa Romeo","Alpine","AM General","Ariel","Aro","Asia","Aston Martin","Audi","Austin",
-    "Autobianchi","Baltijas Dzips","Beijing","Bentley","Bertone","Bitter","BMW","BMW Alpina","Brabus",
-    "Brilliance","Bristol","Bufori","Bugatti","Buick","BYD","Byvin","Cadillac","Callaway","Carbodies",
-    "Caterham","Changan","ChangFeng","Chery","Chevrolet","Chrysler","Citroen","Cizeta","Coggiola","Dacia",
-    "Dadi","Daewoo","DAF","Daihatsu","Daimler","Dallas","Datsun","De Tomaso","DeLorean","Derways","Dodge",
-    "DongFeng","Doninvest","Donkervoort","E-Car","Eagle","Eagle Cars","Ecomotors","FAW","Ferrari","Fiat",
-    "Fisker","Ford","Foton","FSO","Fuqi","Geely","Geo","GMC","Gonow","Great Wall","Hafei","Haima","Hawtai",
-    "Hindustan","Holden","Honda","HuangHai","Hummer","Hyundai","Infiniti","Innocenti","Invicta","Iran Khodro",
-    "Isdera","Isuzu","IVECO","JAC","Jaguar","Jeep","Jensen","JMC","Kia","Koenigsegg","KTM","Lamborghini","Lancia",
-    "Land Rover","Landwind","Lexus","Liebao Motor","Lifan","Lincoln","Lotus","LTI","Luxgen","Mahindra","Marcos",
-    "Marlin","Marussia","Maruti","Maserati","Maybach","Mazda","McLaren","Mega","Mercedes-Benz","Mercury",
-    "Metrocab","MG","Microcar","Minelli","Mini","Mitsubishi","Mitsuoka","Morgan","Morris","Nissan","Noble",
-    "Oldsmobile","Opel","Osca","Pagani","Panoz","Paykan","Perodua","Peugeot","Piaggio","Plymouth","Pontiac",
-    "Porsche","Premier","Proton","PUCH","Puma","Qoros","Qvale","Reliant","Renaissance","Renault","Renault Samsung",
-    "Rolls-Royce","Ronart","Rover","Saab","Saleen","Santana","Saturn","Scion","SEAT","ShuangHuan","Skoda","Smart",
-    "Soueast","Spectre","Spyker","SRT","Ssang Yong","Subaru","Suzuki","Talbot","TATA","Tatra","Tazzari","Tesla",
-    "Tianma","Tianye","Tofas","Toyota","Trabant","Tramontana","Triumph","TVR","Ultima","Vauxhall","Vector",
-    "Venturi","Volkswagen","Volvo","Vortex","Wartburg","Westfield","Wiesmann","Xin Kai","Zastava","Zotye","ZX",
-    "Автокам","Астро","Бронто","ВАЗ","ГАЗ","Ё-мобиль","ЗАЗ","ЗИЛ","ИЖ","КамАЗ","Канонир","ЛУАЗ","Москвич","СеАЗ",
-    "СМЗ","ТагАЗ","УАЗ","Эксклюзив"
-];
-jQuery('#ez-car-autocompl-mark').mdb_autocomplete({
-    data: gv_marks
-});*/
-
 /*---------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
 // Марка, Модель, Поколение автомобиля - НАЧАЛО
 /*---------------------------------------------------------------------------------------*/
+
 var g_mark_val;
 var g_mark_val_wet;
 var g_mark_val_old;
@@ -99,7 +73,7 @@ function ezCarAutocomplMarkFill(obj, e) {
         success: function(response) {
             console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+response);
             v_models = response;
-            jQuery('#ez-car-autocompl-marks').mdb_autocomplete({
+            jQuery('#formZakazCarMark').mdb_autocomplete({
                 data: v_models
             });
         },
@@ -119,7 +93,7 @@ function ezCarAutocomplMarkBlur(obj, e) {
     console.log('::ezCarAutocomplMarkBlur: 1 - g_mark_val_wet='+g_mark_val_wet);
     console.log('::ezCarAutocomplMarkBlur: 1 - g_mark_val_old='+g_mark_val_old);
     console.log('::ezCarAutocomplMarkBlur: 1 - g_mark_val_wet_old='+g_mark_val_wet_old);
-    g_mark_val_wet = jQuery('#ez-car-autocompl-mark').val(); // корректировка "мокрой" марки автомобиля
+    g_mark_val_wet = jQuery('#formZakazCarMark').val(); // корректировка "мокрой" марки автомобиля
     console.log('::ezCarAutocomplMarkBlur: 2 - g_mark_val_wet='+g_mark_val_wet);
     if (g_mark_val_old!=g_mark_val||
         g_mark_val_old==null||
@@ -128,7 +102,7 @@ function ezCarAutocomplMarkBlur(obj, e) {
     {
         g_mark_val_wet_old  = g_mark_val_wet;
         console.log('::ezCarAutocomplMarkBlur: IF :g_mark_val_old='+g_mark_val_old);
-        jQuery('#ez-car-autocompl-model').val('');    
+        jQuery('#formZakazCarModel').val('');    
     }
 }
 /*---------------------------------------------------------------------------------------*/
@@ -143,14 +117,14 @@ function ezCarAutocomplModelFill(obj, e) {
     console.log('::ezCarAutocomplModelFill: 1 - g_mark_val='+g_mark_val);
     console.log('::ezCarAutocomplModelFill: 1 - g_mark_val_wet='+g_mark_val_wet);
     console.log('::ezCarAutocomplModelFill: 1 - g_mark_val_old='+g_mark_val_old);
-    g_mark_val = jQuery('#ez-car-autocompl-mark').val(); // корректировка текущей марки автомобиля
+    g_mark_val = jQuery('#formZakazCarMark').val(); // корректировка текущей марки автомобиля
     console.log('::ezCarAutocomplModelFill: 2 - g_mark_val='+g_mark_val);
     
     var v_models = [""];
     if (g_mark_val == null||g_mark_val == undefined||g_mark_val == '') {
         console.log('::ezCarAutocomplModelFill: IF');
-        jQuery('#ez-car-autocompl-model').val('');
-        jQuery('#ez-car-autocompl-model').mdb_autocomplete({
+        jQuery('#formZakazCarModel').val('');
+        jQuery('#formZakazCarModel').mdb_autocomplete({
             data: v_models
         });
     } else if (g_mark_val_old != g_mark_val) {
@@ -161,19 +135,20 @@ function ezCarAutocomplModelFill(obj, e) {
             url: 'php/ez-car-autocompl.php', //this should be url to your PHP file
             dataType: 'json',
             data: {func: 'getCarModels', car_mark: g_mark_val},
-            complete: function() {
-                console.log('AJAX::COMPLETE');
+            complete: function(response) {
+                console.log('::ezCarAutocomplModelFill:AJAX::COMPLETE::'+JSON.stringify(response));
             },
             success: function(response) {
-                console.log('AJAX::SUCCESS: response='+response);
+                //console.log('AJAX::SUCCESS: response='+response);
+                console.log('::ezCarAutocomplModelFill:AJAX::SUCCESS: response='+JSON.stringify(response));
                 v_models = response;
-                jQuery('#ez-car-autocompl-model').mdb_autocomplete({
+                jQuery('#formZakazCarModel').mdb_autocomplete({
                     data: v_models
                 });
             },
             error: function (xhr, ajaxOptions, thrownError) {
-                console.log('AJAX::MODEL::ERROR: '+xhr.status);
-                console.log('AJAX::MODEL::ERROR: '+thrownError);
+                console.log('::ezCarAutocomplModelFill:AJAX::MODEL::ERROR: '+xhr.status);
+                console.log('::ezCarAutocomplModelFill:AJAX::MODEL::ERROR: '+thrownError);
             }
         });
     }
@@ -181,7 +156,7 @@ function ezCarAutocomplModelFill(obj, e) {
 
 function ezCarAutocomplModelBlur(obj, e) {
     console.log('::ezCarAutocomplModelBlur');   
-    g_mark_val = jQuery('#ez-car-autocompl-mark').val();
+    g_mark_val = jQuery('#formZakazCarMark').val();
     g_model_val_wet = ""; // сброс "мокрой" марки автомобиля
     console.log('::ezCarAutocomplModelBlur: obj.name='+obj.name);
     console.log('::ezCarAutocomplModelBlur: obj.type='+obj.type);
@@ -190,10 +165,10 @@ function ezCarAutocomplModelBlur(obj, e) {
     console.log('::ezCarAutocomplModelBlur: 1 - g_mark_val='+g_mark_val);
     console.log('::ezCarAutocomplModelBlur: 1 - g_model_val='+g_model_val);
     console.log('::ezCarAutocomplModelBlur: 1 - g_model_val_wet='+g_model_val_wet);
-    g_model_val_wet = jQuery('#ez-car-autocompl-model').val(); // корректировка "мокрой" модели автомобиля
+    g_model_val_wet = jQuery('#formZakazCarModel').val(); // корректировка "мокрой" модели автомобиля
     console.log('::ezCarAutocomplModelBlur: 2 - g_model_val_wet='+g_model_val_wet);
     if (g_model_val != g_model_val_wet) {
-        jQuery('#ez-car-autocompl-generation').val('');  
+        jQuery('#formZakazCarGeneration').val('');  
     }
 }
 /*---------------------------------------------------------------------------------------*/
@@ -208,16 +183,16 @@ function ezCarAutocomplGenerationFill(obj, e) {
     console.log('::ezCarAutocomplGenerationFill: 1 - g_mark_val='+g_mark_val);
     console.log('::ezCarAutocomplGenerationFill: 1 - g_mark_val_wet='+g_mark_val_wet);
     console.log('::ezCarAutocomplGenerationFill: 1 - g_mark_val_old='+g_mark_val_old);
-    g_mark_val = jQuery('#ez-car-autocompl-mark').val(); // корректировка текущей марки автомобиля
-    g_model_val = jQuery('#ez-car-autocompl-model').val(); // корректировка текущей модели автомобиля
+    g_mark_val = jQuery('#formZakazCarMark').val(); // корректировка текущей марки автомобиля
+    g_model_val = jQuery('#formZakazCarModel').val(); // корректировка текущей модели автомобиля
     console.log('::ezCarAutocomplGenerationFill: 2 - g_mark_val='+g_mark_val);
     console.log('::ezCarAutocomplGenerationFill: 2 - g_model_val='+g_model_val);
     
     var v_generations = [""];
     if (g_model_val == null||g_model_val == undefined||g_model_val == '') {
         console.log('::ezCarAutocomplGenerationFill: IF');
-        jQuery('#ez-car-autocompl-generation').val('');
-        jQuery('#ez-car-autocompl-generation').mdb_autocomplete({
+        jQuery('#formZakazCarGeneration').val('');
+        jQuery('#formZakazCarGeneration').mdb_autocomplete({
             data: v_generations
         });
     } else if (g_model_val_old != g_model_val) {
@@ -234,7 +209,7 @@ function ezCarAutocomplGenerationFill(obj, e) {
             success: function(response) {
                 console.log('AJAX::SUCCESS: response='+response);
                 v_generations = response;
-                jQuery('#ez-car-autocompl-generation').mdb_autocomplete({
+                jQuery('#formZakazCarGeneration').mdb_autocomplete({
                     data: v_generations
                 });
             },
@@ -249,8 +224,8 @@ function ezCarAutocomplGenerationFill(obj, e) {
 function ezCarAutocomplGenerationBlur(obj, e) {
     console.log('::ezCarAutocomplGenerationBlur');   
     // корректировка наименований Марки и Модели
-    g_mark_val      = jQuery('#ez-car-autocompl-mark').val();
-    g_model_val     = jQuery('#ez-car-autocompl-model').val();
+    g_mark_val      = jQuery('#formZakazCarMark').val();
+    g_model_val     = jQuery('#formZakazCarModel').val();
     g_generation_val_wet = ""; // сброс "мокрого" поколения автомобиля
     console.log('::ezCarAutocomplGenerationBlur: obj.name='+obj.name);
     console.log('::ezCarAutocomplGenerationBlur: obj.type='+obj.type);
@@ -259,7 +234,7 @@ function ezCarAutocomplGenerationBlur(obj, e) {
     console.log('::ezCarAutocomplGenerationBlur: 1 - g_mark_val='+g_mark_val);
     console.log('::ezCarAutocomplGenerationBlur: 1 - g_model_val='+g_model_val);
     console.log('::ezCarAutocomplGenerationBlur: 1 - g_generation_val_wet='+g_generation_val_wet);
-    g_generation_val_wet = jQuery('#ez-car-autocompl-generation').val(); // корректировка "мокрого" поколения автомобиля
+    g_generation_val_wet = jQuery('#formZakazCarGeneration').val(); // корректировка "мокрого" поколения автомобиля
     console.log('::ezCarAutocomplGenerationBlur: 2 - g_generation_val_wet='+g_generation_val_wet);
 }
 // Поколение автомобиля - ОКОНЧАНИЕ
@@ -269,16 +244,18 @@ console.log('>>> ::ezCarAutocomplMarkFill');
 var v_makrs = [""];
 jQuery.ajax({
     type: 'POST',
-    url: 'php/ez-car-autocompl.php', //this should be url to your PHP file
+    url: '/php/ez-car-autocompl.php',
     dataType: 'json',
     data: {func: 'getCarMarks'},
-    complete: function() {
-        console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::COMPLETE');
+    complete: function(response) {
+        console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::COMPLETE: response='+
+            JSON.stringify(response));
     },
     success: function(response) {
-        //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+response);
+        console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+
+            JSON.stringify(response));
         v_marks = response;
-        jQuery('#ez-car-autocompl-mark').mdb_autocomplete({
+        jQuery('#formZakazCarMark').mdb_autocomplete({
             data: v_marks
         });
     },

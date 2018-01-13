@@ -1,5 +1,5 @@
 <?php
-//EZ-CAR-AUTOCOMPL.php
+//ez-car-autocompl.php
 //Подключаем БД = include ez_file.php
   $filename = 'ez_file.php';
   if (file_exists($filename)) {$test = "Exist YES - $filename";} 
@@ -53,10 +53,14 @@ function getCarModels($f_car_mark)
 if (isset($_POST["func"]))    	{ $func 	 = $_POST["func"];}      else { $func  	 = '';}
 if (isset($_POST["car_mark"]))  { $car_mark  = $_POST["car_mark"];}  else{ $car_mark  = '';}
 if (isset($_POST["car_model"])) { $car_model = $_POST["car_model"];} else{ $car_model = '';}
+putContentsLog("EZ-CAR-AUTOCOMPL - func=$func");
+putContentsLog("EZ-CAR-AUTOCOMPL - car_mark=$car_mark");
+putContentsLog("EZ-CAR-AUTOCOMPL - car_model=$car_model");
 /*print_r($func);
 print_r($car_mark);
 print_r($car_model);*/
-
+putContentsLog("EZ-CAR-AUTOCOMPL - switch - BEFORE");
+	putContentsLog("EZ-CAR-AUTOCOMPL - func=$func");
 switch ($func) {
 	case 'getCarMarks':
         $arMarksRows = array();// инициализируем индексный массив Модели

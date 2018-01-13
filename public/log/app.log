@@ -1,202 +1,131 @@
 
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - BEGIN ---------------------------------------------
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Included ez_file.php
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Exist YES - ez-conn.php
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Included ez-conn.php
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Ключ заказа = xVmvABjUtD8Zt0KmtgxFjKGbKxUxtm
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Значения переданные из формы заказа:
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Имя клиента: Денис
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Номер телефона клиента: +7(798)798-70-89
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - VIN номер автомобиля: 
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Марка автомобиля: 
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Модель автомобиля: 
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Начата проверка валидности полей Ваше имя и Ваш телефон
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Завершена проверка валидности полей Ваше имя и Ваш телефон формы заказа
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - phoneNumberDraft=+7(798)798-70-89; phoneNumberClear=77987987089; phoneNumberFormat=+7(798)798-70-89
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Проверка наличия клиента по имени и телефону в EZ_CLIENTS
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Текст запроса=select id from ez_clients where upper(name)=upper('Денис') and upper(phone)=upper('+7(798)798-70-89') limit 1
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Запрос выполнен
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Определяем ID клиента. Ищем в выборке
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - EZ-FORM-ZAKAZ - Определен ID клиента = 15
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Поиск автомобиля для клиента в таблице EZ_CLIENT_CARS
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - по VIN, MARK, MODEL, GENERATION и их комбинаций
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - VIN=
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - MARK=
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - MODEL=
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - GENERATION=
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента:
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - select id from ez_client_cars WHERE client_id = '15'  and COALESCE(vin,'') = ''  and COALESCE(mark,'') = ''  and COALESCE(model,'') = ''  and COALESCE(gener,'') = ''  limit 1
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента выполнен
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Выбрано автомобилей: 1
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Определяем ID автомобиля для клиента
-01.13.18 19:19:01 :: EZ-FORM-ZAKAZ - Определен ID автомобиля для клиента: 6
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - BEGIN ---------------------------------------------
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Included ez_file.php
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Exist YES - ez-conn.php
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Included ez-conn.php
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Ключ заказа = p3y0bP2RBKzWcIxIrFQLwLpBJWBTWT
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Значения переданные из формы заказа:
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Имя клиента: Денис
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Номер телефона клиента: +7(798)798-70-89
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - VIN номер автомобиля: 
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Марка автомобиля: 
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Модель автомобиля: 
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Начата проверка валидности полей Ваше имя и Ваш телефон
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Завершена проверка валидности полей Ваше имя и Ваш телефон формы заказа
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - phoneNumberDraft=+7(798)798-70-89; phoneNumberClear=77987987089; phoneNumberFormat=+7(798)798-70-89
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Проверка наличия клиента по имени и телефону в EZ_CLIENTS
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Текст запроса=select id from ez_clients where upper(name)=upper('Денис') and upper(phone)=upper('+7(798)798-70-89') limit 1
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Запрос выполнен
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Определяем ID клиента. Ищем в выборке
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Определен ID клиента = 15
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Поиск автомобиля для клиента в таблице EZ_CLIENT_CARS
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - по VIN, MARK, MODEL, GENERATION и их комбинаций
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - VIN=
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - MARK=
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - MODEL=
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - GENERATION=
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента:
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - select id from ez_client_cars WHERE client_id = '15'  and COALESCE(vin,'') = ''  and COALESCE(mark,'') = ''  and COALESCE(model,'') = ''  and COALESCE(gener,'') = ''  limit 1
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента выполнен
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Выбрано автомобилей: 1
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Определяем ID автомобиля для клиента
-01.13.18 19:20:31 :: EZ-FORM-ZAKAZ - Определен ID автомобиля для клиента: 6
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - BEGIN ---------------------------------------------
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Included ez_file.php
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Exist YES - ez-conn.php
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Included ez-conn.php
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Ключ заказа = LcdEVakjHTZoARfvqWJlrEu585VHVN
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Значения переданные из формы заказа:
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Имя клиента: Денис
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Номер телефона клиента: +7(798)798-70-89
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - VIN номер автомобиля: 
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Марка автомобиля: 
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Модель автомобиля: 
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Начата проверка валидности полей Ваше имя и Ваш телефон
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Завершена проверка валидности полей Ваше имя и Ваш телефон формы заказа
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - phoneNumberDraft=+7(798)798-70-89; phoneNumberClear=77987987089; phoneNumberFormat=+7(798)798-70-89
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Проверка наличия клиента по имени и телефону в EZ_CLIENTS
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Текст запроса=select id from ez_clients where upper(name)=upper('Денис') and upper(phone)=upper('+7(798)798-70-89') limit 1
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Запрос выполнен
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Определяем ID клиента. Ищем в выборке
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Определен ID клиента = 15
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Поиск автомобиля для клиента в таблице EZ_CLIENT_CARS
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - по VIN, MARK, MODEL, GENERATION и их комбинаций
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - VIN=
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - MARK=
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - MODEL=
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - GENERATION=
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента:
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - select id from ez_client_cars WHERE client_id = '15'  and COALESCE(vin,'') = ''  and COALESCE(mark,'') = ''  and COALESCE(model,'') = ''  and COALESCE(gener,'') = ''  limit 1
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента выполнен
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Выбрано автомобилей: 1
-01.13.18 19:22:21 :: EZ-FORM-ZAKAZ - Определен ID автомобиля для клиента: 6
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - BEGIN ---------------------------------------------
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Included ez_file.php
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Exist YES - ez-conn.php
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Included ez-conn.php
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Ключ заказа = 5gSPoi7Hs4PpmRHengmZCilwuFp2Xz
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Значения переданные из формы заказа:
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Имя клиента: Денис
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Номер телефона клиента: +7(798)798-70-89
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - VIN номер автомобиля: 
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Марка автомобиля: 
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Модель автомобиля: 
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Начата проверка валидности полей Ваше имя и Ваш телефон
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Завершена проверка валидности полей Ваше имя и Ваш телефон формы заказа
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - phoneNumberDraft=+7(798)798-70-89; phoneNumberClear=77987987089; phoneNumberFormat=+7(798)798-70-89
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Проверка наличия клиента по имени и телефону в EZ_CLIENTS
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Текст запроса=select id from ez_clients where upper(name)=upper('Денис') and upper(phone)=upper('+7(798)798-70-89') limit 1
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Запрос выполнен
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Определяем ID клиента. Ищем в выборке
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Определен ID клиента = 15
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Поиск автомобиля для клиента в таблице EZ_CLIENT_CARS по VIN, MARK, MODEL, GENERATION
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - VIN=
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - MARK=
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - MODEL=
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - GENERATION=
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента:
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - select id from ez_client_cars WHERE client_id = '15'  and COALESCE(vin,'') = ''  and COALESCE(mark,'') = ''  and COALESCE(model,'') = ''  and COALESCE(gener,'') = ''  limit 1
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента выполнен
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Выбрано автомобилей: 1
-01.13.18 19:23:44 :: EZ-FORM-ZAKAZ - Определен ID автомобиля для клиента: 6
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - BEGIN ---------------------------------------------
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Included ez_file.php
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Exist YES - ez-conn.php
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Included ez-conn.php
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Ключ заказа = Ry6z59V8ugDGOO4DXYTdJVaJwef1Dy
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Значения переданные из формы заказа:
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Имя клиента: Денис
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Номер телефона клиента: +7(798)798-70-89
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - VIN номер автомобиля: VINDENIS001
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Марка автомобиля: 
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Модель автомобиля: 
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Начата проверка валидности полей Ваше имя и Ваш телефон
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Завершена проверка валидности полей Ваше имя и Ваш телефон формы заказа
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - phoneNumberDraft=+7(798)798-70-89; phoneNumberClear=77987987089; phoneNumberFormat=+7(798)798-70-89
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Проверка наличия клиента по имени и телефону в EZ_CLIENTS
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Текст запроса=select id from ez_clients where upper(name)=upper('Денис') and upper(phone)=upper('+7(798)798-70-89') limit 1
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Запрос выполнен
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Определяем ID клиента. Ищем в выборке
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Определен ID клиента = 15
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Поиск автомобиля для клиента в таблице EZ_CLIENT_CARS по VIN, MARK, MODEL, GENERATION
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - VIN=VINDENIS001
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - MARK=
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - MODEL=
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - GENERATION=
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента:
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - select id from ez_client_cars WHERE client_id = '15'  and COALESCE(vin,'') = 'VINDENIS001'  and COALESCE(mark,'') = ''  and COALESCE(model,'') = ''  and COALESCE(gener,'') = ''  limit 1
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента выполнен
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Выбрано автомобилей: 0
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Определен ID автомобиля для клиента: 0
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Добавление нового автомобиля для клиента
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Запрос для добавления нового автомобиля для клиента:
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - insert into ez_client_cars(id,client_id,vin,mark,model,gener)  values (NULL,'15','VINDENIS001','','','')
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Запрос для добавления нового автомобиля для клиента выполнен успешно
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Определяем ID созданного автомобиля
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Запрос для определения ID созданного автомобиля:
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - select id from ez_client_cars WHERE client_id = '15'  and COALESCE(vin,'') = 'VINDENIS001'  and COALESCE(mark,'') = ''  and COALESCE(model,'') = ''  and COALESCE(gener,'') = ''  limit 1
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - Запрос для определения ID созданного автомобиля выполнен
-01.13.18 19:25:13 :: EZ-FORM-ZAKAZ - ID созданного автомобиля определен: 7
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - BEGIN ---------------------------------------------
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Included ez_file.php
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Exist YES - ez-conn.php
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Included ez-conn.php
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Ключ заказа = DilU5Koi5rdr1bKEQkIi0Ku0szkwYC
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Значения переданные из формы заказа:
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Имя клиента: Денис
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Номер телефона клиента: +7(798)798-70-89
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - VIN номер автомобиля: VINDENIS001
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Марка автомобиля: FORD
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Модель автомобиля: 
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Начата проверка валидности полей Ваше имя и Ваш телефон
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Завершена проверка валидности полей Ваше имя и Ваш телефон формы заказа
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - phoneNumberDraft=+7(798)798-70-89; phoneNumberClear=77987987089; phoneNumberFormat=+7(798)798-70-89
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Проверка наличия клиента по имени и телефону в EZ_CLIENTS
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Текст запроса=select id from ez_clients where upper(name)=upper('Денис') and upper(phone)=upper('+7(798)798-70-89') limit 1
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Запрос выполнен
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Определяем ID клиента. Ищем в выборке
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Определен ID клиента = 15
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Поиск автомобиля для клиента в таблице EZ_CLIENT_CARS по VIN, MARK, MODEL, GENERATION
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - VIN=VINDENIS001
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - MARK=FORD
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - MODEL=
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - GENERATION=
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента:
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - select id from ez_client_cars WHERE client_id = '15'  and COALESCE(vin,'') = 'VINDENIS001'  and COALESCE(mark,'') = 'FORD'  and COALESCE(model,'') = ''  and COALESCE(gener,'') = ''  limit 1
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента выполнен
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Выбрано автомобилей: 0
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Определен ID автомобиля для клиента: 0
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Добавление нового автомобиля для клиента
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Запрос для добавления нового автомобиля для клиента:
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - insert into ez_client_cars(id,client_id,vin,mark,model,gener)  values (NULL,'15','VINDENIS001','FORD','','')
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Запрос для добавления нового автомобиля для клиента выполнен успешно
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Определяем ID созданного автомобиля
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Запрос для определения ID созданного автомобиля:
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - select id from ez_client_cars WHERE client_id = '15'  and COALESCE(vin,'') = 'VINDENIS001'  and COALESCE(mark,'') = 'FORD'  and COALESCE(model,'') = ''  and COALESCE(gener,'') = ''  limit 1
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - Запрос для определения ID созданного автомобиля выполнен
-01.13.18 19:27:44 :: EZ-FORM-ZAKAZ - ID созданного автомобиля определен: 8
-01.13.18 19:31:56 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
-01.13.18 19:31:56 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
-01.13.18 19:31:56 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
-01.13.18 19:31:56 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.13.18 23:56:34 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.13.18 23:56:34 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.13.18 23:56:34 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.13.18 23:56:34 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.13.18 23:56:34 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.13.18 23:56:34 :: EZ-CAR-AUTOCOMPL - car_mark=
+01.13.18 23:56:34 :: EZ-CAR-AUTOCOMPL - car_model=
+01.13.18 23:56:34 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.13.18 23:56:34 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.13.18 23:56:54 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.13.18 23:56:54 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.13.18 23:56:54 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.13.18 23:56:54 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.13.18 23:56:54 :: EZ-CAR-AUTOCOMPL - func=getCarModels
+01.13.18 23:56:54 :: EZ-CAR-AUTOCOMPL - car_mark=Jaguar
+01.13.18 23:56:54 :: EZ-CAR-AUTOCOMPL - car_model=
+01.13.18 23:56:54 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.13.18 23:56:54 :: EZ-CAR-AUTOCOMPL - func=getCarModels
+01.14.18 00:01:06 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 00:01:06 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 00:01:06 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 00:01:06 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 00:01:06 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 00:01:06 :: EZ-CAR-AUTOCOMPL - car_mark=
+01.14.18 00:01:06 :: EZ-CAR-AUTOCOMPL - car_model=
+01.14.18 00:01:06 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 00:01:06 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 00:01:33 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 00:01:33 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 00:01:33 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 00:01:33 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 00:01:33 :: EZ-CAR-AUTOCOMPL - func=getCarModels
+01.14.18 00:01:33 :: EZ-CAR-AUTOCOMPL - car_mark=Alfa Romeo
+01.14.18 00:01:33 :: EZ-CAR-AUTOCOMPL - car_model=
+01.14.18 00:01:33 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 00:01:33 :: EZ-CAR-AUTOCOMPL - func=getCarModels
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - BEGIN ---------------------------------------------
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Included ez_file.php
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Exist YES - ez-conn.php
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Included ez-conn.php
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Ключ заказа = TGZIia84htFdO75q8jlAkZt3oBEIW8
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Значения переданные из формы заказа:
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Имя клиента: Денис
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Номер телефона клиента: +7(798)798-70-89
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - VIN номер автомобиля: VINDENIS001
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Марка автомобиля: Alfa Romeo
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Модель автомобиля: Alfetta
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Начата проверка валидности полей Ваше имя и Ваш телефон
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Завершена проверка валидности полей Ваше имя и Ваш телефон формы заказа
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - phoneNumberDraft=+7(798)798-70-89; phoneNumberClear=77987987089; phoneNumberFormat=+7(798)798-70-89
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Проверка наличия клиента по имени и телефону в EZ_CLIENTS
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Текст запроса=select id from ez_clients where upper(name)=upper('Денис') and upper(phone)=upper('+7(798)798-70-89') limit 1
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Запрос выполнен
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Определяем ID клиента. Ищем в выборке
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Определен ID клиента = 15
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Поиск автомобиля для клиента в таблице EZ_CLIENT_CARS по VIN, MARK, MODEL, GENERATION
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - VIN=VINDENIS001
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - MARK=Alfa Romeo
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - MODEL=Alfetta
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - GENERATION=
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента:
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - select id from ez_client_cars WHERE client_id = '15'  and COALESCE(vin,'') = 'VINDENIS001'  and COALESCE(mark,'') = 'Alfa Romeo'  and COALESCE(model,'') = 'Alfetta'  and COALESCE(gener,'') = ''  limit 1
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента выполнен
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Выбрано автомобилей: 0
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Определен ID автомобиля для клиента: 0
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Добавление нового автомобиля для клиента
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Запрос для добавления нового автомобиля для клиента:
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - insert into ez_client_cars(id,client_id,vin,mark,model,gener)  values (NULL,'15','VINDENIS001','Alfa Romeo','Alfetta','')
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Запрос для добавления нового автомобиля для клиента выполнен успешно
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Определяем ID созданного автомобиля
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Запрос для определения ID созданного автомобиля:
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - select id from ez_client_cars WHERE client_id = '15'  and COALESCE(vin,'') = 'VINDENIS001'  and COALESCE(mark,'') = 'Alfa Romeo'  and COALESCE(model,'') = 'Alfetta'  and COALESCE(gener,'') = ''  limit 1
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - Запрос для определения ID созданного автомобиля выполнен
+01.14.18 00:01:52 :: EZ-FORM-ZAKAZ - ID созданного автомобиля определен: 9
+01.14.18 00:03:06 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 00:03:06 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 00:03:06 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 00:03:06 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 00:03:06 :: EZ-CAR-AUTOCOMPL - func=getCarGenerations
+01.14.18 00:03:06 :: EZ-CAR-AUTOCOMPL - car_mark=Alfa Romeo
+01.14.18 00:03:06 :: EZ-CAR-AUTOCOMPL - car_model=Alfetta
+01.14.18 00:03:06 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 00:03:06 :: EZ-CAR-AUTOCOMPL - func=getCarGenerations
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - BEGIN ---------------------------------------------
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Included ez_file.php
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Exist YES - ez-conn.php
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Included ez-conn.php
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Ключ заказа = Zuajxqf5o72Trc1dD40oqZDgjSnspF
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Значения переданные из формы заказа:
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Имя клиента: Денис
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Номер телефона клиента: +7(798)798-70-89
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - VIN номер автомобиля: VINDENIS001
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Марка автомобиля: Alfa Romeo
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Модель автомобиля: Alfetta
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Начата проверка валидности полей Ваше имя и Ваш телефон
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Завершена проверка валидности полей Ваше имя и Ваш телефон формы заказа
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - phoneNumberDraft=+7(798)798-70-89; phoneNumberClear=77987987089; phoneNumberFormat=+7(798)798-70-89
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Проверка наличия клиента по имени и телефону в EZ_CLIENTS
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Текст запроса=select id from ez_clients where upper(name)=upper('Денис') and upper(phone)=upper('+7(798)798-70-89') limit 1
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Запрос выполнен
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Определяем ID клиента. Ищем в выборке
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Определен ID клиента = 15
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Поиск автомобиля для клиента в таблице EZ_CLIENT_CARS по VIN, MARK, MODEL, GENERATION
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - VIN=VINDENIS001
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - MARK=Alfa Romeo
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - MODEL=Alfetta
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - GENERATION=Alfa Romeo Alfetta
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента:
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - select id from ez_client_cars WHERE client_id = '15'  and COALESCE(vin,'') = 'VINDENIS001'  and COALESCE(mark,'') = 'Alfa Romeo'  and COALESCE(model,'') = 'Alfetta'  and COALESCE(gener,'') = 'Alfa Romeo Alfetta'  limit 1
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Запрос для выборки автомобиля клиента выполнен
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Выбрано автомобилей: 0
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Определен ID автомобиля для клиента: 0
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Добавление нового автомобиля для клиента
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Запрос для добавления нового автомобиля для клиента:
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - insert into ez_client_cars(id,client_id,vin,mark,model,gener)  values (NULL,'15','VINDENIS001','Alfa Romeo','Alfetta','Alfa Romeo Alfetta')
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Запрос для добавления нового автомобиля для клиента выполнен успешно
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Определяем ID созданного автомобиля
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Запрос для определения ID созданного автомобиля:
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - select id from ez_client_cars WHERE client_id = '15'  and COALESCE(vin,'') = 'VINDENIS001'  and COALESCE(mark,'') = 'Alfa Romeo'  and COALESCE(model,'') = 'Alfetta'  and COALESCE(gener,'') = 'Alfa Romeo Alfetta'  limit 1
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - Запрос для определения ID созданного автомобиля выполнен
+01.14.18 00:03:29 :: EZ-FORM-ZAKAZ - ID созданного автомобиля определен: 10
+01.14.18 00:04:51 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 00:04:51 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 00:04:51 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 00:04:51 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 00:04:51 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 00:04:51 :: EZ-CAR-AUTOCOMPL - car_mark=
+01.14.18 00:04:51 :: EZ-CAR-AUTOCOMPL - car_model=
+01.14.18 00:04:51 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 00:04:51 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
