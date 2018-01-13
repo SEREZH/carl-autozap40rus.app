@@ -7,6 +7,14 @@
     $test = array("Файл $filename не существует");//echo json_encode($test, JSON_UNESCAPED_UNICODE);
   }
   include $filename;
+  $filename = 'ez_file.php';
+  if (file_exists($filename)) {
+    $test = array("Файл $filename существует");//echo json_encode($test, JSON_UNESCAPED_UNICODE);
+  } else {
+    $test = array("Файл $filename не существует");//echo json_encode($test, JSON_UNESCAPED_UNICODE);
+  }
+  include $filename;
+  /*------------------------------------------------------------------------------------------------*/
 
   function generateRandomString($length = 30) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -80,22 +88,6 @@
     $f_errMsgS    = $i_errMsg;
     $f_errMsgL    = 'ERROR'.$i_errCode.'<br>'.$f_errMsgS.'<br>'.$f_sqlErr;
     $f_cmtAppHTML = $i_cmtAppHTML.'<br>'.$f_errMsgL;
-
-/*    if (!$i_queryResult) {
-        $f_sqlErr     = mysqli_error($i_connConnection);
-        $f_errCode    = $i_errCode;
-        $f_errMsgT    = $i_logAct;
-        $f_errMsgS    = $i_errMsg;
-        $f_errMsgL    = $f_errMsgS.'<br>'.$f_sqlErr;
-        $f_cmtAppHTML = $i_cmtAppHTML.'<br>'.$f_errMsgL;
-    } else {
-        $f_sqlErr     = '';
-        $f_errCode    = 0;
-        $f_errMsgT    = '';
-        $f_errMsgS    = '';
-        $f_errMsgL    = '';
-        $f_cmtAppHTML = $i_cmtAppHTML;
-    }*/
     $f_result = setResultArray( $i_logKey, $f_errCode, $f_errMsgT, $f_errMsgS, $f_errMsgL,
                                 $i_clientName, $i_clientPhone, 
                                 $i_carVin, $i_carMark, $i_carModel, $i_carGener, $i_carPart,
@@ -232,18 +224,29 @@
   $clientSelectQuery = "select id from ez_clients where upper(name)=upper('$clientName') and upper(phone)=upper('$clientPhone') limit 1";
   $clientSelectResult = mysqli_query($connConnection, $clientSelectQuery) or die (mysqli_error($connConnection));
   /*--- checkQueryResult BEGIN ---*/
-  $logAct   = 'Регистрация клиента';
-  $errCode  = -102101;
-  $errMsg   = "Ошибка проверки наличия клиента в БД!";
-  $queryResult = checkQueryResult ( $connConnection, $clientSelectResult, $logKey, $logAct, 
-                                    $errCode, $errMsg, $clientName, $clientPhone, 
-                                    $carVin, $carMark, $carModel, $carGener, $carPart,
-                                    $clientID, $carID, $orderID, $cmtAppHTML
-                                  );
-  //if (!($queryResult['err_code']==0) {
+  $messageCode = 'ERRR-21001';
+  $cmtAppHTML = $cmtAppHTML.'<br>'.' Поиск сообщений для кода = '.$messageCode.'.';
+  $msgArray = getMessage($messageCode); // ez_file.php
+  list ($v_msg_code,$v_msg_exists,$v_msg_title,$v_msg_message1,$v_msg_message2) = $msgArray;
+  $cmtAppHTML = $cmtAppHTML.'<br>'.' Поиск сообщений для кода завершен:';
+  $cmtAppHTML = $cmtAppHTML.'<br>'.' v_msg_code = '.$v_msg_code;
+  $cmtAppHTML = $cmtAppHTML.'<br>'.' v_msg_exists = '.$v_msg_exists;
+  $cmtAppHTML = $cmtAppHTML.'<br>'.' v_msg_title = '.$v_msg_title;
+  $cmtAppHTML = $cmtAppHTML.'<br>'.' v_msg_message1 = '.$v_msg_message1;
+  $cmtAppHTML = $cmtAppHTML.'<br>'.' v_msg_message2 = '.$v_msg_message2;
+
+  if (!($v_msg_code==0)) {
+    $logAct   = $v_msg_title.'; v_msg_exists='.$v_msg_exists;
+    $errCode  = $v_msg_code;
+    $errMsg   = $v_msg_message1.'<br>'.$v_msg_message2;
+    $queryResult = checkQueryResult ( $connConnection, $clientSelectResult, $logKey, $logAct, 
+                                      $errCode, $errMsg, $clientName, $clientPhone, 
+                                      $carVin, $carMark, $carModel, $carGener, $carPart,
+                                      $clientID, $carID, $orderID, $cmtAppHTML
+                                    );
     echo json_encode($queryResult, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
     return; 
-  //};  
+   }
   /*--- checkQueryResult END ---*/                                   
   /*if (!$clientSelectResult) { //не выдал ли нам запрос ошибки 
     $errCode  = -2101;
