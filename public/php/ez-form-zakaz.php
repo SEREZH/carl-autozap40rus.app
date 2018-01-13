@@ -30,33 +30,37 @@
           $f_phoneNumberFormatPart2 = substr($f_phoneNumberClear, 4, 3);
           $f_phoneNumberFormatPart3 = substr($f_phoneNumberClear, 7, 2);
           $f_phoneNumberFormatPart4 = substr($f_phoneNumberClear, 9, 2);
-          $f_phoneNumberFormat      = $f_phoneNumberFormatPart0.' ('.
-                                      $f_phoneNumberFormatPart1.') '.
-                                      $f_phoneNumberFormatPart2.' - '.
-                                      $f_phoneNumberFormatPart3.' - '.
+          $f_phoneNumberFormat      = $f_phoneNumberFormatPart0.'('.
+                                      $f_phoneNumberFormatPart1.')'.
+                                      $f_phoneNumberFormatPart2.'-'.
+                                      $f_phoneNumberFormatPart3.'-'.
                                       $f_phoneNumberFormatPart4;
     }
     return array($f_phoneNumberDraft,$f_phoneNumberClear,$f_phoneNumberFormat);
   }
 
-  function setResultArray($log_key, $i_err_code, $i_err_msg_t, $i_err_msg_s, $i_err_msg_l, 
-                          $i_client_name, $i_client_phone, $car_vin, $car_mark, $car_model, $car_gener, $car_part, 
+
+
+
+  function setResultArray($i_log_key, $i_err_code, $i_err_msg_t, $i_err_msg_s, $i_err_msg_l, 
+                          $i_client_name, $i_client_phone, 
+                          $i_car_vin, $i_car_mark, $i_car_model, $i_car_gener, $i_car_part, 
                           $i_client_id, $i_car_id, $i_order_id, $i_cmt_app_html)
   {
 
       $f_result = array(
-              'log_key'     => $log_key,
+              'log_key'     => $i_log_key,
               'err_code'    => $i_err_code,
               'err_msg_t'   => $i_err_msg_t,
               'err_msg_s'   => $i_err_msg_s,
               'err_msg_l'   => $i_err_msg_l,
               'client_name' => $i_client_name,
               'client_phone'=> $i_client_phone,
-              'car_vin'     => $car_vin,
-              'car_mark'    => $car_mark,
-              'car_model'   => $car_model,
-              'car_gener'   => $car_gener,
-              'car_part'    => $car_part,
+              'car_vin'     => $i_car_vin,
+              'car_mark'    => $i_car_mark,
+              'car_model'   => $i_car_model,
+              'car_gener'   => $i_car_gener,
+              'car_part'    => $i_car_part,
               'client_id'   => $i_client_id,
               'car_id'      => $i_car_id,
               'order_id'    => $i_order_id,
@@ -64,6 +68,42 @@
             );
       return $f_result;
   };
+
+  function checkQueryResult ( $i_connConnection, $i_queryResult, $i_logKey, $i_logAct, 
+                              $i_errCode, $i_errMsg, $i_clientName, $i_clientPhone, 
+                              $i_carVin, $i_carMark, $i_carModel, $i_carGener, $i_carPart,
+                              $i_clientID, $i_carID, $i_orderID, $i_cmtAppHTML
+                            ) {
+    $f_sqlErr     = mysqli_error($i_connConnection);
+    $f_errCode    = $i_errCode;
+    $f_errMsgT    = $i_logAct;
+    $f_errMsgS    = $i_errMsg;
+    $f_errMsgL    = 'ERROR'.$i_errCode.'<br>'.$f_errMsgS.'<br>'.$f_sqlErr;
+    $f_cmtAppHTML = $i_cmtAppHTML.'<br>'.$f_errMsgL;
+
+/*    if (!$i_queryResult) {
+        $f_sqlErr     = mysqli_error($i_connConnection);
+        $f_errCode    = $i_errCode;
+        $f_errMsgT    = $i_logAct;
+        $f_errMsgS    = $i_errMsg;
+        $f_errMsgL    = $f_errMsgS.'<br>'.$f_sqlErr;
+        $f_cmtAppHTML = $i_cmtAppHTML.'<br>'.$f_errMsgL;
+    } else {
+        $f_sqlErr     = '';
+        $f_errCode    = 0;
+        $f_errMsgT    = '';
+        $f_errMsgS    = '';
+        $f_errMsgL    = '';
+        $f_cmtAppHTML = $i_cmtAppHTML;
+    }*/
+    $f_result = setResultArray( $i_logKey, $f_errCode, $f_errMsgT, $f_errMsgS, $f_errMsgL,
+                                $i_clientName, $i_clientPhone, 
+                                $i_carVin, $i_carMark, $i_carModel, $i_carGener, $i_carPart,
+                                $i_clientID, $i_carID, $i_orderID, $f_cmtAppHTML
+                              );
+    return $f_result;
+  }
+
 
   $phoneNumberDraft   = "";
   $phoneNumberClear   = "";
@@ -191,7 +231,21 @@
   $cmtAppHTML = $cmtAppHTML.'<br>'.$logAct;
   $clientSelectQuery = "select id from ez_clients where upper(name)=upper('$clientName') and upper(phone)=upper('$clientPhone') limit 1";
   $clientSelectResult = mysqli_query($connConnection, $clientSelectQuery) or die (mysqli_error($connConnection));
-  if (!$clientSelectResult) { //не выдал ли нам запрос ошибки 
+  /*--- checkQueryResult BEGIN ---*/
+  $logAct   = 'Регистрация клиента';
+  $errCode  = -102101;
+  $errMsg   = "Ошибка проверки наличия клиента в БД!";
+  $queryResult = checkQueryResult ( $connConnection, $clientSelectResult, $logKey, $logAct, 
+                                    $errCode, $errMsg, $clientName, $clientPhone, 
+                                    $carVin, $carMark, $carModel, $carGener, $carPart,
+                                    $clientID, $carID, $orderID, $cmtAppHTML
+                                  );
+  //if (!($queryResult['err_code']==0) {
+    echo json_encode($queryResult, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+    return; 
+  //};  
+  /*--- checkQueryResult END ---*/                                   
+  /*if (!$clientSelectResult) { //не выдал ли нам запрос ошибки 
     $errCode  = -2101;
     $errMsgT  = "Ошибка проверки наличия клиента в БД!";
     $errMsgS  = mysqli_error($connConnection);
@@ -202,7 +256,7 @@
                                 $clientID, $carID, $orderID, $cmtAppHTML);
     echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
     return; 
-  }
+  }*/
   $cmtAppHTML = $cmtAppHTML."<br>Определяем ID клиента. Ищем в выборке.";
   while ($rowEzClients = mysqli_fetch_array($clientSelectResult)) {$clientID = $rowEzClients['id'];}
   if ($clientID==0) {

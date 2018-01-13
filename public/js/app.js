@@ -47,6 +47,10 @@ jQuery( document ).ready(function() {
 });
 // post-submit callback 
 function showResponseFormZakaz(responseText, statusText, xhr, $form)  { 
+
+    console.log('showResponseFormZakaz: statusText='+statusText);
+    console.log('showResponseFormZakaz: responseText='+responseText);
+
 	var ajaxStatus	= statusText;
 	var jsonObj		= JSON.parse(responseText);
 	var logKey 		= jsonObj['log_key'];
@@ -66,8 +70,6 @@ function showResponseFormZakaz(responseText, statusText, xhr, $form)  {
     var orderID		= jsonObj['order_id'];
     var cmtAppHTML  = jsonObj['cmt_app_html'];
 
-    console.log('showResponseFormZakaz: statusText='+statusText);
-    console.log('showResponseFormZakaz: responseText='+responseText);
     console.log('showResponseFormZakaz: cmtAppHTML='+cmtAppHTML);
 
 	if (errCode == '0') {
@@ -94,15 +96,20 @@ function showResponseFormZakaz(responseText, statusText, xhr, $form)  {
 		$('#modalFormZakazSuccessBodyText').html(errBodyText);
 		$('#modalFormZakazSuccess').modal();
 	} else {
-		if (errCode == '-2001'||errCode == '-2002') {   
-			$('#modalFormZakazErrorTitleText').html(errMsgT);
-			$('#modalFormZakazErrorBodyText').html(errMsgS);
-    		$('#modalFormZakazError').modal();
+		if (errCode == -2001||errCode == -2002) {   
+			$('#modalFormZakazWarningTitleText').html(errMsgT);
+			$('#modalFormZakazWarningBodyText').html(errMsgS);
+    		$('#modalFormZakazWarning').modal();
+		} else if (errCode < -9999) {
+			$('#modalFormZakazDangerTitleText').html(errMsgT);
+			$('#modalFormZakazDangerBodyText').html(errMsgS);
+    		$('#modalFormZakazDanger').modal();
 		} else {
-			$('#modalFormZakazErrorTitleText').html(errMsgT);
-			$('#modalFormZakazErrorBodyText').html(errMsgS);
-    		$('#modalFormZakazError').modal();
-		}	
+			$('#modalFormZakazWarningTitleText').html(errMsgT);
+			$('#modalFormZakazWarningBodyText').html(errMsgS);
+    		$('#modalFormZakazWarning').modal();
+		}
+
 	}
 } 
 

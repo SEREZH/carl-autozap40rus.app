@@ -1,0 +1,20 @@
+/* --- ez-modal --- */
+.modal{ 
+	.modal-dialog{ 
+		.modal-content{ 
+			.modal-header {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+#modalFormZakazDanger{
+	.modal-danger{ 
+		.modal-body{ 
+			i,svg{
+				color:#ff4b4b!important
+			}
+		}
+	}
+}

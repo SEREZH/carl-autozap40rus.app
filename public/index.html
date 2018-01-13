@@ -903,21 +903,23 @@ RGB(74,118,168)
     <!-- EZH JS -->
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/ez-car-autocompl.js"></script>
+    
 
-    <!-- Central Modal Medium Warning -->
-    <!-- id="centralModalWarning"  -->
-    <div    id="modalFormZakazError" 
+
+    <!-- Central Modal Medium Danger -->
+    <!-- id="centralModalDanger"  -->
+    <div    id="modalFormZakazDanger" 
             class="modal fade" 
             tabindex="-1" 
             role="dialog" 
-            aria-labelledby="myModalLabelError" 
+            aria-labelledby="myModalLabelDanger" 
             aria-hidden="true">
-        <div class="modal-dialog cascading-modal modal-notify modal-warning" role="document">
+        <div class="modal-dialog cascading-modal modal-notify modal-danger" role="document">
             <!--Content-->
             <div class="modal-content">
                 <!--Header-->
                 <div class="modal-header">
-                    <p id="modalFormZakazErrorTitleText" class="heading lead">Заголовок ошибки!</p>
+                    <p id="modalFormZakazDangerTitleText" class="heading lead">Заголовок ошибки</p>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="white-text">&times;</span>
                     </button>
@@ -925,8 +927,43 @@ RGB(74,118,168)
                 <!--Body-->
                 <div class="modal-body">
                     <div class="text-center">
-                        <i class="far fa-times-circle fa-3x mb-3 animated rotateIn"></i>
-                        <p id="modalFormZakazErrorBodyText">Текст ошибки...</p>
+                        <i class="fas fa-times-circle fa-3x mb-3 animated rotateIn style='color: #ff4b4b!important'"></i>
+                        <p id="modalFormZakazDangerBodyText">Текст ошибки...</p>
+                    </div>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <!-- <a type="button" class="btn btn-primary-modal">Get it now <i class="fa fa-diamond ml-1"></i></a> -->
+                    <!-- <a type="button" class="btn btn-outline-secondary-modal waves-effect" data-dismiss="modal">OK</a> -->
+                    <a type="button" class="btn btn-primary-modal waves-effect waves-light" data-dismiss="modal">OK</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Central Modal Medium Error -->
+    <!-- id="centralModalWarning"  -->
+    <div    id="modalFormZakazWarning" 
+            class="modal fade" 
+            tabindex="-1" 
+            role="dialog" 
+            aria-labelledby="myModalLabelWarning" 
+            aria-hidden="true">
+        <div class="modal-dialog cascading-modal modal-notify modal-warning" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p id="modalFormZakazWarningTitleText" class="heading lead">Заголовок внимание</p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fas fa-exclamation-circle fa-3x mb-3 animated rotateIn"></i>
+                        <p id="modalFormZakazWarningBodyText">Текст внимание...</p>
                     </div>
                 </div>
                 <!--Footer-->
@@ -940,7 +977,6 @@ RGB(74,118,168)
         </div>
     </div>
     <!-- Central Modal Medium Warning -- END -->
-
     <!-- Central Modal Medium Success -- BEGIN -->
     <div    id="modalFormZakazSuccess" 
             class="modal fade" 
@@ -953,7 +989,7 @@ RGB(74,118,168)
             <div class="modal-content">
                 <!--Header-->
                 <div class="modal-header">
-                    <p id="modalFormZakazSuccessTitleText" class="heading lead">Заголовок сообщения об успешном действии!</p>
+                    <p id="modalFormZakazSuccessTitleText" class="heading lead">Заголовок успешного выполнения</p>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="white-text">&times;</span>
                     </button>
@@ -961,8 +997,43 @@ RGB(74,118,168)
                 <!--Body-->
                 <div class="modal-body">
                     <div class="text-center">
-                        <i class="far fa-times-circle fa-3x mb-3 animated rotateIn"></i>
-                        <p id="modalFormZakazSuccessBodyText">Текст сообщения об успешном действии...</p>
+                        <i class="far fas fa-check-circle fa-3x mb-3 animated rotateIn"></i>
+                        <p id="modalFormZakazSuccessBodyText">Текст сообщения успешного выполнения...</p>
+                    </div>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <!-- <a type="button" class="btn btn-primary-modal">Get it now <i class="fa fa-diamond ml-1"></i></a> -->
+                    <!-- <a type="button" class="btn btn-outline-secondary-modal waves-effect" data-dismiss="modal">OK</a> -->
+                    <a type="button" class="btn btn-primary-modal waves-effect waves-light" data-dismiss="modal">OK</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Central Modal Medium Info -- END -->
+    <!-- Central Modal Medium Info -- BEGIN -->
+    <div    id="modalFormZakazInfo" 
+            class="modal fade" 
+            tabindex="-1" 
+            role="dialog" 
+            aria-labelledby="myModalLabelInfo" 
+            aria-hidden="true">
+        <div class="modal-dialog cascading-modal modal-notify modal-info" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p id="modalFormZakazInfoTitleText" class="heading lead">Заголовок информационного сообщения</p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fas fa-info-circle fa-3x mb-3 animated rotateIn"></i>
+                        <p id="modalFormZakazInfoBodyText">Текст информационного сообщения...</p>
                     </div>
                 </div>
                 <!--Footer-->
@@ -976,6 +1047,7 @@ RGB(74,118,168)
         </div>
     </div>
     <!-- Central Modal Medium Success -- END -->
+
     
 
 
