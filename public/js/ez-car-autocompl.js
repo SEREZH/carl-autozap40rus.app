@@ -1,5 +1,4 @@
 jQuery( document ).ready(function() {
-
 	console.log('::ez-car-autocompl::QUERY::READY');
     // Марка автомобиля - ЗАРОЛНЯЕМ на QUERY::READY, т.е. предполагаем, что после каждого обновления страницы
     ///ezCarAutocomplMarkFill(this, event);

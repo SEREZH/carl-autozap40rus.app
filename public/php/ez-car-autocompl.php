@@ -1,12 +1,20 @@
 <?php
-
-$filename = 'ez-conn.php';
-if (file_exists($filename)) {
-    $test = array("Файл $filename существует");//echo json_encode($test, JSON_UNESCAPED_UNICODE);
-} else {
-	$test = array("Файл $filename не существует");//echo json_encode($test, JSON_UNESCAPED_UNICODE);
-}
-include $filename;
+//EZ-CAR-AUTOCOMPL.php
+//Подключаем БД = include ez_file.php
+  $filename = 'ez_file.php';
+  if (file_exists($filename)) {$test = "Exist YES - $filename";} 
+  else {$test = "Exist NOT - $filename";} 
+  include $filename;
+  putContentsLog("EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------");
+  putContentsLog("EZ-CAR-AUTOCOMPL - Included $filename");
+  //Подключаем БД = include ez-conn.php
+  $filename = 'ez-conn.php';
+  if (file_exists($filename)) {$test = "Exist YES - $filename";} 
+  else {$test = "Exist NOT - $filename";} 
+  putContentsLog("EZ-CAR-AUTOCOMPL - $test");
+  include $filename;
+  putContentsLog("EZ-CAR-AUTOCOMPL - Included $filename");
+  /*------------------------------------------------------------------------------------------------*/
 //в js-файле в AJAX вызове изменяем тип данных с json на text и смотрим ошибки :)
 //$test = array($dbName);//echo json_encode($test, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
 //находим id_car_mark по переданному наименованию марки car_mar.name

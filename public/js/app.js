@@ -68,9 +68,6 @@ function showResponseFormZakaz(responseText, statusText, xhr, $form)  {
     var clientID	= jsonObj['client_id']; 
     var carID		= jsonObj['car_id'];
     var orderID		= jsonObj['order_id'];
-    var cmtAppHTML  = jsonObj['cmt_app_html'];
-
-    console.log('showResponseFormZakaz: cmtAppHTML='+cmtAppHTML);
 
 	if (errCode == '0') {
 		var errBodyText = 'Сервер возвратил следующие значения переменных:'+
@@ -89,8 +86,7 @@ function showResponseFormZakaz(responseText, statusText, xhr, $form)  {
 			'<br>carPart='		+carPart+
 			'<br>clientID='		+clientID+
 			'<br>carID='		+carID+
-			'<br>orderID='		+orderID+
-			'<br>cmtAppHTML='	+cmtAppHTML;
+			'<br>orderID='		+orderID;
 
 		$('#modalFormZakazSuccessTitleText').html(errMsgT);	
 		$('#modalFormZakazSuccessBodyText').html(errBodyText);
