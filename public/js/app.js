@@ -21,7 +21,7 @@ jQuery( document ).ready(function() {
  	jQuery("#formZakazContactPhone").mask("+7(999)999-99-99");
  	var ajaxSubmitOptionsFormZakaz = { 
         //dataType:	'json',
-        target:    	'#formZakazResult',   	// target element(s) to be updated with server response 
+        //target:    	'#formZakazResult',   	// target element(s) to be updated with server response 
 		//beforeSubmit:  showRequest,  		// pre-submit callback 
         success:   	showResponseFormZakaz,  // post-submit callback 
  		url:       	'php/ez-form-zakaz.php',// override for form's 'action' attribute 

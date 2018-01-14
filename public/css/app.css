@@ -25,6 +25,10 @@
 #modalFormZakazDanger .modal-danger .modal-body i, #modalFormZakazDanger .modal-danger .modal-body svg {
   color: #ff4b4b !important; }
 
+.ez-form-zakaz-color-red {
+  color: red;
+  font-weight: 700; }
+
 .ez-form-zakaz {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
