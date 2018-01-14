@@ -5,15 +5,15 @@
   if (file_exists($filename)) {$test = "Exist YES - $filename";} 
   else {$test = "Exist NOT - $filename";} 
   include $filename;
-  putContentsLog("EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------");
-  putContentsLog("EZ-CAR-AUTOCOMPL - Included $filename");
+  putContentsLog("EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------",100);
+  putContentsLog("EZ-CAR-AUTOCOMPL - Included $filename",100);
   //Подключаем БД = include ez-conn.php
   $filename = 'ez-conn.php';
   if (file_exists($filename)) {$test = "Exist YES - $filename";} 
   else {$test = "Exist NOT - $filename";} 
-  putContentsLog("EZ-CAR-AUTOCOMPL - $test");
+  putContentsLog("EZ-CAR-AUTOCOMPL - $test",100);
   include $filename;
-  putContentsLog("EZ-CAR-AUTOCOMPL - Included $filename");
+  putContentsLog("EZ-CAR-AUTOCOMPL - Included $filename",100);
   /*------------------------------------------------------------------------------------------------*/
 //в js-файле в AJAX вызове изменяем тип данных с json на text и смотрим ошибки :)
 //$test = array($dbName);//echo json_encode($test, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
@@ -53,14 +53,14 @@ function getCarModels($f_car_mark)
 if (isset($_POST["func"]))    	{ $func 	 = $_POST["func"];}      else { $func  	 = '';}
 if (isset($_POST["car_mark"]))  { $car_mark  = $_POST["car_mark"];}  else{ $car_mark  = '';}
 if (isset($_POST["car_model"])) { $car_model = $_POST["car_model"];} else{ $car_model = '';}
-putContentsLog("EZ-CAR-AUTOCOMPL - func=$func");
-putContentsLog("EZ-CAR-AUTOCOMPL - car_mark=$car_mark");
-putContentsLog("EZ-CAR-AUTOCOMPL - car_model=$car_model");
+putContentsLog("EZ-CAR-AUTOCOMPL - func=$func",10);
+putContentsLog("EZ-CAR-AUTOCOMPL - car_mark=$car_mark",10);
+putContentsLog("EZ-CAR-AUTOCOMPL - car_model=$car_model",10);
 /*print_r($func);
 print_r($car_mark);
 print_r($car_model);*/
-putContentsLog("EZ-CAR-AUTOCOMPL - switch - BEFORE");
-	putContentsLog("EZ-CAR-AUTOCOMPL - func=$func");
+putContentsLog("EZ-CAR-AUTOCOMPL - switch - BEFORE",100);
+putContentsLog("EZ-CAR-AUTOCOMPL - func=$func",100);
 switch ($func) {
 	case 'getCarMarks':
         $arMarksRows = array();// инициализируем индексный массив Модели
@@ -93,54 +93,7 @@ switch ($func) {
         break;
     default: //function not found, error or something
     	echo "PHP::GetCar::ERROR1::function not found, error or something - func = '$func'";
+    	putContentsLog("EZ-CAR-AUTOCOMPL::GetCar::ERROR::function not found, func = '$func'",100);
         break;
 }
-
-
-
-
-
-
-/*if ($sqlResult.count()) {
-	$arModelRows = array("Jaguar","Jeep");
-	array_push($arModelRows, "Isdera");
-} else {
-	$arModelRows = array("Jaguar","Jeep","Jensen");
-	array_push($arModelRows, "Koenigsegg");
-}*/
-
-//не выдал ли нам запрос ошибки 
-/*if (!$sqlResultCount) {
-	$err_query1 = mysqli_error($myConnection);
-	printf("Errormessage: %s\n", $err_query1);
-} else{ 
-	$err_query1 = '0';
-}*/
-
-//$result = array("Isdera","Isuzu","IVECO","JAC","Jaguar","Jeep","Jensen","JMC","Kia","Koenigsegg");
-// ответ клиенту
-//echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
-
-//echo '"Isdera","Isuzu","IVECO","JAC","Jaguar","Jeep","Jensen","JMC","Kia","Koenigsegg","KTM","Lamborghini","Lancia"';
-
-/*function getCarModels(car_mark)
-{
-  echo '"Isdera","Isuzu","IVECO","JAC","Jaguar","Jeep","Jensen","JMC","Kia","Koenigsegg","KTM","Lamborghini","Lancia"';
-}*/
-
-//if (isset($_POST["func"]))    	{ $func 	= $_POST["func"];}      else { $func  	 = '';}
-//if (isset($_POST["car_mark"]))  { $car_mark = $_POST["car_mark"];}  else { $car_mark = '';}
-/*$func 		= $_POST["func"];
-$car_mark 	= $_POST["car_mark"];
-
-switch ($func) {
-    case 'getCarModels':
-        getCarModels($car_mark);
-        break;
-    default: //function not found, error or something
-    	echo "ERROR1";
-    	//echo "ERROR2";
-        break;
-}*/
-
 ?>

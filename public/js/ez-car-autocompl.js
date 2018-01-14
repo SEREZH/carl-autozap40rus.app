@@ -1,47 +1,12 @@
 jQuery( document ).ready(function() {
 	console.log('::ez-car-autocompl::QUERY::READY');
-    // Марка автомобиля - ЗАРОЛНЯЕМ на QUERY::READY, т.е. предполагаем, что после каждого обновления страницы
-    ///ezCarAutocomplMarkFill(this, event);
-
-///* 	var ajaxSubmitOptions = { 
-///*        target:    '#FormDraftResult',   // target element(s) to be updated with server response 
-///*        success:   showResponse,  // post-submit callback 
-///* 		url:       'php/sendz.php'         // override for form's 'action' attribute 
-        // other available options: 
-        //url:       url         // override for form's 'action' attribute 
-        //type:      type        // 'get' or 'post', override for form's 'method' attribute 
-        //dataType:  null        // 'xml', 'script', or 'json' (expected server response type) 
-        //clearForm: true        // clear all form fields after successful submit 
-        //resetForm: true        // reset the form after successful submit 
- 
-        // $.ajax options can be used here too, for example: 
-        //timeout:   3000 
-///*    }; 
- 
-    // bind to the form's submit event 
-///*    $('#FormDraft').submit(function() { 
-        // inside event callbacks 'this' is the DOM element so we first 
-        // wrap it in a jQuery object and then invoke ajaxSubmit 
-///*        $(this).ajaxSubmit(ajaxSubmitOptions); 
-        // !!! Important !!! 
-        // always return false to prevent standard browser submit and page navigation 
-///*        return false; 
-///*    }); 
-/*	jQuery('.ez-car-autocompl-form ul.mdb-autocomplete-wrap').on("show", function() { 
-    	console.log("ez-car-autocompl-form - SHOW");
-	});	
-	*/
-
-	/*jQuery('.ez-car-autocompl-form ul.mdb-autocomplete-wrap').on('focus', function() {
-		console.log("mouse inside autocomplete");
-		jQuery('.ez-car-autocompl-form ul.mdb-autocomplete-wrap').css( "background-color", "red" );
-	});*/
+    
 });
 /*---------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
 // Марка, Модель, Поколение автомобиля - НАЧАЛО
 /*---------------------------------------------------------------------------------------*/
-
+console.log('::ez-car-autocompl::BEGIN');
 var g_mark_val;
 var g_mark_val_wet;
 var g_mark_val_old;
@@ -67,11 +32,14 @@ function ezCarAutocomplMarkFill(obj, e) {
         url: 'php/ez-car-autocompl.php', //this should be url to your PHP file
         dataType: 'json',
         data: {func: 'getCarMarks'},
-        complete: function() {
-            console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::COMPLETE');
+        complete: function(response) {
+            //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::COMPLETE: response='+
+            //JSON.stringify(response));
         },
         success: function(response) {
-            console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+response);
+            //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+response);
+            //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+
+            //JSON.stringify(response));
             v_models = response;
             jQuery('#formZakazCarMark').mdb_autocomplete({
                 data: v_models
@@ -83,7 +51,6 @@ function ezCarAutocomplMarkFill(obj, e) {
         }
     });
 }    
-
 function ezCarAutocomplMarkBlur(obj, e) {
     console.log('::ezCarAutocomplMarkBlur');   
     console.log('::ezCarAutocomplMarkBlur: obj.name='+obj.name);
@@ -136,7 +103,7 @@ function ezCarAutocomplModelFill(obj, e) {
             dataType: 'json',
             data: {func: 'getCarModels', car_mark: g_mark_val},
             complete: function(response) {
-                console.log('::ezCarAutocomplModelFill:AJAX::COMPLETE::'+JSON.stringify(response));
+                console.log('::ezCarAutocomplModelFill:AJAX::COMPLETE: response='+JSON.stringify(response));
             },
             success: function(response) {
                 //console.log('AJAX::SUCCESS: response='+response);
@@ -176,6 +143,9 @@ function ezCarAutocomplModelBlur(obj, e) {
 /*---------------------------------------------------------------------------------------*/
 // Поколение автомобиля - НАЧАЛО
 /*---------------------------------------------------------------------------------------*/ 
+// Количество потомков в родителе
+// $('.ez-car-autocompl-form-generation ul.mdb-autocomplete-wrap').children('li').length
+/*---------------------------------------------------------------------------------------*/ 
 function ezCarAutocomplGenerationFill(obj, e) {
     console.log('::ezCarAutocomplGenerationFill');
     console.log('::ezCarAutocomplGenerationFill: obj.name='+obj.name);
@@ -187,6 +157,7 @@ function ezCarAutocomplGenerationFill(obj, e) {
     g_model_val = jQuery('#formZakazCarModel').val(); // корректировка текущей модели автомобиля
     console.log('::ezCarAutocomplGenerationFill: 2 - g_mark_val='+g_mark_val);
     console.log('::ezCarAutocomplGenerationFill: 2 - g_model_val='+g_model_val);
+    console.log('::ezCarAutocomplGenerationFill: 2 - g_model_val_old='+g_model_val_old);
     
     var v_generations = [""];
     if (g_model_val == null||g_model_val == undefined||g_model_val == '') {
@@ -203,11 +174,14 @@ function ezCarAutocomplGenerationFill(obj, e) {
             url: 'php/ez-car-autocompl.php', //this should be url to your PHP file
             dataType: 'json',
             data: {func: 'getCarGenerations', car_mark: g_mark_val, car_model: g_model_val},
-            complete: function() {
-                console.log('AJAX::COMPLETE');
+            complete: function(response) {
+                console.log('AJAX::COMPLETE: response='+
+                JSON.stringify(response));
             },
             success: function(response) {
-                console.log('AJAX::SUCCESS: response='+response);
+                //console.log('AJAX::SUCCESS: response='+response);
+                console.log('AJAX::SUCCESS: response='+
+                JSON.stringify(response));
                 v_generations = response;
                 jQuery('#formZakazCarGeneration').mdb_autocomplete({
                     data: v_generations
@@ -240,7 +214,7 @@ function ezCarAutocomplGenerationBlur(obj, e) {
 // Поколение автомобиля - ОКОНЧАНИЕ
 /*---------------------------------------------------------------------------------------*/ 
 /*---------------------------------------------------------------------------------------*/ 
-console.log('>>> ::ezCarAutocomplMarkFill');
+console.log('::ez-car-autocompl::CAR MARK FILL');
 var v_makrs = [""];
 jQuery.ajax({
     type: 'POST',
@@ -248,12 +222,12 @@ jQuery.ajax({
     dataType: 'json',
     data: {func: 'getCarMarks'},
     complete: function(response) {
-        console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::COMPLETE: response='+
-            JSON.stringify(response));
+        //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::COMPLETE: response='+
+        //    JSON.stringify(response));
     },
     success: function(response) {
-        console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+
-            JSON.stringify(response));
+        //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+
+        //    JSON.stringify(response));
         v_marks = response;
         jQuery('#formZakazCarMark').mdb_autocomplete({
             data: v_marks
@@ -264,22 +238,3 @@ jQuery.ajax({
         console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::ERROR: '+thrownError);
     }
 });
-
-// post-submit callback 
-///*function showResponse(responseText, statusText, xhr, $form)  { 
-    // for normal html responses, the first argument to the success callback 
-    // is the XMLHttpRequest object's responseText property 
- 
-    // if the ajaxSubmit method was passed an Options Object with the dataType 
-    // property set to 'xml' then the first argument to the success callback 
-    // is the XMLHttpRequest object's responseXML property 
- 
-    // if the ajaxSubmit method was passed an Options Object with the dataType 
-    // property set to 'json' then the first argument to the success callback 
-    // is the json data object returned by the server 
- 
-///*    alert('status: ' + statusText + '\n\nresponseText: \n' + responseText + 
-///*        '\n\nThe output div should have already been updated with the responseText.'); 
-///*} 
-
-

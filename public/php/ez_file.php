@@ -31,14 +31,35 @@ function fileread($filename){
   	fclose($file); // Закрываем файл
 }
 
-function putContentsLog($i_content){
-	$f_file 		= 'app.log';
-	$f_filePath 	= '../log/'.$f_file;
-	$f_content 		= $i_content;
-	$f_time 		= date("m.d.y H:i:s");
-	$f_content 		= $f_time.' :: '.$f_content; 
-	file_put_contents($f_filePath, PHP_EOL.$f_content, FILE_APPEND | LOCK_EX);
+function putContentsLog($i_content, $i_level=1){
+	$f_log_level_min = getParam("LOG_LEVEL_MIN");
+	if ($i_level >= $f_log_level_min) {
+		$f_file 		= 'app.log';
+		$f_filePath 	= '../log/'.$f_file;
+		$f_content 		= $i_content;
+		$f_time 		= date("m.d.y H:i:s");
+		$f_content 		= $f_time.' ::: CL'.$i_level.'=ML'.$f_log_level_min.' :: '.$f_content; 
+		file_put_contents($f_filePath, PHP_EOL.$f_content, FILE_APPEND | LOCK_EX);
+	}	
 }
+
+function getParam($i_param_code){
+	//формат строки параметров: КОД=ЗНАЧЕНИЕ
+	$f_param_value 	= 1;
+	$f_path = 'params.txt';
+	$param_list = explode("\n", file_get_contents($f_path));
+	foreach ( $param_list as $param_key=>$param_value )
+    {
+        if ( strpos($param_value,$i_param_code,0) !==false )
+        {
+	      	$f_param_row 	= $param_list[$param_key];
+	      	$f_param_row_list = explode("=", $f_param_row);
+	      	$f_param_value = $f_param_row_list[1];
+			break;
+        }
+    }
+	return $f_param_value;
+}	
 
 function getMessage($i_msg_code){
 	$f_msg_code 	= $i_msg_code;

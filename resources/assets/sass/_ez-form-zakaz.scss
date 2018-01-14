@@ -84,17 +84,53 @@
     
 }
 
-#modalFormZakazError {
-    .modal-warning{ 
+#modalFormZakazSuccess {
+    .modal-success{ 
         .modal-content {
             .modal-body {
                 padding: 1rem 1.5rem;
                 svg{
-                    color: #FF8E38;
+                    color: rgba(1,211,107,1);
                 }
             }
         }
     }
 }
 
+#modalFormZakazInfo {
+    .modal-info{ 
+        .modal-content {
+            .modal-body {
+                padding: 1rem 1.5rem;
+                svg{
+                    color: rgba(83,148,255,1);
+                }
+            }
+        }
+    }
+}
+#modalFormZakazWarning {
+    .modal-warning{ 
+        .modal-content {
+            .modal-body {
+                padding: 1rem 1.5rem;
+                svg{
+                    color: rgba(255,142,56,1);
+                }
+            }
+        }
+    }
+}
+#modalFormZakazDanger {
+    .modal-danger{ 
+        .modal-content {
+            .modal-body {
+                padding: 1rem 1.5rem;
+                svg{
+                    color: rgba(255,75,75,1);
+                }
+            }
+        }
+    }
+}
 

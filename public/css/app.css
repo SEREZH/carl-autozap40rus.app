@@ -82,10 +82,25 @@
   .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-marka i, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-marka svg, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-model i, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-model svg, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-generation i, .ez-form-zakaz .ez-form-zakaz-form.ez-car-autocompl-form-generation svg {
     font-size: 1.4rem; }
 
-#modalFormZakazError .modal-warning .modal-content .modal-body {
+#modalFormZakazSuccess .modal-success .modal-content .modal-body {
   padding: 1rem 1.5rem; }
-  #modalFormZakazError .modal-warning .modal-content .modal-body svg {
-    color: #FF8E38; }
+  #modalFormZakazSuccess .modal-success .modal-content .modal-body svg {
+    color: #01d36b; }
+
+#modalFormZakazInfo .modal-info .modal-content .modal-body {
+  padding: 1rem 1.5rem; }
+  #modalFormZakazInfo .modal-info .modal-content .modal-body svg {
+    color: #5394ff; }
+
+#modalFormZakazWarning .modal-warning .modal-content .modal-body {
+  padding: 1rem 1.5rem; }
+  #modalFormZakazWarning .modal-warning .modal-content .modal-body svg {
+    color: #ff8e38; }
+
+#modalFormZakazDanger .modal-danger .modal-content .modal-body {
+  padding: 1rem 1.5rem; }
+  #modalFormZakazDanger .modal-danger .modal-content .modal-body svg {
+    color: #ff4b4b; }
 
 /* input:required:invalid {
     border:1px solid red;

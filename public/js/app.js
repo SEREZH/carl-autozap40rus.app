@@ -47,13 +47,11 @@ jQuery( document ).ready(function() {
 });
 // post-submit callback 
 function showResponseFormZakaz(responseText, statusText, xhr, $form)  { 
-
     console.log('showResponseFormZakaz: statusText='+statusText);
     console.log('showResponseFormZakaz: responseText='+responseText);
-
 	var ajaxStatus	= statusText;
 	var jsonObj		= JSON.parse(responseText);
-	var logKey 		= jsonObj['log_key'];
+	var orderKey 	= jsonObj['order_key'];
 	var errCode 	= jsonObj['err_code'];
     var errMsgT 	= jsonObj['err_msg_t'];
     var errMsgS 	= jsonObj['err_msg_s'];
@@ -68,28 +66,10 @@ function showResponseFormZakaz(responseText, statusText, xhr, $form)  {
     var clientID	= jsonObj['client_id']; 
     var carID		= jsonObj['car_id'];
     var orderID		= jsonObj['order_id'];
-
+    var orderNum	= jsonObj['order_num'];
 	if (errCode == '0') {
-		var errBodyText = 'Сервер возвратил следующие значения переменных:'+
-			'<br>ajaxStatus='	+ajaxStatus+
-			'<br>logKey='		+logKey+
-			'<br>errCode='		+errCode+
-			'<br>errMsgT='		+errMsgT+
-			'<br>errMsgS='		+errMsgS+
-			'<br>errMsgL='		+errMsgL+
-			'<br>clientName='	+clientName+
-			'<br>clientPhone='	+clientPhone+
-			'<br>carVin='		+carVin+
-			'<br>carMark='		+carMark+
-			'<br>carModel='		+carModel+
-			'<br>carGener='		+carGener+
-			'<br>carPart='		+carPart+
-			'<br>clientID='		+clientID+
-			'<br>carID='		+carID+
-			'<br>orderID='		+orderID;
-
 		$('#modalFormZakazSuccessTitleText').html(errMsgT);	
-		$('#modalFormZakazSuccessBodyText').html(errBodyText);
+		$('#modalFormZakazSuccessBodyText').html(errMsgS);
 		$('#modalFormZakazSuccess').modal();
 	} else {
 		if (errCode == -2001||errCode == -2002) {   
@@ -101,9 +81,9 @@ function showResponseFormZakaz(responseText, statusText, xhr, $form)  {
 			$('#modalFormZakazDangerBodyText').html(errMsgS);
     		$('#modalFormZakazDanger').modal();
 		} else {
-			$('#modalFormZakazWarningTitleText').html(errMsgT);
-			$('#modalFormZakazWarningBodyText').html(errMsgS);
-    		$('#modalFormZakazWarning').modal();
+			$('#modalFormZakazInfoTitleText').html(errMsgT);
+			$('#modalFormZakazInfoBodyText').html(errMsgS);
+    		$('#modalFormZakazInfo').modal();
 		}
 
 	}
