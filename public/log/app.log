@@ -868,3 +868,343 @@
 01.14.18 14:46:13 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - ID созданного заказа определен: 40
 01.14.18 14:46:13 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен Номер заказа для клиента: 180114-000-040
 01.14.18 14:46:13 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - errMsgS=Уважаемый Корлеоне, Ваш заказ принят!<br>Оператор свяжется с Вами в течении 15 минут!<br>Номер Вашего заказа: 180114-000-040<span class='animated rotateIn infinite'><br>Скидка для Вашего заказа составляет <span class='ez-form-zakaz-color-red'>10%</span></span>!<br><br>Благодарим за обращение к нам!
+01.14.18 14:54:06 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 14:54:06 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 14:54:06 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 14:54:06 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 14:54:06 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 14:54:06 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 20:45:54 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 20:45:54 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 20:45:54 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 20:45:54 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 20:45:54 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 20:45:54 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 20:47:58 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 20:47:58 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 20:47:58 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 20:47:58 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 20:47:58 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 20:47:58 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 20:49:56 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 20:49:56 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 20:49:56 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 20:49:56 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 20:49:56 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 20:49:56 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 21:20:03 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 21:20:03 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 21:20:03 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 21:20:03 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 21:20:03 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 21:20:03 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 21:20:32 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 21:20:32 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 21:20:32 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 21:20:32 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 21:20:32 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 21:20:32 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 21:20:46 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 21:20:46 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 21:20:46 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 21:20:46 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 21:20:46 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 21:20:46 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 21:23:21 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 21:23:21 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 21:23:21 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 21:23:21 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 21:23:21 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 21:23:21 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 21:23:27 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 21:23:27 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 21:23:27 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 21:23:27 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 21:23:27 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 21:23:27 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 21:23:43 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 21:23:43 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 21:23:43 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 21:23:43 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 21:23:43 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 21:23:43 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - ----------------------- BEGIN -----------------------
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Included ez_file.php
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Exist YES - ez-conn.php
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Included ez-conn.php
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvHttpReferer=http://carl-autozap40rus.app/
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvHttps=Данные недоступны
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvHttpUserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvRemoteHost=SEREZH-PC
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvRemoteAddr=127.0.0.1
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvRemoteUser=SEREZH-PC
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - HOST:hostByName=192.168.1.100
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Ключ заказа = DNlTgGo5BYVRcf7bswG7FJk2eHhXUk
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Значения переданные из формы заказа:
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Имя клиента: Корлеоне
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Номер телефона клиента: +7(780)970-97-80
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - VIN номер автомобиля: VIN9797979
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Марка автомобиля: 
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Модель автомобиля: 
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - EZ_CLIENT
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен ID клиента = 17
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - EZ_CLIENT_CARS
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Поиск автомобиля для клиента в таблицу EZ_CLIENT_CARS по vin, mark, model, generation
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - VIN=VIN9797979
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - MARK=
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - MODEL=
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - GENERATION=
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен ID автомобиля для клиента: 16
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - EZ_CAR_ORDERS
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - ID созданного заказа определен: 41
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен Номер заказа для клиента: 180114-000-041
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - ----------------------- BEGIN -----------------------
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Included ez_file.php
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Exist YES - ez-conn.php
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Included ez-conn.php
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttpReferer=http://carl-autozap40rus.app/
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - errMsgS=Уважаемый Корлеоне, Ваш заказ принят!<br>Оператор свяжется с Вами в течении 15 минут!<br>Номер Вашего заказа: 180114-000-041<span class='animated rotateIn infinite'><br>Скидка для Вашего заказа составляет <span class='ez-form-zakaz-color-red'>10%</span></span>!<br><br>Благодарим за обращение к нам!
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttps=Данные недоступны
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttpUserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteHost=SEREZH-PC
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteAddr=127.0.0.1
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteUser=SEREZH-PC
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - HOST:hostByName=192.168.1.100
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Ключ заказа = USvzzv2LcWKdCkIgWhylJhrN9Fm4Ma
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Значения переданные из формы заказа:
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Имя клиента: 
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Номер телефона клиента: 
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - VIN номер автомобиля: 
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errCode=-2001
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errMsgS=Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!<br>Укажите, пожалуйста, Ваше имя!
+01.14.18 21:23:49 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errMsgL=Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!<br>Укажите, пожалуйста, Ваше имя!
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - ----------------------- BEGIN -----------------------
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Included ez_file.php
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Exist YES - ez-conn.php
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Included ez-conn.php
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvHttpReferer=http://carl-autozap40rus.app/
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvHttps=Данные недоступны
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvHttpUserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvRemoteHost=SEREZH-PC
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - ----------------------- BEGIN -----------------------
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvRemoteAddr=127.0.0.1
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Included ez_file.php
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvRemoteUser=SEREZH-PC
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - HOST:hostByName=192.168.1.100
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Exist YES - ez-conn.php
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Ключ заказа = zZDjmcZSOG1sgbUy0JW6EgX2K54Ojw
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Значения переданные из формы заказа:
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Имя клиента: Корлеоне
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Номер телефона клиента: +7(780)970-97-80
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - VIN номер автомобиля: VIN9797979
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Марка автомобиля: 
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Included ez-conn.php
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Модель автомобиля: 
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttpReferer=http://carl-autozap40rus.app/
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - EZ_CLIENT
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttps=Данные недоступны
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttpUserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteHost=SEREZH-PC
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteAddr=127.0.0.1
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteUser=SEREZH-PC
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен ID клиента = 17
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - HOST:hostByName=192.168.1.100
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Ключ заказа = ySBRi9APRhpq5i3bV8c7Iuyq1knLwt
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - EZ_CLIENT_CARS
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Значения переданные из формы заказа:
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Поиск автомобиля для клиента в таблицу EZ_CLIENT_CARS по vin, mark, model, generation
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Имя клиента: 
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - VIN=VIN9797979
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - MARK=
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - MODEL=
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - GENERATION=
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен ID автомобиля для клиента: 16
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - EZ_CAR_ORDERS
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Номер телефона клиента: 
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - VIN номер автомобиля: 
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errCode=-2001
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errMsgS=Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!<br>Укажите, пожалуйста, Ваше имя!
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errMsgL=Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!<br>Укажите, пожалуйста, Ваше имя!
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - ID созданного заказа определен: 42
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен Номер заказа для клиента: 180114-000-042
+01.14.18 21:24:03 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - errMsgS=Уважаемый Корлеоне, Ваш заказ принят!<br>Оператор свяжется с Вами в течении 15 минут!<br>Номер Вашего заказа: 180114-000-042<span class='animated rotateIn infinite'><br>Скидка для Вашего заказа составляет <span class='ez-form-zakaz-color-red'>10%</span></span>!<br><br>Благодарим за обращение к нам!
+01.14.18 21:25:54 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 21:25:54 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 21:25:54 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 21:25:54 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 21:25:54 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 21:25:54 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - ----------------------- BEGIN -----------------------
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Included ez_file.php
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Exist YES - ez-conn.php
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Included ez-conn.php
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvHttpReferer=http://carl-autozap40rus.app/
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvHttps=Данные недоступны
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvHttpUserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvRemoteHost=SEREZH-PC
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvRemoteAddr=127.0.0.1
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvRemoteUser=SEREZH-PC
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - HOST:hostByName=192.168.1.100
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Ключ заказа = UfxuAwH0kzec0DMZaueYNe99oVnL2r
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Значения переданные из формы заказа:
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Имя клиента: Корлеоне
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Номер телефона клиента: +7(780)970-97-80
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - VIN номер автомобиля: VIN9797979
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Марка автомобиля: 
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Модель автомобиля: 
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - EZ_CLIENT
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен ID клиента = 17
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - EZ_CLIENT_CARS
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Поиск автомобиля для клиента в таблицу EZ_CLIENT_CARS по vin, mark, model, generation
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - VIN=VIN9797979
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - MARK=
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - MODEL=
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - GENERATION=
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен ID автомобиля для клиента: 16
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - EZ_CAR_ORDERS
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - ID созданного заказа определен: 43
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен Номер заказа для клиента: 180114-000-043
+01.14.18 21:25:59 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - errMsgS=Уважаемый Корлеоне, Ваш заказ принят!<br>Оператор свяжется с Вами в течении 15 минут!<br>Номер Вашего заказа: 180114-000-043<span class='animated rotateIn infinite'><br>Скидка для Вашего заказа составляет <span class='ez-form-zakaz-color-red'>10%</span></span>!<br><br>Благодарим за обращение к нам!
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - ----------------------- BEGIN -----------------------
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Included ez_file.php
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Exist YES - ez-conn.php
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Included ez-conn.php
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttpReferer=http://carl-autozap40rus.app/
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttps=Данные недоступны
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttpUserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteHost=SEREZH-PC
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteAddr=127.0.0.1
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteUser=SEREZH-PC
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - HOST:hostByName=192.168.1.100
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Ключ заказа = EjWjvqBBG5g0iykRdESAPd1RDM20sE
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Значения переданные из формы заказа:
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Имя клиента: 
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Номер телефона клиента: 
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - VIN номер автомобиля: 
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errCode=-2001
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errMsgS=Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!<br>Укажите, пожалуйста, Ваше имя!
+01.14.18 21:26:07 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errMsgL=Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!<br>Укажите, пожалуйста, Ваше имя!
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - ----------------------- BEGIN -----------------------
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Included ez_file.php
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Exist YES - ez-conn.php
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Included ez-conn.php
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttpReferer=http://carl-autozap40rus.app/
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttps=Данные недоступны
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttpUserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteHost=SEREZH-PC
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteAddr=127.0.0.1
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteUser=SEREZH-PC
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - HOST:hostByName=192.168.1.100
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Ключ заказа = HFun1JrbzF0lQD2qu8tQz8GEe91lpR
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Значения переданные из формы заказа:
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Имя клиента: Валера
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Номер телефона клиента: 
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - VIN номер автомобиля: 
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errCode=-2002
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errMsgS=Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!<br>Укажите, пожалуйста, Ваш телефон!
+01.14.18 21:26:34 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errMsgL=Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!<br>Укажите, пожалуйста, Ваш телефон!
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - ----------------------- BEGIN -----------------------
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Included ez_file.php
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Exist YES - ez-conn.php
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Included ez-conn.php
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttpReferer=http://carl-autozap40rus.app/
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttps=Данные недоступны
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttpUserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteHost=SEREZH-PC
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteAddr=127.0.0.1
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteUser=SEREZH-PC
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - HOST:hostByName=192.168.1.100
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Ключ заказа = 61p3wkJJWDtwKNWylUeu0Om11zHmCj
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Значения переданные из формы заказа:
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Имя клиента: Валера
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Номер телефона клиента: +7(908)098-08-09
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - VIN номер автомобиля: 
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - EZ_CLIENT
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Не определен ID клиента. Считаем, что в БД клиента нету
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Не определен ID клиента. Создаем нового клиента
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Запрос на добавление клиента выполнен успешно
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - В таблицу EZ_CLIENTS добавлен клиент с ID = 18
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - EZ_CLIENT_CARS
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Поиск автомобиля для клиента в таблицу EZ_CLIENT_CARS по vin
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - VIN=
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Определен ID автомобиля для клиента: 0
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - ID созданного автомобиля определен: 17
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - EZ_CAR_ORDERS
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - ID созданного заказа определен: 44
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Определен Номер заказа для клиента: 180114-000-044
+01.14.18 21:26:51 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errMsgS=Уважаемый Валера, Ваш заказ принят!<br>Оператор свяжется с Вами в течении 15 минут!<br>Номер Вашего заказа: 180114-000-044<span class='animated rotateIn infinite'><br>Скидка для Вашего заказа составляет <span class='ez-form-zakaz-color-red'>10%</span></span>!<br><br>Благодарим за обращение к нам!
+01.14.18 21:44:10 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 21:44:10 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 21:44:10 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 21:44:10 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 21:44:10 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 21:44:10 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 21:47:20 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 21:47:20 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 21:47:20 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 21:47:20 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 21:47:20 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 21:47:20 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 21:54:25 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - BEGIN ---------------------------------------------
+01.14.18 21:54:25 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez_file.php
+01.14.18 21:54:25 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Exist YES - ez-conn.php
+01.14.18 21:54:25 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - Included ez-conn.php
+01.14.18 21:54:25 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - switch - BEFORE
+01.14.18 21:54:25 ::: CL100=ML11 :: EZ-CAR-AUTOCOMPL - func=getCarMarks
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - ----------------------- BEGIN -----------------------
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Included ez_file.php
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Exist YES - ez-conn.php
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Included ez-conn.php
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvHttpReferer=http://carl-autozap40rus.app/
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvHttps=Данные недоступны
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvHttpUserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvRemoteHost=SEREZH-PC
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvRemoteAddr=127.0.0.1
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - SERVER:srvRemoteUser=SEREZH-PC
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - HOST:hostByName=192.168.1.100
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Ключ заказа = b972xYzq7gRpTzykpCcUUJ98FFZobP
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Значения переданные из формы заказа:
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Имя клиента: Корлеоне
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Номер телефона клиента: +7(780)970-97-80
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - VIN номер автомобиля: VIN9797979
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Марка автомобиля: 
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Модель автомобиля: 
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - EZ_CLIENT
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен ID клиента = 17
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - EZ_CLIENT_CARS
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Поиск автомобиля для клиента в таблицу EZ_CLIENT_CARS по vin, mark, model, generation
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - VIN=VIN9797979
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - MARK=
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - MODEL=
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - GENERATION=
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен ID автомобиля для клиента: 16
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - EZ_CAR_ORDERS
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - ID созданного заказа определен: 45
+01.14.18 21:54:36 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - Определен Номер заказа для клиента: 180114-000-045
+01.14.18 21:54:37 ::: CL100=ML11 :: EZ-FORM-ZAKAZ - errMsgS=Уважаемый Корлеоне, Ваш заказ принят!<br>Оператор свяжется с Вами в течении 15 минут!<br>Номер Вашего заказа: 180114-000-045<span class='animated rotateIn infinite'><br>Скидка для Вашего заказа составляет <span class='ez-form-zakaz-color-red'>10%</span></span>!<br><br>Благодарим за обращение к нам!
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - ----------------------- BEGIN -----------------------
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Included ez_file.php
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Exist YES - ez-conn.php
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Included ez-conn.php
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttpReferer=http://carl-autozap40rus.app/
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttps=Данные недоступны
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvHttpUserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteHost=SEREZH-PC
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteAddr=127.0.0.1
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - SERVER:srvRemoteUser=SEREZH-PC
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - HOST:hostByName=192.168.1.100
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Ключ заказа = AdC7fTT03yPyN3QzkysAYlK0q1PNBy
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Значения переданные из формы заказа:
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Имя клиента: Валера
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Номер телефона клиента: +7(908)098-08-09
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - VIN номер автомобиля: 
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - EZ_CLIENT
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Определен ID клиента = 18
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - EZ_CLIENT_CARS
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Поиск автомобиля для клиента в таблицу EZ_CLIENT_CARS по vin
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - VIN=
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Определен ID автомобиля для клиента: 17
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - EZ_CAR_ORDERS
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - ID созданного заказа определен: 46
+01.14.18 21:54:55 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - Определен Номер заказа для клиента: 180114-000-046
+01.14.18 21:54:56 ::: CL100=ML11 :: EZ-FORM-ZAKAZ-SIMPLE - errMsgS=Уважаемый Валера, Ваш заказ принят!<br>Оператор свяжется с Вами в течении 15 минут!<br>Номер Вашего заказа: 180114-000-046<span class='animated rotateIn infinite'><br>Скидка для Вашего заказа составляет <span class='ez-form-zakaz-color-red'>10%</span></span>!<br><br>Благодарим за обращение к нам!

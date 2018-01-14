@@ -6,8 +6,6 @@ jQuery( document ).ready(function() {
 	// Set some date in the future. In this case, it's always Jan 1
 	var ye = currentDate.getFullYear();
 	var mo = currentDate.getMonth()+1;
-	console.log('ez_flipclock_clock: ye='+ye);
-	console.log('ez_flipclock_clock: mo='+mo);
 	var futureDate  = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
 	// Calculate the difference in seconds between the future and current date
 	var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
@@ -19,6 +17,8 @@ jQuery( document ).ready(function() {
 	console.log('jQuery - app: READY');
 	new WOW().init();
  	jQuery("#formZakazContactPhone").mask("+7(999)999-99-99");
+ 	jQuery("#formZakazSimpleContactPhone").mask("+7(999)999-99-99");
+ 	/*--- formZakaz ---*/
  	var ajaxSubmitOptionsFormZakaz = { 
         //dataType:	'json',
         //target:    	'#formZakazResult',   	// target element(s) to be updated with server response 
@@ -34,7 +34,6 @@ jQuery( document ).ready(function() {
         // $.ajax options can be used here too, for example: 
         //timeout:   3000 
     }; 
- 
     // bind to the form's submit event 
     jQuery('#formZakaz').submit(function() { 
         // inside event callbacks 'this' is the DOM element so we first 
@@ -44,11 +43,22 @@ jQuery( document ).ready(function() {
         // always return false to prevent standard browser submit and page navigation 
         return false; 
     }); 
+    /*--- formZakazSimple ---*/
+    var ajaxSubmitOptionsFormZakazSimple = { 
+        success:   	showResponseFormZakaz,  // post-submit callback 
+ 		url:       	'php/ez-form-zakaz-simple.php',// override for form's 'action' attribute 
+    };
+    jQuery('#formZakazSimple').submit(function() { 
+        jQuery(this).ajaxSubmit(ajaxSubmitOptionsFormZakazSimple); 
+        // !!! Important !!! always return false to prevent standard browser submit and page navigation 
+        return false; 
+    }); 
+
 });
 // post-submit callback 
 function showResponseFormZakaz(responseText, statusText, xhr, $form)  { 
-    console.log('showResponseFormZakaz: statusText='+statusText);
-    console.log('showResponseFormZakaz: responseText='+responseText);
+    /*console.log('showResponseFormZakaz: statusText='+statusText);
+    console.log('showResponseFormZakaz: responseText='+responseText);*/
 	var ajaxStatus	= statusText;
 	var jsonObj		= JSON.parse(responseText);
 	var orderKey 	= jsonObj['order_key'];
@@ -72,7 +82,7 @@ function showResponseFormZakaz(responseText, statusText, xhr, $form)  {
 		$('#modalFormZakazSuccessBodyText').html(errMsgS);
 		$('#modalFormZakazSuccess').modal();
 	} else {
-		if (errCode == -2001||errCode == -2002) {   
+		if (errCode == -2001||errCode == -2002||errCode == -2003) {   
 			$('#modalFormZakazWarningTitleText').html(errMsgT);
 			$('#modalFormZakazWarningBodyText').html(errMsgS);
     		$('#modalFormZakazWarning').modal();
@@ -85,12 +95,11 @@ function showResponseFormZakaz(responseText, statusText, xhr, $form)  {
 			$('#modalFormZakazInfoBodyText').html(errMsgS);
     		$('#modalFormZakazInfo').modal();
 		}
-
 	}
 } 
 
 /// -- !!! -- Похоже, что это уже не используем -- !!! ---
-function sendAjaxFormZakaz(result_form, ajax_form, url) {
+/*function sendAjaxFormZakaz(result_form, ajax_form, url) {
 	console.log('AJAX - sendAjaxFormZakaz BEGIN');
 	console.log('AJAX - sendAjaxFormZakaz::result_form='+result_form);
 	console.log('AJAX - sendAjaxFormZakaz::ajax_form='+ajax_form);
@@ -117,7 +126,7 @@ function sendAjaxFormZakaz(result_form, ajax_form, url) {
     });
  	console.log('AJAX - sendAjaxFormZakaz END');
 }
-
+*/
 function validateFormZakaz(obj, e) {
 	console.log('validateFormZakaz: BEGIN');
 
@@ -152,17 +161,14 @@ function validateFormZakaz(obj, e) {
 	//formZakazUserName
 	//formZakazContactPhone
 	if (obj.name == "formZakazUserName") { 	
-
-		console.log('validateFormZakaz::formZakazUserName: obj.value='+obj.value);
+		/*console.log('validateFormZakaz::formZakazUserName: obj.value='+obj.value);
 		console.log('validateFormZakaz::formZakazUserName: obj.value.length='+obj.value.length);
 		console.log('validateFormZakaz::formZakazUserName: e.target.value='+e.target.value);
-		console.log('validateFormZakaz::formZakazUserName: e.target.value.length='+e.target.value.length);
-
+		console.log('validateFormZakaz::formZakazUserName: e.target.value.length='+e.target.value.length);*/
 		var v_value = obj.value;
-		var v_title = '<span>Пожалуйста,<br>укажите Ваше имя! <br> Бляха, муха!!!<br>'+v_value+'</span>';
-		console.log('validateFormZakaz::formZakazUserName: v_value='+v_value);
-		console.log('validateFormZakaz::formZakazUserName: v_title='+v_title);
-
+		var v_title = '<span>Пожалуйста,<br>укажите Ваше имя! <br>'+v_value+'</span>';
+		/*console.log('validateFormZakaz::formZakazUserName: v_value='+v_value);
+		console.log('validateFormZakaz::formZakazUserName: v_title='+v_title);*/
 	   	if (obj.value.length < 5) {
 	   		console.log('validateFormZakaz: obj.name='+obj.name+': VALIDATE ERROR');
 	   		jQuery(e.target).tooltip('dispose');

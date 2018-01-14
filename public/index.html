@@ -226,7 +226,7 @@
                             <!--Form without header-->
                             <form id ="formZakaz" 
                                 name="formZakaz" 
-                                action="js/ez-form-zakaz.php" 
+                                action="php/ez-form-zakaz.php" 
                                 method="POST">    
                                 <div class="card card-image" style="background-image: url('XXX-img/backgr/zapch-autoparts.png');">
                                     <div class="text-white rgba-stylish-strong py-5 px-5 ez-form-zakaz-card-wrapper">
@@ -245,9 +245,8 @@
                                                 id="formZakazUserName" 
                                                 name="formZakazUserName" 
                                                 class="form-control white-text ez-form-control ez-tooltip-js" 
-                                                data-toggle="tooltip" 
-                                                onblur="validateformZakaz(this, event)"
                                                 >
+                                            <!--data-toggle="tooltip" onblur="validateformZakaz(this, event)"-->
                                             <label for="formZakazUserName">Ваше имя</label>
                                         </div>
                                         <div class="md-form ez-form-zakaz-form ez-form-zakaz-form-req">
@@ -256,8 +255,6 @@
                                                 id="formZakazContactPhone" 
                                                 name="formZakazContactPhone" 
                                                 class="form-control white-text  ez-form-control ez-tooltip-js" 
-                                                data-toggle="tooltip" 
-                                                onblur="validateformZakaz(this, event)" 
                                             >
                                             <label for="formZakazContactPhone">Ваш телефон</label>
                                             <!-- 
@@ -326,7 +323,6 @@
                                                     name="formZakazCarGeneration" 
                                                     onblur="ezCarAutocomplGenerationBlur(this, event)" 
                                                     onfocus="ezCarAutocomplGenerationFill(this, event)" 
-                                                    onsearch="ezCarAutocomplGenerationFill(this, event)" 
                                                     class="form-control mdb-autocomplete ez-car-autocompl-input"
                                             >
                                             <button class="mdb-autocomplete-clear ez-car-autocompl-button">
@@ -427,70 +423,73 @@
         </div>
     </section>
     <!-- --- Акция - Упрощенная форма экспресс-заказа -->
-    <section class="mdb-color ez-bcol-main-blue-light ez-action-form-simpe">
-        <div class="container wow fadeInUp ez-action-form-simpe-con"> <!-- /Form -->
+    <section class="mdb-color ez-bcol-main-blue-light ez-form-zakaz-simpe">
+        <div class="container wow fadeInUp ez-form-zakaz-simpe-con"> <!-- /Form -->
             <!--Section: Form Draft-->
-            <section class="form-dark z-depth-4 ez-action-form-simpe-section">
+            <section class="form-dark z-depth-4 ez-form-zakaz-simpe-section">
                 <!--Form without header-->
-                <form id ="formActionFormSimple" 
-                    name="formActionFormSimple" 
-                    class="ez-action-form-simpe-form"
-                    action="js/sendz.php" 
+                <form id ="formZakazSimple" 
+                    name="formZakazSimple" 
+                    class="ez-form-zakaz-simpe-form"
+                    action="php/ez-form-zakaz-simle.php"
                     method="POST">    
-                    <div class="card text-white mx-auto py-1 px-2 ez-action-form-simpe-card">
-                        <!-- <div class="text-white mx-auto py-1 px-0 ez-action-form-simpe-card-wrapper"> -->
+                    <div class="card text-white mx-auto py-1 px-2 ez-form-zakaz-simpe-card">
+                        <!-- <div class="text-white mx-auto py-1 px-0 ez-form-zakaz-simpe-card-wrapper"> -->
                             <!--Header-->
-                            <div class="mt-3 ez-action-form-simpe-card-header">
-                                <div class="text-center ez-action-form-simpe-card-header-text">
+                            <div class="mt-3 ez-form-zakaz-simpe-card-header">
+                                <div class="text-center ez-form-zakaz-simpe-card-header-text">
                                     <h5>Заказать обратный звонок</h5>
                                 </div>
                             </div>
                             <!--Body-->
-                            <!-- <div class="d-inline-flex justify-content-center ez-action-form-simpe-body"> -->
-                            <div class="mx-auto ez-action-form-simpe-card-body">
+                            <!-- <div class="d-inline-flex justify-content-center ez-form-zakaz-simpe-body"> -->
+                            <div class="mx-auto ez-form-zakaz-simpe-card-body">
                                 <div class="row mt-3">
                                     <div class="col-lg-9 d-inline-flex">
                                         <div class="row">
                                             <div class="col-4">
-                                                <div class="md-form d-inline-flex ez-action-form-simpe-card-body-form ez-action-form-simpe-card-body-form-req">
+                                                <div class="md-form d-inline-flex ez-form-zakaz-simpe-card-body-form ez-form-zakaz-simpe-card-body-form-req">
                                                     <i class="far fa-user prefix white-text"></i>
                                                     <input type="text" 
-                                                        id="formActionFormSimpleUserName" name="formActionFormSimpleUserName" 
+                                                        id="formZakazSimpleUserName" 
+                                                        name="formZakazSimpleUserName" 
                                                         class="form-control white-text ez-form-control ez-tooltip-js" 
                                                         >
-                                                    <label for="formActionFormSimpleUserName">Ваше имя</label>
+                                                    <label for="formZakazSimpleUserName">Ваше имя</label>
                                                 </div>
                                             </div>
                                             <div class="col-4">
-                                                <div class="md-form d-inline-flex ez-action-form-simpe-card-body-form ez-action-form-simpe-card-body-form-req">
+                                                <div class="md-form d-inline-flex ez-form-zakaz-simpe-card-body-form ez-form-zakaz-simpe-card-body-form-req">
                                                     <i class="fas fa-phone prefix white-text"></i>
                                                     <input type="text" 
-                                                        id="formActionFormSimpleContactPhone" name="formActionFormSimpleContactPhone" 
+                                                        id="formZakazSimpleContactPhone" 
+                                                        name="formZakazSimpleContactPhone" 
                                                         class="form-control white-text  ez-form-control ez-tooltip-js" 
                                                     >
                                                     <label for="formZakazContactPhone">Ваш телефон</label>
                                                 </div>
                                             </div>
                                             <div class="col-4">
-                                                <div class="md-form d-inline-flex ez-action-form-simpe-card-body-form">
+                                                <div class="md-form d-inline-flex ez-form-zakaz-simpe-card-body-form">
                                                     <i class="fas fa-car prefix white-text"></i>
                                                     <input type="text" 
-                                                        id="formActionFormSimpleCarVIN" name="formActionFormSimpleCarVIN" 
+                                                        id="formZakazSimpleCarVIN" 
+                                                        name="formZakazSimpleCarVIN" 
                                                         class="form-control white-text ez-form-control" 
                                                         >
-                                                    <label for="formActionFormSimpleCarVIN">VIN автомобиля</label>
+                                                    <label for="formZakazSimpleCarVIN">VIN автомобиля</label>
                                                 </div>
                                             </div>
                                         </div>    
                                     </div>    
                                      <div class="col-lg-3">
                                         <!-- BUTTON Express -->
-                                        <div class="row d-flex align-items-center mb-4 ez-action-form-simpe-card-row">
-                                            <!-- <div class="text-center col-md-12"> -->
+                                        <div class="row d-flex align-items-center mb-4 ez-form-zakaz-simpe-card-row">
+                                            <!-- <div class="text-center col-md-12"> form-zakaz-simpe -->
                                             <div class="text-center">
-                                                <button id='ez-button-action-send' 
+                                                <button id='formZakazSimpleButton' 
                                                         type="submit" 
-                                                        class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-action-form-simpe-card-btn">
+                                                        class="btn btn-outline-primary btn-rounded z-depth-1 waves-effect ez-form-zakaz-simpe-card-btn">
                                                     <i class="fa fa-arrow-circle-right animated slideInRight infinite" aria-hidden="true"></i>
                                                     <span>Заказать звонок</span>
                                                 </button>
@@ -878,7 +877,7 @@
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
-    <script type="text/javascript" src="js/circle-progress.min.js"></script>
+    <!-- <script type="text/javascript" src="js/circle-progress.min.js"></script> -->
     <script type="text/javascript" src="js/jquery.form.min.js"></script>
 
     <!-- Bootstrap tooltips -->

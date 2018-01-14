@@ -149,23 +149,18 @@
   mysqli_query($connConnection, 'SET NAMES utf8') or header('Location: Error');
   //printf("Host information: %s\n", mysqli_get_host_info($connConnection));
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Заполение переменных пакета значениями из формы заказа",10);
-  if (isset($_POST["formZakazUserName"])){ $clientName =$_POST["formZakazUserName"];} else{ $clientName ='';}
-  if (isset($_POST["formZakazContactPhone"])){ $clientPhone=$_POST["formZakazContactPhone"];} else{ $clientPhone='';}
-  if (isset($_POST["formZakazCarVIN"])){ $carVin=$_POST["formZakazCarVIN"];} else{ $carVin='';}
-  if (isset($_POST["formZakazCarMark"])){ $carMark=$_POST["formZakazCarMark"];} else{ $carMark='';}
-  if (isset($_POST["formZakazCarModel"])){ $carModel=$_POST["formZakazCarModel"];} else{ $carModel='';}
-  if (isset($_POST["formZakazCarGeneration"])){ $carGener=$_POST["formZakazCarGeneration"];}else{ $carGener='';}
+  if (isset($_POST["formZakazSimpleUserName"])){ $clientName =$_POST["formZakazSimpleUserName"];} else{ $clientName ='';}
+  if (isset($_POST["formZakazSimpleContactPhone"])){ $clientPhone=$_POST["formZakazSimpleContactPhone"];} else{ $clientPhone='';}
+  if (isset($_POST["formZakazSimpleCarVIN"])){ $carVin=$_POST["formZakazSimpleCarVIN"];} else{ $carVin='';}
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Ключ заказа = ".$orderKey,100);
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Значения переданные из формы заказа:",100);
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Имя клиента: ".$clientName,100);
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Номер телефона клиента: ".$clientPhone,100);
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - VIN номер автомобиля: ".$carVin,100);
-  putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Марка автомобиля: ".$carMark,100);
-  putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Модель автомобиля: ".$carModel,100);
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Начата проверка валидности полей Ваше имя и Ваш телефон",10);
   if ($clientName=='') {
       $errCode  = -2001;
-      $errMsgT  = "Ошибка при заполнении формы заказа";
+      $errMsgT  = "Заполнение формы заказа";
       $errMsgS  = "Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!";
       $errMsgS  = $errMsgS."<br>"."Укажите, пожалуйста, Ваше имя!";
       $errMsgL  = $errMsgS;
@@ -181,7 +176,7 @@
   }
   if ($clientPhone=='') {
       $errCode  = -2002;
-      $errMsgT  = "Ошибка при заполнении формы заказа";
+      $errMsgT  = "Заполнение формы заказа";
       $errMsgS  = "Поля&nbsp;&laquo;Ваше&nbsp;имя&raquo;&nbsp;и&nbsp;&laquo;Ваш&nbsp;телефон&raquo; являются&nbsp;обязательными для&nbsp;заполнения!";
       $errMsgS  = $errMsgS."<br>"."Укажите, пожалуйста, Ваш телефон!";
       $errMsgL  = $errMsgS;
@@ -199,7 +194,7 @@
   list  ($phoneNumberDraft, $phoneNumberClear, $phoneNumberFormat) = $phoneNumberArray;
   if (!$phoneNumberFormat) {
       $errCode    = -2003;
-      $errMsgT    = "Ошибка при заполнении формы заказа";
+      $errMsgT    = "Заполнение формы заказа";
       //$errMsgS    = "Поле&nbsp;&laquo;Ваш&nbsp;телефон&raquo; должно содержать 10 цифр!";
       $errMsgS    = $errMsgS."<br>"."Пожалуйста, введите правильно Ваш телефон!";
       $errMsgL    = $errMsgS;
@@ -236,14 +231,15 @@
     $clientInsertQuery =  "insert into ez_clients (id,name,phone,phone_draft,phone_clear,phone_format,mail) ".
                           "values (null,'$clientName','$clientPhone',".
                           "'$phoneNumberDraft','$phoneNumberClear','$phoneNumberFormat','e-mail')";
-    putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Запрос на добавление клиента: $clientInsertQuery",10);                          
+    putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Запрос на добавление клиента: $clientInsertQuery",10);
+    $logAct = 'Заказ обратного звонка';
     $sqlResultInsert = mysqli_query($connConnection, $clientInsertQuery);
     if (!$sqlResultInsert) {
       $sqlErr     = mysqli_error($connConnection);
       $errCode    = -2202;
-      $errMsgT    = "Ошибка регистрации нового клиента";
-      $errMsgS    = "Ошибка регистрации нового клиента:<br>".$sqlErr;
-      $errMsgL    = $errMsgS;
+      $errMsgT    = $logAct;
+      $errMsgS    = "Ошибка регистрации нового клиента.";
+      $errMsgL    = $errMsgS."<br>".$sqlErr;
       putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Запрос на добавление клиента выполнен с ошибкой:",100);
       putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - $sqlErr",100);
       putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Код ошибки: $errCode",100);
@@ -257,12 +253,13 @@
     putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Запрос на добавление клиента выполнен успешно",100);
     putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Определяем ID добавленного клиента",10);
     putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Запрос для определения: $clientSelectQuery",10);
+    $logAct = 'Заказ обратного звонка';
     $clientSelectResult=mysqli_query($connConnection, $clientSelectQuery) or die (mysqli_error($connConnection));
     if (!$clientSelectResult) { //не выдал ли нам запрос ошибки 
       $sqlErr = mysqli_error($connConnection);
       $errCode    = -2203;
       $errMsgT    = $logAct;     // 'Добавление новой записи в EZ_CLIENTS.'
-      $errMsgS    = "Ошибка при попытке проверки определить ID вновь добавленного клиента.";
+      $errMsgS    = "Ошибка при попытке определить идентификатор добавленного клиента.";
       $errMsgL    = $errMsgS.'<br>'.$sqlErr;
       putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Запрос для определения ID клиента выполнен выполнен с ошибкой:",100);
       putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - $sqlErr",100);
@@ -283,17 +280,11 @@
   }  
   /*--------------------------------------------------------------------------------*/
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - EZ_CLIENT_CARS",100);
-  putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Поиск автомобиля для клиента в таблицу EZ_CLIENT_CARS по vin, mark, model, generation",100);
+  putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Поиск автомобиля для клиента в таблицу EZ_CLIENT_CARS по vin",100);
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - VIN=$carVin",100);
-  putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - MARK=$carMark",100);
-  putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - MODEL=$carModel",100);
-  putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - GENERATION=$carGener",100);
   $carSelectQuery =   "select id from ez_client_cars WHERE client_id = '$clientID' ".
                       " and COALESCE(vin,'') = '$carVin' ".
-                      " and COALESCE(mark,'') = '$carMark' ".
-                      " and COALESCE(model,'') = '$carModel' ".
-                      " and COALESCE(gener,'') = '$carGener' ".
-                      " limit 1";
+                      " order by created_at desc limit 1";
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Запрос для выборки автомобиля клиента:",10);
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - $carSelectQuery",10);
   $carSelectQueryResult = mysqli_query($connConnection, $carSelectQuery);
@@ -312,14 +303,15 @@
     $carInsertQuery = "insert into ez_client_cars(id,client_id,vin,mark,model,gener) ".
                       " values (NULL,'$clientID','$carVin','$carMark','$carModel','$carGener')";
     putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Запрос для добавления нового автомобиля для клиента:",10);
-    putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - $carInsertQuery",10);                  
+    putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - $carInsertQuery",10);            
+    $logAct = 'Заказ обратного звонка';      
     $carInsertQueryResult = mysqli_query($connConnection, $carInsertQuery);
     if (!$carInsertQueryResult) {
       $sqlErr     = mysqli_error($connConnection);
       $errCode    = -2301;
       $errMsgT    = $logAct;
-      $errMsgS    = "Ошибка при попытке добавление нового автомобиля для клиента ID=".$clientID."<br>".$sqlErr;
-      $errMsgL    = $errMsgS;
+      $errMsgS    = "Ошибка при попытке добавление нового автомобиля для клиента.";
+      $errMsgL    = $errMsgS."<br>".$sqlErr;
       putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Запрос для добавления автомобиля для клиента выполнен с ошибкой:",100);
       putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - $sqlErr",100);
       putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Код ошибки: $errCode",100);
@@ -352,13 +344,14 @@
                         "'$srvHttpReferer','$srvHttps','$srvHttpUserAgent','$srvRemoteAddr',".
                         "'$srvRemoteHost','$srvRemoteUser','$hostByName')";
     putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Запрос для добавления нового заказа для автомобиля:",10);
-    putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - $orderInsertQuery",10);                  
+    putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - $orderInsertQuery",10);
+    $logAct = 'Заказ обратного звонка';                  
     $orderInsertQueryResult = mysqli_query($connConnection, $orderInsertQuery);
     if (!$orderInsertQueryResult) {
       $sqlErr     = mysqli_error($connConnection);
       $errCode    = -2401;
       $errMsgT    = $logAct;
-      $errMsgS    = "Ошибка при попытке добавление нового заказа для автомобиля ID=".$carID;
+      $errMsgS    = "Ошибка при попытке добавление нового заказа.";
       $errMsgL    = $errMsgS."<br>".$sqlErr;
       putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Запрос для добавление нового заказа выполнен с ошибкой:",100);
       putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - $sqlErr",100);

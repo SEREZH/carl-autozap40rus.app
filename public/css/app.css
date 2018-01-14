@@ -106,6 +106,84 @@
   #modalFormZakazDanger .modal-danger .modal-content .modal-body svg {
     color: #ff4b4b; }
 
+.ez-form-zakaz-simpe {
+  color: white;
+  font-family: Comfortaa;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem 0; }
+  .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section {
+    border-radius: 0.5rem; }
+    .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section .ez-form-zakaz-simpe-form {
+      background-color: rgba(209, 63, 169, 0.9) !important;
+      font-family: Comfortaa;
+      font-weight: 400;
+      border-radius: 0.5rem; }
+      .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section .ez-form-zakaz-simpe-form .ez-form-zakaz-simpe-card .ez-form-zakaz-simpe-card-header {
+        border-bottom: 1px solid white; }
+        .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section .ez-form-zakaz-simpe-form .ez-form-zakaz-simpe-card .ez-form-zakaz-simpe-card-header .ez-form-zakaz-simpe-card-header-text h5 {
+          font-weight: 700;
+          text-transform: uppercase; }
+      .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section .ez-form-zakaz-simpe-form .ez-form-zakaz-simpe-card .ez-form-zakaz-simpe-card-body {
+        padding-top: 0.5rem; }
+        .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section .ez-form-zakaz-simpe-form .ez-form-zakaz-simpe-card .ez-form-zakaz-simpe-card-body .ez-form-zakaz-simpe-card-body-form i, .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section .ez-form-zakaz-simpe-form .ez-form-zakaz-simpe-card .ez-form-zakaz-simpe-card-body .ez-form-zakaz-simpe-card-body-form svg {
+          font-size: 1.75rem; }
+        .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section .ez-form-zakaz-simpe-form .ez-form-zakaz-simpe-card .ez-form-zakaz-simpe-card-body .ez-form-zakaz-simpe-card-body-form label {
+          font-family: Roboto, sans-serif;
+          font-size: 1rem; }
+        .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section .ez-form-zakaz-simpe-form .ez-form-zakaz-simpe-card .ez-form-zakaz-simpe-card-body .ez-form-zakaz-simpe-card-body-form-req::after {
+          content: "*";
+          font-family: Comfortaa;
+          font-size: 2rem;
+          color: white;
+          position: absolute;
+          top: 0;
+          right: 1rem;
+          padding: 0.3rem; }
+        .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section .ez-form-zakaz-simpe-form .ez-form-zakaz-simpe-card .ez-form-zakaz-simpe-card-body .ez-form-zakaz-simpe-card-btn {
+          color: white;
+          border-color: white;
+          padding: 0.75rem; }
+          .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section .ez-form-zakaz-simpe-form .ez-form-zakaz-simpe-card .ez-form-zakaz-simpe-card-body .ez-form-zakaz-simpe-card-btn i, .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section .ez-form-zakaz-simpe-form .ez-form-zakaz-simpe-card .ez-form-zakaz-simpe-card-body .ez-form-zakaz-simpe-card-btn svg {
+            color: white;
+            font-size: 1.25rem;
+            margin-right: 1rem; }
+          .ez-form-zakaz-simpe .ez-form-zakaz-simpe-con .ez-form-zakaz-simpe-section .ez-form-zakaz-simpe-form .ez-form-zakaz-simpe-card .ez-form-zakaz-simpe-card-body .ez-form-zakaz-simpe-card-btn span {
+            color: white; }
+
+/* 
+.ez-form-zakaz-form.ez-form-zakaz-form-req
+.ez-form-zakaz-simpe-card-body-form.ez-form-zakaz-simpe-card-body-form-req
+
+.ez-form-zakaz-form {
+        input {
+            font-size: 1.25rem;
+            font-family: Open Sans;
+        }
+        &.ez-form-zakaz-form-req {
+            &::after {
+                content: "*";
+                font-family: Comfortaa;
+                font-size: 2rem;
+                color: white;
+                position: absolute;
+                top: 0;
+                right: 1rem;
+                padding: 0.3rem;
+            }
+        }
+        i, svg {
+            font-size: 1.75rem;
+        }
+        &.ez-car-autocompl-form-marka,
+        &.ez-car-autocompl-form-model,
+        &.ez-car-autocompl-form-generation {
+            i, svg {
+                font-size: 1.4rem;
+            }      
+        }
+    } */
 /* input:required:invalid {
     border:1px solid red;
 } */
@@ -226,41 +304,6 @@
         background-color: rgba(209, 63, 169, 0.9) !important; }
   .ez-tovar .ez-tovar-card-body {
     background-color: transparent !important; }
-
-.ez-action-form-simpe {
-  color: white;
-  font-family: Comfortaa;
-  font-size: 0.7rem;
-  font-weight: 400;
-  text-align: center;
-  padding: 0.5rem 0; }
-  .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section {
-    border-radius: 0.5rem; }
-    .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form {
-      background-color: rgba(209, 63, 169, 0.9) !important;
-      font-family: Comfortaa;
-      font-weight: 400;
-      border-radius: 0.5rem; }
-      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-header {
-        border-bottom: 1px solid white; }
-        .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-header .ez-action-form-simpe-card-header-text h5 {
-          font-weight: 700;
-          text-transform: uppercase; }
-      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-body-form i, .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-body-form svg {
-        font-size: 1.75rem; }
-      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-body-form label {
-        font-family: Roboto, sans-serif;
-        font-size: 1rem; }
-      .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn {
-        color: white;
-        border-color: white;
-        padding: 0.75rem; }
-        .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn i, .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn svg {
-          color: white;
-          font-size: 1.25rem;
-          margin-right: 1rem; }
-        .ez-action-form-simpe .ez-action-form-simpe-con .ez-action-form-simpe-section .ez-action-form-simpe-form .ez-action-form-simpe-card .ez-action-form-simpe-card-body .ez-action-form-simpe-card-btn span {
-          color: white; }
 
 /* @import "ez-circle-progress"; */
 /* ez-button-up */
