@@ -14,6 +14,17 @@
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - $test",100);
   include $filename;
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Included $filename",100);
+  //Подключаем БД = include ez-send-to-telegram.php
+  /*$filename = 'ez-send-to-telegram.php';
+  if (file_exists($filename)) {$test = "Exist YES - $filename";} 
+  else {$test = "Exist NOT - $filename";} 
+  putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - $test",100);
+  include $filename;
+  putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Included $filename",100);*/
+
+
+
+
 
   $srvHttpReferer   = $_SERVER['HTTP_REFERER'];
   $srvHttps         = array_key_exists('HTTPS',$_SERVER) ? $_SERVER['HTTPS']:'Данные недоступны';
@@ -395,6 +406,29 @@
     $errMsgL    = $errMsgS;
 
     putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - errMsgS=$errMsgS",100); 
+
+
+    /////////////////////////////////////////////////////////
+    $token = "533993012:AAHtelmGfqThW099Bj0tzjLTSrTdgqrKHLY";
+    $chatId = "-265745077";
+    //$msg = "Новая заявка на сайте! \nТелефон: $clientPhone \nИмя: $clientName";
+    //$msg = "Новая заявка на сайте! %2F Имя: $clientName";
+    //$msg = "Новая заявка на сайте! \r\nИмя: $clientName";
+    //$msg = "%D0%9E%D0%B4%D0%B8%D0%BD%0A%D0%94%D0%B2%D0%B0%0A%D0%A2%D1%80%D0%B8";
+    $msg = urlencode("Новая заявка на сайте! \nТелефон: $clientPhone \nИмя: $clientName");
+    /*$opts = array(
+      'http'=>array(
+        'method'=>"GET",
+        'header'=> "User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36\r\n"
+      )
+    );
+    $context = stream_context_create($opts);*/
+    
+    /*$file = file_get_contents("https://api.telegram.org/bot'. $token .'/sendMessage?chat_id='. $chatId .'&text=' . urlencode($msg)", false, $context);*/
+    
+    $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chatId}&parse_mode=html&text={$msg}","r");
+
+    ///////////////////////////////////////////////////
 
     $result = setResultArray( $orderKey, 
                               $errCode, $errMsgT, $errMsgS, $errMsgL,

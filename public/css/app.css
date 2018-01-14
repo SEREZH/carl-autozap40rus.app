@@ -68,7 +68,8 @@
       margin-right: 2.5rem; }
   .ez-form-zakaz .ez-form-zakaz-footer {
     font-family: Comfortaa;
-    font-size: 0.75rem; }
+    font-size: 0.75rem;
+    font-style: italic; }
   .ez-form-zakaz .ez-form-zakaz-form input {
     font-size: 1.25rem;
     font-family: Open Sans; }

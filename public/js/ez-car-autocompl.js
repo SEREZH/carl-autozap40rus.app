@@ -1,12 +1,11 @@
 jQuery( document ).ready(function() {
-	console.log('::ez-car-autocompl::QUERY::READY');
-    
+	/*console.log('::ez-car-autocompl::QUERY::READY');*/
 });
 /*---------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
 // Марка, Модель, Поколение автомобиля - НАЧАЛО
 /*---------------------------------------------------------------------------------------*/
-console.log('::ez-car-autocompl::BEGIN');
+/*console.log('::ez-car-autocompl::BEGIN');*/
 var g_mark_val;
 var g_mark_val_wet;
 var g_mark_val_old;
@@ -23,9 +22,9 @@ var g_generation_val_wet_old;
 // Марка автомобиля - НАЧАЛО
 /*---------------------------------------------------------------------------------------*/
 function ezCarAutocomplMarkFill(obj, e) {
-    console.log('::ezCarAutocomplMarkFill');
+    /*console.log('::ezCarAutocomplMarkFill');
     console.log('::ezCarAutocomplMarkFill: obj.name='+obj.name);
-    console.log('::ezCarAutocomplMarkFill: obj.value='+obj.value);
+    console.log('::ezCarAutocomplMarkFill: obj.value='+obj.value);*/
     var v_makrs = [""];
     jQuery.ajax({
         type: 'POST',
