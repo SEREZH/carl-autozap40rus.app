@@ -398,11 +398,9 @@
 
     ////////////////////////////////////////////////////
     /////////// --- TELEGRAM  --- //////////////////////
-    //$token  = getParam("TOKEN");  //Почему то после этого fopen не может создать канал???
-    //$chatId = getParam("CHAT_ID");
+    $token  = getParam("TLG_TOKEN");  //Почему то после этого fopen не может создать поток???
+    $chatId = getParam("TLG_CHAT_ID");//failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found 
     ////////////////////////////////////////////////////
-    $token = "533993012:AAHtelmGfqThW099Bj0tzjLTSrTdgqrKHLY";
-    $chatId = "-265745077";
     $msg = "Новая заявка на сайте! \nТелефон: $clientPhone \nИмя: $clientName";
     if (!($carVin == '')) {
       $msg .= "\nVIN: $carVin";      

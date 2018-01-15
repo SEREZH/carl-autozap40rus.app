@@ -58,6 +58,7 @@ function getParam($i_param_code){
 			break;
         }
     }
+    $f_param_value = str_replace(array("\r","\n"),"",$f_param_value);
 	return $f_param_value;
 }	
 

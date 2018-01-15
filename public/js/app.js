@@ -58,8 +58,8 @@ jQuery( document ).ready(function() {
 });
 // post-submit callback 
 function showResponseFormZakaz(responseText, statusText, xhr, $form)  { 
-    console.log('showResponseFormZakaz: statusText='+statusText);
-    console.log('showResponseFormZakaz: responseText='+responseText);
+    //console.log('showResponseFormZakaz: statusText='+statusText);
+    //console.log('showResponseFormZakaz: responseText='+responseText);
 	var ajaxStatus	= statusText;
 	var jsonObj		= JSON.parse(responseText);
 	var orderKey 	= jsonObj['order_key'];

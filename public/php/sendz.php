@@ -1,12 +1,23 @@
 <?php
-  //include "senda.php";//Подключаем БД
-  //Подключаем БД
-  $hostname = "localhost";  // название/путь сервера, с MySQL
+  
+  //Подключаем ez_file.php
+  $filename = 'ez_file.php';
+  if (file_exists($filename)) {$test = "Exist YES - $filename";} 
+  else {$test = "Exist NOT - $filename";} 
+  include_once $filename;
+  putContentsLog("EZ-CONN - Included $filename",100);
+  //Подключаем БД = include ez-conn.php
+  $filename = 'ez-conn.php';
+  if (file_exists($filename)) {$test = "Exist YES - $filename";} 
+  else {$test = "Exist NOT - $filename";} 
+  putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - $test",100);
+  include $filename;
+  putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Included $filename",100);
+  /*$hostname = "localhost";  // название/путь сервера, с MySQL
   $username = "carl";       // имя пользователя
   $password = "carl";       // пароль пользователя
   $dbName   = "carl01";     // название базы данных
   $myConnection = mysqli_connect($hostname, $username, $password, $dbName) or die ("could not connect to mysql");
-  /* check connection */ //тоже? - if (mysqli_connect_errno()) {
   if (!$myConnection) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     $err_conn = mysqli_connect_error();
@@ -14,7 +25,7 @@
   }
   else{ 
     $err_conn = '0';
-  }
+  }*/
   mysqli_query($myConnection, 'SET NAMES utf8') or header('Location: Error');
   //printf("Host information: %s\n", mysqli_get_host_info($myConnection));
   // заполяем переменные полей  

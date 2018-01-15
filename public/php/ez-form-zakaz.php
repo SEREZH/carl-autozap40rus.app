@@ -409,18 +409,16 @@
 
     ////////////////////////////////////////////////////
     /////////// --- TELEGRAM  BEGIN --- ////////////////
-    //$token  = getParam("TOKEN");  //Почему то после этого fopen не может создать канал???
-    //$chatId = getParam("CHAT_ID");
+    $token  = getParam("TLG_TOKEN");  //Почему то после этого fopen не может создать поток???
+    $chatId = getParam("TLG_CHAT_ID");//failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found 
     ////////////////////////////////////////////////////
-    $token = "533993012:AAHtelmGfqThW099Bj0tzjLTSrTdgqrKHLY";
-    $chatId = "-265745077";
     $msg = "Новая заявка на сайте! \nТелефон: $clientPhone \nИмя: $clientName";
     if (!($carVin   == '')) {$msg .= "\nVIN: $carVin";}
     if (!($carMark  == '')) {$msg .= "\nМарка: $carMark";}
     if (!($carModel == '')) {$msg .= "\nМодель: $carModel";}
     if (!($carGener == '')) {$msg .= "\nПоколение: $carGener";}
     $msg = urlencode($msg);
-    //$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chatId}&parse_mode=html&text={$msg}","r");
+    /*$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chatId}&parse_mode=html&text={$msg}","r");*/
     $sendToTelegram = file_get_contents("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chatId}&parse_mode=html&text={$msg}","r");
     ////////////////////////////////////////////////////
     /////////// --- TELEGRAM  END --- //////////////////
