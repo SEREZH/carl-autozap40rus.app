@@ -1,11 +1,12 @@
 <?php
+  $currentFormName = "EZ-FORM-ZAKAZ-SIMPLE";
   //ez-form-zakaz-simple.php
   //Подключаем БД = include ez_file.php
   $filename = 'ez_file.php';
   if (file_exists($filename)) {$test = "Exist YES - $filename";} 
   else {$test = "Exist NOT - $filename";} 
   include $filename;
-  putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - ----------------------- BEGIN -----------------------",100);
+  putContentsLog("$currentFormName - ----------------------- BEGIN -----------------------",100);
   putContentsLog("EZ-FORM-ZAKAZ-SIMPLE - Included $filename",100);
   //Подключаем БД = include ez-conn.php
   $filename = 'ez-conn.php';
@@ -133,13 +134,13 @@
   $errMsgT      = "Заголовок модального окна";
   $errMsgS      = "Текст модального окна (короткий)";
   $errMsgL      = "Текст модального окна (длинный)";
-  $clientName   = "Имя клиента";
-  $clientPhone  = "Номер телефона клиента";
-  $carVin       = "VIN номер автомобиля";
-  $carMark      = "Марка автомобиля";
-  $carModel     = "Модель автомобиля";
-  $carGener     = "Поколение автомобиля";
-  $carPart      = "Запчасть автомобиля (прикреплена к заказу)";  
+  $clientName   = "";
+  $clientPhone  = "";
+  $carVin       = "";
+  $carMark      = "";
+  $carModel     = "";
+  $carGener     = "";
+  $carPart      = "";  
   $clientID     = 0;
   $carID        = 0;
   $orderID      = 0;

@@ -82,6 +82,15 @@ function showResponseFormZakaz(responseText, statusText, xhr, $form)  {
 		$('#modalFormZakazSuccessTitleText').html(errMsgT);	
 		$('#modalFormZakazSuccessBodyText').html(errMsgS);
 		$('#modalFormZakazSuccess').modal();
+		var orderDateTime = formatDate('YYYYMMDDHHmmss'); //используется - /js/formatdate.js
+		Cookies.set('orderDateTime',orderDateTime, 	{ expires: 100 });
+		Cookies.set('clientName',  	clientName, 	{ expires: 100 });
+		Cookies.set('clientPhone',  clientPhone,	{ expires: 100 });
+		Cookies.set('carVin',  		carVin, 		{ expires: 100 });
+		Cookies.set('carMark',  	carMark, 		{ expires: 100 });
+		Cookies.set('carModel',  	carModel, 		{ expires: 100 });
+		Cookies.set('carGener',  	carGener, 		{ expires: 100 });
+
 	} else {
 		if (errCode == -2001||errCode == -2002||errCode == -2003||errCode == -2005) {   
 			$('#modalFormZakazWarningTitleText').html(errMsgT);
@@ -98,6 +107,26 @@ function showResponseFormZakaz(responseText, statusText, xhr, $form)  {
 		}
 	}
 } 
+
+var cok_orderDateTime	= Cookies.set('orderDateTime');
+var cok_clientName		= Cookies.get('clientName');
+var cok_clientPhone		= Cookies.get('clientPhone');
+var cok_carVin			= Cookies.get('carVin');
+var cok_carMark			= Cookies.get('carMark');
+var cok_carModel		= Cookies.get('carModel');
+var cok_carGener		= Cookies.get('carGener');
+
+console.log('Cookies:\n\r' +
+			'cok_orderDateTime='+cok_orderDateTime+'\n\r'+
+			'cok_clientName='+cok_clientName+'\n\r'+
+			'cok_clientPhone='+cok_clientPhone+'\n\r'+
+			'cok_carVin='+cok_carVin+'\n\r'+
+			'cok_carMark='+cok_carMark+'\n\r'+
+			'cok_carModel='+cok_carModel+'\n\r'+
+			'cok_carGener='+cok_carGener
+		   );
+
+
 
 /// -- !!! -- Похоже, что это уже не используем -- !!! ---
 /*function sendAjaxFormZakaz(result_form, ajax_form, url) {
