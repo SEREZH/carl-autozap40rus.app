@@ -302,8 +302,9 @@
   $carSelectQueryRowsCount = mysqli_num_rows($carSelectQueryResult); /* определение числа строк в выборке */
   putContentsLog("EZ-FORM-ZAKAZ - Выбрано автомобилей: $carSelectQueryRowsCount",10);
   if ($carSelectQueryRowsCount>0) {
-    while ($carSelectQueryResultRow = mysqli_fetch_array($carSelectQueryResult)) 
-      {$carID = $carSelectQueryResultRow['id'];};
+    /*while ($carSelectQueryResultRow = mysqli_fetch_array($carSelectQueryResult)) 
+      {$carID = $carSelectQueryResultRow['id'];};*/
+    $carID  = $carSelectQueryResult->fetch_row()[0];  
   } else {
     $carID = 0;
   }
@@ -344,7 +345,38 @@
     putContentsLog("EZ-FORM-ZAKAZ - ID созданного автомобиля определен: $carID",100);
   }
   mysqli_free_result($carSelectQueryResult); /* закрытие выборки */
-  /*--------------------------------------------------------------------------------*/
+  /*------------------ EZ-FORM-ZAKAZ-SIMPLE - GET_CLIENT_ORDERS_HOURL - BEGIN ------------------*/
+  putContentsLog("EZ-FORM-ZAKAZ - GET_CLIENT_ORDERS_HOURLY - BEGIN clientID=$clientID",100);
+  $clientOrdersHourlySelect = "select get_client_orders_hourly('$clientID')";
+  $clientOrdersHourlyResult = mysqli_query($connConnection, $clientOrdersHourlySelect);
+  $clientOrdersHourlyCount  = $clientOrdersHourlyResult->fetch_row()[0];
+  putContentsLog("EZ-FORM-ZAKAZ - GET_CLIENT_ORDERS_HOURLY - Запрос выполнен",100);
+  putContentsLog("EZ-FORM-ZAKAZ - GET_CLIENT_ORDERS_HOURLY - Количество заказов=$clientOrdersHourlyCount",100);
+  mysqli_free_result($clientOrdersHourlyResult); /* закрытие выборки */
+  $stopOrdersHourlyCount  = getParam("ORDERS_HOURLY_COUNT");
+  putContentsLog("EZ-FORM-ZAKAZ - GET_CLIENT_ORDERS_HOURLY - stopOrdersHourlyCount=$stopOrdersHourlyCount",100);
+  IF ($clientOrdersHourlyCount >= $stopOrdersHourlyCount) { 
+    putContentsLog("EZ-FORM-ZAKAZ - GET_CLIENT_ORDERS_HOURLY - количество заказов за час превысило допустимое",100);
+    $logAct   = 'Заказ обратного звонка';
+    $sqlErr   = mysqli_error($connConnection);
+    $errCode  = -2005;
+    $errMsgT  = "ЗАКАЗ НЕ ПРИНЯТ";
+    $errMsgS  = "Уважаемый $clientName!<br>Ваш заказ не может быть принят.".
+              "<br>Количество сделанных Вами заказов превысило допустимое за промежуток времени.".
+              "<br><br>Пожалуйста, попробуйте позже.";
+    $errMsgL  = $errMsgS."Количество заказов в течении часа $clientOrdersHourlyCount";  
+    putContentsLog("EZ-FORM-ZAKAZ - GET_CLIENT_ORDERS_HOURLY - ".$errMsgL,100);
+    putContentsLog("EZ-FORM-ZAKAZ - GET_CLIENT_ORDERS_HOURLY - $sqlErr",100);
+    putContentsLog("EZ-FORM-ZAKAZ - GET_CLIENT_ORDERS_HOURLY - Код ошибки: $errCode",100);
+    $result = setResultArray( $orderKey, 
+                              $errCode, $errMsgT, $errMsgS, $errMsgL,
+                              $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
+                              $clientID, $carID, $orderID, $orderNum);
+    echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+    return; 
+  }
+  /*------------------ EZ-FORM-ZAKAZ-SIMPLE - GET_CLIENT_ORDERS_HOURL - END ------------------*/
+  /*------------------------------------------------------------------------------------------*/
   putContentsLog("EZ-FORM-ZAKAZ - EZ_CAR_ORDERS",100);
   putContentsLog("EZ-FORM-ZAKAZ - Добавление нового заказа для автомобиля",10);
     $orderInsertQuery = "insert into ez_car_orders(id,car_id,order_key,".

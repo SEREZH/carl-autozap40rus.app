@@ -83,7 +83,7 @@ function showResponseFormZakaz(responseText, statusText, xhr, $form)  {
 		$('#modalFormZakazSuccessBodyText').html(errMsgS);
 		$('#modalFormZakazSuccess').modal();
 	} else {
-		if (errCode == -2001||errCode == -2002||errCode == -2003) {   
+		if (errCode == -2001||errCode == -2002||errCode == -2003||errCode == -2005) {   
 			$('#modalFormZakazWarningTitleText').html(errMsgT);
 			$('#modalFormZakazWarningBodyText').html(errMsgS);
     		$('#modalFormZakazWarning').modal();
