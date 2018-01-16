@@ -86,8 +86,11 @@ switch ($func) {
 		if ($car_mark!=''&&$car_model!='') {
 			//$sqlCommandCarGeneration = "select id_car_mark, trim(name) from car_mark where name is not null and in_list = 1 and in_prior = 1 order by trim(name)";
 			$sqlCommandCarGeneration = "select cmr.name as marka, cml.name as model,  cgr.name as generation, cgr.year_begin, cgr.year_end from car_mark cmr, car_model cml, car_generation cgr where cmr.id_car_mark = cml.id_car_mark and cgr.id_car_model = cml.id_car_model and cmr.name = '$car_mark' and cml.name = '$car_model' order by cmr.name,  cgr.year_begin, cgr.name";
-			$sqlResultCarGenerations  = mysqli_query($connConnection, $sqlCommandCarGeneration) or die (mysqli_error($connConnection));
+			$sqlResultCarGenerations = mysqli_query($connConnection, $sqlCommandCarGeneration) or die (mysqli_error($connConnection));
 			while ($row = mysqli_fetch_array($sqlResultCarGenerations, MYSQLI_NUM)) {array_push($arGeneratorRows, $row[2]);}
+		}
+		if (count($arGeneratorRows)==0) {
+			array_push($arGeneratorRows, $car_model);	
 		}
 		echo json_encode($arGeneratorRows, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
         break;

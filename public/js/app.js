@@ -115,17 +115,6 @@ var cok_carVin			= Cookies.get('carVin');
 var cok_carMark			= Cookies.get('carMark');
 var cok_carModel		= Cookies.get('carModel');
 var cok_carGener		= Cookies.get('carGener');
-
-console.log('Cookies:\n\r' +
-			'cok_orderDateTime='+cok_orderDateTime+'\n\r'+
-			'cok_clientName='+cok_clientName+'\n\r'+
-			'cok_clientPhone='+cok_clientPhone+'\n\r'+
-			'cok_carVin='+cok_carVin+'\n\r'+
-			'cok_carMark='+cok_carMark+'\n\r'+
-			'cok_carModel='+cok_carModel+'\n\r'+
-			'cok_carGener='+cok_carGener
-		   );
-
 jQuery("#formZakazUserName").val(cok_clientName);
 jQuery("#formZakazContactPhone").val(cok_clientPhone); 
 jQuery("#formZakazCarVIN").val(cok_carVin); 
@@ -135,9 +124,6 @@ jQuery("#formZakazCarGeneration").val(cok_carGener);
 jQuery("#formZakazSimpleUserName").val(cok_clientName);
 jQuery("#formZakazSimpleContactPhone").val(cok_clientPhone); 
 jQuery("#formZakazSimpleCarVIN").val(cok_carVin); 
- 
-
-
 
 /// -- !!! -- Похоже, что это уже не используем -- !!! ---
 /*function sendAjaxFormZakaz(result_form, ajax_form, url) {
@@ -169,7 +155,7 @@ jQuery("#formZakazSimpleCarVIN").val(cok_carVin);
 }
 */
 function validateFormZakaz(obj, e) {
-	console.log('validateFormZakaz: BEGIN');
+	//console.log('validateFormZakaz: BEGIN');
 
 	//Печать имён и значений свойств с помощью Array.forEach
 	//Object.getOwnPropertyNames(ev).forEach(function(val, idx, array) {console.log(val + ' -> ' + ev[val]);});
@@ -211,7 +197,7 @@ function validateFormZakaz(obj, e) {
 		/*console.log('validateFormZakaz::formZakazUserName: v_value='+v_value);
 		console.log('validateFormZakaz::formZakazUserName: v_title='+v_title);*/
 	   	if (obj.value.length < 5) {
-	   		console.log('validateFormZakaz: obj.name='+obj.name+': VALIDATE ERROR');
+	   		//console.log('validateFormZakaz: obj.name='+obj.name+': VALIDATE ERROR');
 	   		jQuery(e.target).tooltip('dispose');
 	   		jQuery(e.target).tooltip({
 					trigger: 'manual',
@@ -231,7 +217,7 @@ function validateFormZakaz(obj, e) {
 			}, 3500);
 	   	}
 	   	else if (obj.value.length > 4) {
-	   		console.log('validateFormZakaz: obj.name='+obj.name+': VALIDATE ERROR');
+	   		//console.log('validateFormZakaz: obj.name='+obj.name+': VALIDATE ERROR');
 	   		jQuery(e.target).tooltip('dispose');
 	   		jQuery(e.target).tooltip({
 					trigger: 'manual',
@@ -250,21 +236,21 @@ function validateFormZakaz(obj, e) {
 			}, 3500);
 	   	}
 	   	else {
-		  	console.log('validateFormZakaz obj.name='+obj.name+': VALIDATE OK');
+		  	//console.log('validateFormZakaz obj.name='+obj.name+': VALIDATE OK');
 		  	jQuery(e.target).tooltip('hide');
 	   	}
 	}  else if (obj.name == "formZakazContactPhone") { 	
 		var v_value_phone = obj.value;
 		var v_title_phone = '<span>Пожалуйста,<br>укажите Ваш телефон!<br>'+v_value_phone+'</span>';
-		console.log('validateFormZakaz::formZakazContactPhone: v_value='+v_value_phone);
-		console.log('validateFormZakaz::formZakazContactPhone: v_title='+v_title_phone);
+		//console.log('validateFormZakaz::formZakazContactPhone: v_value='+v_value_phone);
+		//console.log('validateFormZakaz::formZakazContactPhone: v_title='+v_title_phone);
 
 		var v_tph =v_value_phone;
 		v_tph = !v_tph.match(/^\([0-9]{3}\)[0-9]{3}-[0-9]{2}\-[0-9]{2}/);
-		console.log('validateFormZakaz::formZakazContactPhone: v_tph = '+v_tph);
+		//console.log('validateFormZakaz::formZakazContactPhone: v_tph = '+v_tph);
 
 		if (obj.value.length < 100) {
-	   		console.log('validateFormZakaz obj.name='+obj.name+': VALIDATE ERROR');
+	   		//console.log('validateFormZakaz obj.name='+obj.name+': VALIDATE ERROR');
 			jQuery(e.target).tooltip('dispose');
 	   		jQuery(e.target).tooltip({
 					trigger: 'manual',
@@ -283,7 +269,7 @@ function validateFormZakaz(obj, e) {
 			}, 3500);
 	   	}
 	   	else {
-		  	console.log('validateFormZakaz obj.name='+obj.name+': VALIDATE OK');
+		  	//console.log('validateFormZakaz obj.name='+obj.name+': VALIDATE OK');
 		  	jQuery(e.target).tooltip('hide');
 	   	}
 	} else {

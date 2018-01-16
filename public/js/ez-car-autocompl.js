@@ -1,5 +1,26 @@
 jQuery( document ).ready(function() {
 	/*console.log('::ez-car-autocompl::QUERY::READY');*/
+    var v_makrs = [""];
+    jQuery.ajax({
+        type: 'POST',
+        url: '/php/ez-car-autocompl.php',
+        dataType: 'json',
+        data: {func: 'getCarMarks'},
+        complete: function(response) {
+            //console.log('::FIRST::ezCarAutocomplMarkFill::AJAX::MARKS::COMPLETE: response='+JSON.stringify(response));
+        },
+        success: function(response) {
+            //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+JSON.stringify(response));
+            v_marks = response;
+            jQuery('#formZakazCarMark').mdb_autocomplete({
+                data: v_marks
+            });
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.log('::FIRST::ezCarAutocomplMarkFill::AJAX::MARKS::ERROR: '+xhr.status);
+            console.log('::FIRST::ezCarAutocomplMarkFill::AJAX::MARKS::ERROR: '+thrownError);
+        }
+    });
 });
 /*---------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
@@ -32,13 +53,11 @@ function ezCarAutocomplMarkFill(obj, e) {
         dataType: 'json',
         data: {func: 'getCarMarks'},
         complete: function(response) {
-            //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::COMPLETE: response='+
-            //JSON.stringify(response));
+            //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::COMPLETE: response='+JSON.stringify(response));
         },
         success: function(response) {
             //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+response);
-            //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+
-            //JSON.stringify(response));
+            //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+JSON.stringify(response));
             v_models = response;
             jQuery('#formZakazCarMark').mdb_autocomplete({
                 data: v_models
@@ -84,7 +103,7 @@ function ezCarAutocomplModelFill(obj, e) {
     console.log('::ezCarAutocomplModelFill: 1 - g_mark_val_wet='+g_mark_val_wet);
     console.log('::ezCarAutocomplModelFill: 1 - g_mark_val_old='+g_mark_val_old);*/
     g_mark_val = jQuery('#formZakazCarMark').val(); // корректировка текущей марки автомобиля
-    console.log('::ezCarAutocomplModelFill: 2 - g_mark_val='+g_mark_val);
+    //console.log('::ezCarAutocomplModelFill: 2 - g_mark_val='+g_mark_val);
     
     var v_models = [""];
     if (g_mark_val == null||g_mark_val == undefined||g_mark_val == '') {
@@ -158,9 +177,9 @@ function ezCarAutocomplGenerationFill(obj, e) {
     console.log('::ezCarAutocomplGenerationFill: 2 - g_model_val='+g_model_val);
     console.log('::ezCarAutocomplGenerationFill: 2 - g_model_val_old='+g_model_val_old);*/
     
-    var v_generations = [""];
+    var v_generations = [g_model_val];
     if (g_model_val == null||g_model_val == undefined||g_model_val == '') {
-        console.log('::ezCarAutocomplGenerationFill: IF');
+        //console.log('::ezCarAutocomplGenerationFill: IF');
         jQuery('#formZakazCarGeneration').val('');
         jQuery('#formZakazCarGeneration').mdb_autocomplete({
             data: v_generations
@@ -168,20 +187,18 @@ function ezCarAutocomplGenerationFill(obj, e) {
     //} else if (g_model_val_old != g_model_val) {
     } else {
         g_model_val_old = g_model_val;
-        console.log('::ezCarAutocomplGenerationFill: ELSE IF');
+        //console.log('::ezCarAutocomplGenerationFill: ELSE IF');
         jQuery.ajax({
             type: 'POST',
             url: 'php/ez-car-autocompl.php', //this should be url to your PHP file
             dataType: 'json',
             data: {func: 'getCarGenerations', car_mark: g_mark_val, car_model: g_model_val},
             complete: function(response) {
-                console.log('AJAX::COMPLETE: response='+
-                JSON.stringify(response));
+                //console.log('AJAX::COMPLETE: response='+JSON.stringify(response));
             },
             success: function(response) {
                 //console.log('AJAX::SUCCESS: response='+response);
-                console.log('AJAX::SUCCESS: response='+
-                JSON.stringify(response));
+                //console.log('AJAX::SUCCESS: response='+JSON.stringify(response));
                 v_generations = response;
                 jQuery('#formZakazCarGeneration').mdb_autocomplete({
                     data: v_generations
@@ -215,26 +232,3 @@ function ezCarAutocomplGenerationBlur(obj, e) {
 /*---------------------------------------------------------------------------------------*/ 
 /*---------------------------------------------------------------------------------------*/ 
 /*console.log('::ez-car-autocompl::CAR MARK FILL');*/
-var v_makrs = [""];
-jQuery.ajax({
-    type: 'POST',
-    url: '/php/ez-car-autocompl.php',
-    dataType: 'json',
-    data: {func: 'getCarMarks'},
-    complete: function(response) {
-        //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::COMPLETE: response='+
-        //    JSON.stringify(response));
-    },
-    success: function(response) {
-        //console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS: response='+
-        //    JSON.stringify(response));
-        v_marks = response;
-        jQuery('#formZakazCarMark').mdb_autocomplete({
-            data: v_marks
-        });
-    },
-    error: function (xhr, ajaxOptions, thrownError) {
-        console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::ERROR: '+xhr.status);
-        console.log('::ezCarAutocomplMarkFill::AJAX::MARKS::ERROR: '+thrownError);
-    }
-});
