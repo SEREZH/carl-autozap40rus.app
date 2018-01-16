@@ -165,7 +165,8 @@ function ezCarAutocomplGenerationFill(obj, e) {
         jQuery('#formZakazCarGeneration').mdb_autocomplete({
             data: v_generations
         });
-    } else if (g_model_val_old != g_model_val) {
+    //} else if (g_model_val_old != g_model_val) {
+    } else {
         g_model_val_old = g_model_val;
         console.log('::ezCarAutocomplGenerationFill: ELSE IF');
         jQuery.ajax({

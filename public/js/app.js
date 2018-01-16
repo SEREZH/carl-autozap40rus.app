@@ -126,6 +126,17 @@ console.log('Cookies:\n\r' +
 			'cok_carGener='+cok_carGener
 		   );
 
+jQuery("#formZakazUserName").val(cok_clientName);
+jQuery("#formZakazContactPhone").val(cok_clientPhone); 
+jQuery("#formZakazCarVIN").val(cok_carVin); 
+jQuery("#formZakazCarMark").val(cok_carMark); 
+jQuery("#formZakazCarModel").val(cok_carModel); 
+jQuery("#formZakazCarGeneration").val(cok_carGener);
+jQuery("#formZakazSimpleUserName").val(cok_clientName);
+jQuery("#formZakazSimpleContactPhone").val(cok_clientPhone); 
+jQuery("#formZakazSimpleCarVIN").val(cok_carVin); 
+ 
+
 
 
 /// -- !!! -- Похоже, что это уже не используем -- !!! ---
