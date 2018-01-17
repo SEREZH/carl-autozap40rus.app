@@ -1,7 +1,28 @@
 var ez_flipclock_clock;
 
+
+function getDayDifference(i_from_date) {
+    var f_todayDate = new Date();
+    var f_fromDate = i_from_date;
+    var f_dateDifference =  f_todayDate.getTime() - f_fromDate.getTime();
+    var f_remainsDate = new Date(f_dateDifference);
+    var f_remainsMin = (parseInt(f_remainsDate / (1000 * 60) ));
+/*    var remainsFullDays = (parseInt(remainsSec / (24 * 60 * 60)));
+    var secInLastDay = remainsSec - remainsFullDays * 24 * 3600;
+    var remainsFullHours = (parseInt(secInLastDay / 3600));
+    var secInLastHour = secInLastDay - remainsFullHours * 3600;
+    var remainsMinutes = (parseInt(secInLastHour / 60));
+    var lastSec = secInLastHour - remainsMinutes * 60;
+*/ 
+    //alert(f_remainsMin);
+    return f_remainsMin;
+}    
+
+
+
 jQuery( document ).ready(function() {
 	/*console.log('jQuery - app: READY');*/
+	
 	// Grab the current date
 	var currentDate = new Date();
 	// Set some date in the future. In this case, it's always Jan 1
@@ -15,7 +36,62 @@ jQuery( document ).ready(function() {
 		countdown: true,
 		language: 'ru'
 	});
-	
+	var cok_cookieDateTimeYear 		= Cookies.get('cookieDateTimeYear');
+	var cok_cookieDateTimeMonth 	= Cookies.get('cookieDateTimeMonth');
+	var cok_cookieDateTimeDay 		= Cookies.get('cookieDateTimeDay');
+	var cok_cookieDateTimeHour 		= Cookies.get('cookieDateTimeHour');
+	var cok_cookieDateTimeMinute 	= Cookies.get('cookieDateTimeMinute');
+	var cok_cookieDateTimeSec 		= Cookies.get('cookieDateTimeSec');
+	console.log('jQuery - app: READY cok_cookieDateTimeYear = ' 	+ cok_cookieDateTimeYear);
+	console.log('jQuery - app: READY cok_cookieDateTimeMonth = ' 	+ cok_cookieDateTimeMonth);
+	console.log('jQuery - app: READY cok_cookieDateTimeDay = ' 		+ cok_cookieDateTimeDay);
+	console.log('jQuery - app: READY cok_cookieDateTimeHour = ' 	+ cok_cookieDateTimeHour);
+	console.log('jQuery - app: READY cok_cookieDateTimeMinute = '	+ cok_cookieDateTimeMinute);
+	console.log('jQuery - app: READY cok_cookieDateTimeSec = ' 		+ cok_cookieDateTimeSec);
+
+	if (!(	cok_cookieDateTimeDay	==undefined||
+			cok_cookieDateTimeMonth	==undefined||
+			cok_cookieDateTimeDay	==undefined||
+			cok_cookieDateTimeHour	==undefined||
+			cok_cookieDateTimeMinute==undefined||
+			cok_cookieDateTimeSec	==undefined
+		)) {
+		//new Date(year, month, date, hours, minutes, seconds, ms)
+		var cok_cookieDateTime	= new Date(	cok_cookieDateTimeYear,	cok_cookieDateTimeMonth, cok_cookieDateTimeDay,
+											cok_cookieDateTimeHour,	cok_cookieDateTimeMinute,cok_cookieDateTimeSec);	
+		var cok_dayDifference = getDayDifference(cok_cookieDateTime);
+	} else {
+		var cok_cookieDateTime	= new Date();
+		var cok_dayDifference = 1;
+	};
+	console.log('jQuery - app: READY cok_cookieDateTime = ' + cok_cookieDateTime);
+	console.log('jQuery - app: READY cok_dayDifference = ' 	+ cok_dayDifference);
+    if (cok_dayDifference >= 1) {
+    	setTimeout(function () {jQuery('#modalCookie').modal('show');}, 1500);
+		setTimeout(function () {jQuery('#modalCookie').modal('hide');}, 8500);	
+		var todayDate = new Date();
+		cok_cookieDateTimeYear 		= todayDate.getFullYear();
+		cok_cookieDateTimeMonth 	= todayDate.getMonth();
+		cok_cookieDateTimeDay 		= todayDate.getDate();
+		cok_cookieDateTimeHour 		= todayDate.getHours();
+		cok_cookieDateTimeMinute 	= todayDate.getMinutes();
+		cok_cookieDateTimeSec 		= todayDate.getSeconds();
+
+		console.log('jQuery - app: READY cok_cookieDateTimeYear = ' 	+ cok_cookieDateTimeYear);
+		console.log('jQuery - app: READY cok_cookieDateTimeMonth = ' 	+ cok_cookieDateTimeMonth);
+		console.log('jQuery - app: READY cok_cookieDateTimeDay = ' 		+ cok_cookieDateTimeDay);
+		console.log('jQuery - app: READY cok_cookieDateTimeHour = ' 	+ cok_cookieDateTimeHour);
+		console.log('jQuery - app: READY cok_cookieDateTimeMinute = ' 	+ cok_cookieDateTimeMinute);
+		console.log('jQuery - app: READY cok_cookieDateTimeSec = ' 		+ cok_cookieDateTimeSec);
+
+		Cookies.set('cookieDateTimeYear',	cok_cookieDateTimeYear, 	{ expires: 100 });
+		Cookies.set('cookieDateTimeMonth',	cok_cookieDateTimeMonth, 	{ expires: 100 });
+		Cookies.set('cookieDateTimeDay',	cok_cookieDateTimeDay, 		{ expires: 100 });
+		Cookies.set('cookieDateTimeHour',	cok_cookieDateTimeHour, 	{ expires: 100 });
+		Cookies.set('cookieDateTimeMinute',	cok_cookieDateTimeMinute, 	{ expires: 100 });
+		Cookies.set('cookieDateTimeSec',	cok_cookieDateTimeSec, 		{ expires: 100 });
+    }
+     
 	new WOW().init();
  	jQuery("#formZakazContactPhone").mask("+7(999)999-99-99");
  	jQuery("#formZakazSimpleContactPhone").mask("+7(999)999-99-99");
@@ -54,7 +130,6 @@ jQuery( document ).ready(function() {
         // !!! Important !!! always return false to prevent standard browser submit and page navigation 
         return false; 
     }); 
-
 });
 // post-submit callback 
 function showResponseFormZakaz(responseText, statusText, xhr, $form)  { 
@@ -108,7 +183,7 @@ function showResponseFormZakaz(responseText, statusText, xhr, $form)  {
 	}
 } 
 
-var cok_orderDateTime	= Cookies.set('orderDateTime');
+var cok_orderDateTime	= Cookies.get('orderDateTime');
 var cok_clientName		= Cookies.get('clientName');
 var cok_clientPhone		= Cookies.get('clientPhone');
 var cok_carVin			= Cookies.get('carVin');

@@ -25,6 +25,17 @@
 #modalFormZakazDanger .modal-danger .modal-body i, #modalFormZakazDanger .modal-danger .modal-body svg {
   color: #ff4b4b !important; }
 
+/* --- ez-modal COOKIES --- */
+.modal#modalCookie .modal-dialog .modal-content {
+  background-color: rgba(255, 187, 51, 0.9); }
+  .modal#modalCookie .modal-dialog .modal-content .modal-body {
+    padding: 0.5rem 0; }
+    .modal#modalCookie .modal-dialog .modal-content .modal-body .row p {
+      margin-bottom: 0 !important; }
+    .modal#modalCookie .modal-dialog .modal-content .modal-body .row a {
+      border-color: rgba(255, 255, 255, 0.9);
+      color: rgba(255, 255, 255, 0.9) !important; }
+
 .ez-form-zakaz-color-red {
   color: red;
   font-weight: 700; }
