@@ -29,13 +29,14 @@
     }
     .ez-form-zakaz-header {
         font-family: Comfortaa;
-        font-size: 1.15rem;
+        font-size: 1.25rem;
+        font-weight: 700;
         .ez-form-zakaz-header-text{
             padding-bottom: 0.75rem;
             text-shadow: 1px 1px black;
             .ez-form-zakaz-header-text-during {
                 //font-family: Marck Script;
-                font-size: 0.9rem;
+                font-size: 0.8rem;
                 font-style: italic;
             }                        
         }
@@ -58,6 +59,7 @@
         font-family: Comfortaa;
         font-size: 0.75rem;
         font-style: italic;
+        padding-bottom: 0.85rem;
     }
     .ez-form-zakaz-form {
         input {
@@ -65,6 +67,9 @@
             font-family: Open Sans;
         }
         &.ez-form-zakaz-form-req {
+            &.ez-form-zakaz-form-user-name {
+                margin-top: 1rem;
+            }
             &::after {
                 content: "*";
                 font-family: Comfortaa;

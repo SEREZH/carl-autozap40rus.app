@@ -6,7 +6,7 @@ function getDayDifference(i_from_date) {
     var f_fromDate = i_from_date;
     var f_dateDifference =  f_todayDate.getTime() - f_fromDate.getTime();
     var f_remainsDate = new Date(f_dateDifference);
-    var f_remainsMin = (parseInt(f_remainsDate / (1000 * 60) ));
+    var f_remainsDays = (parseInt(f_remainsDate / (1000 * 24 * 60 * 60)));
 /*    var remainsFullDays = (parseInt(remainsSec / (24 * 60 * 60)));
     var secInLastDay = remainsSec - remainsFullDays * 24 * 3600;
     var remainsFullHours = (parseInt(secInLastDay / 3600));
@@ -15,14 +15,13 @@ function getDayDifference(i_from_date) {
     var lastSec = secInLastHour - remainsMinutes * 60;
 */ 
     //alert(f_remainsMin);
-    return f_remainsMin;
+    return f_remainsDays;
 }    
 
 
 
 jQuery( document ).ready(function() {
 	/*console.log('jQuery - app: READY');*/
-	
 	// Grab the current date
 	var currentDate = new Date();
 	// Set some date in the future. In this case, it's always Jan 1
@@ -36,19 +35,15 @@ jQuery( document ).ready(function() {
 		countdown: true,
 		language: 'ru'
 	});
+	/*-------------------- COOKIES BEGIN --------------------*/
+	var cok_cookieDateTimeCounter	= Cookies.get('cok_cookieDateTimeCounter');
+	if (cok_cookieDateTimeCounter==undefined) {cok_cookieDateTimeCounter=0}
 	var cok_cookieDateTimeYear 		= Cookies.get('cookieDateTimeYear');
 	var cok_cookieDateTimeMonth 	= Cookies.get('cookieDateTimeMonth');
 	var cok_cookieDateTimeDay 		= Cookies.get('cookieDateTimeDay');
 	var cok_cookieDateTimeHour 		= Cookies.get('cookieDateTimeHour');
 	var cok_cookieDateTimeMinute 	= Cookies.get('cookieDateTimeMinute');
 	var cok_cookieDateTimeSec 		= Cookies.get('cookieDateTimeSec');
-	console.log('jQuery - app: READY cok_cookieDateTimeYear = ' 	+ cok_cookieDateTimeYear);
-	console.log('jQuery - app: READY cok_cookieDateTimeMonth = ' 	+ cok_cookieDateTimeMonth);
-	console.log('jQuery - app: READY cok_cookieDateTimeDay = ' 		+ cok_cookieDateTimeDay);
-	console.log('jQuery - app: READY cok_cookieDateTimeHour = ' 	+ cok_cookieDateTimeHour);
-	console.log('jQuery - app: READY cok_cookieDateTimeMinute = '	+ cok_cookieDateTimeMinute);
-	console.log('jQuery - app: READY cok_cookieDateTimeSec = ' 		+ cok_cookieDateTimeSec);
-
 	if (!(	cok_cookieDateTimeDay	==undefined||
 			cok_cookieDateTimeMonth	==undefined||
 			cok_cookieDateTimeDay	==undefined||
@@ -56,19 +51,20 @@ jQuery( document ).ready(function() {
 			cok_cookieDateTimeMinute==undefined||
 			cok_cookieDateTimeSec	==undefined
 		)) {
-		//new Date(year, month, date, hours, minutes, seconds, ms)
 		var cok_cookieDateTime	= new Date(	cok_cookieDateTimeYear,	cok_cookieDateTimeMonth, cok_cookieDateTimeDay,
 											cok_cookieDateTimeHour,	cok_cookieDateTimeMinute,cok_cookieDateTimeSec);	
-		var cok_dayDifference = getDayDifference(cok_cookieDateTime);
+		var cok_daysDifference = getDayDifference(cok_cookieDateTime);
 	} else {
 		var cok_cookieDateTime	= new Date();
-		var cok_dayDifference = 1;
+		var cok_daysDifference = 1;
 	};
-	console.log('jQuery - app: READY cok_cookieDateTime = ' + cok_cookieDateTime);
-	console.log('jQuery - app: READY cok_dayDifference = ' 	+ cok_dayDifference);
-    if (cok_dayDifference >= 1) {
+    if (cok_daysDifference >= 1) {
     	setTimeout(function () {jQuery('#modalCookie').modal('show');}, 1500);
-		setTimeout(function () {jQuery('#modalCookie').modal('hide');}, 8500);	
+		setTimeout(function () {jQuery('#modalCookie').modal('hide');}, 9500);	
+
+		cok_cookieDateTimeCounter = (cok_cookieDateTimeCounter>=100 ? 
+			cok_cookieDateTimeCounter=100 : cok_cookieDateTimeCounter + 1);
+
 		var todayDate = new Date();
 		cok_cookieDateTimeYear 		= todayDate.getFullYear();
 		cok_cookieDateTimeMonth 	= todayDate.getMonth();
@@ -77,13 +73,7 @@ jQuery( document ).ready(function() {
 		cok_cookieDateTimeMinute 	= todayDate.getMinutes();
 		cok_cookieDateTimeSec 		= todayDate.getSeconds();
 
-		console.log('jQuery - app: READY cok_cookieDateTimeYear = ' 	+ cok_cookieDateTimeYear);
-		console.log('jQuery - app: READY cok_cookieDateTimeMonth = ' 	+ cok_cookieDateTimeMonth);
-		console.log('jQuery - app: READY cok_cookieDateTimeDay = ' 		+ cok_cookieDateTimeDay);
-		console.log('jQuery - app: READY cok_cookieDateTimeHour = ' 	+ cok_cookieDateTimeHour);
-		console.log('jQuery - app: READY cok_cookieDateTimeMinute = ' 	+ cok_cookieDateTimeMinute);
-		console.log('jQuery - app: READY cok_cookieDateTimeSec = ' 		+ cok_cookieDateTimeSec);
-
+		Cookies.set('cookieDateTimeCounter',cok_cookieDateTimeCounter, 	{ expires: 100 });
 		Cookies.set('cookieDateTimeYear',	cok_cookieDateTimeYear, 	{ expires: 100 });
 		Cookies.set('cookieDateTimeMonth',	cok_cookieDateTimeMonth, 	{ expires: 100 });
 		Cookies.set('cookieDateTimeDay',	cok_cookieDateTimeDay, 		{ expires: 100 });
@@ -91,6 +81,7 @@ jQuery( document ).ready(function() {
 		Cookies.set('cookieDateTimeMinute',	cok_cookieDateTimeMinute, 	{ expires: 100 });
 		Cookies.set('cookieDateTimeSec',	cok_cookieDateTimeSec, 		{ expires: 100 });
     }
+    /*-------------------- COOKIES END --------------------*/
      
 	new WOW().init();
  	jQuery("#formZakazContactPhone").mask("+7(999)999-99-99");
@@ -357,36 +348,4 @@ jQuery(function () {
   jQuery('[data-toggle="tooltip"]').tooltip()
 });
 
-/* circle-progress */
-/*(function($) {
-  $('.first.circle').circleProgress({
-    value: 0.12,
-    fill: {gradient: ['#ff1e41', '#ff5f43']}
-  }).on('circle-animation-progress', function(event, progress, stepValue) {
-    $(this).find('strong').text(Math.round(100 * (stepValue)));
-  });
-  $('.second.circle').circleProgress({
-    	value: 0.627
-  }).on('circle-animation-progress', function(event, progress, stepValue) {
-    	$(this).find('strong').html(Math.round(1000 * (stepValue + 0.5)));
-  });
-  $('.third.circle').circleProgress({
-    value: 0.75,
-    fill: {gradient: [['#AD4CA6', .5], ['#C524B1', .5]], gradientAngle: Math.PI / 4}
-  }).on('circle-animation-progress', function(event, progress, stepValue) {
-    $(this).find('strong').html(Math.round(100 * stepValue) + '<i>%</i>');
-  });
-  var c4 = $('.forth.circle');
-  c4.circleProgress({
-    startAngle: -Math.PI / 4 * 3,
-    value: 0.5,
-    lineCap: 'round',
-    fill: {color: '#ffa500'}
-  }).on('circle-animation-progress', function(event, progress, stepValue) {
-    $(this).find('strong').text(stepValue.toFixed(2).substr(1));
-  });
-  setTimeout(function() { c4.circleProgress('value', 0.7); }, 1000);
-  setTimeout(function() { c4.circleProgress('value', 1.0); }, 1100);
-  setTimeout(function() { c4.circleProgress('value', 0.5); }, 2100);
-})(jQuery);
-*/
+

@@ -59,12 +59,13 @@
       padding-bottom: 0 !important; }
   .ez-form-zakaz .ez-form-zakaz-header {
     font-family: Comfortaa;
-    font-size: 1.15rem; }
+    font-size: 1.25rem;
+    font-weight: 700; }
     .ez-form-zakaz .ez-form-zakaz-header .ez-form-zakaz-header-text {
       padding-bottom: 0.75rem;
       text-shadow: 1px 1px black; }
       .ez-form-zakaz .ez-form-zakaz-header .ez-form-zakaz-header-text .ez-form-zakaz-header-text-during {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-style: italic; }
     .ez-form-zakaz .ez-form-zakaz-header .ez-form-zakaz-header-icon {
       justify-content: center; }
@@ -80,10 +81,13 @@
   .ez-form-zakaz .ez-form-zakaz-footer {
     font-family: Comfortaa;
     font-size: 0.75rem;
-    font-style: italic; }
+    font-style: italic;
+    padding-bottom: 0.85rem; }
   .ez-form-zakaz .ez-form-zakaz-form input {
     font-size: 1.25rem;
     font-family: Open Sans; }
+  .ez-form-zakaz .ez-form-zakaz-form.ez-form-zakaz-form-req.ez-form-zakaz-form-user-name {
+    margin-top: 1rem; }
   .ez-form-zakaz .ez-form-zakaz-form.ez-form-zakaz-form-req::after {
     content: "*";
     font-family: Comfortaa;
