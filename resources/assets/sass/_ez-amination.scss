@@ -1,0 +1,35 @@
+//_ez-amination
+.ez-animat-text-blur {
+  /* text-align: center;
+  font-size: 6.5em;
+  color: #fff;
+  letter-spacing: -7px;
+  font-weight: 700;
+  text-transform: uppercase;
+   */
+  animation: ez_keyf_text_blur 7s ease-out infinite;
+  text-shadow: 0px 0px 3px rgba(255,255,255,0.5), 0px 0px 3px rgba(255,255,255,0.5);
+}
+
+@keyframes ez_keyf_text_blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px rgba(255,255,255,0.75), 
+      0px 0px 25px rgba(255,255,255,0.75),
+      0px 0px 25px rgba(255,255,255,0.75),
+      0px 0px 25px rgba(255,255,255,0.75),
+      0px 0px 25px rgba(255,255,255,0.75),
+      0px 0px 25px rgba(255,255,255,0.75),
+      0px 0px 25px rgba(255,255,255,0.75),
+      0px 0px 50px rgba(255,255,255,0.75),
+      0px 0px 50px rgba(255,255,255,0.75),
+      0px 0px 50px rgba(165,80,167,1),
+      0px 0px 150px rgba(165,80,167,1),
+      0px 10px 100px rgba(165,80,167,1),
+      0px 10px 100px rgba(165,80,167,1),
+      0px 10px 100px rgba(165,80,167,1),
+      0px 10px 100px rgba(165,80,167,1),
+      0px -10px 100px rgba(165,80,167,1),
+      0px -10px 100px rgba(165,80,167,1);
+  }
+}

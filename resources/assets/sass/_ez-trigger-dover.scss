@@ -22,6 +22,9 @@
     .ez-trigger-dover-col {
         .ez-trigger-dover-col-icon {
             font-size: 2.5rem;
+            i,svg {
+                font-size: 2rem;
+            }
         }
         .ez-trigger-dover-card {
             &.ez-trigger-dover-card-kachest {
@@ -30,7 +33,7 @@
                 }
             }
             &.ez-trigger-dover-card-brand {
-                .ez-trigger-dover-col-icon {
+                .ez-trigger-dover-col-icon { 
                     background-color: rgba(51, 181, 229, 0.55);
                 }
             }
@@ -45,7 +48,7 @@
                 }
             }
             .card-body {
-                padding-top: .5rem;
+                padding-top: 1rem;
                 padding-bottom: 0;
                 .card-text {
                     text-transform: none;
