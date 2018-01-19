@@ -18,6 +18,20 @@
 @import url("./fonts/roboto/roboto.css"); roboto - Roboto 100,100i,300,300i,400,400i,500,500i,700,700i,900,900i
 @import url("./fonts/lato/lato.css"); lato - Lato 100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i
  */
+.ez-animat-text-blur {
+  /* text-align: center;
+  font-size: 6.5em;
+  color: #fff;
+  letter-spacing: -7px;
+  font-weight: 700;
+  text-transform: uppercase;
+   */
+  animation: ez_keyf_text_blur 7s ease-out infinite;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5), 0px 0px 3px rgba(255, 255, 255, 0.5); }
+
+@keyframes ez_keyf_text_blur {
+  from {
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px rgba(255, 255, 255, 0.75), 0px 0px 25px rgba(255, 255, 255, 0.75), 0px 0px 25px rgba(255, 255, 255, 0.75), 0px 0px 25px rgba(255, 255, 255, 0.75), 0px 0px 25px rgba(255, 255, 255, 0.75), 0px 0px 25px rgba(255, 255, 255, 0.75), 0px 0px 25px rgba(255, 255, 255, 0.75), 0px 0px 50px rgba(255, 255, 255, 0.75), 0px 0px 50px rgba(255, 255, 255, 0.75), 0px 0px 50px #a550a7, 0px 0px 150px #a550a7, 0px 10px 100px #a550a7, 0px 10px 100px #a550a7, 0px 10px 100px #a550a7, 0px 10px 100px #a550a7, 0px -10px 100px #a550a7, 0px -10px 100px #a550a7; } }
 /* --- ez-modal --- */
 .modal .modal-dialog .modal-content .modal-header {
   margin-bottom: 0; }
@@ -41,7 +55,7 @@
   font-weight: 700; }
 
 .ez-form-zakaz {
-  margin-top: 0.5rem;
+  margin-top: 0rem;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem; }
   .ez-form-zakaz #FormDraft, .ez-form-zakaz #FormDraft .ez-form-zakaz-card-wrapper, .ez-form-zakaz .card-image {
@@ -53,8 +67,7 @@
       padding-bottom: 0.25rem; }
   .ez-form-zakaz .ez-form-zakaz-card-wrapper {
     background-color: rgba(195, 68, 167, 0.75) !important;
-    padding: 1rem 1rem 0 !important;
-    padding-bottom: 1rem !important; }
+    padding: 1rem 1rem 0 !important; }
     .ez-form-zakaz .ez-form-zakaz-card-wrapper .ez-form-zakaz-card-wrapper-row {
       padding-bottom: 0 !important; }
   .ez-form-zakaz .ez-form-zakaz-header {
@@ -297,7 +310,7 @@
   .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-card.ez-trigger-dover-card-dostavka .ez-trigger-dover-col-icon {
     background-color: rgba(43, 187, 173, 0.55); }
   .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-card .card-body {
-    padding-top: .5rem;
+    padding-top: 1rem;
     padding-bottom: 0; }
     .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-card .card-body .card-text {
       text-transform: none; }

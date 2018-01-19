@@ -155,6 +155,7 @@
   if (isset($_POST["formZakazCarMark"])){ $carMark=$_POST["formZakazCarMark"];} else{ $carMark='';}
   if (isset($_POST["formZakazCarModel"])){ $carModel=$_POST["formZakazCarModel"];} else{ $carModel='';}
   if (isset($_POST["formZakazCarGeneration"])){ $carGener=$_POST["formZakazCarGeneration"];}else{ $carGener='';}
+  if (isset($_POST["formZakazCarPart"])){ $carPart=$_POST["formZakazCarPart"];} else{ $carPart='';}
   putContentsLog("EZ-FORM-ZAKAZ - Ключ заказа = ".$orderKey,100);
   putContentsLog("EZ-FORM-ZAKAZ - Значения переданные из формы заказа:",100);
   putContentsLog("EZ-FORM-ZAKAZ - Имя клиента: ".$clientName,100);
@@ -162,6 +163,8 @@
   putContentsLog("EZ-FORM-ZAKAZ - VIN номер автомобиля: ".$carVin,100);
   putContentsLog("EZ-FORM-ZAKAZ - Марка автомобиля: ".$carMark,100);
   putContentsLog("EZ-FORM-ZAKAZ - Модель автомобиля: ".$carModel,100);
+  putContentsLog("EZ-FORM-ZAKAZ - Поколение автомобиля: ".$carGener,100);
+  putContentsLog("EZ-FORM-ZAKAZ - Запчасть автомобиля: ".$carPart,100);
   putContentsLog("EZ-FORM-ZAKAZ - Начата проверка валидности полей Ваше имя и Ваш телефон",10);
   if ($clientName=='') {
       $errCode  = -2001;
@@ -377,6 +380,7 @@
   }
   /*------------------ EZ-FORM-ZAKAZ-SIMPLE - GET_CLIENT_ORDERS_HOURL - END ------------------*/
   /*------------------------------------------------------------------------------------------*/
+  /* ------------------------------- Добавление нового заказа BEGIN ------------------------- */
   putContentsLog("EZ-FORM-ZAKAZ - EZ_CAR_ORDERS",100);
   putContentsLog("EZ-FORM-ZAKAZ - Добавление нового заказа для автомобиля",10);
     $orderInsertQuery = "insert into ez_car_orders(id,car_id,order_key,".
@@ -423,9 +427,36 @@
     putContentsLog("EZ-FORM-ZAKAZ - Текст запроса=$orderUpdateQuery",10);
     $orderSelectQueryResult = mysqli_query($connConnection, $orderUpdateQuery); 
     putContentsLog("EZ-FORM-ZAKAZ - Номер заказа сохранен в EZ_CAR_ORDERS",10); 
-
-
+    /* ------------------------------- Добавление нового заказа END ------------------------- */
+    /* ------------------------------- Добавление запчасти к заказу BEGIN ------------------- */
+    putContentsLog("EZ-FORM-ZAKAZ - EZ_CAR_PARTS",100);
+    putContentsLog("EZ-FORM-ZAKAZ - Добавление запчасти к заказу",10);
+    $partInsertQuery = "insert into ez_order_parts(id,order_id,name) ".
+                       "values (NULL,'$orderID','$carPart')";
+    putContentsLog("EZ-FORM-ZAKAZ - Запрос для добавления запчасти к заказу:",10);
+    putContentsLog("EZ-FORM-ZAKAZ - $partInsertQuery",10);                  
+    $partInsertQueryResult = mysqli_query($connConnection, $partInsertQuery);
+    $logAct = 'Заказ обратного звонка';
+    if (!$partInsertQueryResult) {
+      $sqlErr     = mysqli_error($connConnection);
+      $errCode    = -2411;
+      $errMsgT    = $logAct;
+      $errMsgS    = "Ошибка при попытке добавления запчасти к заказу.";
+      $errMsgL    = $errMsgS." для заказа ID=".$orderID."<br>".$sqlErr;
+      putContentsLog("EZ-FORM-ZAKAZ - Запрос для добавление запчасти к заказу выполнен с ошибкой:",100);
+      putContentsLog("EZ-FORM-ZAKAZ - $sqlErr",100);
+      putContentsLog("EZ-FORM-ZAKAZ - Код ошибки: $errCode",100);
+      $result = setResultArray( $orderKey, 
+                                $errCode, $errMsgT, $errMsgS, $errMsgL,
+                                $clientName, $clientPhone, $carVin, $carMark, $carModel, $carGener, $carPart,
+                                $clientID, $carID, $orderID, $orderNum);
+      echo json_encode($result, JSON_UNESCAPED_UNICODE); // как бы руссификация :)
+      return; 
+    };               
+    putContentsLog("EZ-FORM-ZAKAZ - Запрос для добавления запчасти к заказу выполнен успешно",10); 
+    /* ------------------------------- Добавление запчасти к заказу END --------------------- */
     putContentsLog("EZ-FORM-ZAKAZ - Формирование заказа завершено успешно",10); 
+
     $errCode    = 0;
     $errMsgT    = "ЗАКАЗ ПРИНЯТ";
     $errMsgS    = "Уважаемый $clientName, Ваш заказ принят!".
@@ -449,6 +480,7 @@
     if (!($carMark  == '')) {$msg .= "\nМарка: $carMark";}
     if (!($carModel == '')) {$msg .= "\nМодель: $carModel";}
     if (!($carGener == '')) {$msg .= "\nПоколение: $carGener";}
+    if (!($carPart  == '')) {$msg .= "\nЗапчасть: $carPart";}
     $msg = urlencode($msg);
     /*$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chatId}&parse_mode=html&text={$msg}","r");*/
     $sendToTelegram = file_get_contents("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chatId}&parse_mode=html&text={$msg}","r");
