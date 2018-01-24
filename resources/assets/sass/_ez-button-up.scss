@@ -1,6 +1,7 @@
 /* ez-button-up */
 .ez-button-up,
 .ez-button-vk {
+    z-index: 99;
 	a {
 		outline:0;
 	}
@@ -15,7 +16,7 @@
 	bottom: 125px; 
 	right: 24px; 
 	a {
-		background-color: rgba(74,118,168,1);	
+		background-color: rgba(63,114,155,1);	
 	}
 }
 

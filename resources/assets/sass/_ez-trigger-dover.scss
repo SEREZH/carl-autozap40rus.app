@@ -6,12 +6,13 @@
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
-    padding: 1.35rem 0 0.7rem;
+    /* padding: 1.35rem 0 0rem; */
+    padding: 0;
     &.ez-trigger-dover-row-header { 
         display: flex;
         justify-content: center;
-        padding-top: 1.75rem;
-        padding-bottom: 0;
+        //padding-top: 1.75rem; padding-bottom: 0;
+        padding: 2.25rem 0 2rem;
         h5 {
             //font-family: Marck Script;
             font-size: 1.4rem;
@@ -27,6 +28,7 @@
             }
         }
         .ez-trigger-dover-card {
+            padding-bottom: 1rem;
             &.ez-trigger-dover-card-kachest {
                 .ez-trigger-dover-col-icon {
                     background-color: rgba(255, 187, 51, 0.85);
@@ -58,4 +60,52 @@
     }
 }       
 
+
+
+
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .ez-trigger-dover-card .card-body .card-text {
+        font-size: 0.8rem!important;
+    }
+}
+
+
+/* Portrait tablets and small desktops */
+
+@media (max-width: 991px) {
+
+}    
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ez-trigger-dover-card .card-body .card-text {
+        font-size: 0.75rem!important;
+    }
+    .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-col-icon i, 
+    .ez-trigger-dover-row .ez-trigger-dover-col .ez-trigger-dover-col-icon svg {
+        font-size: 1.85rem;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .ez-trigger-dover-card .card-body .card-text {
+        font-size: 0.7rem!important;
+    }
+    .ez-flipclock .ez-flipclock-row.ez-flipclock-row-header h5 {
+        font-size: 1.25rem!important;
+    }    
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
+}
 
