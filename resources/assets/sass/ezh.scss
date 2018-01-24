@@ -202,6 +202,19 @@
 }    
 
 
+
+@media all and (max-width: 1070px) {
+    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body,
+    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-header {
+        font-size: 0.75rem !important;
+    }    
+    .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-header {
+        font-size: 0.9rem !important;
+    }
+}    
+    
+
+
 @media all and (max-width: 480px) {
     .ez-draft-r-btn {
         font-size: 0.75rem!important;

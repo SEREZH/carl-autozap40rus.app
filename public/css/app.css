@@ -361,10 +361,7 @@
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
   .ez-trigger-dover-card .card-body .card-text {
-    font-size: 0.7rem !important; }
-
-  .ez-flipclock .ez-flipclock-row.ez-flipclock-row-header h5 {
-    font-size: 1.25rem !important; } }
+    font-size: 0.7rem !important; } }
 /* Landscape phones and smaller */
 .ez-tovar {
   padding-top: 1rem;
@@ -482,7 +479,7 @@
     padding-bottom: 0; }
     .ez-flipclock .ez-flipclock-row.ez-flipclock-row-header h5 {
       font-size: 1.4rem;
-      font-weight: 400;
+      font-weight: 700;
       margin-bottom: 0; }
   .ez-flipclock .ez-flipclock-row.ez-flipclock-row-header-rest {
     display: flex;
@@ -517,6 +514,10 @@
     .ez-flipclock .ez-trigger-dover-col .ez-trigger-dover-card .card-body .card-text {
       text-transform: none; }
 
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .ez-flipclock-row-header h5 {
+    font-size: 0.85rem !important; } }
 .ez-dostavka-oplata {
   color: white;
   font-family: Comfortaa;

@@ -17,7 +17,7 @@
             h5 {
                 //font-family: Marck Script;
                 font-size: 1.4rem;
-                font-weight: 400;
+                font-weight: 700;
                 margin-bottom: 0;
             }
         }
@@ -86,3 +86,12 @@
 }       
 
 
+//.ez-flipclock .ez-flipclock-row.ez-flipclock-row-header h5 
+   
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .ez-flipclock-row-header h5 
+    {
+        font-size: 0.85rem!important;
+    }    
+}    
