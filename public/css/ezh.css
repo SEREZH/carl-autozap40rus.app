@@ -132,7 +132,8 @@
           font-size: 0.5rem; }
       .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-yandex-map {
         display: flex !important;
-        justify-content: center !important; }
+        justify-content: center !important;
+        min-height: 15rem; }
       .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact {
         -webkit-transition: all 1s ease-out;
         -moz-transition: all 1s ease-out;
