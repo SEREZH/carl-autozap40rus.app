@@ -1,0 +1,2176 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Зап",
+				"Запчасть"
+			],
+			[
+				"or",
+				"orderID"
+			],
+			[
+				"pat",
+				"padding-top"
+			],
+			[
+				"pl",
+				"pl-3 \tBootstrap 4 Class"
+			],
+			[
+				"te",
+				"text-center \tBootstrap 4 Class"
+			],
+			[
+				"va",
+				"var"
+			],
+			[
+				"i_c",
+				"i_clientName\t(ez-form-zakaz-simple.php)"
+			],
+			[
+				"c",
+				"class\t(index.html)"
+			],
+			[
+				"v",
+				"val\t.val()"
+			],
+			[
+				"EZ",
+				"EZ_CAR_ORDERS"
+			],
+			[
+				"О",
+				"Определяем"
+			],
+			[
+				"cl",
+				"clientName"
+			],
+			[
+				"за",
+				"заказа"
+			],
+			[
+				"lo",
+				"log\t(app.js)"
+			],
+			[
+				"zapchasti",
+				"zapchasti40.ru\t(index.html)"
+			],
+			[
+				"опре",
+				"определен"
+			],
+			[
+				"carM",
+				"carMark"
+			],
+			[
+				"клиент",
+				"клиента"
+			],
+			[
+				"cmtA",
+				"cmtAppHTML"
+			],
+			[
+				"carMo",
+				"carModel"
+			],
+			[
+				"успен",
+				"успешно"
+			],
+			[
+				"при",
+				"приложения"
+			],
+			[
+				"client",
+				"client_id"
+			],
+			[
+				"д",
+				"добавление"
+			],
+			[
+				"h",
+				"html\t.html()"
+			],
+			[
+				"до",
+				"доставка"
+			],
+			[
+				"ez-form-",
+				"ez-form-zakaz.php\t(ez-form-zakaz.php)"
+			],
+			[
+				"mt-",
+				"mt-5 \tBootstrap 4 Class"
+			],
+			[
+				"aling-c",
+				"align-content-center \tBootstrap 4 Class"
+			],
+			[
+				"ri",
+				"right\t(index.html)"
+			],
+			[
+				"d-f",
+				"d-inline-flex \tBootstrap 4 Class"
+			],
+			[
+				"act",
+				"action"
+			],
+			[
+				"j",
+				"jQuery"
+			],
+			[
+				"инте",
+				"интернет-магазин"
+			],
+			[
+				"un",
+				"underline"
+			],
+			[
+				"upp",
+				"uppercase\t(_ez-dostavka-oplata.scss)"
+			],
+			[
+				"tran",
+				"text-transform"
+			],
+			[
+				"mb",
+				"mb-1 \tBootstrap 4 Class"
+			],
+			[
+				"text",
+				"text-center"
+			],
+			[
+				"le",
+				"left\t(ezh.scss)"
+			],
+			[
+				"w",
+				"white"
+			],
+			[
+				"pb",
+				"pb\tpadding-bottom"
+			],
+			[
+				"pri",
+				"print_r\t(sendz.php)"
+			],
+			[
+				"id_car_ma",
+				"id_car_mark"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"mode",
+				"models\t(ez-car-autocompl.php)"
+			],
+			[
+				"те",
+				"телефон\t(index.html)"
+			],
+			[
+				"miw",
+				"min-width"
+			],
+			[
+				"on",
+				"onclick\t(index.html)"
+			],
+			[
+				"add",
+				"addClass\t.addClass()"
+			],
+			[
+				"jQ",
+				"jQuery"
+			],
+			[
+				"typ",
+				"type\t(index.html)"
+			],
+			[
+				"off",
+				"offset\t.offset()"
+			],
+			[
+				"it",
+				"italic"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"pt",
+				"padding-top"
+			],
+			[
+				"ez-",
+				"ez-draft-l"
+			],
+			[
+				"ce",
+				"center\t(app.scss)"
+			],
+			[
+				"imp",
+				"important"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"align-c",
+				"align-content-lg-center \tBootstrap 4 Class"
+			],
+			[
+				"d-",
+				"d-lg-flex \tBootstrap 4 Class"
+			],
+			[
+				"mr-",
+				"mr-md-auto \tBootstrap 4 Class"
+			],
+			[
+				"aling-s",
+				"align-self-end \tBootstrap 4 Class"
+			],
+			[
+				"lin",
+				"line-height"
+			],
+			[
+				"bacc",
+				"background-color"
+			],
+			[
+				"au",
+				"auto"
+			],
+			[
+				"n",
+				"none"
+			],
+			[
+				"tr",
+				"transparent"
+			],
+			[
+				"u",
+				"url"
+			],
+			[
+				"fil",
+				"filter"
+			],
+			[
+				"no",
+				"none\t(_footer-menu.scss)"
+			],
+			[
+				"container-flui",
+				"container-fluid \tBootstrap 4 Class"
+			],
+			[
+				"container-f",
+				"container-fluid \tBootstrap 4 Class"
+			],
+			[
+				"container-",
+				"container-fluid\t(body-jcarousel-doctors.blade.php)"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"list-s",
+				"list-style-type"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"bcl",
+				"background-color"
+			],
+			[
+				"bckc",
+				"background-color\t(_site-addons.scss)"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"ho",
+				"hover\t(amati.scss)"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"bi",
+				"background-image"
+			],
+			[
+				"he",
+				"height\t(amati.scss)"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"f",
+				"flex\tFlexbox - flex: 0 1 auto;"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"wi",
+				"width\t(amati.scss)"
+			],
+			[
+				"a",
+				"absolute"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"background-",
+				"background-repeat"
+			],
+			[
+				"borc",
+				"border-color"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"baco",
+				"background-color"
+			],
+			[
+				"body-amati-select",
+				"body-amati-select-wrapper\t(_body-amati-select.scss)"
+			],
+			[
+				"btn-outline-",
+				"btn-outline-info \tBootstrap 4 Class"
+			],
+			[
+				"bco",
+				"background-color\t(_color.scss)"
+			],
+			[
+				"m",
+				"mt\tmargin-top"
+			],
+			[
+				"tea",
+				"text-align"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"b",
+				"black\t(amati.scss)"
+			],
+			[
+				"ali",
+				"text-align"
+			],
+			[
+				"d",
+				"d-f\tdisplay: flex;"
+			],
+			[
+				"jus",
+				"justify-content-center \tBootstrap 4 Class"
+			],
+			[
+				"img-",
+				"img-responsive \tBootstrap 3 Class"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"to",
+				"top"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"s",
+				"scale"
+			],
+			[
+				"d-b",
+				"d-block"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"i",
+				"img"
+			],
+			[
+				"zcl-b",
+				"zcl-black-75\t(_color.scss)"
+			],
+			[
+				"zcl",
+				"zcl-white\t(_color.scss)"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"col-m",
+				"col-md-12 \tBootstrap 3 Class"
+			],
+			[
+				"clr",
+				"color"
+			],
+			[
+				"ju",
+				"justify-content-center"
+			],
+			[
+				"card",
+				"card-header\t(login.blade.php)"
+			],
+			[
+				"ca",
+				"card"
+			],
+			[
+				"data",
+				"datatable\t(DatatablesController.php)"
+			],
+			[
+				"we",
+				"welcome\t(web.php)"
+			],
+			[
+				"bs4",
+				"bs4b"
+			],
+			[
+				"li",
+				"lib"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 53871,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-form-zakaz.scss",
+			"settings":
+			{
+				"buffer_size": 3598,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-amination.scss",
+			"settings":
+			{
+				"buffer_size": 1114,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "php/ez-form-zakaz.php",
+			"settings":
+			{
+				"buffer_size": 31226,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/ezh.scss",
+			"settings":
+			{
+				"buffer_size": 6796,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/app.js",
+			"settings":
+			{
+				"buffer_size": 15205,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/ez-car-autocompl.js",
+			"settings":
+			{
+				"buffer_size": 12169,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-trigger-dover.scss",
+			"settings":
+			{
+				"buffer_size": 1729,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/app.scss",
+			"settings":
+			{
+				"buffer_size": 3642,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "ins",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: sez",
+				"Snippet: sez-blmain"
+			],
+			[
+				"Snippet: ez",
+				"Snippet: sez-blmain"
+			],
+			[
+				"Snippet: filt",
+				"Snippet: filter:opacity"
+			],
+			[
+				"Snippet: ",
+				"Snippet: cards"
+			],
+			[
+				"Laravel ",
+				"Laravel Artisan 5: Serve"
+			],
+			[
+				"htmlprettify",
+				"HTMLPrettify: Set Keyboard Shortcuts"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"ht",
+				"Snippet: Comment - HTML comment"
+			],
+			[
+				"",
+				"ANF: Copy Current File"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ftp",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"advan",
+				"Package Control: Advanced Install Package"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '261dd1222b4693ce6d4f85f9c827ac06' + '6d5ab8ebdd020086947172a8a1356bb6'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/wamp64/www/carl-autozap40rus.app",
+		"/C/wamp64/www/carl-autozap40rus.app/public",
+		"/C/wamp64/www/carl-autozap40rus.app/public/sass"
+	],
+	"file_history":
+	[
+		"/C/wamp64/www/avtozap40rusa.lav/bootstrap/autoload.php",
+		"/C/wamp64/www/ezlumen01.app/bootstrap/app.php",
+		"/C/wamp64/www/carl-autozap40rus.app/public/php/ez-car-autocompl.php",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-modal.scss",
+		"/C/Users/SEREZH/Downloads/jquery-timeago-master/jquery-timeago-master/test/test_helpers.js",
+		"/C/wamp64/www/carl-autozap40rus.app/public/lib/timeago/jquery.timeago.js",
+		"/C/wamp64/www/carl-autozap40rus.app/public/php/ez-form-zakaz-simple.php",
+		"/C/wamp64/www/carl-autozap40rus.app/public/php/sendz.php",
+		"/C/wamp64/www/carl-autozap40rus.app/public/php/senda.php",
+		"/C/wamp64/www/carl-autozap40rus.app/public/js/ez-formatdate.js",
+		"/C/wamp64/www/carl-autozap40rus.app/tmp/index.htm",
+		"/C/wamp64/www/carl-autozap40rus.app/public/php/ez-conn.php",
+		"/C/wamp64/www/carl-autozap40rus.app/public/js/ez-car-autocompl.js",
+		"/C/wamp64/www/carl-autozap40rus.app/public/php/ez_file.php",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-form-zakaz.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/public/php/app.php",
+		"/C/wamp64/www/carl-autozap40rus.app/public/index.html",
+		"/C/wamp64/www/carl-autozap40rus.app/public/php/ez-send-to-telegram.php",
+		"/C/Users/SEREZH/Downloads/sendToTelegram/sendToTelegram/index.php",
+		"/C/Users/SEREZH/Downloads/sendToTelegram/sendToTelegram/telegramform/js/telegramform.js",
+		"/C/Users/SEREZH/Downloads/sendToTelegram/sendToTelegram/telegramform/php/send-message-to-telegram.php",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-form-zakaz-simpe.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/app.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/public/js/tooltip.js",
+		"/C/wamp64/www/carl-autozap40rus.app/public/php/ez-form-zakaz.php",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-tovar.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/ezh.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-action-form-simpe.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/public/js/app.js",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-dostavka-oplata.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/public/index-20180111A-formZakaz.html",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-button-up.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-button-atom.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-flipclock.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-trigger-dover.scss",
+		"/C/Users/SEREZH/Downloads/ MDB_Pro_4.4.3/MDB Pro/js/mdb.js",
+		"/C/wamp64/www/carl-autozap40rus.app/public/js/mdb.js",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-work-schema.scss",
+		"/D/CARL/LIB/MDB Free - исправлен navbar/js/mdb.js",
+		"/C/wamp64/www/carl-autozap40rus.app/public/lib/flipclock/flipclock.js",
+		"/C/wamp64/www/carl-autozap40rus.app/public/lib/flipclock/flipclock.css",
+		"/C/wamp64/www/carl-autozap40rus.app/public/lib/flipclock/flipclock.min.js",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-car-autocompl.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/public/index-20180108A.html",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-circle-progress.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-validate.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/public/js/sendz.php",
+		"/C/wamp64/www/carl-autozap40rus.app/public/font/line-awesome/css/line-awesome.css",
+		"/C/wamp64/www/carl-autozap40rus.app/public/css/ezh.css",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/js/mdb.js",
+		"/C/wamp64/www/carl-autozap40rus.app/public/css/mdb.css",
+		"/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/mdb.scss",
+		"/C/wamp64/www/carl-autozap40rus.app/tmp/MDB Pro/index.html",
+		"/C/wamp64/www/carl-autozapchasti40rus.dev/public/css/ezh.css",
+		"/C/wamp64/www/carl-autozapchasti40rus.dev/resources/assets/sass/ezh.scss",
+		"/C/wamp64/www/carl-autozapchasti40rus.dev/public/js/mdb.js",
+		"/C/wamp64/www/carl-autozapchasti40rus.dev/public/js/popper.min.js",
+		"/C/wamp64/www/carl-autozapchasti40rus.dev/public/js/bootstrap.min.js",
+		"/C/wamp64/www/carl-autozapchasti40rus.dev/public/css/bootstrap.min.css",
+		"/C/wamp64-SAVE/wamp64-20171228A/www/amati7.dev/resources/views/upld/head-fonts.blade.php",
+		"/C/wamp64/www/carl-autozapchasti40rus.dev/public/css/style.css",
+		"/C/wamp64/www/amati7.dev/resources/views/auth/register.blade.php",
+		"/C/wamp64/www/amati7.dev/resources/views/auth/passwords/email.blade.php",
+		"/C/wamp64/www/amati7.dev/resources/views/auth/login.blade.php",
+		"/C/wamp64/www/amati7.dev/resources/views/parts/menu-mega.blade.php",
+		"/C/wamp64/www/amati7.dev/vendor/autoload.php",
+		"/D/MDB/MDB Free/index.html",
+		"/C/wamp64/www/amati7.dev/public/lib/mdb/js/mdb.js",
+		"/C/wamp64/www/amati1.dev/resources/views/parts/menu-login.blade.php",
+		"/C/Users/SEREZH/.hyper.js",
+		"/C/Users/SEREZH/AppData/Local/Temp/_tc/hyperterm-monokai-master/index.js",
+		"/C/wamp64/www/amati1-git/test04/auth/passwords/email.blade.php",
+		"/C/wamp64/www/amati5502db.dev/.env",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_footer-menu.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_color.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/views/snippets/snippet-sez-blmain.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/snippet-sez-blmain.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/__sez-blmain.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/body-jcarousel-doctors.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/footer-menu.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_body-footer.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/body-jcarousel-popular.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/body-amati-about.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/menu-main.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/layouts/app2.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/amati.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_footer-social.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_footer-offerta.scss",
+		"/C/Users/SEREZH/AppData/Roaming/Sublime Text 3/Packages/User/hello.sublime-snippet",
+		"/C/Users/SEREZH/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/C/Users/SEREZH/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_body-birthday-register.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_body-jcarousel-doctor.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/footer-copyright.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/footer-social.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/footer-offerta.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_body-amati-select.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_footer-copyright.scss",
+		"/C/wamp64/www/amati5502db.dev/public/js/amati.js",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/body-testimonials.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/body-birthday-register.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_opps-fixfloat-block.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/views/opps/opps-fixfloat-block.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/opps/opps-preloader-md-one.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_opps-preloader-md-one.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/body-bcarousel-interior.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/footer-js.blade.php",
+		"/C/Users/SEREZH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/Default (Windows).sublime-keymap",
+		"/C/wamp64/www/amati5502db.dev/resources/views/welcome2A.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_body-amati-news.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_body-testimonials.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/views/chips/body-testimonials-item.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_amati-main.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_site-addons.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/body-amati-news.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/chips/body-jslider-item.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_body-jcarousel.scss",
+		"/C/wamp64/www/amati5502db.dev/public/css/amati.css",
+		"/C/wamp64/www/amati5502db.dev/resources/views/chips/body-jslider-popular-item.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_body-amati-podxod.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/body-amati-podxod.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/body-amati-select.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/css-sonar-blurd.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_css-sonar-blurb.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_body-amati-about.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/views/parts/body-magic-rays.blade.php",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_body-magic-rays.scss",
+		"/C/wamp64/www/amati5502db.dev/resources/assets/sass/_body-magic-rays-blue.scss"
+	],
+	"find":
+	{
+		"height": 45.0
+	},
+	"find_in_files":
+	{
+		"height": 116.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ez-draft-r",
+			"cok_dayDifference",
+			"cok_secDifference",
+			"suffix",
+			"suffixAgo",
+			"minutes",
+			"suffixAgo",
+			"string",
+			"loadRussian",
+			"local",
+			"console.log",
+			"$autocomplete",
+			"simpl",
+			"FormName",
+			"(\"EZ-FORM-ZAKAZ-SIMPLE",
+			"ID созданного автомобиля определен",
+			"desc",
+			"fcreate",
+			"sele",
+			"sendToTelegramResult ",
+			"sendAjaxFormZakaz",
+			"TOOL",
+			"sendAjaxFormZakaz",
+			"template",
+			"TOOL",
+			"ez-form-zakaz-simpe-card-body-form",
+			"ez-form-zakaz-",
+			"ez-form-zakaz-simple",
+			"af",
+			"befo",
+			"Ошибка при заполнении формы заказа",
+			"action=\"",
+			"sendz",
+			"ajaxSubmitOptionsFormZakaz",
+			"formZakazButton",
+			"button id=",
+			"order",
+			"$logAct",
+			"formZakazSimple",
+			"ez-action-form-simpe",
+			"formActionFormSimple",
+			"\"formZakaz",
+			"formActionFormSimple",
+			"Simple",
+			"formActionFormSimple",
+			"ОБРА",
+			"\"EZ-FORM-ZAKAZ",
+			"formActionForm",
+			"formActionFormSimple",
+			"\"EZ-FORM-ZAKAZ",
+			"carMark",
+			"\"EZ-FORM-ZAKAZ",
+			"                \"<",
+			"dur",
+			"dura",
+			"Экс",
+			"formZakazResult",
+			"anim",
+			"srvRemoteUser",
+			"mdb_autocomplete",
+			"formZakazCarGeneration",
+			"ezCarAutocomplGenerationFill",
+			"formZakazCarGeneration",
+			"i_order_num",
+			"setResultArray",
+			"modalFormZakaz",
+			"#modalFormZakaz",
+			"setResultArray",
+			"orderNumClient",
+			"putContentsLog",
+			"orderKey",
+			"log_key",
+			"generateRandomString",
+			"::ezCarAutocomplMarkFill",
+			"::ezCarAutocomplMarkFill::AJAX::MARKS::SUCCESS",
+			"putContentsLog",
+			"logKey",
+			"log_key",
+			"putContentsLog",
+			"logKey",
+			"putContentsLog",
+			"complete:",
+			"ezCarAutocomplModelBlur",
+			"submit",
+			"putContentsLog",
+			"getCarMarks",
+			"ez-car-autocompl-generation",
+			"ez-car-autocompl-model",
+			"ez-car-autocompl-mark",
+			"ez-car-autocompl-marks",
+			"ezCarAutocomplMarkBlur",
+			"ezCarAutocomplMarkFill",
+			"ez-car-autocompl",
+			"EZ-FORM-ZAKAZ",
+			"Определен ID клиента",
+			"EZ-FORM-ZAKAZ - EZ-FORM-ZAKAZ ",
+			"setResultArray",
+			"cmtAppHTML",
+			"checkQueryResult",
+			"if",
+			"$f_msg_code",
+			"$phoneNumberArray",
+			"list",
+			"checkPhoneNumber",
+			"$carGener",
+			"Поиск автомобиля для клиента",
+			"Поиск автомобиля для клиента.",
+			"insert into ",
+			"insert into",
+			"insert ",
+			"_rows",
+			"count",
+			"$logAct",
+			"checkPhoneNumber",
+			"Текст запроса на добавление новой записи в таблицу LOGS:",
+			"setResultArray",
+			"Модель автомобиля",
+			"Модель автомобиля: ",
+			"Завершена успешно проверка наличия клиента в базе по имени и телефону в таблице EZ_CLIENTS",
+			"$logKeyID",
+			"++",
+			"$cmtAppHTML.\" ",
+			"$clientName, $clientPhone, $cmtAppHTML",
+			"$logKey",
+			"ajaxSubmitOptionsFormZakaz",
+			"$cmtApp",
+			"$cmt_app",
+			"$part"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"cok_daysDifference",
+			"(\"$currentFormName",
+			"ez-form-zakaz-simpe",
+			"\"formZakazSimple",
+			"formZakazSimple",
+			"\"EZ-FORM-ZAKAZ-SIMPLE",
+			"orderNum",
+			"orderKey",
+			"formZakazCarGeneration",
+			"formZakazCarModel",
+			"EZ-CAR-AUTOCOMPL",
+			"$cmtAppHTML.\"<br>",
+			"$cmtAppHTML",
+			"$cmtApp",
+			"$carPart",
+			"$carModel",
+			"$carMark",
+			"$carVin",
+			"$clientPhone",
+			"$clientName",
+			"$orderID",
+			"$carID",
+			"$clientID",
+			"errMsgT",
+			"err_msg_t",
+			"cmt_app",
+			"clientSelectResult",
+			"clientSelectCount",
+			"carleon40",
+			"formZakaz",
+			"ez-form-zakaz",
+			"formZakaz",
+			"formZakazContactPhone",
+			"formZakazUserName",
+			"FormZakaz",
+			"connConnection",
+			"ez-action-form-simpe",
+			"dostavka-oplata",
+			"",
+			"val_old",
+			"validateFormDraft:"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 53871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								293,
+								293
+							]
+						],
+						"settings":
+						{
+							"color_helper.box_height": 24,
+							"color_helper.color_scheme": "Packages/User/SublimeLinter/Monokai (Colorcoded) (SL).tmTheme",
+							"color_helper.file_palette":
+							[
+								"#ff4b4bff"
+							],
+							"color_helper.preview_meta":
+							{
+								"47506":
+								[
+									-7842627854057725671,
+									7,
+									"hex",
+									-9119840945248175872,
+									1,
+									"1516281113.76253"
+								]
+							},
+							"color_helper.scan":
+							{
+								"allowed_colors":
+								[
+									"hex_compressed",
+									"rgba",
+									"rgb",
+									"hsla",
+									"hsl",
+									"webcolors",
+									"hex"
+								],
+								"compress_hex_output": true,
+								"current_ext": ".html",
+								"current_syntax": "HTML/HTML",
+								"enabled": true,
+								"last_updated": 1516221026.92,
+								"scan_completion_scopes":
+								[
+								],
+								"scan_scopes":
+								[
+									"meta.declaration-list.css -support.type.property-name.css -comment -string",
+									"meta.property-value.css -comment -string",
+									"meta.value.css -comment -string",
+									"meta.tag.inline.any.html string.quoted -constant.character.entity.html",
+									"meta.tag.any.html meta.attribute-with-value.style.html"
+								],
+								"use_hex_argb": false
+							},
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-form-zakaz.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								120,
+								120
+							]
+						],
+						"settings":
+						{
+							"auto_indent": true,
+							"color_helper.box_height": 24,
+							"color_helper.color_scheme": "Packages/User/Color Highlighter/themes/Monokai (Colorcoded) (SL).tmTheme",
+							"color_helper.file_palette":
+							[
+								"#000000ff",
+								"#01d36bFF",
+								"#5394ffFF",
+								"#c344a7BF@2",
+								"#ff0000ff",
+								"#ff4b4bFF",
+								"#ff8e38FF",
+								"#ffffffff"
+							],
+							"color_helper.popup_active": false,
+							"color_helper.popup_auto": true,
+							"color_helper.preview_meta":
+							{
+								"1377":
+								[
+									-4928820360191389477,
+									5,
+									"webcolors",
+									-3075333387302188464,
+									1,
+									"1516341886.912372"
+								],
+								"1417":
+								[
+									-4928820360191389477,
+									5,
+									"webcolors",
+									-3075333387302188464,
+									2,
+									"1516341886.939379"
+								],
+								"1463":
+								[
+									2102284720449437937,
+									5,
+									"webcolors",
+									-3075333387302188464,
+									3,
+									"1516341886.942378"
+								],
+								"2159":
+								[
+									-4928820360191389477,
+									5,
+									"webcolors",
+									-9048484976394288472,
+									4,
+									"1516341887.081941"
+								],
+								"56":
+								[
+									-7570553407648008889,
+									3,
+									"webcolors",
+									-7400938100356887936,
+									7,
+									"1516343784.240633"
+								],
+								"564":
+								[
+									-6925650235118141281,
+									20,
+									"rgba",
+									1674619144330047737,
+									5,
+									"1516341887.845175"
+								],
+								"998":
+								[
+									2102284720449437937,
+									5,
+									"webcolors",
+									-3666452569727992744,
+									6,
+									"1516341887.984242"
+								]
+							},
+							"color_helper.scan":
+							{
+								"allowed_colors":
+								[
+									"hex_compressed",
+									"rgba",
+									"rgb",
+									"hsla",
+									"hsl",
+									"webcolors",
+									"hex"
+								],
+								"compress_hex_output": true,
+								"current_ext": ".scss",
+								"current_syntax": "SCSS/SCSS",
+								"enabled": true,
+								"last_updated": 1516221026.92,
+								"scan_completion_scopes":
+								[
+									"source.scss -comment -string",
+									"source.sass -comment -string"
+								],
+								"scan_scopes":
+								[
+									"meta.property-list.css.sass -comment -string",
+									"constant.other.rgb-value.sass -comment -string",
+									"constant.other.color.rgb-value.scss -comment -string",
+									"constant.other.color.rgb-value.scss",
+									"support.constant.color.w3c-standard-color-name.scss",
+									"meta.property-value.scss",
+									"sass-script-maps -variable.other -comment -string"
+								],
+								"use_hex_argb": false
+							},
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (Colorcoded) (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-amination.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1114,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								142,
+								142
+							]
+						],
+						"settings":
+						{
+							"color_helper.box_height": 24,
+							"color_helper.color_scheme": "Packages/User/Color Highlighter/themes/Monokai (Colorcoded) (SL).tmTheme",
+							"color_helper.file_palette":
+							[
+								"#a550a7FF",
+								"#ffffff80@1",
+								"#ffffffBF@2",
+								"#ffffffff"
+							],
+							"color_helper.popup_active": false,
+							"color_helper.popup_auto": true,
+							"color_helper.preview_meta":
+							{
+								"1005":
+								[
+									-221142392036616309,
+									18,
+									"rgba",
+									1674619144330047737,
+									153,
+									"1516345612.739716"
+								],
+								"1047":
+								[
+									-221142392036616309,
+									18,
+									"rgba",
+									1674619144330047737,
+									154,
+									"1516345612.742715"
+								],
+								"1089":
+								[
+									-221142392036616309,
+									18,
+									"rgba",
+									1674619144330047737,
+									155,
+									"1516345612.745715"
+								],
+								"258":
+								[
+									1485131683957860054,
+									21,
+									"rgba",
+									-5799908442362715961,
+									163,
+									"1516345654.887403"
+								],
+								"293":
+								[
+									1485131683957860054,
+									21,
+									"rgba",
+									-5799908442362715961,
+									165,
+									"1516345656.889473"
+								],
+								"388":
+								[
+									7994005542614512212,
+									4,
+									"hex_compressed",
+									-1301583775935767654,
+									138,
+									"1516345612.51509"
+								],
+								"413":
+								[
+									-2687912829431095892,
+									22,
+									"rgba",
+									1674619144330047737,
+									184,
+									"1516345710.99673"
+								],
+								"457":
+								[
+									-2687912829431095892,
+									22,
+									"rgba",
+									1674619144330047737,
+									185,
+									"1516345710.999731"
+								],
+								"500":
+								[
+									-2687912829431095892,
+									22,
+									"rgba",
+									1674619144330047737,
+									186,
+									"1516345711.003733"
+								],
+								"543":
+								[
+									-2687912829431095892,
+									22,
+									"rgba",
+									1674619144330047737,
+									187,
+									"1516345711.008734"
+								],
+								"586":
+								[
+									-2687912829431095892,
+									22,
+									"rgba",
+									1674619144330047737,
+									188,
+									"1516345711.011734"
+								],
+								"629":
+								[
+									-2687912829431095892,
+									22,
+									"rgba",
+									1674619144330047737,
+									189,
+									"1516345711.014735"
+								],
+								"672":
+								[
+									-2687912829431095892,
+									22,
+									"rgba",
+									1674619144330047737,
+									190,
+									"1516345711.018735"
+								],
+								"715":
+								[
+									-2687912829431095892,
+									22,
+									"rgba",
+									1674619144330047737,
+									191,
+									"1516345711.025749"
+								],
+								"758":
+								[
+									-2687912829431095892,
+									22,
+									"rgba",
+									1674619144330047737,
+									192,
+									"1516345711.030254"
+								],
+								"801":
+								[
+									-221142392036616309,
+									18,
+									"rgba",
+									1674619144330047737,
+									148,
+									"1516345612.722198"
+								],
+								"841":
+								[
+									-221142392036616309,
+									18,
+									"rgba",
+									1674619144330047737,
+									149,
+									"1516345612.726703"
+								],
+								"882":
+								[
+									-221142392036616309,
+									18,
+									"rgba",
+									1674619144330047737,
+									150,
+									"1516345612.730208"
+								],
+								"923":
+								[
+									-221142392036616309,
+									18,
+									"rgba",
+									1674619144330047737,
+									151,
+									"1516345612.732712"
+								],
+								"964":
+								[
+									-221142392036616309,
+									18,
+									"rgba",
+									1674619144330047737,
+									152,
+									"1516345612.735712"
+								]
+							},
+							"color_helper.scan":
+							{
+								"allowed_colors":
+								[
+									"hex_compressed",
+									"rgba",
+									"rgb",
+									"hsla",
+									"hsl",
+									"webcolors",
+									"hex"
+								],
+								"compress_hex_output": true,
+								"current_ext": ".scss",
+								"current_syntax": "SCSS/SCSS",
+								"enabled": true,
+								"last_updated": 1516221026.92,
+								"scan_completion_scopes":
+								[
+									"source.scss -comment -string",
+									"source.sass -comment -string"
+								],
+								"scan_scopes":
+								[
+									"meta.property-list.css.sass -comment -string",
+									"constant.other.rgb-value.sass -comment -string",
+									"constant.other.color.rgb-value.scss -comment -string",
+									"constant.other.color.rgb-value.scss",
+									"support.constant.color.w3c-standard-color-name.scss",
+									"meta.property-value.scss",
+									"sass-script-maps -variable.other -comment -string"
+								],
+								"use_hex_argb": false
+							},
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (Colorcoded) (SL).tmTheme",
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "php/ez-form-zakaz.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 31226,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								31147,
+								31097
+							]
+						],
+						"settings":
+						{
+							"color_helper.box_height": 24,
+							"color_helper.color_scheme": "Packages/User/SublimeLinter/Monokai (Colorcoded) (SL).tmTheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.preview_meta":
+							{
+							},
+							"color_helper.scan":
+							{
+								"allowed_colors":
+								[
+									"hex_compressed",
+									"rgba",
+									"rgb",
+									"hsla",
+									"hsl",
+									"webcolors",
+									"hex"
+								],
+								"compress_hex_output": true,
+								"current_ext": ".php",
+								"current_syntax": "PHP/PHP",
+								"enabled": true,
+								"last_updated": 1516221026.92,
+								"scan_completion_scopes":
+								[
+								],
+								"scan_scopes":
+								[
+									"meta.declaration-list.css -support.type.property-name.css -comment -string",
+									"meta.property-value.css -comment -string",
+									"meta.value.css -comment -string",
+									"meta.tag.inline.any.html string.quoted -constant.character.entity.html",
+									"meta.tag.any.html meta.attribute-with-value.style.html"
+								],
+								"use_hex_argb": false
+							},
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 11899.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/ezh.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6796,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6569,
+								6579
+							]
+						],
+						"settings":
+						{
+							"color_helper.box_height": 24,
+							"color_helper.color_scheme": "Packages/User/Color Highlighter/themes/Monokai (Colorcoded) (SL).tmTheme",
+							"color_helper.file_palette":
+							[
+								"#000000ff",
+								"#064780FF",
+								"#36658bFF",
+								"#3f729bFF",
+								"#c00eaaE6@1",
+								"#e231bcFF",
+								"#ff0000ff",
+								"#ffffffFF",
+								"#ffffffff"
+							],
+							"color_helper.preview_meta":
+							{
+								"1070":
+								[
+									-4928820360191389477,
+									5,
+									"webcolors",
+									-9048484976394288472,
+									4,
+									"1516343698.084544"
+								],
+								"125":
+								[
+									-1785346498922027554,
+									19,
+									"rgba",
+									-5799908442362715961,
+									2,
+									"1516343696.654016"
+								],
+								"1574":
+								[
+									6762992298032880068,
+									22,
+									"rgba",
+									-790345109264730737,
+									5,
+									"1516343700.596648"
+								],
+								"2076":
+								[
+									2102284720449437937,
+									5,
+									"webcolors",
+									-3666452569727992744,
+									6,
+									"1516343706.568874"
+								],
+								"213":
+								[
+									7851227791237317921,
+									22,
+									"rgba",
+									-5799908442362715961,
+									3,
+									"1516343696.656339"
+								],
+								"2274":
+								[
+									-6750329775545591493,
+									18,
+									"rgba",
+									-790345109264730737,
+									7,
+									"1516343709.430691"
+								],
+								"3285":
+								[
+									-7570553407648008889,
+									3,
+									"webcolors",
+									-594106449957612472,
+									8,
+									"1516343711.124858"
+								],
+								"3397":
+								[
+									-5203735750138979485,
+									18,
+									"rgba",
+									2950945387918931535,
+									9,
+									"1516343711.393496"
+								],
+								"3786":
+								[
+									-4928820360191389477,
+									5,
+									"webcolors",
+									-594106449957612472,
+									10,
+									"1516343711.399495"
+								],
+								"43":
+								[
+									-7063489533626033357,
+									19,
+									"rgba",
+									-5799908442362715961,
+									1,
+									"1516343696.649016"
+								],
+								"5650":
+								[
+									-5203735750138979485,
+									18,
+									"rgba",
+									-2943143471625493415,
+									11,
+									"1516343713.239208"
+								]
+							},
+							"color_helper.scan":
+							{
+								"allowed_colors":
+								[
+									"hex_compressed",
+									"rgba",
+									"rgb",
+									"hsla",
+									"hsl",
+									"webcolors",
+									"hex"
+								],
+								"compress_hex_output": true,
+								"current_ext": ".scss",
+								"current_syntax": "SCSS/SCSS",
+								"enabled": true,
+								"last_updated": 1516221026.92,
+								"scan_completion_scopes":
+								[
+									"source.scss -comment -string",
+									"source.sass -comment -string"
+								],
+								"scan_scopes":
+								[
+									"meta.property-list.css.sass -comment -string",
+									"constant.other.rgb-value.sass -comment -string",
+									"constant.other.color.rgb-value.scss -comment -string",
+									"constant.other.color.rgb-value.scss",
+									"support.constant.color.w3c-standard-color-name.scss",
+									"meta.property-value.scss",
+									"sass-script-maps -variable.other -comment -string"
+								],
+								"use_hex_argb": false
+							},
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (Colorcoded) (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4482.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2801,
+								2801
+							]
+						],
+						"settings":
+						{
+							"color_helper.box_height": 24,
+							"color_helper.color_scheme": "Packages/User/SublimeLinter/Monokai (Colorcoded) (SL).tmTheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.scan":
+							{
+								"current_ext": ".js",
+								"current_syntax": "JavaScript/JavaScript",
+								"enabled": false,
+								"last_updated": 1516113804.88
+							},
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1392.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/ez-car-autocompl.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12169,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								41,
+								52
+							]
+						],
+						"settings":
+						{
+							"color_helper.box_height": 24,
+							"color_helper.color_scheme": "Packages/User/SublimeLinter/Monokai (Colorcoded) (SL).tmTheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.scan":
+							{
+								"current_ext": ".js",
+								"current_syntax": "JavaScript/JavaScript",
+								"enabled": false,
+								"last_updated": 1516113804.88
+							},
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/_ez-trigger-dover.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1541,
+								1541
+							]
+						],
+						"settings":
+						{
+							"auto_indent": true,
+							"color_helper.box_height": 24,
+							"color_helper.color_scheme": "Packages/User/Color Highlighter/themes/Monokai (Colorcoded) (SL).tmTheme",
+							"color_helper.file_palette":
+							[
+								"#2bbbad8C@2",
+								"#33b5e58C@2",
+								"#aa66cc8C@2",
+								"#ffbb33D9@2",
+								"#ffffffff"
+							],
+							"color_helper.preview_meta":
+							{
+								"1054":
+								[
+									464457191806882781,
+									24,
+									"rgba",
+									3091225963446714599,
+									2,
+									"1516222178.749027"
+								],
+								"1239":
+								[
+									-4176904023245701106,
+									25,
+									"rgba",
+									3091225963446714599,
+									3,
+									"1516222178.753031"
+								],
+								"1428":
+								[
+									5792281235784210870,
+									24,
+									"rgba",
+									3091225963446714599,
+									4,
+									"1516222178.756538"
+								],
+								"868":
+								[
+									-8345812971992310003,
+									24,
+									"rgba",
+									3091225963446714599,
+									1,
+									"1516222178.736007"
+								]
+							},
+							"color_helper.scan":
+							{
+								"allowed_colors":
+								[
+									"hex_compressed",
+									"rgba",
+									"rgb",
+									"hsla",
+									"hsl",
+									"webcolors",
+									"hex"
+								],
+								"compress_hex_output": true,
+								"current_ext": ".scss",
+								"current_syntax": "SCSS/SCSS",
+								"enabled": true,
+								"last_updated": 1516221026.92,
+								"scan_completion_scopes":
+								[
+									"source.scss -comment -string",
+									"source.sass -comment -string"
+								],
+								"scan_scopes":
+								[
+									"meta.property-list.css.sass -comment -string",
+									"constant.other.rgb-value.sass -comment -string",
+									"constant.other.color.rgb-value.scss -comment -string",
+									"constant.other.color.rgb-value.scss",
+									"support.constant.color.w3c-standard-color-name.scss",
+									"meta.property-value.scss",
+									"sass-script-maps -variable.other -comment -string"
+								],
+								"use_hex_argb": false
+							},
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (Colorcoded) (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 452.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/wamp64/www/carl-autozap40rus.app/resources/assets/sass/app.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3642,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2202,
+								2202
+							]
+						],
+						"settings":
+						{
+							"color_helper.box_height": 24,
+							"color_helper.color_scheme": "Packages/User/Color Highlighter/themes/Monokai (Colorcoded) (SL).tmTheme",
+							"color_helper.file_palette":
+							[
+								"#000000B3@1",
+								"#3f51b5ff",
+								"#480f9066@1",
+								"#7e7bd733@1",
+								"#ffffffff"
+							],
+							"color_helper.preview_meta":
+							{
+							},
+							"color_helper.scan":
+							{
+								"allowed_colors":
+								[
+									"hex_compressed",
+									"rgba",
+									"rgb",
+									"hsla",
+									"hsl",
+									"webcolors",
+									"hex"
+								],
+								"compress_hex_output": true,
+								"current_ext": ".scss",
+								"current_syntax": "SCSS/SCSS",
+								"enabled": true,
+								"last_updated": 1516221026.92,
+								"scan_completion_scopes":
+								[
+									"source.scss -comment -string",
+									"source.sass -comment -string"
+								],
+								"scan_scopes":
+								[
+									"meta.property-list.css.sass -comment -string",
+									"constant.other.rgb-value.sass -comment -string",
+									"constant.other.color.rgb-value.scss -comment -string",
+									"constant.other.color.rgb-value.scss",
+									"support.constant.color.w3c-standard-color-name.scss",
+									"meta.property-value.scss",
+									"sass-script-maps -variable.other -comment -string"
+								],
+								"use_hex_argb": false
+							},
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (Colorcoded) (SL).tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 36.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 156.0
+	},
+	"pinned_build_system": "",
+	"project": "carl-zapchsti40-ru.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
