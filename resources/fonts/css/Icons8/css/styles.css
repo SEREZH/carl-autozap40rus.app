@@ -1,5 +1,5 @@
-/*
- * Icon Font Icons8
+/*!
+ * Font Icons8
  * Made with love by Icons8 [ https://icons8.com/ ] using FontCustom [ https://github.com/FontCustom/fontcustom ]
  *
  * Contacts:
@@ -11,30 +11,20 @@
  *    Google+ [ https://plus.google.com/+Icons8 ]
  *    GitHub [ https://github.com/icons8 ]
  */
-
-
 @font-face {
   font-family: "Icons8";
   src: url("../fonts/Icons8_3072cda4eea292af8090c889472fbb42.eot");
-  src: url("../fonts/Icons8_3072cda4eea292af8090c889472fbb42.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/Icons8_3072cda4eea292af8090c889472fbb42.woff2") format("woff2"),
-       url("../fonts/Icons8_3072cda4eea292af8090c889472fbb42.woff") format("woff"),
-       url("../fonts/Icons8_3072cda4eea292af8090c889472fbb42.ttf") format("truetype"),
-       url("../fonts/Icons8_3072cda4eea292af8090c889472fbb42.svg#Icons8") format("svg");
+  src: url("../fonts/Icons8_3072cda4eea292af8090c889472fbb42.eot?#iefix") format("embedded-opentype"), url("../fonts/Icons8_3072cda4eea292af8090c889472fbb42.woff2") format("woff2"), url("../fonts/Icons8_3072cda4eea292af8090c889472fbb42.woff") format("woff"), url("../fonts/Icons8_3072cda4eea292af8090c889472fbb42.ttf") format("truetype"), url("../fonts/Icons8_3072cda4eea292af8090c889472fbb42.svg#Icons8") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: "Icons8";
     src: url("../fonts/Icons8_3072cda4eea292af8090c889472fbb42.svg#Icons8") format("svg");
   }
 }
-
-[data-icons8]:before { content: attr(data-icons8); }
-
-.icons8, [data-icons8]:before,
+[data-icons8]:before,
 .icons8-filled-bookmark-ribbon:before {
   display: inline-block;
   font-family: "Icons8";
@@ -49,5 +39,9 @@
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
-
-.icons8-filled-bookmark-ribbon:before { content: "\f100"; }
+[data-icons8]:before {
+  content: attr(data-icons8);
+}
+.icons8-filled-bookmark-ribbon:before {
+  content: "\f100";
+}

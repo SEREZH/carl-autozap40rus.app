@@ -155,6 +155,10 @@
             color: #e231bc !important;
             font-size: 0.9rem; }
 
+.ez-popover-img {
+  width: 400px;
+  border-radius: 3px; }
+
 @media all and (max-width: 1070px) {
   .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body,
   .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-info .ez-footer-info-header {
@@ -176,6 +180,9 @@
       font-size: 0.9rem !important; }
 
   .ez-header-addresse-time {
-    font-size: 0.75rem; } }
+    font-size: 0.75rem; }
+
+  .ez-popover-img {
+    width: 320px; } }
 
 /*# sourceMappingURL=ezh.css.map */

@@ -1,6 +1,5 @@
 var ez_flipclock_clock;
 
-
 function getDayDifference(i_from_date) {
     var f_todayDate = new Date();
     var f_fromDate = i_from_date;
@@ -58,7 +57,7 @@ jQuery( document ).ready(function() {
 		var cok_cookieDateTime	= new Date();
 		var cok_daysDifference = 1;
 	};
-    if (cok_daysDifference >= 1) {
+    if (cok_daysDifference >= 2) {
     	setTimeout(function () {jQuery('#modalCookie').modal('show');}, 1500);
 		setTimeout(function () {jQuery('#modalCookie').modal('hide');}, 9500);	
 
@@ -121,6 +120,24 @@ jQuery( document ).ready(function() {
         // !!! Important !!! always return false to prevent standard browser submit and page navigation 
         return false; 
     }); 
+    /*-------------------------------------*/
+    /* --- popover - popover - popover --- */
+    // Hack function
+/*	const getAttr = (el, child) => {
+	  	return jQuery('.data-${child}', $(el).attr('data-bind')).html();
+	};
+	// Dinamic Popover
+	jQuery('[data-toggle="popover"]').popover({
+	  	html: true,
+	  	placement: 'bottom',
+	  	title: function () {
+	    	return getAttr(this, 'title');
+	  	},
+	  	content: function () {
+	    	return getAttr(this, 'content');
+	  	}
+	});*/
+	/*-------------------------------------*/
 });
 // post-submit callback 
 function showResponseFormZakaz(responseText, statusText, xhr, $form)  { 

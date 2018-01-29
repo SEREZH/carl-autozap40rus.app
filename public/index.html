@@ -53,10 +53,12 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- EZ Lib CSS -->
     <link href="lib/flipclock/flipclock.css" rel="stylesheet">
+    <!-- EZ Lib BOOTSTRAP-POPOVER-X -->
+    <link href="lib/bootstrap-popover-x/bootstrap-popover-x.min.css" rel="stylesheet">
+    <!-- <script defer src="lib/bootstrap-popover-x/bootstrap-popover-x.min.js"></script> -->
     <!-- Your custom styles (optional) -->
     <link href="css/app.css" rel="stylesheet">
     <link href="css/ezh.css" rel="stylesheet">
-
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
@@ -102,7 +104,7 @@
                             data-trigger="hover" 
                             data-placement="auto"
                             data-html="true"
-                            title="Переход в интернет-магазин &laquo;CARLEON40&raquo;" 
+                            title="Переход в интернет-магазин&laquo;CARLEON40&raquo;" 
                         >
                         <img src="img/logo/logoСT1A.png" class="img-fluid" alt="CARLEON40">
                         </a>
@@ -113,7 +115,16 @@
                     </div>
                     <div class="col-lg-5 animated bounceInRight ez-header-addresse">
                         <p class="ez-header-addresse-post"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;
-                            <span>г. Обнинск, Киевское ш., 49а, пав. 39</span>
+                            <span>
+                                <a  href="#"
+                                    data-toggle="popover-x" 
+                                    data-target="#topMapYandex"
+                                    data-trigger="hover focus"
+                                    target="_blank"
+                                    class="text-white">
+                                        г. Обнинск, Киевское ш., 49а, пав. 39
+                                </a>
+                            </span>
                         </p>
                         <p class="ez-header-addresse-phone"><i class="fas fa-phone"></i>&nbsp; 
                             <a href="tel:+79208990039"><span>+7 (920) 899<img>-00<img>-39</span></a>
@@ -364,6 +375,27 @@
             </div>                    
         </div>   
     </section>
+
+
+<!-- Content for popovers -->
+<div style="visibility:hidden">
+    <div id="topMapYandex" class="popover popover-default ez-popover">
+        <div class="arrow"></div>
+        <!-- <h3 class="popover-title">
+            <span class="close pull-right" data-dismiss="popover-x">&times;</span>
+            Title here
+        </h3> -->
+        <div class="popover-content">
+            <img    class="z-depth-4 ez-popover-img" 
+                    width="400" 
+                    src="/img/logo/carleon40-map-top.jpg" alt="Yandex Map"
+            >
+        </div>
+        <!-- <div class="popover-footer">Footer here</div> -->
+    </div>
+</div>
+
+
     <!-- --- work schema --- -->
     <section class="ez-work-schema ez-bcol-main-blue-light">
         <div class="container ez-work-schema-cont wow fadeInUp">
@@ -724,6 +756,9 @@
     <!-- EZH JS -->
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/ez-car-autocompl.js"></script>
+    <!-- EZ Lib BOOTSTRAP-POPOVER-X -->
+    <script defer src="lib/bootstrap-popover-x/bootstrap-popover-x.min.js"></script>
+
     <!-- Central Modal Medium Danger -->
     <!-- id="centralModalDanger"  -->
     <div    id="modalFormZakazDanger" 

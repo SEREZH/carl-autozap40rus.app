@@ -202,6 +202,12 @@
 }    
 
 
+.ez-popover-img {
+    width: 400px;
+    border-radius: 3px;
+}    
+    
+
 
 @media all and (max-width: 1070px) {
     .ez-footer .ez-footer-cont-x .ez-footer-cont .ez-footer-row .ez-footer-contact .ez-footer-contact-body,
@@ -233,4 +239,7 @@
     .ez-header-addresse-time {
         font-size: 0.75rem;
     }
+    .ez-popover-img { 
+        width: 320px;
+    }   
 }
